@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "watch": "node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+    "build": "node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "package": "NODE_ENV=production node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.cwp.govt.nz/cwp/new-theme.git"
+  },
+  "license": "BSD-3",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "laravel-mix": "^0.3.0"
+  }
+}
