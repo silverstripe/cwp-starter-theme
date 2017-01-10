@@ -11,6 +11,14 @@
   ],
   "require": {
     "composer/installers": "*",
-    "silverstripe/framework": ">=3.5"
-  }
+    "silverstripe/framework": "~3.2",
+    "silverstripe/cms": "~3.2",
+    "cwp/cwp-theme-module": "dev-develop"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://gitlab.cwp.govt.nz/cwp/cwp-theme-module.git"
+    }
+  ]
 }
