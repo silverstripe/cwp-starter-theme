@@ -9,6 +9,21 @@ node_modules/.bin/eslint src/js --fix
 
 Create the file `.git/hooks/pre-commit`, and paste this code into it. Your JS code will then be automatically validated and fixed before it can be committed to the repository, ensuring everyone's code conforms to the standard. You can also trigger this command each time you save files, but the results will be the same either way.
 
+## Prerequisites for compilation of front-end files
+
+To install the required packages, **NodeJS version 7.3** or higher is required.
+
+To check the installed NodeJS version, run the following command:
+```sh
+node -v
+```
+
+To install the dependencies, in the `themes\new-theme` folder, run the following command:
+
+```sh
+npm install
+```
+
 ## Compiling front-end files
 
 This project uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) to compile source ES6 JS and SASS files into ES5 JS and CSS respectively. To trigger this, you can run the following command:
