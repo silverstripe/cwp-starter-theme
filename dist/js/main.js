@@ -104,14 +104,14 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_share__["a" /* def
     e.preventDefault();
     e.stopPropagation();
 
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href, 'Share via Facebook', 'resizable,width=800,height=600,centerscreen');
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href, '_blank', 'resizable,width=800,height=600,centerscreen');
   });
 
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.share-links .share-links-twitter').on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
 
-    window.open('https://twitter.com/home?status=' + window.location.href, 'Share via Twitter', 'resizable,width=800,height=600,centerscreen');
+    window.open('https://twitter.com/home?status=' + window.location.href, '_blank', 'resizable,width=800,height=600,centerscreen');
   });
 };
 
