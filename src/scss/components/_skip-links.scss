@@ -1,0 +1,14 @@
+.skip-links {
+    position: relative;
+    
+    a {
+        position: absolute;
+        top: 1em;
+        left: -100%;
+
+        &:focus, &:active {
+            right: auto;
+            left: 1em;
+        }
+    }
+}
