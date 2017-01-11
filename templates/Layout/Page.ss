@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <section class="col-md-6">
-            <% include Breadcrumbs %>
+            $Breadcrumbs
         </section>
         <section class="col-md-6">
             <% include ShareLinks %>
