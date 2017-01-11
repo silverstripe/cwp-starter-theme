@@ -13,10 +13,10 @@ export default function () {
     e.stopPropagation();
 
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
-      '_blank',
-      'resizable,width=800,height=600,centerscreen',
-    );
+            `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
+            '_blank',
+            'resizable,width=800,height=600,centerscreen',
+        );
   });
 
   $('.share-links .share-links-twitter').on('click', (e) => {
@@ -24,9 +24,9 @@ export default function () {
     e.stopPropagation();
 
     window.open(
-      `https://twitter.com/home?status=${window.location.href}`,
-      '_blank',
-      'resizable,width=800,height=600,centerscreen',
-    );
+            `https://twitter.com/home?status=${window.location.href}`,
+            '_blank',
+            'resizable,width=800,height=600,centerscreen',
+        );
   });
 }
