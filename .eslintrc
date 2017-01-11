@@ -2,5 +2,10 @@
     "extends": "airbnb",
     "rules": {
         "func-names": ["error", "never"]
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true
     }
 }

@@ -5,3 +5,6 @@ mix.setPublicPath("dist");
 
 mix.js("src/js/main.js", "dist/js/main.js");
 mix.sass("src/scss/main.scss", "dist/css/main.css");
+
+mix.copy("node_modules/bootstrap-sass/assets/fonts/bootstrap", "dist/fonts");
+mix.copy("node_modules/font-awesome/fonts", "dist/fonts");

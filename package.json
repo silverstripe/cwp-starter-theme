@@ -10,14 +10,17 @@
     "url": "https://gitlab.cwp.govt.nz/cwp/new-theme.git"
   },
   "license": "BSD-3-Clause",
+  "dependencies": {
+      "bootstrap-sass": "^3.3.7",
+      "jquery": "^3.1.1",
+      "laravel-mix": "^0.3.0"
+  },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "bootstrap-sass": "^3.3.7",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0",
-    "laravel-mix": "^0.3.0"
+    "eslint-plugin-react": "^6.9.0"
   }
 }

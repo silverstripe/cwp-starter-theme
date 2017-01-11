@@ -4,7 +4,7 @@
             <% include Breadcrumbs %>
         </section>
         <section class="col-md-6">
-            <% include Share %>
+            <% include ShareLinks %>
         </section>
     </div>
     <div class="row">
