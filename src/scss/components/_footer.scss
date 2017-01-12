@@ -1,0 +1,42 @@
+footer {
+  .footer-logo {
+    margin-top: 10px;
+  }
+
+  .socialLinks {
+    height: 39px;
+    line-height: 39px;
+  }
+
+  .fa {
+    font-size: 20px;
+    padding: 10px;
+    vertical-align: bottom;
+  }
+
+  .nav {
+    padding-left: 14px;
+    margin-bottom: 10px
+  }
+
+  /* small screen landscape */
+  @media (max-width: 768px) {
+
+    .socialLinks {
+      line-height: 39px;
+      height: auto;
+
+      &.text-right {
+        text-align: left;
+      }
+
+      a {
+        display: block;
+      }
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+    }
+  }
+}
