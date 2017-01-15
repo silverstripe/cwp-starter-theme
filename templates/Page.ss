@@ -6,6 +6,7 @@
         $MetaTags(false)
         <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
         <link rel="stylesheet" href="$ThemeDir/dist/css/main.css">
+        <% include Favicon %>
     </head>
     <body class="$ClassName">
         <% include SkipLinks %>
