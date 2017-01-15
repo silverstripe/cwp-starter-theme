@@ -72,16 +72,18 @@
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_share__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_collapse__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_collapse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_collapse__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_tab__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_tab___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_tab__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_share__ = __webpack_require__(2);
+/* eslint-disable */
 
 
+/* eslint-enable*/
 
 
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_share__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_share__["a" /* default */])();
 
 /***/ },
 /* 1 */
@@ -123,7 +125,6 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_share__["a" /* def
 
 /***/ },
 /* 3 */
-
 /***/ function(module, exports) {
 
 /* ========================================================================
@@ -503,7 +504,6 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_share__["a" /* def
 
 /***/ },
 /* 5 */
-
 /***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10729,11 +10729,7 @@ return jQuery;
 
 
 /***/ },
-<<<<<<< 653dfe72283acfbb01ff57d051ced413380a2731
-/* 4 */
-=======
 /* 6 */
->>>>>>> Added BS3 styling to $SearchForm + Imported BS3 JS for Collapse/Tab
 /***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
