@@ -1,4 +1,4 @@
-<div class="col-md-3 col-xs-12">
+<div class="col-md-4 col-xs-12">
     <ul class="quicklink-list">
         <% loop $QuickLinks %>
             <li class="quicklink-list__item">
