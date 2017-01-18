@@ -68,7 +68,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -85,15 +85,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_share__["a" /* default */])();
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
-/***/ }),
+/***/ },
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(5);
@@ -123,9 +123,9 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_share__["a" /* def
   });
 };
 
-/***/ }),
+/***/ },
 /* 3 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.7
@@ -341,9 +341,9 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_share__["a" /* def
 }(jQuery);
 
 
-/***/ }),
+/***/ },
 /* 4 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
@@ -502,9 +502,9 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__components_share__["a" /* def
 }(jQuery);
 
 
-/***/ }),
+/***/ },
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.1.1
@@ -10687,8 +10687,7 @@ jQuery.parseJSON = JSON.parse;
 if ( true ) {
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
 		return jQuery;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 }
 
 
@@ -10729,13 +10728,13 @@ return jQuery;
 } );
 
 
-/***/ }),
+/***/ },
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
 
-/***/ })
+/***/ }
 /******/ ]);
