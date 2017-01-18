@@ -1,7 +1,27 @@
 .site-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .row {
+        line-height: 35px;
+    }
+
+    .push-down {
+        display: inline-block;
+        margin-top: 12px;
+    }
+
+    .form-inline {
+        display: inline-block;
+    }
+
+    .btn-group {
+        margin-right: 10px;
+    }
+
     &-brand {
-        font-size: 3em;
-        font-weight: normal;
+        font-size: 20px;
+        font-weight: bold;
         overflow: visible;
         line-height: 1em;
         float: left;
@@ -29,4 +49,25 @@
             }
         }
     }
+}
+
+.header-search {
+    .input-group-addon {
+        padding: 0;
+
+        .btn {
+            border: none;
+            background: none;
+        }
+    }
+}
+
+.navbar-toggle {
+    border-color: #ccc;
+    margin-top: 2px;
+    margin-right: 0;
+}
+
+.icon-bar {
+    background-color: #888;
 }
