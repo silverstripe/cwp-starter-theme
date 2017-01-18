@@ -1,0 +1,8 @@
+.breadcrumb a {
+	color: darken($link-color, 2.2%);
+
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+	}
+}
