@@ -1,8 +1,12 @@
 .home-page {
-
     .jumbotron {
         padding-top: 40px;
         padding-bottom: 40px;
+        margin-bottom: 70px;
+
+        @include for(sm) {
+            margin-bottom: 35px;
+        }
 
         h1 {
             font-size: 40px;
@@ -38,6 +42,46 @@
                     font-weight: 300;
                 }
             }
+        }
+    }
+
+    .quicklinks, .feature {
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .quicklinks {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    display: block;
+                }
+            }
+
+            li + li {
+
+                a {
+                    padding-top: 1em;
+                }
+            }
+        }
+    }
+
+    .push-down {
+        margin-top: 70px;
+
+        @include for(sm) {
+            margin-top: 35px;
         }
     }
 }
