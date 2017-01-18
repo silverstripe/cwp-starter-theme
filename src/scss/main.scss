@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_mixins";
 @import "node_modules/font-awesome/scss/font-awesome";
 @import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
 @import "components/_share-links";
@@ -6,4 +7,5 @@
 @import "components/_footer";
 @import "components/_header";
 @import "components/_main-nav";
+@import "components/_home-page";
 @import "components/_overrides";

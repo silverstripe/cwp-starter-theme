@@ -1,0 +1,43 @@
+.home-page {
+
+    .jumbotron {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        h1 {
+            font-size: 40px;
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            @include for(xs) {
+                margin-bottom: 12.5px;
+            }
+        }
+
+        .buttons {
+            margin-bottom: 0;
+
+            a {
+                margin-top: 50px;
+                display: inline-block;
+
+                @include for(xs) {
+                    margin-top: 25px;
+                }
+
+                &:last-child {
+                    margin-left: 20px;
+
+                    @include for(xs) {
+                        margin-left: 0;
+                    }
+                }
+
+                &.btn-link {
+                    text-decoration: underline;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
