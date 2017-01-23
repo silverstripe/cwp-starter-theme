@@ -1,4 +1,4 @@
-<div class="share-links">
+<span class="share-links">
     <a href="https://twitter.com" class="share-links-twitter" title="<%t CWP.Share.Twitter "Share to Twitter" %>">
         <i class="fa fa-twitter" aria-hidden="true"></i>
         <span class="sr-only"><%t CWP.Share.Twitter "Share to Twitter" %></span>
@@ -11,4 +11,4 @@
         <i class="glyphicon glyphicon-print" aria-hidden="true"></i>
         <span class="sr-only"><%t CWP.Share.Print "Print this page" %></span>
     </a>
-</div>
+</span>
