@@ -1,5 +1,5 @@
 <div class="main-nav">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" aria-label="main navigation">
         <div class="container">
             <div class="row">
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -13,7 +13,7 @@
                                     <ul class="dropdown-menu">
                                         <% loop $Children %>
                                             <li class="dropdown-menu__item">
-                                                <a href="$Link">$MenuTitle.XML</a>
+                                                <a href="$Link" title="$MenuTitle.XML">$MenuTitle.XML</a>
                                             </li>
                                             <li role="separator" class="divider"></li>
                                         <% end_loop %>
