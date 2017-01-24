@@ -1,7 +1,7 @@
 <% if $QuickLinks %>
     <div class="col-md-4 col-xs-12 quicklinks">
         <h2><%t CWP.Home.Quicklinks.Title "Quicklinks" %></h2>
-        <ul class="quicklink-list">
+        <ul class="quicklink-list list-unstyled">
             <% loop $QuickLinks %>
                 <li class="quicklink-list__item">
                     <% if $ExternalLink %>

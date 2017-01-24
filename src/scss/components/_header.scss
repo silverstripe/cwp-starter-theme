@@ -1,23 +1,6 @@
 .site-header {
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    .row {
-        line-height: 35px;
-    }
-
-    .push-down {
-        display: inline-block;
-        margin-top: 12px;
-    }
-
-    .form-inline {
-        display: inline-block;
-    }
-
-    .btn-group {
-        margin-right: 10px;
-    }
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     &-brand {
         font-size: 20px;
@@ -25,9 +8,7 @@
         overflow: visible;
         line-height: 1em;
         float: left;
-        margin-top: 18px;
-        padding-bottom: 18px;
-        margin-bottom: 0;
+        margin-top: 3px;
 
         &-link {
             color: inherit;
@@ -51,23 +32,23 @@
     }
 }
 
-.header-search {
-    .input-group-addon {
-        padding: 0;
+.navbar-toggle {
+    margin-top: 0;
 
-        .btn {
-            border: none;
-            background: none;
-        }
+    &:focus {
+        outline: invert none medium;
+        border-color: $brand-primary;
+    }
+
+    .icon-bar {
+        background-color: #888;
     }
 }
 
-.navbar-toggle {
-    border-color: #ccc;
-    margin-top: 2px;
-    margin-right: 0;
+.input-group-btn .btn {
+    line-height: 20px;
 }
 
-.icon-bar {
-    background-color: #888;
+#header-language-toggle {
+    margin-right: 5px;
 }

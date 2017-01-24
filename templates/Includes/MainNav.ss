@@ -15,18 +15,15 @@
                                             <li class="dropdown-menu__item">
                                                 <a href="$Link" title="$MenuTitle.XML">$MenuTitle.XML</a>
                                             </li>
-                                            <li role="separator" class="divider"></li>
                                         <% end_loop %>
                                     </ul>
                                 <% end_if %>
                             </li>
                         <% end_loop %>
-                        <li class="search">
-                            <form class="form-inline visible-xs header-search" action="/search">
-                                <% include HeaderSearch %>
-                            </form>
-                        </li>
                     </ul>
+                    <form class="navbar-form navbar-left visible-xs" action="/search">
+                        <% include HeaderSearch %>
+                    </form>
                 </div>
             </div>
         </div>

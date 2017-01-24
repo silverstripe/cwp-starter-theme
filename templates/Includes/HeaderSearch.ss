@@ -1,6 +1,6 @@
 <div class="input-group">
-    <input name="q" type="text" class="form-control" placeholder="<%t CWP.Header.Search.Placeholder "Search..." %>">
-    <div class="input-group-addon">
+    <input name="q" aria-label="search" id="HeaderSearch_search" type="text" class="form-control" placeholder="<%t CWP.Header.Search.Placeholder "Search..." %>">
+    <div class="input-group-btn">
         <button type="submit" class="btn btn-default"><%t CWP.Header.Search.Button "Search" %></button>
     </div>
 </div>

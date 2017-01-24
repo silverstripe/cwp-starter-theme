@@ -7,7 +7,6 @@
         </div>
         <div class="row push-down">
             <div class="col-sm-6 text-left">
-                <% include ShareLinks %>
                 <% if $AtomLink %>
                     <a href="$AtomLink" title="<%t CWP.Home.Subscribe "Subscribe" %>"><%t CWP.Home.Subscribe "Subscribe" %></a>
                 <% else_if $RSSLink %>
@@ -17,7 +16,7 @@
                 <% else_if $DefaultRSSLink %>
                     <a href="$DefaultRSSLink" title="<%t CWP.Home.Subscribe "Subscribe" %>"><%t CWP.Home.Subscribe "Subscribe" %></a>
                 <% end_if %>
-                <% if PdfLink %>
+                <% if $PdfLink %>
                     <a href="$PdfLink" class="pdf" title="<%t CWP.Home.PDF "Export PDF" %>"><%t CWP.Home.PDF "Export PDF" %></a>
                 <% end_if %>
             </div>
