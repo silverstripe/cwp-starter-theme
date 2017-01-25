@@ -1,5 +1,5 @@
 <% if $FeatureOneTitle %>
-    <div class="<% if $FeatureTwoContent %>col-md-4 <% else %>col-md-8 <% end_if %> col-sm-6 col-xs-12 feature">
+    <div class="<% if $FeatureTwoContent %>col-md-4 <% else %>col-md-8 <% end_if %> feature">
         <h2>$FeatureOneTitle</h2>
         $FeatureOneContent
         <% if $FeatureOneLink && $FeatureOneButtonText %>
@@ -8,7 +8,7 @@
     </div>
 <% end_if %>
 <% if $FeatureTwoTitle %>
-    <div class="col-md-4 col-sm-6 col-xs-12 feature">
+    <div class="col-md-4 feature">
         <h2>$FeatureTwoTitle</h2>
         $FeatureTwoContent
         <% if $FeatureTwoLink && $FeatureTwoButtonText %>

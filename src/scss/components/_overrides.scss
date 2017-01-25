@@ -1,13 +1,21 @@
-.breadcrumb a {
-    color: darken($link-color, 2.2%);
-
-    &:hover,
-    &:focus {
-        color: $link-hover-color;
-    }
-}
-
-/* NewsDetail */
+// NewsDetail
 .news-details-aside {
     margin-top: 37px;
+}
+
+// Page utilities
+.page-utilities {
+    margin-top: 40px;
+}
+
+.page-utilities_last-modified {
+    font-size: $font-size-small;
+    color: $text-muted;
+    margin-top: 10px;
+
+    @media (min-width: 768px) {
+        float: right;
+        text-align: right;
+        margin-top: 0;
+    }
 }

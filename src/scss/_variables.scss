@@ -2,12 +2,14 @@ $fa-font-path: "/themes/new-theme/dist/fonts/";
 $icon-font-path: "/themes/new-theme/dist/fonts/";
 
 //** Success label background color
-$label-success-bg:  #008A00 !default;
+$label-success-bg: #008A00 !default;
 
 //** Global textual link color.
-$link-color:    #0070b7 !default;
+$link-color: #0070b7 !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:  darken($link-color, 5%) !default;
+$link-hover-color: darken($link-color, 5%) !default;
+//** Text muted color
+$text-muted: #767676 !default;
 
 // Basics of a navbar
-$navbar-border-radius:  0 !default;
+$navbar-border-radius: 0 !default;
