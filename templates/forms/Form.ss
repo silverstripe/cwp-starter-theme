@@ -1,20 +1,18 @@
-<% if $IncludeFormTag %><form $AttributesHTML><% end_if %>
+<% if $IncludeFormTag %><form {$AttributesHTML}><% end_if %>
     <% if $Message %>
-        <p id="{$FormName}_error" class="alert alert-$MessageType">$Message</p>
-    <% else %>
-        <p id="{$FormName}_error" style="display: none"></p>
+        <div id="{$FormName.ATT}_error" class="alert alert-{$MessageType.ATT}">{$Message.XML}</div>
     <% end_if %>
     <% if $Fields %>
         <div class="fields">
             <% loop $Fields %>
-                $FieldHolder
+                {$FieldHolder}
             <% end_loop %>
         </div>
     <% end_if %>
     <% if $Actions %>
         <div class="actions">
             <% loop $Actions %>
-                $Field
+                {$Field}
             <% end_loop %>
         </div>
     <% end_if %>
