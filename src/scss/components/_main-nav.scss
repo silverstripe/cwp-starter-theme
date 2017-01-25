@@ -1,36 +1,24 @@
 .main-nav {
-    &, .navbar-collapse {
-        width: 100%;
-        overflow: hidden;
+
+    .navbar {
+        min-height: 0;
+        border: 0;
+        border-bottom: 1px solid $navbar-default-border;
+
+        @media (min-width: 768px) {
+            background-color: #fff;
+        }
     }
 
-    .navbar-nav {
-        margin: 0;
-    }
+    nav {
+        .navbar-form {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
 
-    .nav__item a {
-        // padding: 20px 25px;
-        color: #333 !important;
+        ul.nav {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
-
-    .current {
-        box-shadow: inset 0px 5px 14px 1px #ddd;
-    }
-
-    .navbar-collapse {
-        padding-left: 0;
-        padding-right: 0;
-        border: none;
-    }
-
-    .navbar-default {
-        background-color: transparent;
-        border: none;
-        min-height: auto;
-        margin-bottom: 0;
-    }
-}
-
-.search {
-    padding: 10px 15px;
 }
