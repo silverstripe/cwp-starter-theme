@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10299,15 +10299,19 @@ return jQuery;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_sass_assets_javascripts_bootstrap_collapse__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_share__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_img__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_search__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_share__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_img__ = __webpack_require__(4);
 /* eslint-disable */
+
 
 
 
@@ -10315,8 +10319,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__components_share__["a" /* default */])();
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* default */])();
+
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_search__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__components_share__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__components_img__["a" /* default */])();
 
 /***/ }),
 /* 2 */
@@ -10361,6 +10367,23 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
+  /* eslint-disable */
+  if (typeof searchQuery !== 'undefined') {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('article.result').highlight(searchQuery.query, { element: 'mark', className: 'highlight' });
+  }
+  /* eslint-enable */
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+/* harmony default export */ __webpack_exports__["a"] = function () {
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.share-links .share-links-print').on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -10384,7 +10407,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 };
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -10603,7 +10626,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -10775,7 +10798,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
@@ -10937,7 +10960,165 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 9 */
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
+ * jQuery Highlight plugin
+ *
+ * Based on highlight v3 by Johann Burkard
+ * http://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html
+ *
+ * Code a little bit refactored and cleaned (in my humble opinion).
+ * Most important changes:
+ *  - has an option to highlight only entire words (wordsOnly - false by default),
+ *  - has an option to be case sensitive (caseSensitive - false by default)
+ *  - highlight element tag and class names can be specified in options
+ *
+ * Usage:
+ *   // wrap every occurrance of text 'lorem' in content
+ *   // with <span class='highlight'> (default options)
+ *   $('#content').highlight('lorem');
+ *
+ *   // search for and highlight more terms at once
+ *   // so you can save some time on traversing DOM
+ *   $('#content').highlight(['lorem', 'ipsum']);
+ *   $('#content').highlight('lorem ipsum');
+ *
+ *   // search only for entire word 'lorem'
+ *   $('#content').highlight('lorem', { wordsOnly: true });
+ *
+ *   // search only for the entire word 'C#'
+ *   // and make sure that the word boundary can also
+ *   // be a 'non-word' character, as well as a regex latin1 only boundary:
+ *   $('#content').highlight('C#', { wordsOnly: true , wordsBoundary: '[\\b\\W]' });
+ *
+ *   // don't ignore case during search of term 'lorem'
+ *   $('#content').highlight('lorem', { caseSensitive: true });
+ *
+ *   // wrap every occurrance of term 'ipsum' in content
+ *   // with <em class='important'>
+ *   $('#content').highlight('ipsum', { element: 'em', className: 'important' });
+ *
+ *   // remove default highlight
+ *   $('#content').unhighlight();
+ *
+ *   // remove custom highlight
+ *   $('#content').unhighlight({ element: 'em', className: 'important' });
+ *
+ *
+ * Copyright (c) 2009 Bartek Szopka
+ *
+ * Licensed under MIT license.
+ *
+ */
+
+(function (factory) {
+    if (true) {
+        // AMD. Register as an anonymous module.
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS
+        factory(require('jquery'));
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function (jQuery) {
+    jQuery.extend({
+        highlight: function (node, re, nodeName, className) {
+            if (node.nodeType === 3) {
+                var match = node.data.match(re);
+                if (match) {
+                    // The new highlight Element Node
+                    var highlight = document.createElement(nodeName || 'span');
+                    highlight.className = className || 'highlight';
+                    // Note that we use the captured value to find the real index
+                    // of the match. This is because we do not want to include the matching word boundaries
+                    var capturePos = node.data.indexOf( match[1] , match.index );
+
+                    // Split the node and replace the matching wordnode
+                    // with the highlighted node
+                    var wordNode = node.splitText(capturePos);
+                    wordNode.splitText(match[1].length);
+
+                    var wordClone = wordNode.cloneNode(true);                    
+                    highlight.appendChild(wordClone);
+                    wordNode.parentNode.replaceChild(highlight, wordNode);
+                    return 1; //skip added node in parent
+                }
+            } else if ((node.nodeType === 1 && node.childNodes) && // only element nodes that have children
+                    !/(script|style)/i.test(node.tagName) && // ignore script and style nodes
+                    !(node.tagName === nodeName.toUpperCase() && node.className === className)) { // skip if already highlighted
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    i += jQuery.highlight(node.childNodes[i], re, nodeName, className);
+                }
+            }
+            return 0;
+        }
+    });
+
+    jQuery.fn.unhighlight = function (options) {
+        var settings = {
+          className: 'highlight',
+          element: 'span'
+        };
+
+        jQuery.extend(settings, options);
+
+        return this.find(settings.element + '.' + settings.className).each(function () {
+            var parent = this.parentNode;
+            parent.replaceChild(this.firstChild, this);
+            parent.normalize();
+        }).end();
+    };
+
+    jQuery.fn.highlight = function (words, options) {
+        var settings = {
+          className: 'highlight',
+          element: 'span',
+          caseSensitive: false,
+          wordsOnly: false,
+          wordsBoundary: '\\b'
+        };
+
+        jQuery.extend(settings, options);
+        
+        if (typeof words === 'string') {
+          words = [words];
+        }
+        words = jQuery.grep(words, function(word, i){
+          return word != '';
+        });
+        words = jQuery.map(words, function(word, i) {
+          return word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+        });
+
+        if (words.length === 0) {
+          return this;
+        };
+
+        var flag = settings.caseSensitive ? '' : 'i';
+        // The capture parenthesis will make sure we can match
+        // only the matching word
+        var pattern = '(' + words.join('|') + ')';
+        if (settings.wordsOnly) {
+            pattern = settings.wordsBoundary + pattern + settings.wordsBoundary;
+        }
+        var re = new RegExp(pattern, flag);
+        
+        return this.each(function () {
+            jQuery.highlight(this, re, settings.element, settings.className);
+        });
+    };
+}));
+
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
