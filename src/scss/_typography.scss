@@ -1,0 +1,154 @@
+img, 
+figure {
+
+    max-width: 100%;
+    height: auto;
+
+    &.right {
+        float:right;
+        clear:right;
+        margin: 0 0 18px 18px;
+    }
+    &.left {
+        float:left;
+        clear:left;
+        margin: 0 18px 18px 0px;
+    }
+    &.leftAlone {
+        margin: 0 18px 18px 0;
+        display: block;
+        clear: both;
+    }
+    &.center{
+        margin-bottom: 18px;
+        clear: both;
+    }
+}
+.captionImage {
+    width: 100%;
+    max-width: 100%;
+
+    &.pull-left {
+        margin: 0 18px 18px 0px;
+    }
+
+    &.pull-right{
+        margin: 0 0 18px 18px;
+    }
+
+    &.leftAlone{
+        margin: 0 18px 18px 0px;
+    }
+
+    &.center-block {
+        margin-bottom: 18px;
+    }
+
+    p {
+        clear: both;
+        margin: 8px 0;
+        color: #444;
+    }
+
+    img {
+        margin: 0 0 5px 0;
+    }
+}
+
+// Table styles
+table {
+    @extend .table;
+    caption {
+        text-align: left;
+        padding: 4px 0;
+    }
+    thead, tfoot {
+        font-weight: 700;
+    }
+}
+.table-striped, .table-bordered-striped {
+    tbody tr:hover {
+        td, th {
+          background-color: $table-bg-hover;
+        }
+    }
+}
+
+// EXTERNAL LINKS
+a.external {
+    padding-right: 13px;
+    display:inline-block;
+
+    &::after {
+        content: "\f08e";
+        font-size: 12px;
+        font-family: FontAwesome;
+        position: relative;
+        top: -3px;
+    }
+}
+
+a[href$=".doc"],
+a[href$=".DOC"],
+a[href$=".docx"],
+a[href$=".DOCX"],
+.doc {
+    &::before {
+        margin-right: 5px;
+        content: "\f016";
+        font-family: FontAwesome;
+    }
+}
+a[href$=".xls"],
+a[href$=".XLS"],
+a[href$=".xlsx"],
+a[href$=".XLSX"],
+.xls {
+    &::before {
+        margin-right: 5px;
+        content: "\f1c3";
+        font-family: FontAwesome;
+    }
+}
+a[href$=".gz"],
+a[href$=".GZ"],
+a[href$=".gzip"],
+a[href$=".GZIP"],
+a[href$=".zip"],
+a[href$=".ZIP"],
+.archive {
+   &::before {
+        margin-right: 5px;
+        content: "\f1c6";
+        font-family: FontAwesome;
+    }
+}
+a[href$=".exe"],
+a[href$=".EXE"],
+.application {
+    &::before {
+        margin-right: 5px;
+        content: "\f022";
+        font-family: FontAwesome;
+    }
+}
+a[href$=".pdf"],
+a[href$=".PDF"],
+.pdf {
+    &::before {
+        margin-right: 5px;
+        content: "\f1c1";
+        font-family: FontAwesome;
+    }
+}
+
+.blockquote-footer { 
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #767676;
+
+    &::before {
+        content: '\2014 \00A0';
+    }
+}

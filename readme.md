@@ -45,3 +45,5 @@ npm run watch
 ```
 
 This is faster and more reliable than running `build` every time you make a change. If you'd like additional info about Mix, head over to [the dedicated Mix documentation](https://github.com/JeffreyWay/laravel-mix/tree/master/docs).
+
+Image and Text alignment is handled in img.js (/src/js/components/img.js). It replaces the default alignment classes that TinyMCE provides with bootstrap alignment classes such as 'pull-left', 'pull-right' and 'center-block'.
