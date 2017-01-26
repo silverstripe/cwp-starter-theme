@@ -30,6 +30,14 @@
             }
         }
     }
+
+    .language-selector {
+        margin-right: 5px;
+
+        i.fa-language {
+            margin-right: 5px;
+            }
+        }
 }
 
 .navbar-toggle {
@@ -43,8 +51,4 @@
     .icon-bar {
         background-color: #888;
     }
-}
-
-#header-language-toggle {
-    margin-right: 5px;
 }
