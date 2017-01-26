@@ -8,11 +8,12 @@
         </div>
         
         <section class="<% if $AvailableMonths || not $FilteredUpdates %>col-md-7 col-md-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
+            
             <% if $FilteredUpdates %>
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
                 <article>
-                    <p><%t CWP.FilteredUpdates.NoNews "No news" %></p>
+                    <p><%t CWP.FilteredUpdates.NoEvents "No Events" %></p>
                 </article>
             <% end_if %>
         </section>
