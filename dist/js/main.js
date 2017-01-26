@@ -10340,15 +10340,15 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img').addClass('img-responsive');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img').addClass('img-responsive');
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.right').removeClass('right').addClass('pull-right');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.right').removeClass('right').addClass('pull-right');
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.left').removeClass('left').addClass('pull-left');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.left').removeClass('left').addClass('pull-left');
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.center').removeClass('center').addClass('center-block');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.center').removeClass('center').addClass('center-block');
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img.center').removeClass('center').addClass('center-block');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img.center').removeClass('center').addClass('center-block');
 };
 
 /***/ }),
