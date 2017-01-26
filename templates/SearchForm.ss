@@ -1,14 +1,14 @@
-<form action="/search" class="form-inline">
+<form action="/search" class="inline-form page-searchform">
     <div class="input-group">
-        <label class="sr-only" for="SearchForm_SearchForm_Search"><%t CWP.Header.Search.Button "Search" %></label>
         <input id="SearchForm_SearchForm_Search"
             aria-label="<%t CWP.Header.Search.Button "Search" %>"
-            type="search"
+            type="text"
             name="Search"
-            class="form-control"
+            class="text form-control searchfield"
             value="$SearchQuery"
             placeholder="<%t CWP.Header.Search.Placeholder "Search..." %>"/>
-        <div class="input-group-addon">
+        <label class="sr-only" for="SearchForm_SearchForm_Search"><%t CWP.Header.Search.Button "Search" %></label>
+        <div class="input-group-btn">
             <button type="submit" class="btn btn-default"><%t CWP.Header.Search.Button "Search" %></button>
         </div>
     </div>
