@@ -16,18 +16,5 @@
         </aside>
     </div>
 </article>
-<div class="container page-utilities">
-    <% if $LastEdited %>
-        <p class="text-muted pull-right text-right small">Last modified: <time datetime="$LastEdited.Format(Y-m-d)">{$LastEdited.Format(jS F Y)}</time></p>
-    <% end_if %>
-    <ul class="pull-left list-inline">
-        <li>
-            <a href="#print" title='<%t TableListField.Print "Print" %>'><%t TableListField.Print "Print" %>
-            </a>
-        </li>
-        <li>
-            <a href="#export" title='<%t Cwp.Export "Export PDF" %>'><%t Cwp.Export "Export PDF" %>
-            </a>
-        </li>
-    </ul>
-</div>
+
+<% include PageUtilities %>

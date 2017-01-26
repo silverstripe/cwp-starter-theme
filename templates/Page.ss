@@ -5,6 +5,9 @@
         <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title</title>
         $MetaTags(false)
         <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
+        <% if $RSSLink %>
+        <link rel='alternate' type='application/rss+xml' title='RSS' href='$RSSLink'>
+        <% end_if %>
         <link rel="stylesheet" href="$ThemeDir/dist/css/main.css">
         <% include Favicon %>
     </head>
