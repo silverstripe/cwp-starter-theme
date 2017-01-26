@@ -68,7 +68,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.1.1
@@ -119,23 +119,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var arr = [];
 
-<<<<<<< HEAD
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-=======
 var document = window.document;
->>>>>>> Added BS3 classes for Typography
 
 var getProto = Object.getPrototypeOf;
 
-<<<<<<< HEAD
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-=======
 var slice = arr.slice;
->>>>>>> Added BS3 classes for Typography
 
 var concat = arr.concat;
 
@@ -153,13 +141,7 @@ var fnToString = hasOwn.toString;
 
 var ObjectFunctionString = fnToString.call( Object );
 
-<<<<<<< HEAD
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-=======
 var support = {};
->>>>>>> Added BS3 classes for Typography
 
 
 
@@ -369,13 +351,7 @@ jQuery.extend( {
 		return jQuery.type( obj ) === "function";
 	},
 
-<<<<<<< HEAD
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-=======
 	isArray: Array.isArray,
->>>>>>> Added BS3 classes for Typography
 
 	isWindow: function( obj ) {
 		return obj != null && obj === obj.window;
@@ -621,13 +597,7 @@ function( i, name ) {
 	class2type[ "[object " + name + "]" ] = name.toLowerCase();
 } );
 
-<<<<<<< HEAD
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-=======
 function isArrayLike( obj ) {
->>>>>>> Added BS3 classes for Typography
 
 	// Support: real iOS 8.2 only (not reproducible in simulator)
 	// `in` check used to prevent JIT error (gh-2145)
@@ -859,15 +829,9 @@ try {
 	};
 }
 
-<<<<<<< HEAD
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-=======
 function Sizzle( selector, context, results, seed ) {
 	var m, i, elem, nid, match, groups, newSelector,
 		newContext = context && context.ownerDocument,
->>>>>>> Added BS3 classes for Typography
 
 		// nodeType defaults to 9, since context defaults to document
 		nodeType = context ? context.nodeType : 9;
@@ -10376,15 +10340,15 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
 
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img').addClass('img-responsive');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img').addClass('img-responsive');
 
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.right').removeClass('right').addClass('pull-right');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.right').removeClass('right').addClass('pull-right');
 
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.left').removeClass('left').addClass('pull-left');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.left').removeClass('left').addClass('pull-left');
 
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.center').removeClass('center').addClass('center-block');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.center').removeClass('center').addClass('center-block');
 
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img.center').removeClass('center').addClass('center-block');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img.center').removeClass('center').addClass('center-block');
 };
 
 /***/ }),
@@ -10918,19 +10882,11 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__components_img__["a" /* defau
       callback && callback()
     }
 
-<<<<<<< HEAD
-if ( true ) {
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
-		return jQuery;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-}
-=======
     $active.length && transition ?
       $active
         .one('bsTransitionEnd', next)
         .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
       next()
->>>>>>> Added BS3 classes for Typography
 
     $active.removeClass('in')
   }
@@ -10980,20 +10936,14 @@ if ( true ) {
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
-<<<<<<< HEAD
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-=======
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
->>>>>>> Added BS3 classes for Typography
 
 __webpack_require__(1);
 __webpack_require__(2);
 module.exports = __webpack_require__(3);
 
 
-/***/ }
+/***/ })
 /******/ ]);
