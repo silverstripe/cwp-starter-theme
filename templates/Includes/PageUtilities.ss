@@ -4,7 +4,7 @@
     <% end_if %>
     <ul class="pull-left list-inline">
         <li>
-            <a href="#print"><%t TableListField.Print "Print" %></a>
+            <a href="#" onclick="window.print(); return false;"><%t TableListField.Print "Print" %></a>
         </li>
     <% if $PdfLink %>
         <li>
