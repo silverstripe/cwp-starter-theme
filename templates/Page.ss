@@ -12,7 +12,6 @@
         <% include Favicon %>
     </head>
     <body class="$ClassName">
-        <% include SkipLinks %>
         <header>
             <% include Header %>
             <% include MainNav %>

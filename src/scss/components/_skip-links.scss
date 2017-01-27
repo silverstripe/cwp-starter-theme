@@ -1,14 +1,22 @@
 .skip-links {
-    position: relative;
-    
     a {
+        height: 1px;
+    	padding: 5px 10px;
         position: absolute;
-        top: 1em;
         left: -100%;
+        overflow: hidden;
+        top: -100%;
+        width: 1px;
 
         &:focus, &:active {
-            right: auto;
-            left: 1em;
+        	display: inline-block;
+            height: auto;
+            left: 0;
+            margin-bottom: 20px;
+            overflow: visible;
+            position: static;
+            top: 0;
+            width: auto;
         }
     }
 }
