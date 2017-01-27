@@ -37,7 +37,9 @@
                             <% end_with %>
                         </div>
                     <% end_if %>
-
+                    <script type="text/javascript">
+                        var searchQuery = {query: "$SearchQuery"};
+                    </script>
                 <% else %>
                     <div class="page-summary">
                         $SiteConfig.EmptySearch
