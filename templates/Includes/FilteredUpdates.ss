@@ -6,21 +6,38 @@
                 $FeaturedImage.SetHeight(150)
             </figure>
         <% end_if %>
-
+       
         <header>
             <h3><a title="$Title" href="$Link">$Title</a></h3>
         </header>
         
-        <% if $Date || $Author %>
-            <p class="metaInfo help-block">
-                <% if $Date %>
-                    <time datetime="$Date">$Date.nice <% if $StartTime %>$StartTime.Nice <% end_if %>
-                    </time>
-                <% end_if %>
-                <% if $Author %>by {$Author}<% end_if %>
-            </p>
+        <% if $Up.ControllerName == "EventHolder" %>
+
+            <% if $Date %>
+                <p class="metaInfo help-block">
+                    <% if $Location %>
+                        $NiceLocation, 
+                    <% end_if %>
+                    <% if $Date %>
+                        <time datetime="$Date">$Date.Format(Y/m/d) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
+                    <% end_if %>
+                </p>
+            <% end_if %>
+
+        <% else_if $Up.ControllerName == "NewsHolder" %> 
+
+            <% if $Date || $Author %>
+                <p class="metaInfo help-block">
+                    <% if $Date %>
+                        <time datetime="$Date">$Date.nice <% if $StartTime %>$StartTime.Nice <% end_if %>
+                        </time>
+                    <% end_if %>
+                    <% if $Author %>by {$Author}<% end_if %>
+                </p>
+            <% end_if %>
+
         <% end_if %>
-        
+
         <p>
             <% if $Abstract %>
                 $Abstract

@@ -1,6 +1,6 @@
-<div class="news_date-range">    
+<div class="news-events_date-range">    
     <% with DateRangeForm %>
-        <h3 class="h4"><%t CWP.NewsHolder.DateRange "Filter by date" %></h3>
+        <h3 class="h4"><%t CWP.DateRange.FilterDate "Filter by date" %></h3>
         <form $FormAttributes>
             <% if $ErrorMessage %>
                 <div id="{$FormName}_error" class="message $ErrorMessageType">$ErrorMessage</div>
@@ -12,14 +12,14 @@
                 <div id="from" class="field date text form-group">
                     <label class="left" for="{$FormName}_from">
                         <%t CWP.DateRange.FilterFrom "From date" %> 
-                        <span class="field-note">(example: 31/12/17)</span>
+                        <span class="field-note">(example: 2017/12/30)</span>
                     </label>
                     $Fields.dataFieldByName(from)
                 </div>
                 <div id="to" class="field date text form-group">
                     <label class="left" for="{$FormName}_to">
                         <%t CWP.DateRange.FilterTo "To date" %> 
-                        <span class="field-note">(example: 31/12/17)</span>
+                        <span class="field-note">(example: 2017/12/30)</span>
                     </label>
                     $Fields.dataFieldByName(to)
                 </div>
