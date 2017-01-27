@@ -1,4 +1,5 @@
 <div class="container site-header">
+	<% include SkipLinks %>
     <div class="site-header-brand">
         <a title="<%t CWP.Header.Title "Go to home page" %>" class="site-header-brand-link-default" href="$BaseHref">
             <% if $SiteConfig.Logo %>
