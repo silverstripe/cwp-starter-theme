@@ -19,3 +19,8 @@
         margin-top: 0;
     }
 }
+
+.dropdown-toggle:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
