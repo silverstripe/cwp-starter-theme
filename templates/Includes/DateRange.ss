@@ -26,10 +26,13 @@
                 $Fields.dataFieldByName(tag)
                 $Fields.dataFieldByName(SecurityID)
             </fieldset>
-
-            <% if $Actions %>
-                <% loop $Actions %>$Field<% end_loop %>
-            <% end_if %>
+            
+            <div class="btn-toolbar">
+                <% if $Actions %>
+                    <% loop $Actions %>$Field<% end_loop %>
+                <% end_if %>
+            </div>
+            
         </form>
     <% end_with %>
 </div>
