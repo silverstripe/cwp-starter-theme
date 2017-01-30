@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
+                    <ul class="nav navbar-nav">
                         <% loop Menu(1) %>
                             <li class="nav__item $FirstLast $LinkingMode<% if $LinkingMode = current %> active<% end_if %><% if $Children %> dropdown <% end_if %>">
                                 <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="$LinkingMode<% if $Children %> dropdown-toggle" data-toggle="dropdown<% end_if %>">
@@ -21,7 +21,7 @@
                             </li>
                         <% end_loop %>
                     </ul>
-                    <form class="navbar-form navbar-left visible-xs" action="/search">
+                    <form class="navbar-form visible-xs" action="/search">
                         <% include HeaderSearch %>
                     </form>
                 </div>
