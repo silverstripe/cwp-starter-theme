@@ -8,36 +8,32 @@
         </li>
     <% if $PdfLink %>
         <li>
-            <a href="$PdfLink" class="pdf"><%t CWP.Home.PDF "Export PDF" %></a>
+            <a href="$PdfLink"><%t CWP.Home.PDF "Export PDF" %></a>
         </li>
     <% end_if %>
 
         <% if $ClassName == HomePage %>
             <% if $AtomLink %>
                 <li>
-                    <a href="$AtomLink">
-                        <i class="fa fa-rss" aria-hidden="true"></i>
+                    <a href="$AtomLink" class="fa fa-rss">
                         <span class="sr-only"><%t CWP.Home.Subscribe "Subscribe" %></span>
                     </a>
                 </li>
             <% else_if $RSSLink %>
                 <li>
-                    <a href="$RSSLink">
-                        <i class="fa fa-rss" aria-hidden="true"></i>
+                    <a href="$RSSLink" class="fa fa-rss">
                         <span class="sr-only"><%t CWP.Home.Subscribe "Subscribe" %></span>
                     </a>
                 </li>
             <% else_if $DefaultAtomLink %>
                 <li>
-                    <a href="$DefaultAtomLink">
-                        <i class="fa fa-rss" aria-hidden="true"></i>
+                    <a href="$DefaultAtomLink" class="fa fa-rss">
                         <span class="sr-only"><%t CWP.Home.Subscribe "Subscribe" %></span>
                     </a>
                 </li>
             <% else_if $DefaultRSSLink %>
                 <li>
-                    <a href="$DefaultRSSLink">
-                        <i class="fa fa-rss" aria-hidden="true"></i>
+                    <a href="$DefaultRSSLink" class="fa fa-rss">
                         <span class="sr-only"><%t CWP.Home.Subscribe "Subscribe" %></span>
                     </a>
                 </li>
