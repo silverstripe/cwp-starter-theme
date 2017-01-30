@@ -1,3 +1,3 @@
 <input {$AttributesHTML}
-    aria-describedby="<% if $Message %>{$ID}-message<% end_if %> <% if $Description %>{$ID}-description<% end_if %>"
+    <% if $Message || $Description %>aria-describedby="<% if $Message %>{$ID}-message<% end_if %> <% if $Description %>{$ID}-description<% end_if %>"<% end_if %>
     />

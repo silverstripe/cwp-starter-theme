@@ -1,5 +1,5 @@
 <select {$AttributesHTML}
-    aria-describedby="<% if $Message %>{$ID}-message<% end_if %> <% if $Description %>{$ID}-description<% end_if %>"
+    <% if $Message || $Description %>aria-describedby="<% if $Message %>{$ID}-message<% end_if %> <% if $Description %>{$ID}-description<% end_if %>"<% end_if %>
     >
     <% loop $Options %>
         <option value="{$Value.ATT}" <% if $Selected %>selected="selected"<% end_if %> <% if $Disabled %>disabled="disabled"<% end_if %>>
