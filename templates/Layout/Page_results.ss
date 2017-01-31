@@ -39,7 +39,9 @@
                                 <% end_loop %>
                             </div>
                             <% with $Results %>
-                                <% include Pagination %>
+                                <div class="col-sm-12">
+                                    <% include Pagination %>
+                                </div>
                             <% end_with %>
                         </div>
                     <% end_if %>
