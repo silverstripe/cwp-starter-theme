@@ -1,0 +1,7 @@
+.search-results {
+  &__no-result, &__empty-search {
+    .bg-warning {
+      padding: 15px;
+    }
+  }
+}

@@ -9,16 +9,22 @@
                 <% if $SearchQuery %>
                     <div class="page-summary">
                         <p class="lead pull-left"><%t CWP.Search.ShowingResultsFor "Showing results for" %>
-                            "$SearchQuery"</p>
+                            "$SearchQuery.XML"</p>
                         <% if $Results %>
-                            <p class="text-muted pull-right text-right"><%t CWP.Search.DisplayingPageTotal "Displaying page" %> $Limit
+                            <p class="text-muted pull-right text-right"><%t CWP.Search.DisplayingResultsTotal "Displaying results" %> $Limit
                                 of $Total</p>
                         <% else %>
-                            $SiteConfig.NoSearchResults
+                            <div class="row search-results__no-result">
+                                <div class="col-sm-12">
+                                <p class="bg-warning">
+                                    $SiteConfig.NoSearchResults
+                                </p>
+                                </div>
+                            </div>
                         <% end_if %>
                     </div>
 
-                    <% if $Results %>
+                    <% if $Total > 0 %>
                         <div class="row">
                             <div class="results col-sm-12">
                                 <% loop $Results %>
@@ -41,8 +47,12 @@
                         var searchQuery = {query: "$SearchQuery"};
                     </script>
                 <% else %>
-                    <div class="page-summary">
-                        $SiteConfig.EmptySearch
+                    <div class="row search-results__empty-search">
+                        <div class="col-sm-12">
+                            <p class="bg-warning">
+                                $SiteConfig.EmptySearch
+                            </p>
+                        </div>
                     </div>
                 <% end_if %>
             </div>
