@@ -11,14 +11,15 @@
                         <p class="lead pull-left"><%t CWP.Search.ShowingResultsFor "Showing results for" %>
                             "$SearchQuery.XML"</p>
                         <% if $Results %>
-                            <p class="text-muted pull-right text-right"><%t CWP.Search.DisplayingResultsTotal "Displaying results" %> $Limit
-                                of $Total</p>
+                            <p class="text-muted pull-right text-right">
+                                <%t CWP.Search.Pages "Displaying Page {CurrentPage} of {TotalPages}" CurrentPage=$Results.CurrentPage TotalPages=$Results.TotalPages %>
+                            </p>
                         <% else %>
                             <div class="row search-results__no-result">
                                 <div class="col-sm-12">
-                                <p class="bg-warning">
-                                    $SiteConfig.NoSearchResults
-                                </p>
+                                    <p class="bg-warning">
+                                        $SiteConfig.NoSearchResults
+                                    </p>
                                 </div>
                             </div>
                         <% end_if %>
