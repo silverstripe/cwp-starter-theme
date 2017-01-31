@@ -1,4 +1,5 @@
 ## Creating A CWP Site
+
 We've designed the new theme to be easy to install, use, and modify. It's our hope that the starting point, for all theme development, becomes this new theme. It's built using modern standards, to be accessible, and with high-quality code.
 
 Let's begin, by creating a new `cwp-installer` application:
@@ -32,6 +33,7 @@ The last step, to a new CWP site, is to create an `_ss_environment.php` file. Th
 The example configuration file even shows how to point SilverStripe to a custom MySQL socket path. If you're looking for how to define other settings, check out the [official SilverStripe documentation](https://docs.silverstripe.org/en/3/getting_started/environment_management).
 
 ## Installing The New Theme
+
 The new theme is just a Composer library - it can be installed the same as any other SilverStripe theme:
 
 ![Installing the new theme](images/installing-the-new-theme.gif)
