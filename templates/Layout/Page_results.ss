@@ -17,9 +17,9 @@
                         <% else %>
                             <div class="row search-results__no-result">
                                 <div class="col-sm-12">
-                                    <p class="bg-warning">
+                                    <div class="bg-warning" role="alert">
                                         $SiteConfig.NoSearchResults
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         <% end_if %>
@@ -52,9 +52,9 @@
                 <% else %>
                     <div class="row search-results__empty-search">
                         <div class="col-sm-12">
-                            <p class="bg-warning">
+                            <div class="bg-warning" role="alert">
                                 $SiteConfig.EmptySearch
-                            </p>
+                            </div>
                         </div>
                     </div>
                 <% end_if %>
