@@ -10349,10 +10349,10 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__components_img__["a" /* defau
 
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
-  // Maori language class to add lang type
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.maori').attr('lang', 'mi');
+    // Maori language class to add lang type
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.maori').attr('lang', 'mi');
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nonvisual-indicator').addClass('sr-only').removeClass('nonvisual-indicator');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nonvisual-indicator').addClass('sr-only').removeClass('nonvisual-indicator');
 };
 
 /***/ }),
