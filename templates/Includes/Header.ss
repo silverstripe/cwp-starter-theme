@@ -1,14 +1,15 @@
 <div class="container site-header">
-	<% include SkipLinks %>
+    <% include SkipLinks %>
     <div class="site-header-brand">
-        <a title="<%t CWP.Header.Title "Go to home page" %>" class="site-header-brand-link-default" href="$BaseHref">
+        <a title="<%t CWP.Header.Title "Go to Home Page" %>" class="site-header-brand-link-default" href="$BaseHref">
             <% if $SiteConfig.Logo %>
                 <img
                     src="$SiteConfig.Logo.URL" width="$SiteConfig.Logo.Width" height="$SiteConfig.Logo.Height"
-                    alt="<%t CWP.Header.Logo "My Department Logo" %>"
+                    alt="$SiteConfig.Title"
                     aria-hidden="true" />
+            <% else %>
+                <span>$SiteConfig.Title</span>
             <% end_if %>
-            <span>$SiteConfig.Title</span>
         </a>
     </div>
     <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
