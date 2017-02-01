@@ -6,8 +6,10 @@ $label-success-bg: #008A00 !default;
 
 //** Global textual link color.
 $link-color: #0070b7 !default;
+
 //** Link hover color set via `darken()` function.
 $link-hover-color: darken($link-color, 5%) !default;
+
 //** Text muted color
 $text-muted: #767676 !default;
 
@@ -18,4 +20,4 @@ $navbar-border-radius: 0 !default;
 $navbar-default-link-color: #767676 !default;
 
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       #707070 !default;
+$breadcrumb-active-color: #707070 !default;
