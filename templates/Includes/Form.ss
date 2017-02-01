@@ -1,4 +1,4 @@
-<% if $IncludeFormTag %><form {$AttributesHTML}><% end_if %>
+<% if $IncludeFormTag %><form {$AttributesHTML} novalidate><% end_if %>
     <% if $Message %>
         <div id="{$FormName.ATT}_error" class="alert alert-{$MessageType.ATT}">{$Message.XML}</div>
     <% end_if %>
