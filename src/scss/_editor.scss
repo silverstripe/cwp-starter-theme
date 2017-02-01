@@ -1,11 +1,38 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_media";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_utilities";
+@import "_typography";
+
 body.mceContentBody a.ss-broken { background-color: red; border: 1px red solid; color: #fff; padding: 1px; text-decoration: underline; }
 
 /*# sourceMappingURL=editor.css.map */
 
-.blockquote-footer { 
-    background-color: #eee;
+.blockquote-footer {
+   background-color: #eee;
 }
 
 .maori {
-    background-color: #fae5e8 !important;
+   background-color: #fae5e8 !important;
+}
+
+.text-hide {
+   font: 14px/20px sans-serif;
+   color: rgba(0,0,0,1);
+   outline: 1px dotted #767676 ;
+}
+
+.center {
+	@extend .center-block;
+}
+
+.left {
+	@extend .pull-left;
+}
+
+.right {
+	@extend .pull-right;
 }

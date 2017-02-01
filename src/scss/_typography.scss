@@ -1,91 +1,110 @@
-img, 
-figure {
-
-    max-width: 100%;
-    height: auto;
-
-    &.right {
-        float:right;
-        clear:right;
-        margin: 0 0 18px 18px;
-    }
-    &.left {
-        float:left;
-        clear:left;
-        margin: 0 18px 18px 0px;
-    }
-    &.leftAlone {
-        margin: 0 18px 18px 0;
-        display: block;
-        clear: both;
-    }
-    &.center{
-        margin-bottom: 18px;
-        clear: both;
-    }
+.typography {
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
 }
+
+p {
+	margin-bottom: $line-height-computed / 2;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
+img,
+figure {
+	max-width: 100%;
+	height: auto;
+
+	&.right {
+		float: right;
+		clear: right;
+		margin: 0 0 18px 18px;
+	}
+
+	&.left {
+		float: left;
+		clear: left;
+		margin: 0 18px 18px 0px;
+	}
+
+	&.leftAlone {
+		margin: 0 18px 18px 0;
+		display: block;
+		clear: both;
+	}
+
+	&.center{
+		margin-bottom: 18px;
+		clear: both;
+	}
+}
+
 .captionImage {
-    width: 100%;
-    max-width: 100%;
+	width: 100%;
+	max-width: 100%;
 
-    &.pull-left {
-        margin: 0 18px 18px 0px;
-    }
+	&.pull-left {
+		margin: 0 18px 18px 0px;
+	}
 
-    &.pull-right{
-        margin: 0 0 18px 18px;
-    }
+	&.pull-right {
+		margin: 0 0 18px 18px;
+	}
 
-    &.leftAlone{
-        margin: 0 18px 18px 0px;
-    }
+	&.leftAlone{
+		margin: 0 18px 18px 0px;
+	}
 
-    &.center-block {
-        margin-bottom: 18px;
-    }
+	&.center-block {
+		margin-bottom: 18px;
+	}
 
-    p {
-        clear: both;
-        margin: 8px 0;
-        color: #444;
-    }
+	p {
+		clear: both;
+		margin: 8px 0;
+		color: #444;
+	}
 
-    img {
-        margin: 0 0 5px 0;
-    }
+	img {
+		margin: 0 0 5px 0;
+	}
 }
 
 // Table styles
 table {
-    @extend .table;
-    caption {
-        text-align: left;
-        padding: 4px 0;
-    }
-    thead, tfoot {
-        font-weight: 700;
-    }
+	font-family: $font-family-sans-serif;
+	@extend .table;
+	caption {
+		text-align: left;
+		padding: 4px 0;
+	}
+	thead, tfoot {
+		font-weight: 700;
+	}
 }
+
 .table-striped, .table-bordered-striped {
-    tbody tr:hover {
-        td, th {
-          background-color: $table-bg-hover;
-        }
-    }
+	tbody tr:hover {
+		td, th {
+			background-color: $table-bg-hover;
+		}
+	}
 }
 
 // EXTERNAL LINKS
+a[href^="http://"],
+a[href^="https"],
 a.external {
 
-    display:inline-block;
+   display:inline-block;
 
-    &::after {
-        content: "\f08e";
-        font-size: 12px;
-        font-family: FontAwesome;
-        position: relative;
-        top: -3px;
-    }
+	&::after {
+		content: "\f08e";
+		font-size: 12px;
+		font-family: FontAwesome;
+		position: relative;
+		top: -3px;
+	}
 }
 
 a[href$=".doc"],
@@ -93,23 +112,25 @@ a[href$=".DOC"],
 a[href$=".docx"],
 a[href$=".DOCX"],
 .doc {
-    &::before {
-        margin-right: 5px;
-        content: "\f016";
-        font-family: FontAwesome;
-    }
+	&::before {
+		margin-right: 5px;
+		content: "\f016";
+		font-family: FontAwesome;
+	}
 }
+
 a[href$=".xls"],
 a[href$=".XLS"],
 a[href$=".xlsx"],
 a[href$=".XLSX"],
 .xls {
-    &::before {
-        margin-right: 5px;
-        content: "\f1c3";
-        font-family: FontAwesome;
-    }
+	&::before {
+		margin-right: 5px;
+		content: "\f1c3";
+		font-family: FontAwesome;
+	}
 }
+
 a[href$=".gz"],
 a[href$=".GZ"],
 a[href$=".gzip"],
@@ -117,42 +138,51 @@ a[href$=".GZIP"],
 a[href$=".zip"],
 a[href$=".ZIP"],
 .archive {
-   &::before {
-        margin-right: 5px;
-        content: "\f1c6";
-        font-family: FontAwesome;
-    }
+	&::before {
+		margin-right: 5px;
+		content: "\f1c6";
+		font-family: FontAwesome;
+	}
 }
+
 a[href$=".exe"],
 a[href$=".EXE"],
 .application {
-    &::before {
-        margin-right: 5px;
-        content: "\f022";
-        font-family: FontAwesome;
-    }
+	&::before {
+		margin-right: 5px;
+		content: "\f022";
+		font-family: FontAwesome;
+	}
 }
+
 a[href$=".pdf"],
 a[href$=".PDF"],
 .pdf {
-    &::before {
-        margin-right: 5px;
-        content: "\f1c1";
-        font-family: FontAwesome;
-    }
+	&::before {
+		margin-right: 5px;
+		content: "\f1c1";
+		font-family: FontAwesome;
+	}
 }
 
-.blockquote-footer { 
-    display: block;
-    font-size: 80%;
-    line-height: 1.42857143;
-    color: #767676;
+.blockquote-footer {
+	display: block;
+	font-size: 80%;
+	line-height: 1.42857143;
+	color: #767676;
 
-    &::before {
-        content: '\2014 \00A0';
-    }
+	&::before {
+		content: '\2014 \00A0';
+	}
 }
 
-.maori {
-    background-color: #fae5e8 !important;
+pre {
+	padding: 9.5px;
+	margin: 0 0 10px;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	white-space: pre-wrap;
 }
