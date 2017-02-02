@@ -7,9 +7,11 @@ import highlight from 'jquery-highlight/jquery.highlight';
 import content from './components/content';
 import search from './components/search';
 import share from './components/share';
+import form from './components/form';
 import img from './components/img';
 
 content();
 search();
 share();
+form();
 img();
