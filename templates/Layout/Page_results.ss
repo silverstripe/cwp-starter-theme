@@ -17,7 +17,7 @@
                         <% else %>
                             <div class="row search-results__no-result">
                                 <div class="col-sm-12">
-                                    <div class="bg-warning" role="alert">
+                                    <div class="alert alert-warning" role="alert">
                                         $SiteConfig.NoSearchResults
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                 <% else %>
                     <div class="row search-results__empty-search">
                         <div class="col-sm-12">
-                            <div class="bg-warning" role="alert">
+                            <div class="alert alert-warning" role="alert">
                                 $SiteConfig.EmptySearch
                             </div>
                         </div>
