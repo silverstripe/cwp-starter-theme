@@ -7,7 +7,7 @@
         <ul class="nav nav-pills">
             <% loop $Months %>
                 <li <% if $Active %> class="active"<% end_if %> >
-                    <a title="$MonthName" href="$MonthLink.XML">$MonthName</a>
+                    <a title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML">$MonthName</a>
                 </li>
             <% end_loop %>
         </ul>   
