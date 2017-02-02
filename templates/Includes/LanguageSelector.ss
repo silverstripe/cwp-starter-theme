@@ -13,7 +13,7 @@
         <ul class="dropdown-menu dropdown-menu-right">
             <% loop $AvailableTranslations %>
                 <li <% if $Current %> class="active"<% end_if %>>
-                    <a href="$Link" lang="$LangName" hreflang="$LangName">
+                    <a href="$Link" lang="en-NZ">
                         $LangName
                     </a>
                 </li>
