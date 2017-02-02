@@ -1,4 +1,4 @@
-<div class="news_tags">
+<div class="news-events_tags">
     <h3 class="h4"><%t CWP.Events_News.FilterTag "Filter by tag" %></h3>
     <nav role="navigation">
         <p>

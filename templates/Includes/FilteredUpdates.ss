@@ -2,13 +2,13 @@
     <article class="clearfix">
         
         <% if $FeaturedImage %>
-            <figure class="pull-right news_item-figure">
+            <figure class="pull-right news-events_item-figure">
                 $FeaturedImage.SetHeight(150)
             </figure>
         <% end_if %>
        
         <header>
-            <h3><a title="$Title" href="$Link">$Title</a></h3>
+            <h2 class="h3"><a title="$Title" href="$Link">$Title</a></h2>
         </header>
         
         <% if $Up.ControllerName == "EventHolder" %>

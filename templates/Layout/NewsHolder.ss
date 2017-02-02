@@ -1,4 +1,4 @@
-<div class="container news_holder">
+<div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="page-header">
@@ -18,6 +18,7 @@
         </section>
         
         <aside class="col-md-3">
+            <h2 class="sr-only">Filters</h2>
             <% if $UpdateTagsWithLinks %>
                 <% include UpdateTags %>
             <% end_if %>

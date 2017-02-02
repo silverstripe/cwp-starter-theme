@@ -1,10 +1,9 @@
 <div class="news-events_archive">
     
     <h3 class="h4"><%t CWP.AvailableMonths.Title "Archive" %></h3>
-    <h3 class="h4 sr-only"><%t CWP.AvailableMonths.Title "Archive" %>:</h3>
 
     <% loop $Availablemonths %>
-        <h5 class="pull-left"> {$YearName}: </h5>
+        <h4 class="h5 pull-left news-events_archive-year"> {$YearName}: </h4>
         <ul class="nav nav-pills">
             <% loop $Months %>
                 <li <% if $Active %> class="active"<% end_if %> >
