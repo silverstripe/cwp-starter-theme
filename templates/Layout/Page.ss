@@ -14,6 +14,7 @@
             <% include RelatedPages %>
             $CommentsForm
         </section>
+
         <aside class="col-md-3">
             <% include SidebarNav %>
         </aside>
