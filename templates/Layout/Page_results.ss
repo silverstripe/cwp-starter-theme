@@ -1,13 +1,13 @@
 <div class="content search-results">
     <div class="container">
-        <section class="col-sm-10 col-md-offset-1">
-            <div class="row">
+        <div class="row">
+            <section class="col-md-10 col-md-offset-1">
                 <div class="page-header">
                     <h1>$Title</h1>
                 </div>
                 $SearchForm
                 <% if $SearchQuery %>
-                    <div class="page-summary">
+                    <div class="page-summary clearfix">
                         <p class="lead pull-left"><%t CWP.Search.ShowingResultsFor "Showing results for" %>
                             "$SearchQuery.XML"</p>
                         <% if $Results %>
@@ -26,25 +26,21 @@
                     </div>
 
                     <% if $Total > 0 %>
-                        <div class="row">
-                            <div class="results col-sm-12">
-                                <% loop $Results %>
-                                    <article class="result">
-                                        <header>
-                                            <h1 class="h3">
-                                                <a href="$Link" title="$Title">$Title</a>
-                                            </h1>
-                                        </header>
-                                        $Content.Summary
-                                    </article>
-                                <% end_loop %>
-                            </div>
-                            <% with $Results %>
-                                <div class="col-sm-12">
-                                    <% include Pagination %>
-                                </div>
-                            <% end_with %>
+                        <div class="results">
+                            <% loop $Results %>
+                                <article class="result">
+                                    <header>
+                                        <h1 class="h3">
+                                            <a href="$Link" title="$Title">$Title</a>
+                                        </h1>
+                                    </header>
+                                    $Content.Summary
+                                </article>
+                            <% end_loop %>
                         </div>
+                        <% with $Results %>
+                            <% include Pagination %>
+                        <% end_with %>
                     <% end_if %>
                     <script type="text/javascript">
                         var searchQuery = {query: "$SearchQuery"};
@@ -58,8 +54,8 @@
                         </div>
                     </div>
                 <% end_if %>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
     <% include PageUtilities %>
 </div>
