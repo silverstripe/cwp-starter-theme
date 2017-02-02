@@ -8,17 +8,15 @@
         </section>
     </div>
     <div class="row">
-        <section class="<% if Menu(2) %>col-md-7 col-md-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
+        <section class="<% if Menu(2) && $Children %>col-md-7 col-md-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
             $Content.RichLinks
             $Form
             <% include RelatedPages %>
             $CommentsForm
         </section>
-        <% if Menu(2) %>
-            <aside class="col-md-3">
-                <% include SidebarNav %>
-            </aside>
-        <% end_if %>
+        <aside class="col-md-3">
+            <% include SidebarNav %>
+        </aside>
     </div>
 </div>
 <% include PageUtilities %>
