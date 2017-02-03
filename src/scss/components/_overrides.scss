@@ -20,7 +20,8 @@
     }
 }
 
-.dropdown-toggle:focus {
+.dropdown-toggle:focus,
+.dropdown-touch__item:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
 }
