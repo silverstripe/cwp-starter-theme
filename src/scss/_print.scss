@@ -10,19 +10,19 @@
 
     .news-events_date-range,
     .news-events_archive,
-    .news_holder article h3 a:after,
-    .news_tags .label:after,
+    article h2 a:after,
+    .news-events_tags .label:after,
     .related-pages__link:after,
 
     .search-results form,
-    .search-results article h1 a:after,
-    .pagination a:after {
+    .search-results article h1 a:after {
         display: none;
     }
 
     .header-search,
     #ui-datepicker-div,
     .treedropdownfield-panel,
+    .pagination,
     footer {
         display: none !important;
     }
