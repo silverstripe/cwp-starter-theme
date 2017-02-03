@@ -10408,113 +10408,112 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
 
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
+  var Dropdown = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .dropdown');
 
-    var Dropdown = __WEBPACK_IMPORTED_MODULE_0_jquery___default()("nav .dropdown");
+  function toggleMenu(elem) {
+    var $this = elem;
 
-    Dropdown.hover(function () {
-        toggleMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
-    }).focusin(function () {
-        var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this),
-            $url = null,
-            $key = null,
-            $dropdownToggle = null;
-
-        $this.keydown(function (event) {
-            $key = event.keyCode;
-
-            switch ($key) {
-                case 13:
-                    // [Enter] key
-                    $dropdownToggle = $this.find("a.dropdown-toggle");
-                    if ($dropdownToggle.is(":focus")) {
-                        $url = $dropdownToggle.attr('href');
-                        window.location = $url;
-                        closeMenu($this);
-                    }
-                    $this.unbind("keydown");
-                    break;
-                case 32:
-                case 40:
-                    // Space bar
-                    // arrow Keydown
-                    openMenu($this);
-                    $this.unbind("keydown");
-                    break;
-                default:
-                    $this.unbind("keydown");
-                    break;
-            }
-        });
+    $this.toggleClass('open');
+    $this.find('.dropdown-toggle').attr('aria-expanded', function (i, val) {
+      return val !== 'true';
     });
+  }
 
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("nav .nav__item").focusin(function () {
-        var $key = null,
-            $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this),
-            $next = $this.next().find("a"),
-            $prev = $this.prev().find("a");
+  function openMenu(elem) {
+    var $this = elem;
 
-        // Navigate with [<][>] arrow keyboard keys
-        $this.keydown(function (event) {
-            $key = event.keyCode;
+    $this.addClass('open');
+    $this.find('.dropdown-toggle').attr('aria-expanded', true);
+  }
 
-            switch ($key) {
-                case 39:
-                    // forward [>]
-                    if ($next.length) {
-                        $next.focus();
-                        closeMenu();
-                        $this.unbind("keydown");
-                    }
-                    break;
-                case 37:
-                    // backward [<]
-                    if ($prev.length) {
-                        $prev.focus();
-                        closeMenu();
-                        $this.unbind("keydown");
-                    }
-                    break;
-                default:
-                    $this.unbind("keydown");
-                    break;
-            }
-        });
+  function closeMenu() {
+    // Close dropdown, by default Bootstrap leaves it open
+    Dropdown.removeClass('open').find('.dropdown-toggle').attr('aria-expanded', false);
+  }
+
+  Dropdown.hover(function () {
+    toggleMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
+  }).focusin(function () {
+    var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
+    var $url = null;
+    var $key = null;
+    var $dropdownToggle = null;
+
+    $this.keydown(function (event) {
+      $key = event.keyCode;
+
+      switch ($key) {
+        case 13:
+          // [Enter] key
+          $dropdownToggle = $this.find('a.dropdown-toggle');
+          if ($dropdownToggle.is(':focus')) {
+            $url = $dropdownToggle.attr('href');
+            window.location = $url;
+            closeMenu($this);
+          }
+          $this.unbind('keydown');
+          break;
+        case 32:
+        case 40:
+          // Space bar
+          // arrow Keydown
+          openMenu($this);
+          $this.unbind('keydown');
+          break;
+        default:
+          $this.unbind('keydown');
+          break;
+      }
     });
+  });
 
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".dropdown-touch__item").on("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .nav__item').focusin(function () {
+    var $key = null;
+    var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
+    var $next = $this.next().find('a');
+    var $prev = $this.prev().find('a');
 
-        var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this),
-            $dropdown = $this.closest(".dropdown"),
-            $dropdownToggle = $dropdown.find('.dropdown-toggle');
+    // Navigate with [<][>] arrow keyboard keys
+    $this.keydown(function (event) {
+      $key = event.keyCode;
 
-        $dropdown.toggleClass('open');
-        $dropdownToggle.attr('aria-expanded', function (i, val) {
-            return val !== "true";
-        });
+      switch ($key) {
+        case 39:
+          // forward [>]
+          if ($next.length) {
+            $next.focus();
+            closeMenu();
+            $this.unbind('keydown');
+          }
+          break;
+        case 37:
+          // backward [<]
+          if ($prev.length) {
+            $prev.focus();
+            closeMenu();
+            $this.unbind('keydown');
+          }
+          break;
+        default:
+          $this.unbind('keydown');
+          break;
+      }
     });
+  });
 
-    function toggleMenu(elem) {
-        var $this = elem;
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.dropdown-touch__item').on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
 
-        $this.toggleClass('open');
-        $this.find('.dropdown-toggle').attr('aria-expanded', function (i, val) {
-            return val !== "true";
-        });
-    }
+    var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
+    var $dropdown = $this.closest('.dropdown');
+    var $dropdownToggle = $dropdown.find('.dropdown-toggle');
 
-    function openMenu(elem) {
-        var $this = elem;
-
-        $this.addClass('open');
-        $this.find('.dropdown-toggle').attr('aria-expanded', true);
-    }
-
-    function closeMenu() {
-        // Close dropdown, by default Bootstrap leaves it open
-        Dropdown.removeClass('open').find('.dropdown-toggle').attr('aria-expanded', false);
-    }
+    $dropdown.toggleClass('open');
+    $dropdownToggle.attr('aria-expanded', function (i, val) {
+      return val !== 'true';
+    });
+  });
 };
 
 /***/ }),
