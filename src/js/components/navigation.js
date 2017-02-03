@@ -59,6 +59,12 @@ export default function () {
                 break;
             }
           });
+        })
+        .click(function () {
+          const $this = $(this);
+          const $url = $this.find('a.dropdown-toggle').attr('href');
+          window.location = $url;
+          closeMenu($this);
         });
 
   $('nav .nav__item').focusin(function () {
