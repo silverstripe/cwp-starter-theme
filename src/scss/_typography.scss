@@ -184,3 +184,12 @@ pre {
     border-radius: 4px;
     white-space: pre-wrap;
 }
+
+.form-group__as-label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0;
+    font-weight: bold;
+    border-bottom: 0;
+    font-size: $font-size-base;
+}
