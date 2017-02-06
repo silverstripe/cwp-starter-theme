@@ -7,3 +7,5 @@ Forms are an important part of of the web. We've taken special care to ensure th
 This is a great tool, to use when you're making changes to all fields; an want to see what they all look like together. Form fields are just another set of templates. Dive into `new-theme/templates/forms`, and modify them to suit your site.
 
 We've followed Bootstrap 3's recommended markup, and added a sprinkling of accessibility improvements. We're confident these forms templates will work well for you, and that able and disabled people alike will appreciate their presentation and utility.
+
+> We've provided good defaults for most of the form fields SilverStripe supports. There are a few that could do with a more personal touch, like the Tree Dropdown field. It's one of a few fields that's not often used on the front-end of a site, and its presentation can vary so much that we've chosen to apply minimal styling.
