@@ -1,49 +1,20 @@
-## JS Code Style
+# CWP Developer Theme
 
-We follow the [AirBnB JS code style guide](http://airbnb.io/javascript), which we enforce with a git pre-commit hook:
+This is the repository for the new CWP develop theme.
 
-```sh
-#!/bin/sh
-node_modules/.bin/eslint src/js --fix
-```
+## Documentation
 
-Create the file `.git/hooks/pre-commit`, and paste this code into it. Your JS code will then be automatically validated and fixed before it can be committed to the repository, ensuring everyone's code conforms to the standard. You can also trigger this command each time you save files, but the results will be the same either way.
+You can find documentation about the following topics:
 
-## Prerequisites for compilation of front-end files
+* [Creating a new site](docs/creating-a-new-site.md)
+* [Working with standards](docs/working-with-standards.md)
+* [Modifying template files](docs/modifying-template-files.md)
+* [Customising front-end assets](docs/customising-front-end-assets.md)
+* [Changing forms](docs/changing-forms.md)
+* [Changing menus](docs/changing-menus.md)
 
-To install the required packages, **NodeJS version 7.3** or higher is required.
+## Versioning
 
-To check the installed NodeJS version, run the following command:
-```sh
-node -v
-```
+This library follows [Semver](http://semver.org). According to Semver, you will be able to upgrade to any minor or patch version of this library without any breaking changes to the public API. Semver also requires that we clearly define the public API for this library.
 
-To install the dependencies, in the `themes\new-theme` folder, run the following command:
-
-```sh
-npm install
-```
-
-## Compiling front-end files
-
-This project uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix) to compile source ES6 JS and SASS files into ES5 JS and CSS respectively. To trigger this, you can run the following command:
-
-```sh
-npm run build
-```
-
-This compiles JS and SASS from `src` to the respective `dist` folders. The result is a development build of the files. To build for production (only needs to be run right before releasing a new version of the project), run:
-
-```sh
-npm run package
-```
-
-if you'd like to start the file watcher (to have the build files automatically re-compile themselves when they are updated), run the following:
-
-```sh
-npm run watch
-```
-
-This is faster and more reliable than running `build` every time you make a change. If you'd like additional info about Mix, head over to [the dedicated Mix documentation](https://github.com/JeffreyWay/laravel-mix/tree/master/docs).
-
-Image and Text alignment is handled in img.js (/src/js/components/img.js). It replaces the default alignment classes that TinyMCE provides with bootstrap alignment classes such as 'pull-left', 'pull-right' and 'center-block'.
+All methods, with `public` visibility, are part of the public API. All other methods are not part of the public API. Where possible, we'll try to keep `protected` methods backwards-compatible in minor/patch versions, but if you're overriding methods then please test your work before upgrading.

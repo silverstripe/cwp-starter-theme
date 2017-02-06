@@ -1,4 +1,5 @@
 ## Modifying Template Files
+
 The new theme is built with the same [template syntax SilverStripe developers are used to](https://docs.silverstripe.org/en/3/developer_guides/templates). Here's what we've changed, from the the existing default theme:
 
 * Using [Bootstrap 3](http://getbootstrap.com) HTML and CSS, instead of Bootstrap 2
