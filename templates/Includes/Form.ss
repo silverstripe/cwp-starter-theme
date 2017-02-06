@@ -1,6 +1,7 @@
 <% if $IncludeFormTag %><form {$AttributesHTML} novalidate><% end_if %>
+$getMessage
     <% if $Message %>
-        <div id="{$FormName.ATT}_error" class="alert alert-{$MessageType.ATT}">{$Message.XML}</div>
+        <div id="{$FormName.ATT}_error" class="alert alert-{$MessageType.ATT}" role="alert">{$Message.XML}</div>
     <% end_if %>
     <% if $Fields %>
         <div class="fields">
