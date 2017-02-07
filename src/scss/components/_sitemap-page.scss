@@ -1,0 +1,54 @@
+/*	Sitemap formatting */
+.sitemap {
+	border-bottom: 1px solid $table-border-color;
+	list-style-type: none;
+	margin: 40px 0;
+	padding-left: 0;
+
+	.initial {
+		border-top: 1px solid $table-border-color;
+		z-index: 0;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+			background-color: $table-bg-hover;
+		}
+
+		.sitemap-link {
+			padding: 20px 0 20px 40px;
+			z-index: 1;
+			display: block;
+		}
+
+		.page-toggle__children {
+			padding-left: 20px;
+		}
+	}
+
+	.page-toggle {
+		position: absolute;
+		padding: 20px 15px;
+		display: block;
+
+		&:hover {
+			background-color: $table-bg-hover;
+		}
+
+		&.open .toggleIco {
+			background-color: red;
+		}
+		&.loading .toggleIco {
+			// background: url(../images/ajax-loader.gif) center bottom no-repeat;
+			display: block;
+			height: 27px;
+			width: 15px;
+
+			background-color: green;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
