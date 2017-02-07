@@ -110,4 +110,10 @@ Since we already have a PHP Git hook file, we need to run ESLint via PHP:
 exec("node_modules/.bin/eslint assets/js --fix")
 ```
 
+You can also run Javascript linting manually:
+
+```
+npm run-script lint
+```
+
 Once again, let me stress that you don't have to use these if you don't want to. I've just described what the development team, who made the new theme, are doing on their machines. Perhaps you'd find these tools useful on other projects as well. We certainly have!
