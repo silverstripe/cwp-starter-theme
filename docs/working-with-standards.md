@@ -8,7 +8,7 @@ Let's look at how to use and automate these standards...
 
 ## PHP linting and fixing
 
-Integrated developer environments (like [PHPStorm](https://www.jetbrains.com/phpstorm/)) have built-in support for automating various aspects of standards compliance, but not everyone uses these. And what about when an edit is made in a strange environment, like a remote server?
+Integrated development environments (like [PHPStorm](https://www.jetbrains.com/phpstorm/)) have built-in support for automating various aspects of standards compliance, but not everyone uses these. And what about when an edit is made in a strange environment, like a remote server?
 
 Luckily, others have solved this problem. Take, for instance, the `php-cs-fixer` library, installed with:
 
