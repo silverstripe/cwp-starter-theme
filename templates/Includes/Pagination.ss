@@ -14,12 +14,24 @@
                         <li class="active">
                             <a>
                                 <span>$PageNum <span class="sr-only">(current)</span></span>
-                            </a> 
+                            </a>
                         </li>
+                    <% else %>
+                        <% if $PageNum %>
+                            <li>
+                                <a href="$Link"
+                                    title='<%t CWP.Pagination.PageNum "View page {PageNum} of results" PageNum=$PageNum %>'
+                                    class="go-to-page">
+                                    $PageNum
+                                </a>
+                            </li>
                         <% else %>
-                        <li>
-                            <a href="$Link" title='<%t CWP.Pagination.PageNum "Viewing page {PageNum} of results" PageNum=$PageNum %>' class="go-to-page">$PageNum</a>
-                        </li>
+                            <li class="disabled">
+                                <span>
+                                    <span aria-hidden="true">&hellip;</span>
+                                </span>
+                            </li>
+                        <% end_if %>
                     <% end_if %>
                 <% end_loop %>
                 <% if $NotLastPage %>
@@ -32,4 +44,4 @@
             </ul>
         </nav>
     </div>
-<% end_if %> 
+<% end_if %>
