@@ -3,69 +3,82 @@ import $ from 'jquery';
 export default function () {
   const Dropdown = $('nav .dropdown');
 
-  function toggleMenu(elem) {
-    const $this = elem;
-
-    $this.toggleClass('open');
-    $this.find('.dropdown-toggle').attr('aria-expanded', (i, val) => val !== 'true');
-  }
-
-  function openMenu(elem) {
+  const openMenu = function (elem) {
     const $this = elem;
 
     $this.addClass('open');
     $this.find('.dropdown-toggle').attr('aria-expanded', true);
-  }
+  };
 
-  function closeMenu() {
-        // Close dropdown, by default Bootstrap leaves it open
+  const closeMenu = function () {
+    // Close dropdown, by default Bootstrap leaves it open
     Dropdown.removeClass('open')
             .find('.dropdown-toggle').attr('aria-expanded', false);
-  }
+  };
+
+  const isDesktop = function () {
+    /**
+     * If screen width is Desktop return true
+     * 752px according to Bootstrap @media queries
+     */
+    const width = $(document).width();
+    return width > 752 || false;
+  };
 
   Dropdown
-        .hover(function () {
-          toggleMenu($(this));
-        })
-        .focusin(function () {
-          const $this = $(this);
-          let $url = null;
-          let $key = null;
-          let $dropdownToggle = null;
+  .mouseleave(() => {
+    if (isDesktop()) {
+      closeMenu();
+    }
+  })
+  .mouseover(function () {
+    if (isDesktop()) {
+      openMenu($(this));
+    }
+  })
+  .focusin(function () {
+    const $this = $(this);
+    let $url = null;
+    let $key = null;
+    let $dropdownToggle = null;
 
-          $this.keydown((event) => {
-            $key = event.keyCode;
+    $this.keydown((event) => {
+      $key = event.keyCode;
 
-            switch ($key) {
-              case 13:
-                        // [Enter] key
-                $dropdownToggle = $this.find('a.dropdown-toggle');
-                if ($dropdownToggle.is(':focus')) {
-                  $url = $dropdownToggle.attr('href');
-                  window.location = $url;
-                  closeMenu($this);
-                }
-                $this.unbind('keydown');
-                break;
-              case 32:
-              case 40:
-                        // Space bar
-                        // arrow Keydown
-                openMenu($this);
-                $this.unbind('keydown');
-                break;
-              default:
-                $this.unbind('keydown');
-                break;
-            }
-          });
-        })
-        .click(function () {
-          const $this = $(this);
-          const $url = $this.find('a.dropdown-toggle').attr('href');
-          window.location = $url;
-          closeMenu($this);
-        });
+      switch ($key) {
+        case 13:
+          // [Enter] key
+          $dropdownToggle = $this.find('a.dropdown-toggle');
+          if ($dropdownToggle.is(':focus')) {
+            $url = $dropdownToggle.attr('href');
+            window.location = $url;
+            closeMenu();
+          }
+          $this.unbind('keydown');
+          break;
+        case 32:
+        case 40:
+          // Space bar
+          // arrow Keydown
+          openMenu($this);
+          $this.unbind('keydown');
+          break;
+        case 27:
+          // ESC
+          closeMenu();
+          break;
+        default:
+          $this.unbind('keydown');
+          break;
+      }
+    });
+  })
+  .click(function () {
+    const $this = $(this);
+    const $url = $this.find('a.dropdown-toggle').attr('href');
+    window.location = $url;
+    closeMenu();
+  });
 
   $('nav .nav__item').focusin(function () {
     let $key = null;
@@ -73,13 +86,13 @@ export default function () {
     const $next = $this.next().find('a');
     const $prev = $this.prev().find('a');
 
-        // Navigate with [<][>] arrow keyboard keys
+    // Navigate with [<][>] arrow keyboard keys
     $this.keydown((event) => {
       $key = event.keyCode;
 
       switch ($key) {
         case 39:
-            // forward [>]
+          // forward [>]
           if ($next.length) {
             $next.focus();
             closeMenu();
@@ -87,7 +100,7 @@ export default function () {
           }
           break;
         case 37:
-            // backward [<]
+          // backward [<]
           if ($prev.length) {
             $prev.focus();
             closeMenu();
