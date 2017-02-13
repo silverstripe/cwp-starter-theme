@@ -1,9 +1,7 @@
-// NewsDetail
-.news-details-aside {
-    margin-top: 37px;
-}
-
+// Generic pages
 // Page utilities
+
+
 .page-utilities {
     margin-top: 40px;
 }
@@ -13,25 +11,19 @@
     color: $text-muted;
     margin-top: 10px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $screen-sm) {
         float: right;
         text-align: right;
         margin-top: 0;
     }
 }
 
-.dropdown-toggle:focus,
-.dropdown-touch__item:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+
+// Homepage
+.home-page .jumbotron {
+    margin-top: -20px;
 }
 
-a.fa,
-a.fa:hover,
-i.fa,
-i.fa:hover {
-    text-decoration: none;
-}
 
 // IFramePage
 .Iframepage-iframe {
