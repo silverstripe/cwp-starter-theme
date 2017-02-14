@@ -1,7 +1,6 @@
 <div class="container layout">
     <div class="row">
         <div class="<% if Menu(2) %>col-md-9<% else %>col-md-12<% end_if %>">
-            <div id="main">
                 <h1 class="page-header">$Title</h1>
 
                 <div class="clearfix">
@@ -26,7 +25,6 @@
 
                 $Form
                 $CommentsForm
-            </div>
         </div>
         <% if Menu(2) %>
             <aside class="col-md-3">

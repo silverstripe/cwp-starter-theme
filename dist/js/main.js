@@ -10596,7 +10596,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
    */
   function setLoadingMessage($self, pageId) {
     var loadingMessage = $self.data('loading-message');
-    setSitemapData(pageId, '<div class="sitemap-loading">\n        <i class="fa fa-spinner fa-pulse fa-2x" aria-hidden="true"></i>\n        <span class="sr-only">' + loadingMessage + '</span>\n      </div>');
+    setSitemapData(pageId, '<div class="sitemap-loading">\n        <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>\n        <span class="sr-only">' + loadingMessage + '</span>\n      </div>');
   }
 
   /**

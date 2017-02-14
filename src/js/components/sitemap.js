@@ -38,7 +38,7 @@ export default function () {
     setSitemapData(
       pageId,
       `<div class="sitemap-loading">
-        <i class="fa fa-spinner fa-pulse fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>
         <span class="sr-only">${loadingMessage}</span>
       </div>`,
     );
