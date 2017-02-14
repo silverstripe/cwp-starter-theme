@@ -33,7 +33,7 @@ figure {
         clear: both;
     }
 
-    &.center{
+    &.center {
         margin-bottom: 18px;
         clear: both;
     }
@@ -51,7 +51,7 @@ figure {
         margin: 0 0 18px 18px;
     }
 
-    &.leftAlone{
+    &.leftAlone {
         margin: 0 18px 18px 0px;
     }
 
@@ -74,27 +74,39 @@ figure {
 table {
     font-family: $font-family-sans-serif;
     @extend .table;
+
     caption {
         text-align: left;
         padding: 4px 0;
     }
-    thead, tfoot {
+    thead,
+    tfoot {
         font-weight: 700;
     }
 }
 
-.table-striped, .table-bordered-striped {
+.table-striped,
+.table-bordered-striped {
     tbody tr:hover {
-        td, th {
+        td,
+        th {
             background-color: $table-bg-hover;
         }
     }
 }
 
+// Links
+// Icons
+a.fa,
+a.fa:hover,
+i.fa,
+i.fa:hover {
+    text-decoration: none;
+}
+
 // EXTERNAL LINKS
 a.external {
-
-   display:inline-block;
+   display: inline-block;
 
     &::after {
         content: "\f08e";
