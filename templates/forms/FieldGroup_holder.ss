@@ -1,5 +1,4 @@
-<div id="{$HolderID.ATT}" class="field {$ExtraClass.ATT}">
-    <% include FormFieldMessage %>
+<div id="{$HolderID.ATT}" class="field {$ExtraClass.ATT} {$MessageClass}">
     <% include FormFieldLabel %>
     <div class="field-group <% if $Zebra %>field-group-zebra<% end_if %>">
         <% loop $FieldList %>
@@ -8,5 +7,6 @@
             </div>
         <% end_loop %>
     </div>
+    <% include FormFieldMessage %>
     <% include FormFieldDescription %>
 </div>

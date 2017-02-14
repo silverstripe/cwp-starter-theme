@@ -1,5 +1,5 @@
 <% if $Message %>
-    <div id="{$ID}-message" class="message alert <% if $MessageType == "required" %>alert-danger<% else %>alert-warning<% end_if %>" role="alert">
+    <span id="$MessageID" class="help-block">
         {$Message}
-    </div>
+    </span>
 <% end_if %>

@@ -1,4 +1,4 @@
-<$Tag id="{$HolderID.ATT}" class="CompositeField $ExtraClass.ATT <% if $ColumnCount %>multicolumn<% end_if %>">
+<$Tag id="{$HolderID.ATT}" class="CompositeField $ExtraClass.ATT <% if $ColumnCount %>multicolumn<% end_if %> {$MessageClass}">
     <% if $Tag == "fieldset" && $Legend %>
         <legend>{$Legend.XML}</legend>
     <% end_if %>
