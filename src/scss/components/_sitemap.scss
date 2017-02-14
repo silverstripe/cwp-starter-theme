@@ -7,12 +7,12 @@
 
   ul {
     list-style-type: none;
-    padding-bottom: 10px;
+    padding-bottom: $padding-large-vertical;
 
     .sitemap-link,
     .page-toggle {
-      padding-bottom: 10px!important;
-      padding-top: 10px!important;
+      padding-bottom: $padding-large-vertical !important;
+      padding-top: $padding-large-vertical !important;
     }
   }
 

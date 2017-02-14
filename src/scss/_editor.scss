@@ -8,9 +8,9 @@
 @import "_typography";
 
 body.mceContentBody a.ss-broken {
-    background-color: red;
-    border: 1px red solid;
-    color: #fff;
+    background-color: $brand-danger;
+    border: 1px solid $brand-danger;
+    color: $label-color;
     padding: 1px;
     text-decoration: underline;
 }
@@ -18,17 +18,17 @@ body.mceContentBody a.ss-broken {
 /*# sourceMappingURL=editor.css.map */
 
 .blockquote-footer {
-    background-color: #eee;
+    background-color: $gray-lighter;
 }
 
 .maori {
-    background-color: #fae5e8 !important;
+    background-color: $alert-danger-bg !important;
 }
 
 .text-hide {
-    font: 14px/20px sans-serif;
-    color: rgba(0,0,0,1);
-    outline: 1px dotted #767676 ;
+    font: $font-size-base/$line-height-computed $font-family-sans-serif;
+    color: $text-color;
+    outline: 1px dotted $text-muted;
 }
 
 .center {
