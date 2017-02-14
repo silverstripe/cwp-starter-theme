@@ -53,13 +53,45 @@
         min-height: 0;
         border: 0;
         border-bottom: 1px solid $navbar-default-border;
+
+        .dropdown {
+          padding-right: 18px;
+
+          &.active {
+            background: $gray-lighter;
+          }
+
+          &.open {
+            background: transparent!important;
+
+            .navbar__touch-caret {
+              background: $gray-lighter;
+            }
+          }
+          a {
+            outline: invert none medium!important;
+            border-color: $brand-primary!important;
+          }
+        }
+
+        @media (max-width: $grid-float-breakpoint-max) {
+          .dropdown:not(.active) {
+            background: transparent!important;
+          }
+          .navbar__touch-caret {
+            padding-top:    10px;
+            padding-bottom: 10px;
+          }
+        }
     }
 
-    .dropdown-touch__item {
+    .navbar__touch-caret {
         position: absolute;
-        top: 3px;
+        top: 0;
         right: 0;
-        padding: 7px 18px;
+        border: 0;
+        padding: $navbar-padding-vertical $navbar-padding-horizontal $navbar-padding-vertical 8px;
+        background: transparent;
     }
 }
 
@@ -89,4 +121,3 @@
         width: auto;
     }
 }
-
