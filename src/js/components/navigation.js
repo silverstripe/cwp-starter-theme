@@ -119,8 +119,6 @@ export default function () {
   });
 
   $('.main-nav .navbar-nav .dropdown').on('click', '.navbar__touch-caret',function (event) {
-    console.log("clicked");
-
     event.stopPropagation();
     event.preventDefault();
 
@@ -129,10 +127,8 @@ export default function () {
 
     if ($parent.hasClass('open')) {
       closeMenu();
-      console.log("close");
     } else {
       openMenu($parent);
-      console.log("open");
     }
 
   });

@@ -10521,8 +10521,6 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
   });
 
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main-nav .navbar-nav .dropdown').on('click', '.navbar__touch-caret', function (event) {
-    console.log("clicked");
-
     event.stopPropagation();
     event.preventDefault();
 
@@ -10531,10 +10529,8 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
 
     if ($parent.hasClass('open')) {
       closeMenu();
-      console.log("close");
     } else {
       openMenu($parent);
-      console.log("open");
     }
   });
 };
