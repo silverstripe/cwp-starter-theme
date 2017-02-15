@@ -7,13 +7,13 @@ export default function () {
     const $this = elem;
 
     $this.addClass('open');
-    $this.find('.dropdown-toggle').attr('aria-expanded', true);
+    $this.find('.navbar__touch-caret').attr('aria-expanded', true);
   };
 
   const closeMenu = function () {
     // Close dropdown, by default Bootstrap leaves it open
     Dropdown.removeClass('open')
-            .find('.dropdown-toggle').attr('aria-expanded', false);
+            .find('.navbar__touch-caret').attr('aria-expanded', false);
   };
 
   const isDesktop = function () {
@@ -48,10 +48,12 @@ export default function () {
       switch ($key) {
         case 13:
           // [Enter] key
-          $dropdownToggle = $this.find('a.dropdown-toggle');
+          $dropdownToggle = $this.find('.navbar__touch-caret');
           if ($dropdownToggle.is(':focus')) {
             $url = $dropdownToggle.attr('href');
-            window.location = $url;
+            if ($url !== undefined) {
+              window.location = $url;
+            }
             closeMenu();
           }
           $this.unbind('keydown');
@@ -75,8 +77,10 @@ export default function () {
   })
   .click(function () {
     const $this = $(this);
-    const $url = $this.find('a.dropdown-toggle').attr('href');
-    window.location = $url;
+    const $url = $this.find('a').attr('href');
+    if ($url !== undefined) {
+      window.location = $url;
+    }
     closeMenu();
   });
 
@@ -114,15 +118,17 @@ export default function () {
     });
   });
 
-  $('.dropdown-touch__item').on('click', function (event) {
+  $('.navbar__touch-caret').on('click', function (event) {
+    const $this = $(this);
+    const $parent = $this.parent('li');
+
+    if ($parent.hasClass('open')) {
+      closeMenu();
+    } else {
+      openMenu($parent);
+    }
+
     event.preventDefault();
     event.stopPropagation();
-
-    const $this = $(this);
-    const $dropdown = $this.closest('.dropdown');
-    const $dropdownToggle = $dropdown.find('.dropdown-toggle');
-
-    $dropdown.toggleClass('open');
-    $dropdownToggle.attr('aria-expanded', (i, val) => val !== 'true');
   });
 }

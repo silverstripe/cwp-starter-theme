@@ -10414,12 +10414,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     var $this = elem;
 
     $this.addClass('open');
-    $this.find('.dropdown-toggle').attr('aria-expanded', true);
+    $this.find('.navbar__touch-caret').attr('aria-expanded', true);
   };
 
   var closeMenu = function closeMenu() {
     // Close dropdown, by default Bootstrap leaves it open
-    Dropdown.removeClass('open').find('.dropdown-toggle').attr('aria-expanded', false);
+    Dropdown.removeClass('open').find('.navbar__touch-caret').attr('aria-expanded', false);
   };
 
   var isDesktop = function isDesktop() {
@@ -10451,10 +10451,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
       switch ($key) {
         case 13:
           // [Enter] key
-          $dropdownToggle = $this.find('a.dropdown-toggle');
+          $dropdownToggle = $this.find('.navbar__touch-caret');
           if ($dropdownToggle.is(':focus')) {
             $url = $dropdownToggle.attr('href');
-            window.location = $url;
+            if ($url !== undefined) {
+              window.location = $url;
+            }
             closeMenu();
           }
           $this.unbind('keydown');
@@ -10477,8 +10479,10 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     });
   }).click(function () {
     var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
-    var $url = $this.find('a.dropdown-toggle').attr('href');
-    window.location = $url;
+    var $url = $this.find('a').attr('href');
+    if ($url !== undefined) {
+      window.location = $url;
+    }
     closeMenu();
   });
 
@@ -10516,18 +10520,18 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     });
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.dropdown-touch__item').on('click', function (event) {
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.navbar__touch-caret').on('click', function (event) {
+    var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
+    var $parent = $this.parent('li');
+
+    if ($parent.hasClass('open')) {
+      closeMenu();
+    } else {
+      openMenu($parent);
+    }
+
     event.preventDefault();
     event.stopPropagation();
-
-    var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
-    var $dropdown = $this.closest('.dropdown');
-    var $dropdownToggle = $dropdown.find('.dropdown-toggle');
-
-    $dropdown.toggleClass('open');
-    $dropdownToggle.attr('aria-expanded', function (i, val) {
-      return val !== 'true';
-    });
   });
 };
 
