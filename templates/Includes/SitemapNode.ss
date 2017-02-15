@@ -18,5 +18,5 @@
     <a href="$Link" class="sitemap-link" title="Go to $MenuTitle page">$MenuTitle</a>
 
     <%-- Children are populated via AJAX --%>
-    <div id="children-$ID" class="collapse"></div>
+    <ul id="children-$ID" class="collapse"></ul>
 </div>
