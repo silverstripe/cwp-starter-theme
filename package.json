@@ -1,4 +1,6 @@
 {
+  "name": "cwp-new-theme",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "watch": "node_modules/.bin/webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
