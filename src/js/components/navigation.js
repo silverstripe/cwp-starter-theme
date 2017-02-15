@@ -118,17 +118,22 @@ export default function () {
     });
   });
 
-  $('.navbar__touch-caret').on('click', function (event) {
+  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar__touch-caret',function (event) {
+    console.log("clicked");
+
+    event.stopPropagation();
+    event.preventDefault();
+
     const $this = $(this);
-    const $parent = $this.parent('li');
+    const $parent = $this.parent('.dropdown');
 
     if ($parent.hasClass('open')) {
       closeMenu();
+      console.log("close");
     } else {
       openMenu($parent);
+      console.log("open");
     }
 
-    event.preventDefault();
-    event.stopPropagation();
   });
 }

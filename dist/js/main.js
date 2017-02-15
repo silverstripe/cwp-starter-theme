@@ -10520,18 +10520,22 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     });
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.navbar__touch-caret').on('click', function (event) {
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main-nav .navbar-nav .dropdown').on('click', '.navbar__touch-caret', function (event) {
+    console.log("clicked");
+
+    event.stopPropagation();
+    event.preventDefault();
+
     var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
-    var $parent = $this.parent('li');
+    var $parent = $this.parent('.dropdown');
 
     if ($parent.hasClass('open')) {
       closeMenu();
+      console.log("close");
     } else {
       openMenu($parent);
+      console.log("open");
     }
-
-    event.preventDefault();
-    event.stopPropagation();
   });
 };
 
