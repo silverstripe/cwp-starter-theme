@@ -12,8 +12,8 @@
 }
 
 .site-header-brand {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: $font-size-h3;
+    font-weight: $headings-font-weight;
     overflow: visible;
     line-height: 1em;
     float: left;
@@ -42,7 +42,7 @@
     }
 
     .icon-bar {
-        background-color: #888;
+        background-color: $navbar-default-toggle-icon-bar-bg;
     }
 }
 
@@ -79,8 +79,8 @@
             background: transparent!important;
           }
           .navbar__touch-caret {
-            padding-top:    10px;
-            padding-bottom: 10px;
+            padding-top:    $padding-large-vertical;
+            padding-bottom: $padding-large-vertical;
           }
         }
     }
@@ -103,7 +103,7 @@
 //Accessibilty links to navigation
 .skip-links a {
     height: 1px;
-    padding: 5px 10px;
+    padding: $padding-small-vertical $padding-small-horizontal;
     position: absolute;
     left: -100%;
     overflow: hidden;
