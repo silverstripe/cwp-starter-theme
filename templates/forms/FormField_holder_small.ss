@@ -1,6 +1,6 @@
-<span id="{$HolderID.ATT}" class="form-group {$ExtraClass.ATT}">
-    <% include FormFieldMessageSmall %>
-    <% include FormFieldLabelSmall %>
+<span id="{$HolderID.ATT}" class="form-group {$ExtraClass.ATT} {$MessageClass}">
+    <% include FormFieldLabel %>
     {$Field}
-    <% include FormFieldDescriptionSmall %>
+    <% include FormFieldMessage %>
+    <% include FormFieldDescription %>
 </span>

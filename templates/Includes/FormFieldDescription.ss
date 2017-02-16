@@ -1,5 +1,5 @@
 <% if $Description %>
-    <div id="{$ID}-description" class="description help-text" role="alert">
+    <small id="{$ID}-description" class="form-text text-muted">
         {$Description}
-    </div>
+    </small>
 <% end_if %>
