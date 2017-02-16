@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10305,7 +10305,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap_sass_assets_javascripts_bootstrap_tab__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap_sass_assets_javascripts_bootstrap_dropdown__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery_highlight_jquery_highlight__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_navigation__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_content__ = __webpack_require__(4);
@@ -10313,12 +10313,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_search__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_form__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_img__ = __webpack_require__(6);
+// Define globally exposed module objects
+__webpack_require__(13);
+
+// Define dependency imports
 /* eslint-disable */
 
 
 
 
 /* eslint-enable */
+
+// Define local components
 
 
 
@@ -11214,6 +11220,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jquery"] = __webpack_require__(0);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
  * jQuery Highlight plugin
  *
@@ -11369,7 +11382,34 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 14 */
+/* 15 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
