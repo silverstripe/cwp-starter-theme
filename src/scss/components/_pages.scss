@@ -1,0 +1,29 @@
+// Generic pages
+// Page utilities
+.page-utilities {
+    margin-top: 40px;
+}
+
+.page-utilities_last-modified {
+    font-size: $font-size-small;
+    color: $text-muted;
+    margin-top: 10px;
+
+    @media (min-width: $screen-sm) {
+        float: right;
+        text-align: right;
+        margin-top: 0;
+    }
+}
+
+
+// Homepage
+.home-page .jumbotron {
+    margin-top: -20px;
+}
+
+
+// IFramePage
+.Iframepage-iframe {
+    border: 0;
+}
