@@ -1,4 +1,4 @@
-## Working With Standards
+# Working with standards
 
 In his book [Clean Code](https://www.amazon.com/dp/0132350882), Robert Martin talks about the importance of reading code vs. writing code. That what we write needs to be entirely focussed on being easy to read and understand. That writing something succinctly is a waste of time if the effort makes understanding it harder.
 
@@ -69,7 +69,7 @@ exit(0);
 
 > The irony in fitting this code to a narrower screen, is that it doesn't conform to PSR-2!
 
-This script can be run (after a call to `chmod +x pre-commit`), and it'll go through all files about to be committed, linting and fixing them. Once they're listed and fixed, they're added back to the index, so that they can be committed.
+This script can be run (after a call to `chmod +x .git/hooks/pre-commit`), and it'll go through all files about to be committed, linting and fixing them. Once they're listed and fixed, they're added back to the index, so that they can be committed.
 
 Run as a pre-commit Git hook, this means all PHP files are automatically checked and corrected before a commit can be successfully completed. If there are syntax errors in your code, they can't be committed to the repository.
 
@@ -79,7 +79,7 @@ This file needs to be created as `.git/hooks/pre-commit`. You can find example h
 
 ## JS linting and fixing
 
-Similarly, we've applied the AirBnB JS code style guide, using [ESLint](https://github.com/eslint/eslint):
+Similarly, we've applied [the AirBnB JS code style guide](https://github.com/airbnb/javascript), using [ESLint](https://github.com/eslint/eslint):
 
 ```
 npm install --save-dev babel-eslint
@@ -90,11 +90,12 @@ npm install --save-dev eslint-plugin-jsx-a11y
 npm install --save-dev eslint-plugin-react
 ```
 
-> This assumes you're going for AirBnB JS code style. You can, of course, configure ESLint to your preferred standard.
+> This assumes you're going for AirBnB JS code style. You can of course configure ESLint to your preferred standard.
 
 It would also help if you configured ESLint to allow global variables (like `window` and `document`):
 
-```js
+**File: `.eslintrc`**
+```json
 {
     "extends": "airbnb",
     "env": {
@@ -116,4 +117,4 @@ You can also run Javascript linting manually:
 npm run-script lint
 ```
 
-Once again, let me stress that you don't have to use these if you don't want to. I've just described what the development team, who made the new theme, are doing on their machines. Perhaps you'd find these tools useful on other projects as well. We certainly have!
+Once again, let me stress that you don't have to use these if you don't want to. I've just described what this theme's development team are doing on their machines. Perhaps you'd find these tools useful on other projects as well. We certainly have!
