@@ -1,6 +1,13 @@
+<% include Carousel %>
 <div class="home-page">
-    <% include Jumbotron %>
     <div class="container">
+        <% if $Content %>
+            <section class="col-md-12">
+                <h1>$Title</h1>
+                $Content.RichLinks
+            </section>
+        <% end_if %>
+
         <div class="row">
             <% include Quicklinks %>
             <% include Features %>
