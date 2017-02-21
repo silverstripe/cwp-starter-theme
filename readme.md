@@ -1,6 +1,18 @@
 # CWP Developer Theme
 
-This is the repository for the new CWP develop theme.
+This is the repository for the new CWP developer theme. This theme is a highly accessible Bootstrap theme which you can use as a starter for your CWP project.
+
+If you want to start with a theme that is more designed, take a look at the [demo agency theme](https://gitlab.cwp.govt.nz/cwp/cwp-agencies-theme/).
+
+## Installation
+
+You can install this theme with Composer:
+
+```
+composer require cwp/new-theme
+```
+
+You may need to add the repository URL to your `composer.json` as a VCS repository.
 
 ## Documentation
 
