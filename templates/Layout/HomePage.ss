@@ -7,11 +7,6 @@
                 $Content.RichLinks
             </section>
         <% end_if %>
-
-        <div class="row">
-            <% include Quicklinks %>
-            <% include Features %>
-        </div>
     </div>
 </div>
 <% include PageUtilities %>
