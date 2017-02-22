@@ -1,6 +1,10 @@
+@import "./import/_font-awesome-variables";
+@import "./import/_bootstrap-variables";
+
+
 // Bootstrap overrides
 //
-// Copy variables from `node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss` 
+// Copy variables from `node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss`
 // to this file to override default values without modifying source files.
 
 $fa-font-path: "/themes/new-theme/dist/fonts/";
