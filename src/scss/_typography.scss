@@ -74,28 +74,36 @@ figure {
 
 // Table styles
 table {
-    font-family: $font-family-sans-serif;
     @extend .table;
 
     caption {
         text-align: left;
         padding: $table-cell-padding 0;
     }
-    thead,
-    tfoot {
-        font-weight: $headings-font-weight;
+
+    thead td {
+      font-weight: $headings-font-weight;
+    }
+
+    tfoot td {
+        color: $text-muted;
+        font-size: $font-size-small;
     }
 }
 
+// Specified here so they can be seen and used within the editor styles dropdown
+.table-hover,
 .table-striped,
-.table-bordered-striped {
-    tbody tr:hover {
-        td,
-        th {
-            background-color: $table-bg-hover;
-        }
-    }
+.table-bordered {
+  background-color: $table-bg;
 }
+
+// Example of how you could combine bootstrap table styles
+.table-bordered-striped {
+  @extend .table-bordered;
+  @extend .table-striped;
+}
+
 
 // Links
 // Icons
