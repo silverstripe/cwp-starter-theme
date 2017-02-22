@@ -12,7 +12,7 @@
                                 <% if $Children %>
                                     <button class="pull-right navbar__touch-caret" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
                                         <span class="sr-only">Display $MenuTitle.XML submenu pages</span>
-                                        <span class="caret"></span>
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
                                     </button>
 
                                     <ul class="dropdown-menu" role="menu">
