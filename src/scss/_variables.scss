@@ -7,29 +7,29 @@
 // Copy variables from `node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss`
 // to this file to override default values without modifying source files.
 
-$fa-font-path: "/themes/new-theme/dist/fonts/" !default;
-$icon-font-path: "/themes/new-theme/dist/fonts/" !default;
+$fa-font-path: "/themes/new-theme/dist/fonts/";
+$icon-font-path: $fa-font-path;
 
 // Success label background color
-$label-success-bg: #008A00 !default;
+$label-success-bg: #008A00;
 
 // Global textual link color.
-$link-color: #0070b7 !default;
+$link-color: #0070b7;
 
 // Link hover color set via `darken()` function.
-$link-hover-color: darken($link-color, 5%) !default;
+$link-hover-color: darken($link-color, 5%);
 
 // Text muted color
-$text-muted: #767676 !default;
+$text-muted: #767676;
 
 // Basics of a navbar
-$navbar-border-radius: 0 !default;
+$navbar-border-radius: 0;
 
 // Navbar links
-$navbar-default-link-color: #767676 !default;
+$navbar-default-link-color: #767676;
 
 // Navbar background color
-$navbar-default-bg: #fff !default;
+$navbar-default-bg: #fff;
 
 // Text color of current page in the breadcrumb
-$breadcrumb-active-color: #707070 !default;
+$breadcrumb-active-color: #707070;
