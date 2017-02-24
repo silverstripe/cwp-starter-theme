@@ -5,10 +5,14 @@
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
+            <% if $FilteredContext %>
+                <p class="text-muted">
+                    $FilteredContext
+                </p>
+            <% end_if %>
         </div>
-        
+
         <section class="<% if $AvailableMonths || not $FilteredUpdates %>col-md-7 col-md-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
-            
             <% if $FilteredUpdates %>
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
@@ -17,7 +21,7 @@
                 </article>
             <% end_if %>
         </section>
-        
+
         <aside class="col-md-3">
             <h2 class="sr-only">Filters</h2>
             <% if $UpdateTagsWithLinks %>

@@ -1,16 +1,16 @@
 <div class="news-events_archive">
-    
+
     <h3 class="h4"><%t CWP.AvailableMonths.Title "Archive" %></h3>
 
-    <% loop $Availablemonths %>
+    <% loop $AvailableMonths %>
         <h4 class="h5 pull-left news-events_archive-year"> {$YearName}: </h4>
         <ul class="nav nav-pills">
             <% loop $Months %>
                 <li <% if $Active %> class="active"<% end_if %> >
-                    <a title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML">$MonthName</a>
+                    <a title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
                 </li>
             <% end_loop %>
-        </ul>   
+        </ul>
     <% end_loop %>
 
     <% if $FilteredUpdates %>
