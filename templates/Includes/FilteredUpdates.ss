@@ -1,22 +1,22 @@
 <% loop $FilteredUpdates(10) %>
     <article class="clearfix">
-        
+
         <% if $FeaturedImage %>
             <figure class="pull-right news-events_item-figure">
                 $FeaturedImage.SetHeight(150)
             </figure>
         <% end_if %>
-       
+
         <header>
             <h2 class="h3"><a title="$Title" href="$Link">$Title</a></h2>
         </header>
-        
+
         <% if $Up.ControllerName == "EventHolder" %>
 
             <% if $Date %>
-                <p class="metaInfo help-block">
+                <p class="meta-info">
                     <% if $Location %>
-                        $NiceLocation, 
+                        $NiceLocation,
                     <% end_if %>
                     <% if $Date %>
                         <time datetime="$Date">$Date.Format(Y/m/d) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
@@ -24,10 +24,10 @@
                 </p>
             <% end_if %>
 
-        <% else_if $Up.ControllerName == "NewsHolder" %> 
+        <% else_if $Up.ControllerName == "NewsHolder" %>
 
             <% if $Date || $Author %>
-                <p class="metaInfo help-block">
+                <p class="meta-info">
                     <% if $Date %>
                         <time datetime="$Date">$Date.nice <% if $StartTime %>$StartTime.Nice <% end_if %>
                         </time>
