@@ -5,11 +5,7 @@
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
-            <% if $FilteredContext %>
-                <p class="text-muted">
-                    $FilteredContext
-                </p>
-            <% end_if %>
+            <% include NewsFilterContext %>
         </div>
 
         <section class="<% if $AvailableMonths || not $FilteredUpdates %>col-md-7 col-md-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
