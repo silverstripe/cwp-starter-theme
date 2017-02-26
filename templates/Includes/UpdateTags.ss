@@ -3,7 +3,10 @@
     <nav role="navigation">
         <p>
             <% loop $UpdateTagsWithLinks %>
-                <a href="$Link" class="label <% if $Top.CurrentTag.ID==$ID %>label-success<% else %>label-primary<% end_if %>" title='<%t CWP.Events_Newsr.ViewItemsTagged "View items tagged {Name}" Name=$Name %>'>$Name</a>
+                <a href="$Link"
+                    <% if $Top.CurrentTag.ID == $ID %> aria-selected="true"<% end_if %>
+                    class="label <% if $Top.CurrentTag.ID == $ID %>label-success<% else %>label-primary<% end_if %>"
+                    title='<%t CWP.Events_News.ViewItemsTagged "View items tagged {Name}" Name=$Name %>'>$Name</a>
             <% end_loop %>
         </p>
         <% if $CurrentTag %>
