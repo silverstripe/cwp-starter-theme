@@ -62,7 +62,7 @@
           }
 
           &.open {
-            background: transparent!important;
+            background: $navbar-default-link-hover-bg!important;
 
             .navbar__touch-caret {
               background: $gray-lighter;
@@ -76,7 +76,10 @@
 
         @media (max-width: $grid-float-breakpoint-max) {
           .dropdown:not(.active) {
-            background: transparent!important;
+            background: $navbar-default-link-hover-bg!important;
+          }
+          .dropdown {
+            padding-right: 0;
           }
           .navbar__touch-caret {
             padding-top:    $padding-large-vertical;
@@ -91,12 +94,13 @@
         right: 0;
         border: 0;
         padding: $navbar-padding-vertical $navbar-padding-horizontal $navbar-padding-vertical 8px;
-        background: transparent;
+        background: $navbar-default-link-hover-bg;
     }
 }
 
 .navbar-form {
     margin-bottom: 0;
+    border-color: $navbar-default-link-hover-bg!important;
 }
 
 
