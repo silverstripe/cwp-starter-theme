@@ -1,5 +1,5 @@
 <div>
-    <address class="help-block">
+    <address class="meta-info">
         <% if $Location %>
             $NiceLocation,
         <% end_if %>
