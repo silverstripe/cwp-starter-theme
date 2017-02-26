@@ -11,11 +11,14 @@
 
     .sitemap-link,
     .page-toggle {
-      padding-bottom: $padding-large-vertical !important;
-      padding-top: $padding-large-vertical !important;
+      padding-bottom: $padding-large-vertical;
+      padding-top: $padding-large-vertical;
     }
   }
 
+  li {
+    margin-bottom: 0;
+  }
 }
 
 .sitemap .initial {
