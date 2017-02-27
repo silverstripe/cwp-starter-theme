@@ -1,5 +1,12 @@
 let mix = require("laravel-mix").mix;
 
+mix.webpackConfig({
+  externals: {
+    jquery: 'jQuery',
+    '$': 'jQuery'
+  }
+});
+
 mix.setPublicPath("dist");
 
 mix.js("src/js/main.js", "dist/js/main.js");
