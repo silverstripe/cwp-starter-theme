@@ -15,3 +15,8 @@
     margin-bottom: 0;
   }
 }
+
+// Grouped buttons, convert SilverStripe convention to BS
+.Actions {
+  @extend .btn-toolbar;
+}
