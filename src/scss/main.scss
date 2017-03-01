@@ -1,10 +1,16 @@
+// Theme specific variables and overrides
 @import "./_variables";
-@import "./_print";
+
+// Third-party libraries
 @import "~font-awesome/scss/font-awesome";
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
+
+// Base theme components
+@import "./_print";
 @import "./_typography";
+@import "./components/_forms";
 @import "./components/_footer";
 @import "./components/_header";
-@import "./components/_pages";
 @import "./components/_news-events";
+@import "./components/_pages";
 @import "./components/_sitemap";

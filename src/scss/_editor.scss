@@ -1,11 +1,12 @@
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tables";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_media";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_utilities";
-@import "_typography";
+@import "./_variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_tables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_media";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_type";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_utilities";
+@import "./_typography";
 
 body.mceContentBody a.ss-broken {
     background-color: $brand-danger;

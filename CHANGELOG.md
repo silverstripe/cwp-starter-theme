@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.2.0 (2017-03-02)
+
+* CWPT-369 add extend btn (Sacha Judd)
+* Removed link title attr on mainNav subnavigation (Matias)
+* CWPT-95 add better naming for footer class (newleeland)
+* CWPT-356: Improve accessibility in page breadcrumbs. Fix $BaseHref typo. (Robbie Averill)
+* CWPT-347: Adjust userforms jQuery validator configuration for Bootstrap 3 validation states (Robbie Averill)
+* CWPT-346 This card has a comment to explain the js of how the alternative text works. (Sacha Judd)
+* CWPT-306: Adjust for user forms, add UDF templates and tweak SASS for fieldset group and legends in UDF (Robbie Averill)
+* CWPT-156 move variable from typography to variables and rename help-block to meta-info (Sacha Judd)
+* FIX Move filter context to an include template (Robbie Averill)
+* CWPT-348 move search bar above navigation on mobile (Matias)
+* Adding results string based on the outcome produced by the filters on both news and events pages (Paul Jayme)
+* feature/CWPT-345_sitemap FIX (Sacha Judd)
+* FIX Define entire copy of bootstrap variable sheet with our customised values, remove modularisation (Robbie Averill)
+* FIX Remove !default from variables that are not defaults (Robbie Averill)
+* feature/CWPT-321_base-variables base-theme (Sacha Judd)
+* FIX Update variable precendence by explicitly separating variables and manifests (Robbie Averill)
+* CWPT-97 update markup so that container and Quicklinks are separated (Paul Jayme)
+* Changed caret to fontAwesome icon (Matias)
+* CWPT-94: Add lang attribute to language selector, and native selected language name (Robbie Averill)
+* CWPT-318: Move features/quicklinks to its own include outside of the main content area (Robbie Averill)
+* CWPT-320: Remove Jumbotron template and implement the carousel with Jumbotron styles (Robbie Averill)
+* CWPT-303: Tweak documentation, add some missing sections and fix some typos/grammar (Robbie Averill)
+* Changed margin to padding on site-header (Matias)
+
 ## 0.1.0 (2017-02-16)
 
 * FIX Use correct path for importing node_module SCSS dependencies (Robbie Averill)

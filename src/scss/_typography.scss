@@ -1,6 +1,3 @@
-//** Custom spacing for images within typography
-$image-spacing: 18px !default;
-
 .typography {
     font-family: $font-family-sans-serif;
     font-size: $font-size-base;
@@ -74,28 +71,36 @@ figure {
 
 // Table styles
 table {
-    font-family: $font-family-sans-serif;
     @extend .table;
 
     caption {
         text-align: left;
         padding: $table-cell-padding 0;
     }
-    thead,
-    tfoot {
-        font-weight: $headings-font-weight;
+
+    thead td {
+      font-weight: $headings-font-weight;
+    }
+
+    tfoot td {
+        color: $text-muted;
+        font-size: $font-size-small;
     }
 }
 
+// Specified here so they can be seen and used within the editor styles dropdown
+.table-hover,
 .table-striped,
-.table-bordered-striped {
-    tbody tr:hover {
-        td,
-        th {
-            background-color: $table-bg-hover;
-        }
-    }
+.table-bordered {
+  background-color: $table-bg;
 }
+
+// Example of how you could combine bootstrap table styles
+.table-bordered-striped {
+  @extend .table-bordered;
+  @extend .table-striped;
+}
+
 
 // Links
 // Icons
@@ -206,4 +211,16 @@ pre {
     font-weight: $headings-font-weight;
     border-bottom: 0;
     font-size: $font-size-base;
+}
+
+// Used typically under a header to provide additional info like author or dates.
+.meta-info {
+  color: $text-muted;
+  font-size: $font-size-base;
+  header + &,
+  h1 + &, .h1 + &,
+  h2 + &, .h2 + &,
+  h3 + &, .h3 + & {
+    margin-top: -$line-height-computed / 2;
+  }
 }

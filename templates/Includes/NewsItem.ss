@@ -1,5 +1,5 @@
 <div>
-    <address class="help-block">
+    <address class="meta-info">
         <% if $Author %>
             $Author,
         <% end_if %>
@@ -14,6 +14,6 @@
     </figure>
 <% end_if %>
 $Content.RichLinks
-<p><a href="$Parent.Link" title="$Parent.Title" class="hidden-print"><%t CWP.News.BACK "←  Back to the news" %></a></p>
+<p><a href="$Parent.Link" class="hidden-print"><%t CWP.News.BACK "←  Back to the news" %></a></p>
 
 $Form

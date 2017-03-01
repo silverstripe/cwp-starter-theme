@@ -8,8 +8,9 @@
         aria-expanded="false"
         aria-controls="children-$ID">
         <span class="toggleIco fa fa-plus"></span>
-        <span class="sr-only" data-collapse-text="<%t CWP.CollapseLabel "Collapse section" %>">
-            <%t CWP.ExpandLabel "Expand section" %>
+        <span class="sr-only" data-collapse-text="<%t CWP.CollapseLabel "Collapse section" %> $MenuTitle">
+            <%-- Switches with data-collapse-text when selected --%>
+            <%t CWP.ExpandLabel "Expand section" %> $MenuTitle
         </span>
     </a>
 <% end_if %>
