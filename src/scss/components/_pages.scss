@@ -16,13 +16,17 @@
     }
 }
 
-
 .jumbotron {
     margin-top: -20px;
 }
 
-
 // IFramePage
 .Iframepage-iframe {
     border: 0;
+}
+
+// Features & Quicklinks
+.showcase-quicklinks,
+.showcase-feature {
+  margin-bottom: $line-height-computed * 1.5;
 }
