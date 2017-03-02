@@ -1,5 +1,5 @@
 {
-  "name": "cwp-new-theme",
+  "name": "cwp-starter-theme",
   "version": "0.2.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.cwp.govt.nz/cwp/new-theme.git"
+    "url": "https://gitlab.cwp.govt.nz/cwp/starter-theme.git"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
