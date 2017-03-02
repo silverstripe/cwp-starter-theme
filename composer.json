@@ -1,5 +1,5 @@
 {
-  "name": "cwp/new-theme",
+  "name": "cwp/dev-theme",
   "description": "CWP Theme",
   "type": "silverstripe-theme",
   "keywords": ["silverstripe", "theme"],
@@ -10,15 +10,9 @@
     }
   ],
   "require": {
-    "composer/installers": "*",
-    "silverstripe/framework": "~3.2",
-    "silverstripe/cms": "~3.2",
-    "cwp/cwp-theme-module": "dev-develop"
+    "cwp/cwp": "^1.5"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://gitlab.cwp.govt.nz/cwp/cwp-theme-module.git"
-    }
-  ]
+  "extra": {
+    "installer-name": "dev"
+  }
 }
