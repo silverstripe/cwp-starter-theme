@@ -42,23 +42,4 @@ The new theme is just a Composer library - it can be installed the same as any o
 
 Feel free to remove the previous theme - its files aren't needed to use the new theme. The new theme includes an underlying module (which cleans up the CMS a bit). Once it's installed, run `/dev/build?flush=1`. When you return to the home page you should see the new theme.
 
-You may need to add some VCS repositories to your Composer configuration. The code for those repositories is:
-
-```json
-"repositories": [
-    {
-        "type": "composer",
-        "url": "https://packages.cwp.govt.nz/"
-    },
-    {
-        "type": "vcs",
-        "url": "https://gitlab.cwp.govt.nz/cwp/cwp-theme-module.git"
-    },
-    {
-        "type": "vcs",
-        "url": "https://gitlab.cwp.govt.nz/cwp/new-theme.git"
-    }
-]
-```
-
 That's it! You've got the new theme, running on a new CWP site. Time to make it yours...
