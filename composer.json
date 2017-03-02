@@ -1,5 +1,5 @@
 {
-  "name": "cwp/dev-theme",
+  "name": "cwp/starter-theme",
   "description": "CWP Theme",
   "type": "silverstripe-theme",
   "keywords": ["silverstripe", "theme"],
@@ -13,6 +13,6 @@
     "cwp/cwp": "^1.5"
   },
   "extra": {
-    "installer-name": "dev"
+    "installer-name": "starter"
   }
 }
