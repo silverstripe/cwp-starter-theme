@@ -7,13 +7,13 @@ export default function () {
     const $this = elem;
 
     $this.addClass('open');
-    $this.find('.navbar__touch-caret').attr('aria-expanded', true);
+    $this.find('.navbar-touch-caret').attr('aria-expanded', true);
   };
 
   const closeMenu = function () {
     // Close dropdown, by default Bootstrap leaves it open
     Dropdown.removeClass('open')
-            .find('.navbar__touch-caret').attr('aria-expanded', false);
+            .find('.navbar-touch-caret').attr('aria-expanded', false);
   };
 
   const isDesktop = function () {
@@ -48,7 +48,7 @@ export default function () {
       switch ($key) {
         case 13:
           // [Enter] key
-          $dropdownToggle = $this.find('.navbar__touch-caret');
+          $dropdownToggle = $this.find('.navbar-touch-caret');
           if ($dropdownToggle.is(':focus')) {
             $url = $dropdownToggle.attr('href');
             if ($url !== undefined) {
@@ -84,7 +84,7 @@ export default function () {
     closeMenu();
   });
 
-  $('nav .nav__item').focusin(function () {
+  $('nav .nav-item').focusin(function () {
     let $key = null;
     const $this = $(this);
     const $next = $this.next().find('a');
@@ -118,7 +118,7 @@ export default function () {
     });
   });
 
-  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar__touch-caret',function (event) {
+  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret',function (event) {
     event.stopPropagation();
     event.preventDefault();
 
