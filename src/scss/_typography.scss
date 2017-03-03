@@ -216,7 +216,7 @@ pre {
 // Used typically under a header to provide additional info like author or dates.
 .meta-info {
   color: $text-muted;
-  font-size: $font-size-base;
+  font-size: $font-size-small;
   header + &,
   h1 + &, .h1 + &,
   h2 + &, .h2 + &,

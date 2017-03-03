@@ -4,7 +4,7 @@
             $NiceLocation,
         <% end_if %>
         <% if $Date %>
-            <time datetime="$Date">$Date.Format(Y/m/d) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
+            <time datetime="$Date">$Date.Format(d/m/Y) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
         <% end_if %>
     </address>
 </div>
