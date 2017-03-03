@@ -1,7 +1,7 @@
 {
     "extends": "airbnb",
     "rules": {
-        "func-names": ["error", "never"]
+        "func-names": "off"
     },
     "env": {
         "browser": true,

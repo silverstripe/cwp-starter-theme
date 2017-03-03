@@ -362,11 +362,10 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
 
 
 /* harmony default export */ __webpack_exports__["a"] = function () {
-  /* eslint-disable */
-  if (typeof searchQuery !== 'undefined') {
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('article.result').highlight(searchQuery.query, { element: 'mark', className: 'highlight' });
-  }
-  /* eslint-enable */
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('article[data-highlight]').each(function () {
+    var text = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).data('highlight');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).highlight(text, { element: 'mark', className: 'highlight' });
+  });
 };
 
 /***/ }),
