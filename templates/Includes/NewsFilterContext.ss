@@ -1,5 +1,5 @@
-<% if $FilteredContext %>
+<% if $FilterDescription %>
     <p class="text-muted">
-        $FilteredContext
+        $FilterDescription
     </p>
 <% end_if %>
