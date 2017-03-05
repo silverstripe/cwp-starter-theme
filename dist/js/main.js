@@ -231,12 +231,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     var $this = elem;
 
     $this.addClass('open');
-    $this.find('.navbar__touch-caret').attr('aria-expanded', true);
+    $this.find('.navbar-touch-caret').attr('aria-expanded', true);
   };
 
   var closeMenu = function closeMenu() {
     // Close dropdown, by default Bootstrap leaves it open
-    Dropdown.removeClass('open').find('.navbar__touch-caret').attr('aria-expanded', false);
+    Dropdown.removeClass('open').find('.navbar-touch-caret').attr('aria-expanded', false);
   };
 
   var isDesktop = function isDesktop() {
@@ -268,7 +268,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
       switch ($key) {
         case 13:
           // [Enter] key
-          $dropdownToggle = $this.find('.navbar__touch-caret');
+          $dropdownToggle = $this.find('.navbar-touch-caret');
           if ($dropdownToggle.is(':focus')) {
             $url = $dropdownToggle.attr('href');
             if ($url !== undefined) {
@@ -303,7 +303,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     closeMenu();
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .nav__item').focusin(function () {
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .nav-item').focusin(function () {
     var $key = null;
     var $this = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this);
     var $next = $this.next().find('a');
@@ -337,7 +337,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
     });
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main-nav .navbar-nav .dropdown').on('click', '.navbar__touch-caret', function (event) {
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret', function (event) {
     event.stopPropagation();
     event.preventDefault();
 
