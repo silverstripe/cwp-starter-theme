@@ -8,24 +8,35 @@
                 $SearchForm
                 <% if $Query %>
                     <div class="page-summary clearfix">
-                        <p class="lead pull-left">
-                            <%t CWP_Search.ShowingResultsFor 'Showing results for "{query}"' query=$Query.XML %>
-                        </p>
                         <% if $Results %>
-                            <p class="text-muted pull-right text-right">
-                                <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
-                            </p>
                             <% if $Original %>
-                                <div class="row search-results__no-result">
+                                <div class="row search-results-no-result">
                                     <div class="col-sm-12">
                                         <div class="alert alert-warning" role="alert"><p>
-                                            <%t CWP_Search.Original "No search results were found matching <strong>{original}</strong>. Did you mean <strong>{query}</strong>?" original=$Original query=$Query %>
+                                            <%t CWP_Search.Original "No search results were found matching <strong>{original}</strong>." original=$Original %>
                                         </p></div>
                                     </div>
                                 </div>
                             <% end_if %>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 pull-right search-results-results-page">
+                                    <p class="text-muted">
+                                        <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-8 search-results-results-message">
+                                    <p class="lead">
+                                        <% if $Original %>
+                                            <%t CWP_Search.ShowingResultsInsteadFor 'Showing results for "{query}" instead' query=$Query.XML %>
+                                        <% else %>
+                                            <%t CWP_Search.ShowingResultsFor 'Showing results for "{query}"' query=$Query.XML %>
+                                        <% end_if %>
+                                    </p>
+                                </div>
+                            </div>
+
                         <% else %>
-                            <div class="row search-results__no-result">
+                            <div class="row search-results-no-result">
                                 <div class="col-sm-12">
                                     <div class="alert alert-warning" role="alert">
                                         $NoSearchResults.XML
