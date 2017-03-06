@@ -5,6 +5,9 @@
 @import "~font-awesome/scss/font-awesome";
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
 
+// Mixins
+@import "./utils/_mixins";
+
 // Base theme components
 @import "./_print";
 @import "./_typography";
