@@ -2,7 +2,6 @@ let mix = require("laravel-mix").mix;
 
 mix.webpackConfig({
   externals: {
-    jquery: 'jQuery',
     '$': 'jQuery'
   }
 });
