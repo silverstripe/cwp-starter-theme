@@ -1,5 +1,5 @@
 // Define globally exposed module objects
-require('expose-loader?jquery!jquery');
+require('expose-loader?jQuery!jquery');
 
 // Define dependency imports
 /* eslint-disable */
