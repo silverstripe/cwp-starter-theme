@@ -1,0 +1,4 @@
+@mixin outline-focus() {
+  outline: $outline-focus auto 5px;
+  outline: auto 5px -webkit-focus-ring-color;
+}

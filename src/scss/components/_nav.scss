@@ -19,9 +19,50 @@
       }
     }
   }
+
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    > .current > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+  }
+
+  .dropdown {
+    &:hover .navbar-touch-caret,
+    &:focus .navbar-touch-caret {
+      background-color: transparent;
+    }
+
+    // When active
+    &.current {
+      .navbar-touch-caret,
+      &:hover .navbar-touch-caret,
+      &:focus .navbar-touch-caret {
+        background: $gray-lighter;
+
+        &:hover,
+        &:focus {
+          background-color: $gray-lighter;
+        }
+      }
+    }
+  }
 }
 
 .navbar-touch-caret {
+  z-index: 100;
   position: absolute;
   top: 0;
   right: 0;
@@ -45,5 +86,15 @@
 
   .icon-bar {
     background-color: $navbar-default-toggle-icon-bar-bg;
+  }
+}
+
+.navbar-collapse {
+  border-top: none;
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+  .navbar-touch-caret {
+    padding: 10px $navbar-padding-horizontal 10px 8px; // Uses BS default mobile nav values which are not variables
   }
 }

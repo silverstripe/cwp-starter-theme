@@ -1,3 +1,7 @@
+body > header .open > a:focus {
+  @include outline-focus();
+}
+
 .site-header {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -31,7 +35,6 @@
     text-decoration: none;
   }
 }
-
 
 //Accessibilty links to navigation
 .skip-links a {
