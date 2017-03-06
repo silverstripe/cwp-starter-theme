@@ -11251,7 +11251,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__components_img__["a" /* defau
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jquery"] = __webpack_require__(0);
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["jQuery"] = __webpack_require__(0);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ }),
