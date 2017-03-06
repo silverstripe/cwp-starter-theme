@@ -1,9 +1,8 @@
 import $ from 'jquery';
 
 export default function () {
-  /* eslint-disable */
-  if (typeof searchQuery !== 'undefined') {
-      $('article.result').highlight(searchQuery.query, { element: 'mark', className: 'highlight' });
-  }
-  /* eslint-enable */
+  $('article[data-highlight]').each(function () {
+    const text = $(this).data('highlight');
+    $(this).highlight(text, { element: 'mark', className: 'highlight' });
+  });
 }

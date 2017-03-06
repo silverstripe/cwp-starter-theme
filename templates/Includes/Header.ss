@@ -18,8 +18,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <form class="form-inline hidden-xs header-search pull-right" action="/search">
-        <% include HeaderSearch %>
-    </form>
+    <% include HeaderSearch %>
     <% include LanguageSelector %>
 </div>
