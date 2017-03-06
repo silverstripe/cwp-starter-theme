@@ -1,11 +1,11 @@
 <% if $UseButtonTag %>
-    <button class="btn btn-default {$ExtraClass.ATT}" {$AttributesHTML}>
+    <button $getAttributesHTML('class') class="btn btn-default {$ExtraClass.ATT}">
         <% if $ButtonContent %>
-            {$ButtonContent.XML}
+            {$ButtonContent.RAW}
         <% else %>
             {$Title.XML}
         <% end_if %>
     </button>
 <% else %>
-    <input class="btn btn-default {$ExtraClass}" {$AttributesHTML} />
+    <input $getAttributesHTML('class') class="btn btn-default {$ExtraClass.ATT}" />
 <% end_if %>
