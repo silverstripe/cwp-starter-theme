@@ -217,10 +217,12 @@ pre {
 .meta-info {
   color: $text-muted;
   font-size: $font-size-small;
+
   header + &,
   h1 + &, .h1 + &,
   h2 + &, .h2 + &,
-  h3 + &, .h3 + & {
+  h3 + &, .h3 + &,
+  h4 + &, .h4 + & {
     margin-top: -$line-height-computed / 2;
   }
 }
