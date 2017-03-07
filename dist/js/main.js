@@ -10429,6 +10429,15 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
       }
     };
   }
+
+  // Comments Module - Accesibility for Replies
+  var $commentReplyLink = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.comment-reply-link');
+
+  $commentReplyLink.click(function () {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).attr('aria-expanded', function (i, val) {
+      return val !== 'true';
+    });
+  });
 };
 
 /***/ }),
