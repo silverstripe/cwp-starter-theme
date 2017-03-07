@@ -1,45 +1,48 @@
-/*  Sitemap formatting */
+// Sitemap formatting
 .sitemap {
   border-bottom: 1px solid $table-border-color;
   list-style-type: none;
-  margin: 40px 0;
+  margin: 40px 0 ($line-height-computed * 3);
   padding-left: 0;
 
   ul {
     list-style-type: none;
-    padding-bottom: $padding-large-vertical;
-
-    .sitemap-link,
-    .page-toggle {
-      padding-bottom: $padding-large-vertical;
-      padding-top: $padding-large-vertical;
-    }
-  }
-
-  li {
-    margin-bottom: 0;
+    padding-bottom: $padding-base-vertical;
   }
 }
 
-.sitemap .initial {
+.page-toggle { // Todo change class name to .sitemap-toggle in module
+  padding: $padding-base-vertical 15px;
+  display: inline-block;
+  float: left;
+}
+
+.sitemap-link {
+  padding: $padding-base-vertical 0;
+  display: block;
+  margin-left: 40px;
+}
+
+// Target first level only and give more spacing
+.sitemap-initial {
   border-top: 1px solid $table-border-color;
-  z-index: 0;
   position: relative;
 
   &:hover {
     background-color: $table-bg-hover;
   }
 
-  .sitemap-link {
-    padding: 20px 0;
-    z-index: 1;
-    display: block;
-    margin-left: 40px;
+  > .page-toggle__children > .sitemap-link { // Todo change class name in module to .sitemap-toggle-children
+    padding-top: $padding-large-vertical;
+    padding-bottom: $padding-large-vertical;
+  }
+
+  > .page-toggle { // Todo change class name to .sitemap-toggle in module
+    padding-top: $padding-large-vertical;
+    padding-bottom: $padding-large-vertical;
   }
 }
 
-.sitemap .page-toggle {
-  padding: 20px 15px;
-  display: inline-block;
-  float: left;
-}
+
+
+
