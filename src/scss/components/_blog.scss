@@ -1,0 +1,36 @@
+.tagcloud.list-inline > li {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.entry-tags,
+.entry-categories {
+  margin-bottom: $padding-small-vertical;
+  .label {
+    margin-right: $padding-small-vertical;
+  }
+}
+
+.blog-entry-tags {
+  margin-top: $line-height-computed;
+}
+
+.blog-post-meta {
+  @extend .meta-info
+}
+
+.blog-post-heading {
+  margin-bottom: $line-height-computed;
+}
+
+.blog-summary-img {
+  padding-top: $line-height-computed;
+  margin-left: $line-height-computed;
+}
+
+.WidgetHolder  {
+  background-color: $gray-lighter;
+  padding: $line-height-computed * 0.5 $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border-radius: $border-radius-base;
+}
