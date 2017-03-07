@@ -1,5 +1,4 @@
 <div class="container">
-
     <% if $SiteConfig.FacebookURL || $SiteConfig.TwitterUsername %>
         <div class="footer_nav-links footer_social-links" role="complementary">
             <% if $SiteConfig.TwitterUsername %>
@@ -25,26 +24,11 @@
     <% end_if %>
 
     <hr>
-    <a class="footer_govt-logo"
-    <% if $SiteConfig.FooterLogoLink %>
-        href="$SiteConfig.FooterLogoLink"
-    <% else %>
-        href="http://newzealand.govt.nz/"
-    <% end_if %>
-    >
-        <img
-        <% if $SiteConfig.FooterLogo %>
-            src="$SiteConfig.FooterLogo.URL"
-        <% else %>
-            src="$ThemeDir/images/newzealand-government-footer.png" width="210"
-        <% end_if %>
-
-        <% if $SiteConfig.FooterLogoDescription %>
-            alt="$SiteConfig.FooterLogoDescription"
-        <% else %>
-            alt="<%t CWP.Footer.GovAlt "newzealand.govt.nz - connecting you to New Zealand central &amp; local government services" %>"
-        <% end_if %>
-        />
+    <a href="http://newzealand.govt.nz" class="footer_govt-logo">
+        <img src="$ThemeDir/images/newzealand-government-footer.png"
+            width="210"
+            alt="<%t CWP.Footer.GovAlt 'newzealand.govt.nz - connecting you to New Zealand central &amp; local government services' %>"
+            />
     </a>
 
     <p>
