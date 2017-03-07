@@ -25,5 +25,4 @@
        <% include BlogSideBar %>
     </div>
 </div>
-
-
+<% include PageUtilities %>

@@ -14,5 +14,5 @@
         <% include Pagination %>
     <% end_with %>
 <% else %>
-    <p>There are no blog posts</p>
+    <p><%t BlogPostPaginatedList.NO_POSTS "There are no blog posts" %></p>
 <% end_if %>
