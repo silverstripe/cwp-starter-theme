@@ -39,9 +39,6 @@ export default function () {
   const $commentReplyLink = $('.comment-reply-link');
 
   $commentReplyLink.click(function () {
-
     $(this).attr('aria-expanded', (i, val) => val !== 'true');
-
   });
-
 }
