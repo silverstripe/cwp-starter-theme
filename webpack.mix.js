@@ -15,6 +15,4 @@ mix
   .sass("src/scss/editor.scss", "dist/css/editor.css")
   .sass("src/scss/font-awesome.scss", "dist/css/font-awesome.css");
 
-mix.copy("node_modules/bootstrap-sass/assets/fonts/bootstrap", "dist/fonts");
-mix.copy("node_modules/font-awesome/fonts", "dist/fonts");
 mix.copy("src/images", "dist/images");
