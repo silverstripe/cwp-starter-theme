@@ -16,12 +16,19 @@ body > header .open > a:focus {
 }
 
 .site-header-brand {
-  font-size: $font-size-h3;
-  font-weight: $headings-font-weight;
   overflow: visible;
-  line-height: 1em;
   float: left;
   margin-top: 3px;
+}
+
+.site-header-brand a {
+  font-size: $font-size-h3;
+  font-weight: $headings-font-weight;
+  line-height: 1em;
+}
+
+.site-header-brand-tagline {
+  display: block;
 }
 
 .site-header-brand-link,
