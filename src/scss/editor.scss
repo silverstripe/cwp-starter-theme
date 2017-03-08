@@ -1,4 +1,5 @@
-@import "./_variables";
+@import "./variables";
+// sass-lint:disable clean-import-paths
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/_variables";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
@@ -7,7 +8,8 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/_type";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/_utilities";
 @import "_font-awesome";
-@import "./_typography";
+// sass-lint:enable clean-import-paths
+@import "./typography";
 
 body.mceContentBody a.ss-broken {
   background-color: $brand-danger;

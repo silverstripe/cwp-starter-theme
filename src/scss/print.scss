@@ -1,37 +1,36 @@
 @media only print {
+  .site-header-brand-link-default:after,
+  #header-language-toggle,
+  .navbar-toggle,
+  .main-nav,
+  .breadcrumb,
 
-    .site-header-brand-link-default:after,
-    #header-language-toggle,
-    .navbar-toggle,
-    .main-nav,
-    .breadcrumb,
+  .page-utilities .list-inline,
 
-    .page-utilities .list-inline,
+  .news-events_date-range,
+  .news-events_archive,
+  article h2 a:after,
+  .news-events_tags .label:after,
+  .related-pages__link:after,
 
-    .news-events_date-range,
-    .news-events_archive,
-    article h2 a:after,
-    .news-events_tags .label:after,
-    .related-pages__link:after,
+  .search-results form,
+  .search-results article h1 a:after {
+    display: none;
+  }
 
-    .search-results form,
-    .search-results article h1 a:after {
-        display: none;
-    }
+  .header-search,
+  #ui-datepicker-div,
+  .treedropdownfield-panel,
+  .pagination,
+  footer {
+    display: none !important;
+  }
 
-    .header-search,
-    #ui-datepicker-div,
-    .treedropdownfield-panel,
-    .pagination,
-    footer {
-        display: none !important;
-    }
+  .page-utilities_last-modified {
+    float: left !important;
+  }
 
-    .page-utilities_last-modified {
-        float: left !important;
-    }
-
-    pre {
-        white-space: pre-wrap;
-    }
+  pre {
+    white-space: pre-wrap;
+  }
 }

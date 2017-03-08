@@ -1,91 +1,91 @@
 .typography {
-    font-family: $font-family-sans-serif;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 p {
-    margin-bottom: $line-height-computed / 2;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
+  margin-bottom: $line-height-computed / 2;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 img,
 figure {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 
-    &.right {
-        float: right;
-        clear: right;
-        margin: 0 0 $image-spacing $image-spacing;
-    }
+  &.right {
+    float: right;
+    clear: right;
+    margin: 0 0 $image-spacing $image-spacing;
+  }
 
-    &.left {
-        float: left;
-        clear: left;
-        margin: 0 $image-spacing $image-spacing 0;
-    }
+  &.left {
+    float: left;
+    clear: left;
+    margin: 0 $image-spacing $image-spacing 0;
+  }
 
-    &.leftAlone {
-        margin: 0 $image-spacing $image-spacing 0;
-        display: block;
-        clear: both;
-    }
+  &.leftAlone {
+    margin: 0 $image-spacing $image-spacing 0;
+    display: block;
+    clear: both;
+  }
 
-    &.center {
-        margin-bottom: $image-spacing;
-        clear: both;
-    }
+  &.center {
+    margin-bottom: $image-spacing;
+    clear: both;
+  }
 }
 
 .captionImage {
-    width: 100%;
-    max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 
-    &.pull-left {
-        margin: 0 $image-spacing $image-spacing 0;
-    }
+  &.pull-left {
+    margin: 0 $image-spacing $image-spacing 0;
+  }
 
-    &.pull-right {
-        margin: 0 0 $image-spacing $image-spacing;
-    }
+  &.pull-right {
+    margin: 0 0 $image-spacing $image-spacing;
+  }
 
-    &.leftAlone {
-        margin: 0 $image-spacing $image-spacing 0;
-    }
+  &.leftAlone {
+    margin: 0 $image-spacing $image-spacing 0;
+  }
 
-    &.center-block {
-        margin-bottom: $image-spacing;
-    }
+  &.center-block {
+    margin-bottom: $image-spacing;
+  }
 
-    p {
-        clear: both;
-        margin: $table-cell-padding 0;
-    }
+  p {
+    clear: both;
+    margin: $table-cell-padding 0;
+  }
 
-    img {
-        margin: 0 0 $table-cell-padding 0;
-    }
+  img {
+    margin: 0 0 $table-cell-padding 0;
+  }
 }
 
 // Table styles
 table {
-    @extend .table;
+  @extend .table;
 
-    caption {
-        text-align: left;
-        padding: $table-cell-padding 0;
-    }
+  caption {
+    text-align: left;
+    padding: $table-cell-padding 0;
+  }
 
-    thead td {
-      font-weight: $headings-font-weight;
-    }
+  thead td {
+    font-weight: $headings-font-weight;
+  }
 
-    tfoot td {
-        color: $text-muted;
-        font-size: $font-size-small;
-    }
+  tfoot td {
+    color: $text-muted;
+    font-size: $font-size-small;
+  }
 }
 
 // Specified here so they can be seen and used within the editor styles dropdown
@@ -108,20 +108,20 @@ a.fa,
 a.fa:hover,
 i.fa,
 i.fa:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 // EXTERNAL LINKS
 a.external {
-   display: inline-block;
+  display: inline-block;
 
-    &::after {
-        content: "\f08e";
-        font-size: $font-size-small;
-        font-family: FontAwesome;
-        position: relative;
-        top: -3px;
-    }
+  &::after {
+    content: "\f08e";
+    font-size: $font-size-small;
+    font-family: FontAwesome;
+    position: relative;
+    top: -3px;
+  }
 }
 
 a[href$=".doc"],
@@ -129,11 +129,11 @@ a[href$=".DOC"],
 a[href$=".docx"],
 a[href$=".DOCX"],
 .doc {
-    &::before {
-        margin-right: 5px;
-        content: "\f016";
-        font-family: FontAwesome;
-    }
+  &::before {
+    margin-right: 5px;
+    content: "\f016";
+    font-family: FontAwesome;
+  }
 }
 
 a[href$=".xls"],
@@ -141,11 +141,11 @@ a[href$=".XLS"],
 a[href$=".xlsx"],
 a[href$=".XLSX"],
 .xls {
-    &::before {
-        margin-right: 5px;
-        content: "\f1c3";
-        font-family: FontAwesome;
-    }
+  &::before {
+    margin-right: 5px;
+    content: "\f1c3";
+    font-family: FontAwesome;
+  }
 }
 
 a[href$=".gz"],
@@ -155,62 +155,62 @@ a[href$=".GZIP"],
 a[href$=".zip"],
 a[href$=".ZIP"],
 .archive {
-    &::before {
-        margin-right: 5px;
-        content: "\f1c6";
-        font-family: FontAwesome;
-    }
+  &::before {
+    margin-right: 5px;
+    content: "\f1c6";
+    font-family: FontAwesome;
+  }
 }
 
 a[href$=".exe"],
 a[href$=".EXE"],
 .application {
-    &::before {
-        margin-right: 5px;
-        content: "\f022";
-        font-family: FontAwesome;
-    }
+  &::before {
+    margin-right: 5px;
+    content: "\f022";
+    font-family: FontAwesome;
+  }
 }
 
 a[href$=".pdf"],
 a[href$=".PDF"],
 .pdf {
-    &::before {
-        margin-right: 5px;
-        content: "\f1c1";
-        font-family: FontAwesome;
-    }
+  &::before {
+    margin-right: 5px;
+    content: "\f1c1";
+    font-family: FontAwesome;
+  }
 }
 
 .blockquote-footer {
-    display: block;
-    font-size: 80%;
-    color: $text-muted;
+  display: block;
+  font-size: 80%;
+  color: $text-muted;
 
-    &::before {
-        content: '\2014 \00A0';
-    }
+  &::before {
+    content: "\2014 \00A0";
+  }
 }
 
 // Using Bootstrap default sizes for the CMS editor
 pre {
-    padding: (($line-height-computed - 1) / 2);
-    margin: 0 0 ($line-height-computed / 2);
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: $pre-bg;
-    border: 1px solid $pre-border-color;
-    white-space: pre-wrap;
+  padding: (($line-height-computed - 1) / 2);
+  margin: 0 0 ($line-height-computed / 2);
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: $pre-bg;
+  border: 1px solid $pre-border-color;
+  white-space: pre-wrap;
 }
 
 // Forms typography
 .form-group__as-label {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0;
-    font-weight: $headings-font-weight;
-    border-bottom: 0;
-    font-size: $font-size-base;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0;
+  font-weight: $headings-font-weight;
+  border-bottom: 0;
+  font-size: $font-size-base;
 }
 
 // Used typically under a header to provide additional info like author or dates.
@@ -219,10 +219,14 @@ pre {
   font-size: $font-size-small;
 
   header + &,
-  h1 + &, .h1 + &,
-  h2 + &, .h2 + &,
-  h3 + &, .h3 + &,
-  h4 + &, .h4 + & {
+  h1 + &,
+  .h1 + &,
+  h2 + &,
+  .h2 + &,
+  h3 + &,
+  .h3 + &,
+  h4 + &,
+  .h4 + & {
     margin-top: -$line-height-computed / 2;
   }
 }

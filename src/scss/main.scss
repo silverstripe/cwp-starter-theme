@@ -2,8 +2,10 @@
 @import "./variables";
 
 // Third-party libraries
+// sass-lint:disable clean-import-paths
 @import "~font-awesome/scss/font-awesome";
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
+// sass-lint:enable clean-import-paths
 
 // Mixins
 @import "./utils/mixins";
