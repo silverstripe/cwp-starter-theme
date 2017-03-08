@@ -4,7 +4,7 @@ Forms are an important part of the web. We've taken special care to ensure that 
 
 ![Creating the form test page](images/creating-the-form-test-page.gif)
 
-This is a great tool, to use when you're making changes to all fields; and want to see what they all look like together. Form fields are just another set of templates. Dive into `new-theme/templates/forms` and modify them to suit your site.
+This is a great tool, to use when you're making changes to all fields; and want to see what they all look like together. Form fields are just another set of templates. Dive into `starter-theme/templates/forms` and modify them to suit your site.
 
 If the form field template you need is not in the templates folder it means that it is unchanged from the framework's default template. In this case you can copy it from the framework into your theme and adjust as necessary. If you're doing this, check first that you can't achieve your goal using SilverStripe extensions instead of duplicating a template.
 

@@ -1,16 +1,17 @@
 {
-  "name": "cwp-new-theme",
+  "name": "cwp-starter-theme",
   "version": "0.2.0",
   "private": true,
   "scripts": {
     "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
     "build": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "package": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "node_modules/.bin/eslint src/js"
+    "lint-js": "node_modules/.bin/eslint src/js",
+    "lint-sass": "node_modules/.bin/sass-lint -v"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.cwp.govt.nz/cwp/new-theme.git"
+    "url": "https://gitlab.cwp.govt.nz/cwp/starter-theme.git"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
@@ -27,6 +28,8 @@
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "sass-lint": "^1.10.2",
+    "webpack": "^2"
   }
 }

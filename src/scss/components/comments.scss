@@ -1,0 +1,68 @@
+.comments-holder-container {
+  .comments-heading {
+    border-top: 2px solid $gray-dark;
+    padding-top: $line-height-computed * 1.3; //26px
+    margin-top: $line-height-computed * 2.6;  //52px
+  }
+
+  .m-t-2 {
+    margin-top: 2em;  //48px
+  }
+
+  // Requires nesting
+  .comments-holder {
+    .meta-info {
+      .author,
+      .date {
+        font-size: inherit;
+      }
+    }
+
+    .comments-list {
+      .comment {
+        padding: 0 0 $line-height-computed 0;
+
+        .comment-text {
+          background-color: $gray-lighter;
+          min-height: auto;
+        }
+
+        .date::before {
+          content: none;
+        }
+      }
+
+      .comment-action-links {
+        margin: $line-height-computed * 0.5 0 $line-height-computed * 0.5;
+      }
+
+      .comment-replies-container {
+        margin: $line-height-computed * 2 0 0 0;
+      }
+    }
+  }
+
+  p.commenting-rss-feed {
+    text-align: left;
+    margin-top: 0;
+
+    a {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.comments-holder-container .comments-holder .comments-list .comment.spam .comment-text {
+  color: $state-warning-text;
+  background-color: $state-warning-bg;
+  border: 1px solid $state-warning-border;
+}
+
+.comments-holder-container .comments-holder .comments-list .comment .info {
+  @extend .meta-info;
+}
+
+.comments-holder-container .comments-holder .comment-replies-container .comment-reply-form-holder {
+  display: none;
+  margin-bottom: 10px;
+}

@@ -1,4 +1,3 @@
-<% include Carousel %>
 <div class="container">
     <div class="row">
         <section class="col-md-10 col-md-offset-1">

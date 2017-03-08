@@ -1,6 +1,6 @@
-<div id="$Name" class="form-group field<% if $extraClass %> $extraClass<% end_if %>">
-    <% if $Title %><label class="control-label left" for="$ID">$Title</label><% end_if %>
-    $Field
+<div id="{$HolderID.ATT}" class="field form-group {$ExtraClass} <% if $Message %>has-error<% end_if %>">
+    <% include FormFieldLabel %>
+    {$Field}
     <% include FormFieldMessage %>
     <% include FormFieldDescription %>
 </div>

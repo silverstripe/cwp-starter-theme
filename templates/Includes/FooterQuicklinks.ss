@@ -1,5 +1,5 @@
 <% if $ClassName == "HomePage" %>
-    <div class="quick-links">
+    <div class="showcase">
         <div class="container">
             <div class="row">
                 <% include Quicklinks %>

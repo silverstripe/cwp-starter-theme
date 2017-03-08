@@ -73,13 +73,13 @@ This script can be run (after a call to `chmod +x .git/hooks/pre-commit`), and i
 
 Run as a pre-commit Git hook, this means all PHP files are automatically checked and corrected before a commit can be successfully completed. If there are syntax errors in your code, they can't be committed to the repository.
 
-This file needs to be created as `.git/hooks/pre-commit`. You can find example hook files in that folder, but none of them are automatically enabled, as the file names must match the events they target: `pre-commit.sample` → `pre-commit`.
+This file needs to be created as `.git/hooks/pre-commit`.
 
 > You can learn more about Git hooks, in the [documentation](https://git-scm.com/book/be/v2/Customizing-Git-Git-Hooks).
 
 ## JS linting and fixing
 
-Similarly, we've applied [the AirBnB JS code style guide](https://github.com/airbnb/javascript), using [ESLint](https://github.com/eslint/eslint):
+We've applied [the AirBnB JS code style guide](https://github.com/airbnb/javascript), using [ESLint](https://github.com/eslint/eslint):
 
 ```
 npm install --save-dev babel-eslint
@@ -105,7 +105,7 @@ It would also help if you configured ESLint to allow global variables (like `win
 }
 ```
 
-Since we already have a PHP Git hook file, we need to run ESLint via PHP:
+If you already have a PHP Git hook file, you can also run ESLint via PHP:
 
 ```php
 exec("node_modules/.bin/eslint assets/js --fix")
@@ -114,7 +114,15 @@ exec("node_modules/.bin/eslint assets/js --fix")
 You can also run Javascript linting manually:
 
 ```
-npm run-script lint
+npm run-script lint-js
 ```
 
-Once again, let me stress that you don't have to use these if you don't want to. I've just described what this theme's development team are doing on their machines. Perhaps you'd find these tools useful on other projects as well. We certainly have!
+## SASS linting
+
+This theme comes with configuration for the [sass-lint](https://github.com/sasstools/sass-lint) npm module. You can run linting over the SASS files in this theme with the following command:
+
+```
+npm run lint-sass
+```
+
+If you want to change the pre-configured rules for the linter, you can adjust the `.sass-lint.yml` file in the theme's root directory.

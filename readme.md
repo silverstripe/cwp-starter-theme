@@ -9,7 +9,7 @@ If you want to start with a theme that is more designed, take a look at the [dem
 You can install this theme with Composer:
 
 ```
-composer require cwp/new-theme
+composer require cwp/starter-theme
 ```
 
 You may need to add the repository URL to your `composer.json` as a VCS repository.

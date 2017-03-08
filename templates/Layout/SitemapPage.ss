@@ -10,13 +10,13 @@
                 <ul class="sitemap list-unstyled">
                     <% if $SelectedPage %>
                         <% loop $SelectedPage.Children %>
-                        <li data-pagetype="$ClassName" class="$FirstLast initial class-$ClassName">
+                        <li data-pagetype="$ClassName" class="$FirstLast sitemap-initial class-$ClassName">
                         <% include SitemapNode %>
                         </li>
                         <% end_loop %>
                     <% else %>
                         <% loop Menu(1) %>
-                        <li data-pagetype="$ClassName" class="$FirstLast initial class-$ClassName">
+                        <li data-pagetype="$ClassName" class="$FirstLast sitemap-initial class-$ClassName">
                             <% include SitemapNode %>
                         </li>
                         <% end_loop %>

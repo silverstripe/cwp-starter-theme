@@ -1,13 +1,17 @@
 // Define globally exposed module objects
-require('expose-loader?jquery!jquery');
+/* eslint-disable */
+require('expose-loader?jQuery!jquery');
 
 // Define dependency imports
-/* eslint-disable */
+import transition from 'bootstrap-sass/assets/javascripts/bootstrap/transition';
 import collapse from 'bootstrap-sass/assets/javascripts/bootstrap/collapse';
-import tab from 'bootstrap-sass/assets/javascripts/bootstrap/tab';
 import dropdown from 'bootstrap-sass/assets/javascripts/bootstrap/dropdown';
+import carousel from 'bootstrap-sass/assets/javascripts/bootstrap/carousel';
+import tooltip from 'bootstrap-sass/assets/javascripts/bootstrap/tooltip';
+import popover from 'bootstrap-sass/assets/javascripts/bootstrap/popover';
+import modal from 'bootstrap-sass/assets/javascripts/bootstrap/modal';
+import tab from 'bootstrap-sass/assets/javascripts/bootstrap/tab';
 import highlight from 'jquery-highlight/jquery.highlight';
-/* eslint-enable */
 
 // Define local components
 import navigation from './components/navigation';
@@ -23,3 +27,4 @@ sitemap();
 search();
 form();
 img();
+/* eslint-enable */

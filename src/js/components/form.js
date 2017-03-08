@@ -34,4 +34,11 @@ export default function () {
       }
     };
   }
+
+  // Comments Module - Accesibility for Replies
+  const $commentReplyLink = $('.comment-reply-link');
+
+  $commentReplyLink.click(function () {
+    $(this).attr('aria-expanded', (i, val) => val !== 'true');
+  });
 }

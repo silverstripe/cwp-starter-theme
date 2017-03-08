@@ -1,0 +1,98 @@
+// Main navigation
+.main-nav {
+  .navbar {
+    min-height: 0;
+    border: 0;
+    border-bottom: 1px solid $navbar-default-border;
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      .dropdown:not(.active) {
+        background: $navbar-default-link-hover-bg;
+      }
+
+      .dropdown {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    > .current > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+  }
+
+  .dropdown {
+    padding-right: 18px;
+
+    &:hover .navbar-touch-caret,
+    &:focus .navbar-touch-caret {
+      background-color: transparent;
+    }
+
+    // When active
+    &.current {
+      .navbar-touch-caret,
+      &:hover .navbar-touch-caret,
+      &:focus .navbar-touch-caret {
+        background: $gray-lighter;
+
+        &:hover,
+        &:focus {
+          background-color: $gray-lighter;
+        }
+      }
+    }
+  }
+}
+
+.navbar-touch-caret {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: $navbar-padding-vertical $navbar-padding-horizontal $navbar-padding-vertical 8px;
+  background: $navbar-default-link-hover-bg;
+}
+
+.navbar-form {
+  margin-bottom: 0;
+}
+
+// Btn mobile toggle
+.navbar-toggle {
+  margin-top: 0;
+
+  &:focus {
+    outline: invert none medium;
+    border-color: $brand-primary;
+  }
+
+  .icon-bar {
+    background-color: $navbar-default-toggle-icon-bar-bg;
+  }
+}
+
+.navbar-collapse {
+  border-top: 0;
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+  .navbar-touch-caret {
+    padding: 10px $navbar-padding-horizontal 10px 8px; // Uses BS default mobile nav values which are not variables
+  }
+}
