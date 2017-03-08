@@ -8,5 +8,6 @@
     <div class="profile-summary col-md-9">
         <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
         <p>$CurrentProfile.BlogProfileSummary</p>
+        <hr>
     </div>
 </div>

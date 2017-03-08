@@ -1,5 +1,7 @@
 .tagcloud.list-inline > li {
-  padding-left: 0;
+  &:not(:first-child) {
+    padding-left: 0;
+  }
   padding-right: 0;
 }
 
@@ -27,6 +29,11 @@
 .blog-summary-img {
   padding-top: $line-height-computed;
   margin-left: $line-height-computed;
+}
+
+.blog_item-figure {
+  margin-top: $line-height-computed * 1.2; //24px
+  margin-left: $line-height-computed * 0.8; //18px
 }
 
 .WidgetHolder  {

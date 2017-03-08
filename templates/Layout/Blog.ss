@@ -1,23 +1,29 @@
 <div class="container">
     <div class="row">
-        <div class="page-header col-md-10 col-md-offset-1">
-            $Breadcrumbs
-            <h1>$Title</h1>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="page-header">
+                $Breadcrumbs
+                <h1>$Title</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="<% if $SideBarView %>col-md-7<% else %>col-md-10<% end_if %> col-md-offset-1 resultsList">
+
+        <section class="<% if $SideBarView %>col-md-7<% else %>col-md-10<% end_if %> col-md-offset-1">
             <div id="blog-main" role="main">
-                <div class="clearfix">
-                    $Content.RichLinks
-                </div>
+                <% if $Content.RichLinks %>
+                    <div class="clearfix">
+                        $Content.RichLinks
+                    </div>
+                <% end_if %>
                 <% include BlogPostPaginatedList %>
                 $Form
                 <% include RelatedPages %>
                 $CommentsForm
             </div>
-        </div>
+        </section>
+
         <% include BlogSideBar %>
+
     </div>
 </div>
+
 <% include PageUtilities %>
