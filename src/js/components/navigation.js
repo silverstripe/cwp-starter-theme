@@ -118,7 +118,7 @@ export default function () {
     });
   });
 
-  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret',function (event) {
+  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret', function (event) {
     event.stopPropagation();
     event.preventDefault();
 
@@ -130,6 +130,5 @@ export default function () {
     } else {
       openMenu($parent);
     }
-
   });
 }

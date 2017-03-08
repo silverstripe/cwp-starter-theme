@@ -20,26 +20,24 @@
 
     .comments-list {
       .comment {
-        padding: 0px 0px $line-height-computed 0px;
+        padding: 0 0 $line-height-computed 0;
+
         .comment-text {
           background-color: $gray-lighter;
           min-height: auto;
         }
+
         .date::before {
-           content: none;
+          content: none;
         }
       }
+
       .comment-action-links {
         margin: $line-height-computed * 0.5 0 $line-height-computed * 0.5;
       }
+
       .comment-replies-container {
         margin: $line-height-computed * 2 0 0 0;
-      }
-    }
-
-    .comment-replies-container {
-      .comment-reply-form-holder {
-        margin-bottom: 10px;
       }
     }
   }
@@ -66,4 +64,5 @@
 
 .comments-holder-container .comments-holder .comment-replies-container .comment-reply-form-holder {
   display: none;
+  margin-bottom: 10px;
 }

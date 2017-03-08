@@ -1,9 +1,5 @@
 // Main navigation
 .main-nav {
-  .dropdown {
-    padding-right: 18px;
-  }
-
   .navbar {
     min-height: 0;
     border: 0;
@@ -40,6 +36,8 @@
   }
 
   .dropdown {
+    padding-right: 18px;
+
     &:hover .navbar-touch-caret,
     &:focus .navbar-touch-caret {
       background-color: transparent;
@@ -90,7 +88,7 @@
 }
 
 .navbar-collapse {
-  border-top: none;
+  border-top: 0;
 }
 
 @media (max-width: $grid-float-breakpoint-max) {

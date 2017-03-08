@@ -1,23 +1,25 @@
 // Theme specific variables and overrides
-@import "./_variables";
+@import "./variables";
 
 // Third-party libraries
+// sass-lint:disable clean-import-paths
 @import "~font-awesome/scss/font-awesome";
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
+// sass-lint:enable clean-import-paths
 
 // Mixins
-@import "./utils/_mixins";
+@import "./utils/mixins";
 
 // Base theme components
-@import "./_print";
-@import "./_typography";
-@import "./components/_blog";
-@import "./components/_comments";
-@import "./components/_footer";
-@import "./components/_forms";
-@import "./components/_header";
-@import "./components/_nav";
-@import "./components/_news-events";
-@import "./components/_pages";
-@import "./components/_search";
-@import "./components/_sitemap";
+@import "./print";
+@import "./typography";
+@import "./components/blog";
+@import "./components/comments";
+@import "./components/footer";
+@import "./components/forms";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/news-events";
+@import "./components/pages";
+@import "./components/search";
+@import "./components/sitemap";
