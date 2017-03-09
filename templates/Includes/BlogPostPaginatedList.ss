@@ -5,9 +5,6 @@
     <% loop $PaginatedList %>
         <article class="blog-entry $EvenOdd">
             <% include BlogSummary %>
-            <% if not $Last %>
-                <hr>
-            <% end_if %>
         </article>
     <% end_loop %>
     <% with $PaginatedList %>
