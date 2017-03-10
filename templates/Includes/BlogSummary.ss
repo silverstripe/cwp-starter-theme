@@ -1,5 +1,4 @@
 <div class="clearfix">
-
     <% if $FeaturedImage %>
         <figure class="pull-right blog_item-figure">
             $FeaturedImage.SetHeight(150)
@@ -7,7 +6,7 @@
     <% end_if %>
 
     <header>
-        <h2><a href="$Link">$Title</a></h2>
+        <h2 class="h3"><a href="$Link">$Title</a></h2>
         <% include BlogPostMeta %>
     </header>
 
@@ -16,7 +15,6 @@
     <% else %>
         <p>$Excerpt</p>
     <% end_if %>
-
 </div>
 
 <% include BlogEntryTags %>

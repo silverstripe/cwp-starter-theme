@@ -1,6 +1,6 @@
 <% if $PaginatedList %>
     <% if $CurrentProfile %>
-        <h2 class="blog-post-heading"><%t BlogPostPaginatedList.POSTS_BY 'Posts by {firstname} {lastname} for {title}' firstname=$CurrentProfile.FirstName lastname=$CurrentProfile.Surname title=$Title %></h2>
+        <h2 class="h3 blog-post-heading"><%t BlogPostPaginatedList.POSTS_BY 'Posts by {firstname} {lastname} for {title}' firstname=$CurrentProfile.FirstName lastname=$CurrentProfile.Surname title=$Title %></h2>
     <% end_if %>
     <% loop $PaginatedList %>
         <article class="blog-entry $EvenOdd">
