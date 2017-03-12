@@ -13,7 +13,7 @@
                               <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="$LinkingMode" <% if $Children %><% end_if %>>$MenuTitle.XML</a>
 
                               <% if $Children %>
-                                  <button class="pull-right navbar-touch-caret" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                                  <button class="pull-right navbar-touch-caret" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
                                       <span class="sr-only">Display $MenuTitle.XML submenu pages</span>
                                       <i class="fa fa-caret-down" aria-hidden="true"></i>
                                   </button>
