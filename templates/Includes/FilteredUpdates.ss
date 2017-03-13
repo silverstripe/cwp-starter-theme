@@ -2,7 +2,7 @@
     <article class="news-events-article clearfix">
 
         <% if $FeaturedImage %>
-            <figure class="pull-right news-events_item-figure">
+            <figure class="pull-right news-events-item-figure">
                 $FeaturedImage.SetHeight(150)
             </figure>
         <% end_if %>
