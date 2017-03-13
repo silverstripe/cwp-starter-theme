@@ -7,11 +7,13 @@
             <li>
                 <a href="#" onclick="window.print(); return false;"><%t TableListField.Print "Print" %></a>
             </li>
-        <% if $PdfLink %>
-            <li>
-                <a href="$PdfLink"><%t CWP.Home.PDF "Export PDF" %></a>
-            </li>
-        <% end_if %>
+            <%-- Uncomment this section to re-enable the PDF link in the template - see the documentation for
+            configuration instructions --%>
+            <%-- <% if $PdfLink %>
+                <li>
+                    <a href="$PdfLink"><%t CWP.Home.PDF "Export PDF" %></a>
+                </li>
+            <% end_if %> --%>
 
             <% if $ClassName == HomePage %>
                 <% if $AtomLink %>
