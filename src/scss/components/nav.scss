@@ -78,8 +78,7 @@
   margin-top: 0;
 
   &:focus {
-    outline: invert none medium;
-    border-color: $brand-primary;
+    @include outline-focus;
   }
 
   .icon-bar {
