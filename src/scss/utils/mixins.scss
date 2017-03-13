@@ -1,4 +1,8 @@
+// WebKit-style focus
 @mixin outline-focus() {
-  outline: $outline-focus auto 5px;
-  outline: auto 5px -webkit-focus-ring-color;
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
