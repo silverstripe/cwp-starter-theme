@@ -4,20 +4,18 @@
   margin-top: 40px;
 }
 
-.page-utilities_last-modified {
+.page-utilities-last-modified {
   font-size: $font-size-small;
   color: $text-muted;
-  margin-top: 10px;
 
   @media (min-width: $screen-sm) {
     float: right;
     text-align: right;
-    margin-top: 0;
   }
 }
 
 .jumbotron {
-  margin-top: -20px;
+  margin-top: -$line-height-computed; // Compensate for the nav margin on bottom
 }
 
 // IFramePage
@@ -25,8 +23,8 @@
   border: 0;
 }
 
-// Features & Quicklinks
-.showcase {
+// Page features & quicklinks, used on homepage
+.page-showcase {
   padding-bottom: $line-height-computed * 1.5;
 }
 
