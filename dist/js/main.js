@@ -181,28 +181,30 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
   /**
    * Apply a Bootstrap 3 form structure context to the jQuery validator plugin in userforms
    */
-  var userform = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.userform');
-  if (userform.length > 0 && typeof userform.validate === 'function') {
-    var validatorSettings = userform.validate().settings;
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.userform, .comments-holder-container form').each(function () {
+    if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).length > 0 && typeof __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).validate === 'function') {
+      var validatorSettings = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).validate().settings;
 
-    validatorSettings.highlight = function (element) {
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').addClass('has-error');
-    };
+      validatorSettings.highlight = function (element) {
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').addClass('has-error');
+      };
 
-    validatorSettings.unhighlight = function (element) {
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').removeClass('has-error');
-    };
+      validatorSettings.unhighlight = function (element) {
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').removeClass('has-error');
+      };
 
-    validatorSettings.errorClass = 'help-block';
+      validatorSettings.errorElement = 'span';
+      validatorSettings.errorClass = 'help-block';
 
-    validatorSettings.errorPlacement = function (error, element) {
-      if (element.parent('.input-group').length || element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
-        error.insertAfter(element.parent());
-      } else {
-        error.insertAfter(element);
-      }
-    };
-  }
+      validatorSettings.errorPlacement = function (error, element) {
+        if (element.parent('.input-group').length || element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
+          error.insertAfter(element.parent());
+        } else {
+          error.insertAfter(element);
+        }
+      };
+    }
+  });
 
   // Comments Module - Accesibility for Replies
   var $commentReplyLink = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.comment-reply-link');
