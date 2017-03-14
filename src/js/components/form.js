@@ -12,7 +12,7 @@ export default function () {
    * Apply a Bootstrap 3 form structure context to the jQuery validator plugin in userforms
    */
   $('.userform, .comments-holder-container form').each(function () {
-    if ($(this).length > 0 && typeof $(this).validate === 'function') {
+    if (typeof $(this).validate === 'function') {
       const validatorSettings = $(this).validate().settings;
 
       validatorSettings.highlight = function (element) {
