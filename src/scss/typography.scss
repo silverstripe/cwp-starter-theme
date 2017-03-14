@@ -204,17 +204,7 @@ pre {
   white-space: pre-wrap;
 }
 
-// Forms typography
-.form-group__as-label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 0;
-  font-weight: $headings-font-weight;
-  border-bottom: 0;
-  font-size: $font-size-base;
-}
-
-// Used typically under a header to provide additional info like author or dates.
+// Meta info typically under a header to provide additional info like author or dates.
 .meta-info {
   color: $text-muted;
   font-size: $font-size-small;
@@ -228,6 +218,6 @@ pre {
   .h3 + &,
   h4 + &,
   .h4 + & {
-    margin-top: -$line-height-computed / 2;
+    margin-top: -$line-height-computed / 3;
   }
 }

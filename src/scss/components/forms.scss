@@ -1,27 +1,77 @@
 .step-navigation {
-  .step-buttons {
+  > .step-buttons {
     padding-left: 0;
+
+    // Mimic BS .btn-toolbar
+    margin-left: -5px !important; // TODO fix module to allow overriding without important
+    @include clearfix;
+
+    .btn,
+    .btn-group,
+    .input-group {
+      float: left;
+      margin-left: 5px;
+    }
+
+    .step-button-wrapper {
+      display: list-item;
+    }
   }
 }
 
-.progress {
-  .progress-bar {
-    height: inherit !important;
+.userform-progress {
+  .progress-bar-success {
+    background-color: $progress-bar-success-bg;
+  }
+
+  .step-buttons {
+    margin-bottom: $line-height-computed;
   }
 }
 
-.userformsgroup {
-  legend {
-    margin-bottom: 0;
+.step-buttons .step-button-wrapper {
+  > .step-button-jump {
+    opacity: 1;
   }
+
+  &:not(.current):not(.viewed) .btn-default {
+    color: $text-muted;
+    border-color: $text-muted;
+  }
+}
+
+.userformsgroup legend {
+  margin-bottom: 0;
 }
 
 // Grouped buttons, convert SilverStripe convention to BS
+// Mimic BS .btn-toolbar;
 .Actions {
-  @extend .btn-toolbar;
+  margin-left: -5px; // Offset the first child's margin
+  @include clearfix;
+
+  .btn,
+  .btn-group,
+  .input-group {
+    float: left;
+  }
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 5px;
+  }
 }
 
 // Add focus status removed by Bootstrap
 .dropdown-toggle:focus {
   @include outline-focus();
+}
+
+.form-group-as-label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0;
+  font-weight: $headings-font-weight;
+  border-bottom: 0;
+  font-size: $font-size-base;
 }
