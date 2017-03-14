@@ -1,8 +1,8 @@
-# CWP Developer Theme
+# CWP Starter Theme
 
-This is the repository for the new CWP developer theme. This theme is a highly accessible Bootstrap theme which you can use as a starter for your CWP project.
+This is the repository for the CWP "starter" theme. This theme is a highly accessible Bootstrap 3 theme which you can use as a starter for your CWP project.
 
-If you want to start with a theme that is more designed, take a look at the [demo agency theme](https://gitlab.cwp.govt.nz/cwp/cwp-agencies-theme/).
+If you want to start with a theme that is more designed, take a look at the [Wātea theme](https://gitlab.cwp.govt.nz/cwp/watea-theme).
 
 ## Installation
 
@@ -12,18 +12,20 @@ You can install this theme with Composer:
 composer require cwp/starter-theme
 ```
 
-You may need to add the repository URL to your `composer.json` as a VCS repository.
-
 ## Documentation
 
-You can find documentation about the following topics:
+You can find documentation on how to use this theme in the CWP Developer Documentation: [Customising the starter theme](https://www.cwp.govt.nz/developer-docs/en/1.6/working_with_projects/customising_the_starter_theme/).
 
-* [Creating a new site](docs/creating-a-new-site.md)
-* [Working with standards](docs/working-with-standards.md)
-* [Modifying template files](docs/modifying-template-files.md)
-* [Customising front-end assets](docs/customising-front-end-assets.md)
-* [Changing forms](docs/changing-forms.md)
-* [Changing menus](docs/changing-menus.md)
+## Requirements
+
+* [Composer](https://getcomposer.org)
+* `cwp/starter-theme`: The foundation theme for this subtheme, via Composer
+* `cwp/agency-extensions`: Provides additional functionality to the CMS for agency-style websites, via Composer
+
+### Development requirements
+
+* [Node and NPM](https://docs.npmjs.com/getting-started/installing-node)
+* [Laravel-Mix](https://github.com/JeffreyWay/laravel-mix) and [Webpack](https://webpack.github.io) (via NPM)
 
 ## Versioning
 
