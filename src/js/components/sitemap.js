@@ -1,4 +1,6 @@
+/* eslint-disable */
 import $ from 'jquery';
+/* eslint-enable */
 
 export default function () {
   /**
