@@ -9,6 +9,8 @@ export default function () {
    * Trigger a menu item to be "opened" or expanded
    */
   const openMenu = function ($elem) {
+    closeMenu();
+
     $elem.addClass('open');
     $elem
       .find('.navbar-touch-caret')
@@ -45,97 +47,84 @@ export default function () {
     return $(document).width() > 752 || false;
   };
 
+  /**
+   * Handle the "hover" events to open and close the dropdown menus, and some keyboard
+   * behaviours, such as "Esc" to close the menu, and spacebar and down key to open it.
+   *
+   * These keypress handlers differ from the others lower down in that these apply only
+   * to navigation elements that have a dropdown menu associated.
+   */
   Dropdown
-    .mouseleave(() => {
-      if (isDesktop()) {
+    .hover(
+      function () {
+        openMenu($(this));
+      },
+      function () {
         closeMenu();
       }
-    })
-    .mouseover(function () {
-      if (isDesktop()) {
-        openMenu($(this));
-      }
-    })
-    .focusin(function () {
-      let $url = null;
-      let $key = null;
-      let $dropdownToggle = null;
-
-      $(this).keydown((event) => {
-        $key = event.keyCode;
-
-        switch ($key) {
-          case 13:
-            // [Enter] key
-            $dropdownToggle = $(this).find('.navbar-touch-caret');
-            if ($dropdownToggle.is(':focus')) {
-              $url = $dropdownToggle.attr('href');
-              if ($url !== undefined) {
-                window.location = $url;
-              }
-              closeMenu();
-            }
-            $(this).unbind('keydown');
-            break;
-          case 32:
-          case 40:
-            // Space bar
-            // arrow Keydown
-            openMenu($(this));
-            $(this).unbind('keydown');
-            break;
-          case 27:
-            // ESC
-            closeMenu();
-            break;
-          default:
-            $(this).unbind('keydown');
-            break;
-        }
-      });
-    })
-    .click(function () {
-      const $url = $(this).find('a').attr('href');
-      if ($url !== undefined) {
-        window.location = $url;
-      }
-      closeMenu();
-    });
-
-  $('nav .nav-item').focusin(function () {
-    let $key = null;
-    const $next = $(this).next().find('a');
-    const $prev = $(this).prev().find('a');
-
-    // Navigate with [<][>] arrow keyboard keys
-    $(this).keydown((event) => {
-      $key = event.keyCode;
-
-      switch ($key) {
-        case 39:
-          // forward [>]
-          if ($next.length) {
-            $next.focus();
-            closeMenu();
-            $(this).unbind('keydown');
-          }
+    )
+    .keydown(function (event) {
+      switch (event.keyCode) {
+        case 13:
+          // Enter key
+          closeMenu();
           break;
-        case 37:
-          // backward [<]
-          if ($prev.length) {
-            $prev.focus();
-            closeMenu();
-            $(this).unbind('keydown');
-          }
+        case 32:
+        case 40:
+          // Space bar and "down" key
+          // Stop the default behaviour (e.g. scrolling down)
+          event.preventDefault();
+          openMenu($(this));
+          return;
+          break;
+        case 27:
+          // ESC
+          closeMenu();
           break;
         default:
-          $(this).unbind('keydown');
+          return;
           break;
       }
     });
+
+  /**
+   * Handler for key press events on navigation items - this allows the left and right
+   * arrow keys to navigate through the lists.
+   *
+   * These handlers are for all navigation items, not just those with a dropdown associated.
+   * NOTE: Be careful if adding new handlers here - be aware that they the previous handler
+   * may also be fired, creating race conditions.
+   */
+  $('nav .nav-item').keydown(function (event) {
+    const $next = $(this).next().find('a');
+    const $prev = $(this).prev().find('a');
+    switch (event.keyCode) {
+      case 39:
+        // forward [>]
+        if ($next.length) {
+          $next.focus();
+          closeMenu();
+          return;
+        }
+        break;
+      case 37:
+        // backward [<]
+        if ($prev.length) {
+          $prev.focus();
+          closeMenu();
+          return;
+        }
+        break;
+      default:
+        return;
+        break;
+    }
   });
 
-  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret', function (event) {
+  /**
+   * Handler for opening and closing the dropdown menus when you click on the caret toggle
+   */
+  $('.main-nav .navbar-nav').on('click', '.navbar-touch-caret', function (event) {
     event.stopPropagation();
     event.preventDefault();
 

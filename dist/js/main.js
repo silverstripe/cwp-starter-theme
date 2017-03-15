@@ -182,7 +182,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
    * Apply a Bootstrap 3 form structure context to the jQuery validator plugin in userforms
    */
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.userform, .comments-holder-container form').each(function () {
-    if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).length > 0 && typeof __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).validate === 'function') {
+    if (typeof __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).validate === 'function') {
       var validatorSettings = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).validate().settings;
 
       validatorSettings.highlight = function (element) {
@@ -257,6 +257,8 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
    * Trigger a menu item to be "opened" or expanded
    */
   var openMenu = function openMenu($elem) {
+    closeMenu();
+
     $elem.addClass('open');
     $elem.find('.navbar-touch-caret').attr('aria-expanded', true);
 
@@ -284,97 +286,79 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
     return __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).width() > 752 || false;
   };
 
-  Dropdown.mouseleave(function () {
-    if (isDesktop()) {
-      closeMenu();
-    }
-  }).mouseover(function () {
-    if (isDesktop()) {
-      openMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
-    }
-  }).focusin(function () {
-    var _this = this;
-
-    var $url = null;
-    var $key = null;
-    var $dropdownToggle = null;
-
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).keydown(function (event) {
-      $key = event.keyCode;
-
-      switch ($key) {
-        case 13:
-          // [Enter] key
-          $dropdownToggle = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this).find('.navbar-touch-caret');
-          if ($dropdownToggle.is(':focus')) {
-            $url = $dropdownToggle.attr('href');
-            if ($url !== undefined) {
-              window.location = $url;
-            }
-            closeMenu();
-          }
-          __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this).unbind('keydown');
-          break;
-        case 32:
-        case 40:
-          // Space bar
-          // arrow Keydown
-          openMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this));
-          __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this).unbind('keydown');
-          break;
-        case 27:
-          // ESC
-          closeMenu();
-          break;
-        default:
-          __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this).unbind('keydown');
-          break;
-      }
-    });
-  }).click(function () {
-    var $url = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).find('a').attr('href');
-    if ($url !== undefined) {
-      window.location = $url;
-    }
+  /**
+   * Handle the "hover" events to open and close the dropdown menus, and some keyboard
+   * behaviours, such as "Esc" to close the menu, and spacebar and down key to open it.
+   *
+   * These keypress handlers differ from the others lower down in that these apply only
+   * to navigation elements that have a dropdown menu associated.
+   */
+  Dropdown.hover(function () {
+    openMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
+  }, function () {
     closeMenu();
+  }).keydown(function (event) {
+    switch (event.keyCode) {
+      case 13:
+        // Enter key
+        closeMenu();
+        break;
+      case 32:
+      case 40:
+        // Space bar and "down" key
+        // Stop the default behaviour (e.g. scrolling down)
+        event.preventDefault();
+        openMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
+        return;
+        break;
+      case 27:
+        // ESC
+        closeMenu();
+        break;
+      default:
+        return;
+        break;
+    }
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .nav-item').focusin(function () {
-    var _this2 = this;
-
-    var $key = null;
+  /**
+   * Handler for key press events on navigation items - this allows the left and right
+   * arrow keys to navigate through the lists.
+   *
+   * These handlers are for all navigation items, not just those with a dropdown associated.
+   * NOTE: Be careful if adding new handlers here - be aware that they the previous handler
+   * may also be fired, creating race conditions.
+   */
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .nav-item').keydown(function (event) {
     var $next = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).next().find('a');
     var $prev = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).prev().find('a');
-
-    // Navigate with [<][>] arrow keyboard keys
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).keydown(function (event) {
-      $key = event.keyCode;
-
-      switch ($key) {
-        case 39:
-          // forward [>]
-          if ($next.length) {
-            $next.focus();
-            closeMenu();
-            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this2).unbind('keydown');
-          }
-          break;
-        case 37:
-          // backward [<]
-          if ($prev.length) {
-            $prev.focus();
-            closeMenu();
-            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this2).unbind('keydown');
-          }
-          break;
-        default:
-          __WEBPACK_IMPORTED_MODULE_0_jquery___default()(_this2).unbind('keydown');
-          break;
-      }
-    });
+    switch (event.keyCode) {
+      case 39:
+        // forward [>]
+        if ($next.length) {
+          $next.focus();
+          closeMenu();
+          return;
+        }
+        break;
+      case 37:
+        // backward [<]
+        if ($prev.length) {
+          $prev.focus();
+          closeMenu();
+          return;
+        }
+        break;
+      default:
+        return;
+        break;
+    }
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret', function (event) {
+  /**
+   * Handler for opening and closing the dropdown menus when you click on the caret toggle
+   */
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main-nav .navbar-nav').on('click', '.navbar-touch-caret', function (event) {
     event.stopPropagation();
     event.preventDefault();
 
