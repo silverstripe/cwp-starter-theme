@@ -9,8 +9,8 @@ body > header .open > a:focus {
   .language-selector {
     margin-right: 5px;
 
-    i.fa-language {
-      margin-right: 5px;
+    .fa-language {
+      margin-right: $font-size-base / 2;
     }
   }
 }
