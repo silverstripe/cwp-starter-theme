@@ -14,8 +14,9 @@
   }
 }
 
+// Compensate for the nav margin on bottom
 .jumbotron {
-  margin-top: -$line-height-computed; // Compensate for the nav margin on bottom
+  margin-top: -$line-height-computed;
 }
 
 // IFramePage

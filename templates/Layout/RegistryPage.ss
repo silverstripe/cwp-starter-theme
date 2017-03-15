@@ -1,5 +1,5 @@
 <div class="container">
-    
+
     <div class="row">
         <section class="col-md-10 col-md-offset-1">
             <header class="page-header">
@@ -23,16 +23,16 @@
                                     <th>
                                         <a href="$Top.QueryLink&amp;Sort={$Name}&amp;Dir={$Top.OppositeDirection}#results">
                                             $Title
-                                            <% if $Name == $Top.Sort %> 
+                                            <% if $Name == $Top.Sort %>
                                                 <% if $Top.OppositeDirection == "ASC" %>
-                                                    <i class="fa fa-caret-up" aria-hidden="true"> 
+                                                    <i class="fa fa-caret-up" aria-hidden="true">
                                                         <span class="sr-only"><%t CWP.Registry.SortDescending "Column sorted descending" %></span>
                                                     </i>
                                                 <% else_if $Top.OppositeDirection == "DESC" %>
                                                      <i class="fa fa-caret-down" aria-hidden="true">
                                                          <span class="sr-only"><%t CWP.Registry.SortAscending "Column sorted ascending" %></span>
                                                      </i>
-                                                <% end_if %> 
+                                                <% end_if %>
                                             <% end_if %>
                                         </a>
                                     </th>
@@ -71,7 +71,7 @@
                 <% end_if %>
             </div>
         </div>
-        
+
         <% if $RegistryFilterForm %>
             <div class="col-md-3">
                 <h3 class="h4"><%t CWP.Registry.FilterTitle "Filters" %></h3>
@@ -80,8 +80,8 @@
                 </div>
             </div>
         <% end_if %>
-        
-    </div>        
+
+    </div>
 </div>
 
 <% include PageUtilities %>

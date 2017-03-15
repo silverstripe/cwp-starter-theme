@@ -92,6 +92,7 @@
 
 @media (max-width: $grid-float-breakpoint-max) {
   .navbar-touch-caret {
-    padding: 10px $navbar-padding-horizontal 10px 8px; // Uses BS default mobile nav values which are not variables
+    // Uses BS default mobile nav values which are not variables
+    padding: 10px $navbar-padding-horizontal 10px 8px;
   }
 }
