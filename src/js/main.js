@@ -1,7 +1,5 @@
 // Define globally exposed module objects
 /* eslint-disable */
-require('expose-loader?jQuery!jquery');
-
 // Define dependency imports
 import transition from 'bootstrap-sass/assets/javascripts/bootstrap/transition';
 import collapse from 'bootstrap-sass/assets/javascripts/bootstrap/collapse';
