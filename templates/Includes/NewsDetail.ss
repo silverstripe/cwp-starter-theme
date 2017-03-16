@@ -2,7 +2,7 @@
 <div class="news-details-aside">
     <dl>
         <% if $Terms %>
-            <dt class="h4"><%t CWP.NewsDetail.TAGS "Tags" %></dt>
+            <dt class="h4 page-sidebar-header"><%t CWP.NewsDetail.TAGS "Tags" %></dt>
             <dd>
                 <% loop $Terms %>
                     <span class="label label-primary $FirstLast">$Name</span>

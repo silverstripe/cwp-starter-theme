@@ -1,7 +1,7 @@
 // Generic pages
 // Page utilities
 .page-utilities {
-  margin-top: 40px;
+  margin-top: $line-height-computed * 1.5;
 }
 
 .page-utilities-last-modified {
@@ -30,6 +30,7 @@
 }
 
 // Sidebar Widget Spacing
-.sidebar-widget {
-  margin-bottom: $line-height-computed * 1.2;
+// Used for side menus, News and Events widgets and Blog widgets
+.page-sidebar-widget {
+  margin-bottom: $line-height-computed * 1.5;
 }

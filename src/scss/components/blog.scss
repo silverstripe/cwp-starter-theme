@@ -1,32 +1,3 @@
-.tagcloud.list-inline > li {
-  &:not(:first-child) {
-    padding-left: 0;
-  }
-
-  padding-right: 0;
-}
-
-.entry-tags,
-.entry-categories {
-  margin-bottom: $padding-small-vertical;
-
-  .label {
-    margin-right: $padding-small-vertical;
-  }
-}
-
-.blog-entry-tags {
-  margin-top: $line-height-computed;
-}
-
-.blog-post-meta {
-  @extend .meta-info;
-}
-
-.blog-post-heading {
-  margin: 0;
-}
-
 .blog-summary-img {
   padding-top: $line-height-computed;
   margin-left: $line-height-computed;
@@ -41,15 +12,65 @@
   }
 }
 
+// Featured image
 // Requires further nesting to override Blog module
 .blog-entry .blog-post-article .post-image > img {
   max-width: 100%;
   width: auto;
 }
 
-.WidgetHolder {
-  background-color: $gray-lighter;
-  padding: $line-height-computed * 0.5 $line-height-computed;
-  margin-bottom: $line-height-computed;
-  border-radius: $border-radius-base;
+.blog-tags-widget .label {
+  display: inline-block;
+}
+
+.blog-tag-count {
+  transform-origin: top left;
+  margin-bottom: 3px;
+  vertical-align: middle;
+
+  .main  & {
+    text-decoration: none;
+  }
+
+  // Size of tags scales 1-10 depending on popularity
+  &.blog-tag-count-1 {
+    @include adjust-label-size(.8);
+  }
+
+  &.blog-tag-count-2 {
+    @include adjust-label-size(.84);
+  }
+
+  &.blog-tag-count-3 {
+    @include adjust-label-size(.88);
+  }
+
+  &.blog-tag-count-4 {
+    @include adjust-label-size(.92);
+  }
+
+  &.blog-tag-count-5 {
+    @include adjust-label-size(.96);
+  }
+
+  // Standard size do nothing
+  // &.blog-tag-count-6 {
+    // @include adjust-label-size(1);
+  // }
+
+  &.blog-tag-count-7 {
+    @include adjust-label-size(1.04);
+  }
+
+  &.blog-tag-count-8 {
+    @include adjust-label-size(1.1);
+  }
+
+  &.blog-tag-count-9 {
+    @include adjust-label-size(1.16);
+  }
+
+  &.blog-tag-count-10 {
+    @include adjust-label-size(1.24);
+  }
 }
