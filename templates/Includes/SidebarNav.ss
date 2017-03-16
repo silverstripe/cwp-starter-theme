@@ -1,4 +1,4 @@
-<nav id="pageNav" role="navigation" class="sidebar-nav">
+<nav id="pageNav" role="navigation" class="page-sidebar-widget">
     <ul class="nav nav-stacked nav-pills">
     <% loop $Children %>
         <li class="$LinkingMode">

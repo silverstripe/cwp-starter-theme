@@ -1,30 +1,31 @@
 <div class="container layout">
     <div class="row">
-        <div class="<% if Menu(2) %>col-md-9<% else %>col-md-12<% end_if %>">
-                <h1 class="page-header">$Title</h1>
+        <div class="col-md-12">
+            <h1 class="page-header">$Title</h1>
+        </div>
+        <div class="col-md-9">
+            <div class="clearfix">
+                $Content.RichLinks
+            </div>
 
-                <div class="clearfix">
-                    $Content.RichLinks
-                </div>
-
-                <ul class="sitemap list-unstyled">
-                    <% if $SelectedPage %>
-                        <% loop $SelectedPage.Children %>
-                        <li data-pagetype="$ClassName" class="$FirstLast sitemap-initial class-$ClassName">
-                        <% include SitemapNode %>
-                        </li>
-                        <% end_loop %>
-                    <% else %>
-                        <% loop Menu(1) %>
-                        <li data-pagetype="$ClassName" class="$FirstLast sitemap-initial class-$ClassName">
+            <ul class="sitemap list-unstyled" role="tablist">
+                <% if $SelectedPage %>
+                    <% loop $SelectedPage.Children %>
+                        <li role="tab" data-pagetype="$ClassName" class="$FirstLast sitemap-initial class-$ClassName">
                             <% include SitemapNode %>
                         </li>
-                        <% end_loop %>
-                    <% end_if %>
-                </ul>
+                    <% end_loop %>
+                <% else %>
+                    <% loop Menu(1) %>
+                        <li role="tab" data-pagetype="$ClassName" class="$FirstLast sitemap-initial class-$ClassName">
+                            <% include SitemapNode %>
+                        </li>
+                    <% end_loop %>
+                <% end_if %>
+            </ul>
 
-                $Form
-                $CommentsForm
+            $Form
+            $CommentsForm
         </div>
         <% if Menu(2) %>
             <aside class="col-md-3">

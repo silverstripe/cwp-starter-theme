@@ -1,129 +1,142 @@
+/* eslint-disable */
 import $ from 'jquery';
+/* eslint-enable */
 
 export default function () {
   const Dropdown = $('nav .dropdown');
 
-  const openMenu = function (elem) {
-    const $this = elem;
+  /**
+   * Trigger a menu item to be "opened" or expanded
+   */
+  const openMenu = function ($elem) {
+    closeMenu();
 
-    $this.addClass('open');
-    $this.find('.navbar-touch-caret').attr('aria-expanded', true);
+    $elem.addClass('open');
+    $elem
+      .find('.navbar-touch-caret')
+      .attr('aria-expanded', true)
+      .find('.fa-caret-down')
+      .toggleClass('fa-caret-down fa-caret-up');
+
+    $elem
+      .find('.dropdown-menu')
+      .attr('aria-hidden', false);
   };
 
+  /**
+   * Close dropdown, by default Bootstrap leaves it open. Also hide any child
+   * menus with aria-hidden.
+   */
   const closeMenu = function () {
     // Close dropdown, by default Bootstrap leaves it open
-    Dropdown.removeClass('open')
-            .find('.navbar-touch-caret').attr('aria-expanded', false);
+    Dropdown
+      .removeClass('open')
+      .find('.navbar-touch-caret')
+      .attr('aria-expanded', false)
+      .find('.fa-caret-up')
+      .toggleClass('fa-caret-up fa-caret-down');
+
+    Dropdown
+      .find('.dropdown-menu')
+      .attr('aria-hidden', true);
   };
 
+  /**
+   * If screen width is Desktop return true
+   * 752px according to Bootstrap @media queries
+   *
+   * @returns {Boolean}
+   */
   const isDesktop = function () {
-    /**
-     * If screen width is Desktop return true
-     * 752px according to Bootstrap @media queries
-     */
-    const width = $(document).width();
-    return width > 752 || false;
+    return $(document).width() > 752 || false;
   };
 
+  /**
+   * Handle the "hover" events to open and close the dropdown menus, and some keyboard
+   * behaviours, such as "Esc" to close the menu, and spacebar and down key to open it.
+   *
+   * These keypress handlers differ from the others lower down in that these apply only
+   * to navigation elements that have a dropdown menu associated.
+   */
   Dropdown
-  .mouseleave(() => {
-    if (isDesktop()) {
-      closeMenu();
-    }
-  })
-  .mouseover(function () {
-    if (isDesktop()) {
-      openMenu($(this));
-    }
-  })
-  .focusin(function () {
-    const $this = $(this);
-    let $url = null;
-    let $key = null;
-    let $dropdownToggle = null;
-
-    $this.keydown((event) => {
-      $key = event.keyCode;
-
-      switch ($key) {
+    .hover(
+      function () {
+        if (isDesktop()) {
+          openMenu($(this));
+        }
+      },
+      function () {
+        if (isDesktop()) {
+          closeMenu();
+        }
+      }
+    )
+    .keydown(function (event) {
+      switch (event.keyCode) {
         case 13:
-          // [Enter] key
-          $dropdownToggle = $this.find('.navbar-touch-caret');
-          if ($dropdownToggle.is(':focus')) {
-            $url = $dropdownToggle.attr('href');
-            if ($url !== undefined) {
-              window.location = $url;
-            }
-            closeMenu();
-          }
-          $this.unbind('keydown');
+          // Enter key
+          closeMenu();
           break;
         case 32:
         case 40:
-          // Space bar
-          // arrow Keydown
-          openMenu($this);
-          $this.unbind('keydown');
+          // Space bar and "down" key
+          // Stop the default behaviour (e.g. scrolling down)
+          event.preventDefault();
+          openMenu($(this));
+          return;
           break;
         case 27:
           // ESC
           closeMenu();
           break;
         default:
-          $this.unbind('keydown');
+          return;
           break;
       }
     });
-  })
-  .click(function () {
-    const $this = $(this);
-    const $url = $this.find('a').attr('href');
-    if ($url !== undefined) {
-      window.location = $url;
+
+  /**
+   * Handler for key press events on navigation items - this allows the left and right
+   * arrow keys to navigate through the lists.
+   *
+   * These handlers are for all navigation items, not just those with a dropdown associated.
+   * NOTE: Be careful if adding new handlers here - be aware that they the previous handler
+   * may also be fired, creating race conditions.
+   */
+  $('nav .nav-item').keydown(function (event) {
+    const $next = $(this).next().find('a');
+    const $prev = $(this).prev().find('a');
+    switch (event.keyCode) {
+      case 39:
+        // forward [>]
+        if ($next.length) {
+          $next.focus();
+          closeMenu();
+          return;
+        }
+        break;
+      case 37:
+        // backward [<]
+        if ($prev.length) {
+          $prev.focus();
+          closeMenu();
+          return;
+        }
+        break;
+      default:
+        return;
+        break;
     }
-    closeMenu();
   });
 
-  $('nav .nav-item').focusin(function () {
-    let $key = null;
-    const $this = $(this);
-    const $next = $this.next().find('a');
-    const $prev = $this.prev().find('a');
-
-    // Navigate with [<][>] arrow keyboard keys
-    $this.keydown((event) => {
-      $key = event.keyCode;
-
-      switch ($key) {
-        case 39:
-          // forward [>]
-          if ($next.length) {
-            $next.focus();
-            closeMenu();
-            $this.unbind('keydown');
-          }
-          break;
-        case 37:
-          // backward [<]
-          if ($prev.length) {
-            $prev.focus();
-            closeMenu();
-            $this.unbind('keydown');
-          }
-          break;
-        default:
-          $this.unbind('keydown');
-          break;
-      }
-    });
-  });
-
-  $('.main-nav .navbar-nav .dropdown').on('click', '.navbar-touch-caret', function (event) {
+  /**
+   * Handler for opening and closing the dropdown menus when you click on the caret toggle
+   */
+  $('.main-nav .navbar-nav').on('click', '.navbar-touch-caret', function (event) {
     event.stopPropagation();
     event.preventDefault();
 
-    const $this = $(this);
-    const $parent = $this.parent('.dropdown');
+    const $parent = $(this).parent('.dropdown');
 
     if ($parent.hasClass('open')) {
       closeMenu();

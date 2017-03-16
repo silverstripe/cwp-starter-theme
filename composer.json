@@ -4,13 +4,8 @@
   "type": "silverstripe-theme",
   "keywords": ["silverstripe", "theme"],
   "license": "BSD-3-Clause",
-  "authors": [
-    {
-      "name": "Ninja Unicorns"
-    }
-  ],
   "require": {
-    "cwp/cwp": "^1.5"
+    "cwp/cwp": "^1.6@dev"
   },
   "extra": {
     "installer-name": "starter",

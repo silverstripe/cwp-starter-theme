@@ -8,7 +8,7 @@
         </section>
     </div>
     <div class="row">
-        <section class="<% if Menu(2) && $Children %>col-md-7 col-md-offset-1<% else %>col-md-10 col-md-offset-1<% end_if %>">
+        <section class="col-md-7 col-md-offset-1">
             $Content.RichLinks
             $Form
             <% include RelatedPages %>

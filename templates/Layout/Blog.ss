@@ -8,7 +8,7 @@
         </div>
 
         <section class="<% if $SideBarView %>col-md-7<% else %>col-md-10<% end_if %> col-md-offset-1">
-            <div id="blog-main" role="main">
+            <div class="blog-main" role="main">
                 <% if $Content.RichLinks %>
                     <div class="clearfix">
                         $Content.RichLinks

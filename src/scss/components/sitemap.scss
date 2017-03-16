@@ -11,7 +11,8 @@
   }
 }
 
-.page-toggle { // Todo change class name to .sitemap-toggle in module
+// Todo change class name to .sitemap-toggle in module
+.page-toggle {
   padding: $padding-base-vertical 15px;
   display: inline-block;
   float: left;
@@ -32,17 +33,15 @@
     background-color: $table-bg-hover;
   }
 
-  > .page-toggle__children > .sitemap-link { // Todo change class name in module to .sitemap-toggle-children
+  // Todo change class name in module to .sitemap-toggle-children
+  > .page-toggle__children > .sitemap-link {
     padding-top: $padding-large-vertical;
     padding-bottom: $padding-large-vertical;
   }
 
-  > .page-toggle { // Todo change class name to .sitemap-toggle in module
+  // Todo change class name to .sitemap-toggle in module
+  > .page-toggle {
     padding-top: $padding-large-vertical;
     padding-bottom: $padding-large-vertical;
   }
 }
-
-
-
-

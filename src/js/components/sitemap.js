@@ -1,4 +1,6 @@
+/* eslint-disable */
 import $ from 'jquery';
+/* eslint-enable */
 
 export default function () {
   /**
@@ -79,7 +81,9 @@ export default function () {
     $screenReader.attr('data-collapse-text', screenReaderText);
   }
 
-  $('.SitemapPage').on('click', 'a.sitemap__collapse-action', function () {
+  $('.SitemapPage').on('click', 'a.sitemap__collapse-action', function (e) {
+    e.preventDefault();
+
     // @todo: Remove passing of reference to $(this) as per AirBnB style guide
     const $self = $(this);
     const pageId = $self.data('page-id');
@@ -99,5 +103,13 @@ export default function () {
         loadSitemap(pageId, data);
       },
     });
+  });
+
+  /**
+   * Remove the aria-selected attributes that the paypal/bootstrap-accessibility
+   * plugin adds to all sitemap toggle anchors.
+   */
+  $(document).ready(() => {
+    $('.sitemap__collapse-action').removeAttr('aria-selected');
   });
 }

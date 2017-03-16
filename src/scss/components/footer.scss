@@ -1,17 +1,17 @@
-footer {
+.footer-site {
   border-top: 1px solid $gray-lighter;
   margin-top: 10px;
   padding: 30px 0;
 }
 
-.footer_nav-links a {
+.footer-nav-links a {
   margin-right: 30px;
   display: inline-block;
   margin-bottom: 10px;
 }
 
 @media (min-width: $screen-md-min) {
-  .footer_social-links {
+  .footer-social-links {
     float: right;
     text-align: right;
 
@@ -20,7 +20,7 @@ footer {
     }
   }
 
-  .footer_govt-logo {
+  .footer-govt-logo {
     float: right;
     margin-top: -3px;
   }

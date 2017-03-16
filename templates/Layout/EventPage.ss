@@ -11,7 +11,7 @@
         <section class="col-md-7 col-md-offset-1">
             <% include EventItem %>
         </section>
-        <aside class="col-md-3">
+        <aside class="col-md-3 sidebar">
             <% include EventDetail %>
         </aside>
     </div>

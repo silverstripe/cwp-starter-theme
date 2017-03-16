@@ -1,5 +1,5 @@
-<div class="news-events_tags">
-    <h3 class="h4"><%t CWP.Events_News.FilterTag "Filter by tag" %></h3>
+<div class="page-sidebar-widget news-events-tags">
+    <h3 class="h4 page-sidebar-header"><%t CWP.Events_News.FilterTag "Filter by tag" %></h3>
     <nav role="navigation">
         <p>
             <% loop $UpdateTagsWithLinks %>

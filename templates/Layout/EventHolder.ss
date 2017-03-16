@@ -18,8 +18,8 @@
             <% end_if %>
         </section>
 
-        <aside class="col-md-3">
-            <h2 class="sr-only">Filters</h2>
+        <aside class="col-md-3 sidebar">
+            <h2 class="sr-only"><%t CWP_NewsEvents.FILTERS "Filters" %></h2>
             <% if $UpdateTagsWithLinks %>
                 <% include UpdateTags %>
             <% end_if %>
