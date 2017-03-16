@@ -1,3 +1,4 @@
+<%-- clearfix needed for floating image --%>
 <div class="clearfix">
     <% if $FeaturedImage %>
         <figure class="pull-right blog-item-figure">
