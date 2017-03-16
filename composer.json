@@ -13,6 +13,9 @@
     "cwp/cwp": "^1.5"
   },
   "extra": {
-    "installer-name": "starter"
+    "installer-name": "starter",
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
   }
 }
