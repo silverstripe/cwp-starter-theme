@@ -14,7 +14,9 @@ export default function () {
     $elem.addClass('open');
     $elem
       .find('.navbar-touch-caret')
-      .attr('aria-expanded', true);
+      .attr('aria-expanded', true)
+      .find('.fa-caret-down')
+      .toggleClass('fa-caret-down fa-caret-up');
 
     $elem
       .find('.dropdown-menu')
@@ -30,7 +32,9 @@ export default function () {
     Dropdown
       .removeClass('open')
       .find('.navbar-touch-caret')
-      .attr('aria-expanded', false);
+      .attr('aria-expanded', false)
+      .find('.fa-caret-up')
+      .toggleClass('fa-caret-up fa-caret-down');
 
     Dropdown
       .find('.dropdown-menu')

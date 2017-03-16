@@ -260,7 +260,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
     closeMenu();
 
     $elem.addClass('open');
-    $elem.find('.navbar-touch-caret').attr('aria-expanded', true);
+    $elem.find('.navbar-touch-caret').attr('aria-expanded', true).find('.fa-caret-down').toggleClass('fa-caret-down fa-caret-up');
 
     $elem.find('.dropdown-menu').attr('aria-hidden', false);
   };
@@ -271,7 +271,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
    */
   var closeMenu = function closeMenu() {
     // Close dropdown, by default Bootstrap leaves it open
-    Dropdown.removeClass('open').find('.navbar-touch-caret').attr('aria-expanded', false);
+    Dropdown.removeClass('open').find('.navbar-touch-caret').attr('aria-expanded', false).find('.fa-caret-up').toggleClass('fa-caret-up fa-caret-down');
 
     Dropdown.find('.dropdown-menu').attr('aria-hidden', true);
   };
