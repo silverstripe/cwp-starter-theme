@@ -57,10 +57,14 @@ export default function () {
   Dropdown
     .hover(
       function () {
-        openMenu($(this));
+        if (isDesktop()) {
+          openMenu($(this));
+        }
       },
       function () {
-        closeMenu();
+        if (isDesktop()) {
+          closeMenu();
+        }
       }
     )
     .keydown(function (event) {
