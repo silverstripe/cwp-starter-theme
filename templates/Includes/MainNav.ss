@@ -10,7 +10,7 @@
                       <% loop Menu(1) %>
                           <li role="menuitem" class="nav-item $FirstLast $LinkingMode<% if $LinkingMode = current %> active<% end_if %><% if $Children %> dropdown <% end_if %>">
 
-                              <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="$LinkingMode" <% if $Children %><% end_if %>>$MenuTitle.XML</a>
+                              <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="$LinkingMode">$MenuTitle.XML</a>
 
                               <% if $Children %>
                                   <button class="pull-right navbar-touch-caret" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
