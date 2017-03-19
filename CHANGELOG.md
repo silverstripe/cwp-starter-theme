@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-beta1 (2017-03-20)
+
+* FIX Linting errors in JS and SASS files. Remove @extend from editor.scss (Robbie Averill)
+* Remove all @extends (Paul Clarke)
+
 ## 0.4.0 (2017-03-16)
 
 * FIX Do not allow navigation hover state on mobile (Robbie Averill)
