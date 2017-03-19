@@ -75,6 +75,7 @@ table {
   width: 100%;
   max-width: 100%;
   margin-bottom: $line-height-computed;
+
   // Cells
   > thead,
   > tbody,
@@ -89,11 +90,13 @@ table {
       }
     }
   }
+
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid $table-border-color;
   }
+
   // Remove top border from thead by default
   > caption + thead,
   > colgroup + thead,
@@ -105,6 +108,7 @@ table {
       }
     }
   }
+
   // Account for multiple tbody instances
   > tbody + tbody {
     border-top: 2px solid $table-border-color;
@@ -142,6 +146,7 @@ table {
 .table-bordered-striped {
   // BS Table-bordered styles
   border: 1px solid $table-border-color;
+
   > thead,
   > tbody,
   > tfoot {
@@ -152,6 +157,7 @@ table {
       }
     }
   }
+
   > thead > tr {
     > th,
     > td {
