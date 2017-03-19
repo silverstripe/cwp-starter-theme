@@ -6,24 +6,6 @@ export default function () {
   const Dropdown = $('nav .dropdown');
 
   /**
-   * Trigger a menu item to be "opened" or expanded
-   */
-  const openMenu = function ($elem) {
-    closeMenu();
-
-    $elem.addClass('open');
-    $elem
-      .find('.navbar-touch-caret')
-      .attr('aria-expanded', true)
-      .find('.fa-caret-down')
-      .toggleClass('fa-caret-down fa-caret-up');
-
-    $elem
-      .find('.dropdown-menu')
-      .attr('aria-hidden', false);
-  };
-
-  /**
    * Close dropdown, by default Bootstrap leaves it open. Also hide any child
    * menus with aria-hidden.
    */
@@ -39,6 +21,24 @@ export default function () {
     Dropdown
       .find('.dropdown-menu')
       .attr('aria-hidden', true);
+  };
+
+  /**
+   * Trigger a menu item to be "opened" or expanded
+   */
+  const openMenu = function ($elem) {
+    closeMenu();
+
+    $elem.addClass('open');
+    $elem
+      .find('.navbar-touch-caret')
+      .attr('aria-expanded', true)
+      .find('.fa-caret-down')
+      .toggleClass('fa-caret-down fa-caret-up');
+
+    $elem
+      .find('.dropdown-menu')
+      .attr('aria-hidden', false);
   };
 
   /**
@@ -60,16 +60,16 @@ export default function () {
    */
   Dropdown
     .hover(
-      function () {
+      function handleOpenMenu() {
         if (isDesktop()) {
           openMenu($(this));
         }
       },
-      function () {
+      () => {
         if (isDesktop()) {
           closeMenu();
         }
-      }
+      },
     )
     .keydown(function (event) {
       switch (event.keyCode) {
@@ -83,14 +83,12 @@ export default function () {
           // Stop the default behaviour (e.g. scrolling down)
           event.preventDefault();
           openMenu($(this));
-          return;
           break;
         case 27:
           // ESC
           closeMenu();
           break;
         default:
-          return;
           break;
       }
     });
@@ -112,7 +110,6 @@ export default function () {
         if ($next.length) {
           $next.focus();
           closeMenu();
-          return;
         }
         break;
       case 37:
@@ -120,11 +117,9 @@ export default function () {
         if ($prev.length) {
           $prev.focus();
           closeMenu();
-          return;
         }
         break;
       default:
-        return;
         break;
     }
   });

@@ -1,3 +1,6 @@
+// Comments styles
+// Note: These styles don't follow the CSS theme conventions as they need to override the Comment Module styles
+
 .comments-holder-container {
   .comments-heading {
     border-top: 2px solid $gray-dark;
@@ -55,7 +58,7 @@
 }
 
 .comments-holder-container .comments-holder .comments-list .comment .info {
-  @extend .meta-info;
+  @include meta-info();
 }
 
 .comments-holder-container .comments-holder .comment-replies-container .comment-reply-form-holder {

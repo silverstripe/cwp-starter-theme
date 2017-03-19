@@ -254,6 +254,17 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
   var Dropdown = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .dropdown');
 
   /**
+   * Close dropdown, by default Bootstrap leaves it open. Also hide any child
+   * menus with aria-hidden.
+   */
+  var closeMenu = function closeMenu() {
+    // Close dropdown, by default Bootstrap leaves it open
+    Dropdown.removeClass('open').find('.navbar-touch-caret').attr('aria-expanded', false).find('.fa-caret-up').toggleClass('fa-caret-up fa-caret-down');
+
+    Dropdown.find('.dropdown-menu').attr('aria-hidden', true);
+  };
+
+  /**
    * Trigger a menu item to be "opened" or expanded
    */
   var openMenu = function openMenu($elem) {
@@ -263,17 +274,6 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
     $elem.find('.navbar-touch-caret').attr('aria-expanded', true).find('.fa-caret-down').toggleClass('fa-caret-down fa-caret-up');
 
     $elem.find('.dropdown-menu').attr('aria-hidden', false);
-  };
-
-  /**
-   * Close dropdown, by default Bootstrap leaves it open. Also hide any child
-   * menus with aria-hidden.
-   */
-  var closeMenu = function closeMenu() {
-    // Close dropdown, by default Bootstrap leaves it open
-    Dropdown.removeClass('open').find('.navbar-touch-caret').attr('aria-expanded', false).find('.fa-caret-up').toggleClass('fa-caret-up fa-caret-down');
-
-    Dropdown.find('.dropdown-menu').attr('aria-hidden', true);
   };
 
   /**
@@ -293,7 +293,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
    * These keypress handlers differ from the others lower down in that these apply only
    * to navigation elements that have a dropdown menu associated.
    */
-  Dropdown.hover(function () {
+  Dropdown.hover(function handleOpenMenu() {
     if (isDesktop()) {
       openMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
     }
@@ -313,14 +313,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
         // Stop the default behaviour (e.g. scrolling down)
         event.preventDefault();
         openMenu(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
-        return;
         break;
       case 27:
         // ESC
         closeMenu();
         break;
       default:
-        return;
         break;
     }
   });
@@ -342,7 +340,6 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
         if ($next.length) {
           $next.focus();
           closeMenu();
-          return;
         }
         break;
       case 37:
@@ -350,11 +347,9 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
         if ($prev.length) {
           $prev.focus();
           closeMenu();
-          return;
         }
         break;
       default:
-        return;
         break;
     }
   });
