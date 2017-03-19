@@ -35,14 +35,18 @@ body.mceContentBody a.ss-broken {
   outline: 1px dotted $text-muted;
 }
 
+/**
+ * These styles are copied through from Bootstrap to avoid using @extend
+ */
+// Refer: .center-block
 .center {
-  @extend .center-block;
+  @include center-block;
 }
-
+// Refer: .pull-left
 .left {
-  @extend .pull-left;
+  float: left !important;
 }
-
+// Refer: .pull-right
 .right {
-  @extend .pull-right;
+  float: right !important;
 }
