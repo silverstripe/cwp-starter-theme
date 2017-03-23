@@ -21,7 +21,7 @@ You can find documentation on how to use this theme in the CWP Developer Documen
 ## Requirements
 
 * [Composer](https://getcomposer.org)
-* `cwp/cwp`: ^1.6
+* `cwp/cwp`: \^1.6
 
 ### Development requirements
 
