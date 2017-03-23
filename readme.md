@@ -4,6 +4,8 @@ This is the repository for the CWP "starter" theme. This theme is a highly acces
 
 If you want to start with a theme that is more designed, take a look at the [Wātea theme](https://gitlab.cwp.govt.nz/cwp/watea-theme).
 
+![Screenshot](docs/images/screenshot.jpg)
+
 ## Installation
 
 You can install this theme with Composer:
@@ -19,8 +21,7 @@ You can find documentation on how to use this theme in the CWP Developer Documen
 ## Requirements
 
 * [Composer](https://getcomposer.org)
-* `cwp/starter-theme`: The foundation theme for this subtheme, via Composer
-* `cwp/agency-extensions`: Provides additional functionality to the CMS for agency-style websites, via Composer
+* `cwp/cwp`: ^1.6
 
 ### Development requirements
 
