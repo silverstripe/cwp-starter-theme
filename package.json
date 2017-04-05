@@ -19,7 +19,8 @@
     "expose-loader": "^0.7",
     "font-awesome": "^4.7.0",
     "jquery-highlight": "^3.3.0",
-    "laravel-mix": "^0.5"
+    "laravel-mix": "^0.5",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
