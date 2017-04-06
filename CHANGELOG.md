@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0-beta2 (2017-04-06)
+
+* FIX add js ability to define navigation breakpoints (Sacha Judd)
+* FIX Form validation messages should not have escaped HTML in them (Robbie Averill)
+* Fix build issue caused by recent webpack update (elliot sawyer)
+* Escape caret in constraint (Robbie Averill)
+* DOCS Add screenshot to readme (Robbie Averill)
+
 ## 1.0.0-beta1 (2017-03-20)
 
 * FIX Linting errors in JS and SASS files. Remove @extend from editor.scss (Robbie Averill)
