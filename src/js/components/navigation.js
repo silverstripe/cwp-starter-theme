@@ -42,13 +42,15 @@ export default function () {
   };
 
   /**
-   * If screen width is Desktop return true
-   * 752px according to Bootstrap @media queries
+   * If screen width is Desktop return true. 752px according to Bootstrap @media queries,
+   * but can be overridden by adding data-grid-float-breakpoint-width="1234" to your <body>
+   * tag to override this.
    *
    * @returns {Boolean}
    */
   const isDesktop = function () {
-    return $(document).width() > 752 || false;
+    const maxWidth = $('body').data('grid-float-breakpoint-width') || 752;
+    return $(document).width() > maxWidth || false;
   };
 
   /**

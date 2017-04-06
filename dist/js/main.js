@@ -277,13 +277,15 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
   };
 
   /**
-   * If screen width is Desktop return true
-   * 752px according to Bootstrap @media queries
+   * If screen width is Desktop return true. 752px according to Bootstrap @media queries,
+   * but can be overridden by adding data-grid-float-breakpoint-width="1234" to your <body>
+   * tag to override this.
    *
    * @returns {Boolean}
    */
   var isDesktop = function isDesktop() {
-    return __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).width() > 752 || false;
+    var maxWidth = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').data('grid-float-breakpoint-width') || 752;
+    return __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).width() > maxWidth || false;
   };
 
   /**
