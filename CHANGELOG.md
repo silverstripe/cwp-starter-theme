@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-beta3 (2017-04-27)
+
+* Add template for Security.ss from Page.ss and remove sidebar (Sacha Judd)
+
 ## 1.0.0-beta2 (2017-04-06)
 
 * FIX add js ability to define navigation breakpoints (Sacha Judd)
