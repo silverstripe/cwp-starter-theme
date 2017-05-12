@@ -1,16 +1,16 @@
 {
-  "name": "cwp/starter-theme",
-  "description": "CWP Theme",
-  "type": "silverstripe-theme",
-  "keywords": ["silverstripe", "theme"],
-  "license": "BSD-3-Clause",
-  "require": {
-    "cwp/cwp": "^1.6@dev"
-  },
-  "extra": {
-    "installer-name": "starter",
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
+    "name": "cwp/starter-theme",
+    "description": "CWP Theme",
+    "type": "silverstripe-theme",
+    "keywords": [
+        "silverstripe",
+        "theme"
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "cwp/cwp": "^1.6@dev"
+    },
+    "extra": {
+        "installer-name": "starter"
     }
-  }
 }
