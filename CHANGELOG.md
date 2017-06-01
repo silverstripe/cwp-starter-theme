@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-rc2 (2017-06-02)
+
+* FIX Escape search term in page title (Robbie Averill)
+
 ## 1.0.0-beta3 (2017-04-27)
 
 * Add template for Security.ss from Page.ss and remove sidebar (Sacha Judd)
