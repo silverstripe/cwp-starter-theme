@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 (2017-06-06)
+
+* FIX Override Bootstrap .hide definition for userforms formfields (Robbie Averill)
+* FIX Update userforms holder ID to match default templates (Robbie Averill)
+
+## 1.0.0 (2017-06-02)
 ## 1.0.0-rc2 (2017-06-02)
 
 * FIX Escape search term in page title (Robbie Averill)

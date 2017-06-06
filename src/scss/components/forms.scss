@@ -47,6 +47,13 @@
   margin-bottom: 0;
 }
 
+// CWP 1.6.0 recipe modification for userforms display rules bug
+// NOTE: Can be removed after userforms 4.3.2 is included
+// See: https://github.com/silverstripe/silverstripe-userforms/issues/607
+.userform .userformsstep.form-step .field .hide {
+  display: inherit !important;
+}
+
 // Grouped buttons, convert SilverStripe convention to BS
 // Mimic BS .btn-toolbar;
 // Offset the first child's margin
