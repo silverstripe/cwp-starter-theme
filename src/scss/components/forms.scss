@@ -75,7 +75,8 @@
 }
 
 // Add focus status removed by Bootstrap
-.dropdown-toggle:focus {
+.dropdown-toggle:focus,
+.btn:focus {
   @include outline-focus();
 }
 

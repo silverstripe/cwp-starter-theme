@@ -1,41 +1,41 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/
+
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
-/******/
+
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-/******/
+
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
-/******/
+
+
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-/******/
+
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
+
 /******/ 	// identity function for calling harmony imports with the correct context
 /******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
+
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -46,7 +46,7 @@
 /******/ 			});
 /******/ 		}
 /******/ 	};
-/******/
+
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -55,13 +55,13 @@
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-/******/
+
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "./";
-/******/
+
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
@@ -154,12 +154,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
+/* harmony default export */ __webpack_exports__["a"] = function () {
     // Maori language class to add lang type
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.maori').attr('lang', 'mi');
 
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.nonvisual-indicator').addClass('sr-only').removeClass('nonvisual-indicator');
-});
+};
 
 /***/ }),
 /* 5 */
@@ -172,7 +172,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
+/* harmony default export */ __webpack_exports__["a"] = function () {
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('input.number').on('keyup', function () {
     var value = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).val();
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).val(value.replace(/[a-zA-Z]/g, ''));
@@ -214,7 +214,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
       return val !== 'true';
     });
   });
-});
+};
 
 /***/ }),
 /* 6 */
@@ -227,7 +227,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
+/* harmony default export */ __webpack_exports__["a"] = function () {
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img').addClass('img-responsive');
 
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.right').removeClass('right').addClass('pull-right');
@@ -237,7 +237,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main div .captionImage.center').removeClass('center').addClass('center-block');
 
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#main img.center').removeClass('center').addClass('center-block');
-});
+};
 
 /***/ }),
 /* 7 */
@@ -250,7 +250,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
+/* harmony default export */ __webpack_exports__["a"] = function () {
   var Dropdown = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('nav .dropdown');
 
   /**
@@ -371,7 +371,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
       openMenu($parent);
     }
   });
-});
+};
 
 /***/ }),
 /* 8 */
@@ -384,12 +384,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
+/* harmony default export */ __webpack_exports__["a"] = function () {
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('article[data-highlight]').each(function () {
     var text = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).data('highlight');
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).highlight(text, { element: 'mark', className: 'highlight' });
   });
-});
+};
 
 /***/ }),
 /* 9 */
@@ -402,7 +402,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
 
 /* eslint-enable */
 
-/* harmony default export */ __webpack_exports__["a"] = (function () {
+/* harmony default export */ __webpack_exports__["a"] = function () {
   /**
    * Return a cache identifier for storing sitemap data in local storage
    */
@@ -506,7 +506,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* defa
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.sitemap__collapse-action').removeAttr('aria-selected');
   });
-});
+};
 
 /***/ }),
 /* 10 */
@@ -2376,7 +2376,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
  *  - highlight element tag and class names can be specified in options
  *
  * Usage:
- *   // wrap every occurrence of text 'lorem' in content
+ *   // wrap every occurrance of text 'lorem' in content
  *   // with <span class='highlight'> (default options)
  *   $('#content').highlight('lorem');
  *
@@ -2396,7 +2396,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
  *   // don't ignore case during search of term 'lorem'
  *   $('#content').highlight('lorem', { caseSensitive: true });
  *
- *   // wrap every occurrence of term 'ipsum' in content
+ *   // wrap every occurrance of term 'ipsum' in content
  *   // with <em class='important'>
  *   $('#content').highlight('ipsum', { element: 'em', className: 'important' });
  *
@@ -2429,7 +2429,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }
 }(function (jQuery) {
     jQuery.extend({
-        highlight: function (node, re, nodeName, className, callback) {
+        highlight: function (node, re, nodeName, className) {
             if (node.nodeType === 3) {
                 var match = node.data.match(re);
                 if (match) {
@@ -2445,19 +2445,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     var wordNode = node.splitText(capturePos);
                     wordNode.splitText(match[1].length);
 
-                    var wordClone = wordNode.cloneNode(true);
+                    var wordClone = wordNode.cloneNode(true);                    
                     highlight.appendChild(wordClone);
                     wordNode.parentNode.replaceChild(highlight, wordNode);
-                    if (typeof callback == 'function') {
-                        callback(highlight)   
-                    }
                     return 1; //skip added node in parent
                 }
             } else if ((node.nodeType === 1 && node.childNodes) && // only element nodes that have children
                     !/(script|style)/i.test(node.tagName) && // ignore script and style nodes
                     !(node.tagName === nodeName.toUpperCase() && node.className === className)) { // skip if already highlighted
                 for (var i = 0; i < node.childNodes.length; i++) {
-                    i += jQuery.highlight(node.childNodes[i], re, nodeName, className, callback);
+                    i += jQuery.highlight(node.childNodes[i], re, nodeName, className);
                 }
             }
             return 0;
@@ -2479,7 +2476,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         }).end();
     };
 
-    jQuery.fn.highlight = function (words, options, callback) {
+    jQuery.fn.highlight = function (words, options) {
         var settings = {
           className: 'highlight',
           element: 'span',
@@ -2489,7 +2486,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         };
 
         jQuery.extend(settings, options);
-
+        
         if (typeof words === 'string') {
           words = [words];
         }
@@ -2509,15 +2506,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         // only the matching word
         var pattern = '(' + words.join('|') + ')';
         if (settings.wordsOnly) {
-            pattern =
-                (settings.wordsBoundaryStart || settings.wordsBoundary) +
-                pattern +
-                (settings.wordsBoundaryEnd || settings.wordsBoundary);
+            pattern = settings.wordsBoundary + pattern + settings.wordsBoundary;
         }
         var re = new RegExp(pattern, flag);
-
+        
         return this.each(function () {
-            jQuery.highlight(this, re, settings.element, settings.className, callback);
+            jQuery.highlight(this, re, settings.element, settings.className);
         });
     };
 }));
