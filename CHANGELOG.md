@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 (2017-06-19)
+
+* FIX add outline-focus status for buttons (Sacha Judd)
+
 ## 1.0.1 (2017-06-06)
 
 * FIX Override Bootstrap .hide definition for userforms formfields (Robbie Averill)
