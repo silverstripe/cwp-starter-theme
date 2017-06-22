@@ -13,7 +13,7 @@
                               <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="$LinkingMode">$MenuTitle.XML</a>
 
                               <% if $Children %>
-                                  <button class="btn pull-right navbar-touch-caret" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                                  <button class="btn btn-link pull-right navbar-touch-caret" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
                                       <span class="sr-only"><%t CWP_Theme.DISPLAY_SUBMENU_PAGES "Display {count} submenu pages" count=$MenuTitle.XML %></span>
                                       <i class="fa fa-caret-down" aria-hidden="true"></i>
                                   </button>
