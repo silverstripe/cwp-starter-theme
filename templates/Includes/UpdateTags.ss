@@ -10,9 +10,9 @@
             <% end_loop %>
         </p>
         <% if $CurrentTag %>
-            <p class="small"><a href="$AllTagsLink" title='<%t CWP.Events_News.ViewAllTags "All tags"%>'>
-                <%t CWP.Events_News.ViewAllTags "View all tags" %>
-            </a></p>
+            <p class="small">
+                <a href="$AllTagsLink"><%t CWP.Events_News.ViewAllTags "View all tags" %></a>
+            </p>
         <% end_if %>
     </nav>
 </div>
