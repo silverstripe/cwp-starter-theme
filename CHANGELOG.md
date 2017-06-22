@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 (2017-06-22)
+
+* FIX Remove duplicate title attribute content (Robbie Averill)
+* FIX add btn btn-link class for firefox focus (Sacha Judd)
+* FIX add class btn to navbar-touch-caret for focus visible in firefox (Sacha Judd)
+
 ## 1.0.2 (2017-06-19)
 
 * FIX add outline-focus status for buttons (Sacha Judd)
