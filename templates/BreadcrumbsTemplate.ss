@@ -3,7 +3,7 @@
         <p class="sr-only" id="breadcrumbs-label"><%t SiteTree.BREADCRUMBSLABEL "You are here" %></p>
         <ol class="breadcrumb" aria-labelledby="breadcrumbs-label">
             <li>
-                <a href="$BaseHref" title="<%t SiteTree.DEFAULTHOMETITLE 'HOME' %>">
+                <a href="$BaseHref">
                     <%t SiteTree.DEFAULTHOMETITLE "Home" %>
                 </a>
             </li>
@@ -11,7 +11,7 @@
                 <% if $Last %>
                     <li class="active">$Title.XML</li>
                 <% else %>
-                    <li><a href="$Link" title="$MenuTitle.XML">$MenuTitle.XML</a></li>
+                    <li><a href="$Link">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
         </ol>

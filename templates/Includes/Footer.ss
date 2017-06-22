@@ -2,12 +2,12 @@
     <% if $SiteConfig.FacebookURL || $SiteConfig.TwitterUsername %>
         <div class="footer-nav-links footer-social-links" role="complementary">
             <% if $SiteConfig.TwitterUsername %>
-                <a href="http://www.twitter.com/$SiteConfig.TwitterUsername" title='<%t CWP.Footer.FollowOnTwitter "Follow us on Twitter" %>'>
+                <a href="http://www.twitter.com/$SiteConfig.TwitterUsername">
                     <%t CWP.Footer.FollowOnTwitter "Follow us on Twitter" %></a>
             <% end_if %>
 
             <% if $SiteConfig.FacebookURL %>
-                <a href="http://www.facebook.com/$SiteConfig.FacebookURL" title='<%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %>'>
+                <a href="http://www.facebook.com/$SiteConfig.FacebookURL">
                     <%t CWP.Footer.FollowOnFacebook "Follow us on Facebook" %></a>
             <% end_if %>
         </div>
