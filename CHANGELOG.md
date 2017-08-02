@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 (2017-08-02)
+
+* FIX Remove title from userforms checkbox holder (Sacha Judd)
+
 ## 1.0.3 (2017-06-22)
 
 * FIX Remove duplicate title attribute content (Robbie Averill)
