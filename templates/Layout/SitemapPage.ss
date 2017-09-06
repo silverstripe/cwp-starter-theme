@@ -5,7 +5,11 @@
         </div>
         <div class="col-md-9">
             <div class="clearfix">
+                <% if $Content.RichLinks %>
                 $Content.RichLinks
+                <% else %>
+                $Content
+                <% end_if %>
             </div>
 
             <ul class="sitemap list-unstyled" role="tablist">

@@ -9,11 +9,13 @@
 
         <section class="<% if $SideBarView %>col-md-7<% else %>col-md-10<% end_if %> col-md-offset-1">
             <div class="blog-main" role="main">
+                <div class="clearfix">
                 <% if $Content.RichLinks %>
-                    <div class="clearfix">
-                        $Content.RichLinks
-                    </div>
+                    $Content.RichLinks
+                <% else %>
+                    $Content
                 <% end_if %>
+                </div>
                 <% include BlogPostPaginatedList %>
                 $Form
                 <% include RelatedPages %>
