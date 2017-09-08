@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 (2017-09-08)
+
+* NEW Only show header search form if one exists to use (Robbie Averill) - 3e847a4
+* Add keyword, fix syntax error (jovenden) - 13595df
+* Remove agency-extensions suggestion, move to Watea (jovenden) - b648bae
+* Remove CWP requirement (jovenden) - 8f4093d
+* Update changelog for 1.0.4 (Robbie Averill) - 30b85ea
+* FIX Remove title from userforms checkbox holder (Sacha Judd) - d8ff9f4
+
 ## 1.0.4 (2017-08-02)
 
 * FIX Remove title from userforms checkbox holder (Sacha Judd)
