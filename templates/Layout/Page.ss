@@ -9,7 +9,11 @@
     </div>
     <div class="row">
         <section class="col-md-7 col-md-offset-1">
+            <% if $Content.RichLinks %>
             $Content.RichLinks
+            <% else %>
+            $Content
+            <% end_if %>
             $Form
             <% include RelatedPages %>
             $CommentsForm
