@@ -2,10 +2,7 @@
   "name": "cwp/starter-theme",
   "description": "CWP Theme",
   "type": "silverstripe-theme",
-  "keywords": [
-      "silverstripe",
-      "theme"
-  ],
+  "keywords": ["silverstripe", "theme", "cwp"],
   "license": "BSD-3-Clause",
   "extra": {
       "installer-name": "starter"

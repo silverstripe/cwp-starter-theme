@@ -1,5 +1,5 @@
-<% if HTML.RichLinks %>
-HTML.RichLinks
+<% if $HTML.RichLinks %>
+$HTML.RichLinks
 <% else %>
-HTML
+$HTML
 <% end_if %>
