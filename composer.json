@@ -5,7 +5,10 @@
   "keywords": ["silverstripe", "theme", "cwp"],
   "license": "BSD-3-Clause",
   "extra": {
-      "installer-name": "starter"
+    "installer-name": "starter",
+    "branch-alias": {
+      "dev-master": "1.2.x-dev"
+    }  
   },
   "suggest": {
     "cwp/cwp": "Much of the functionality in this theme is enabled by this module"
