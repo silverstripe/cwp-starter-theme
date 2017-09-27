@@ -1,4 +1,4 @@
-<% if $IsReadonly %>
+<% if $isReadonly %>
     <ul class="{$ExtraClass.ATT}">
         <% loop $FieldSet %>
             <% if $Selected %>
