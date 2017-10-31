@@ -25,7 +25,7 @@
 
     <hr>
     <a href="http://newzealand.govt.nz" class="footer-govt-logo">
-        <img src="$ThemeDir/images/newzealand-government-footer.png"
+        <img src="themes/starter/images/newzealand-government-footer.png"
             width="210"
             alt="<%t CWP.Footer.GovAlt 'newzealand.govt.nz - connecting you to New Zealand central &amp; local government services' %>"
             />
