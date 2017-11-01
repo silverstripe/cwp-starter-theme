@@ -34,3 +34,8 @@
 .banner-element__title {
   color: $jumbotron-color;
 }
+
+// File block
+.file-element__file {
+  margin-bottom: $line-height-computed * 2;
+}
