@@ -1,6 +1,6 @@
 // Content block styles
 
-// Banner block
+//-- Banner block
 .banner-element {
   align-items: center;
   display: flex;
@@ -16,6 +16,7 @@
 .banner-element__image {
   display: flex;
   flex-grow: 1;
+  max-height: 450px;
   opacity: .55;
 
   img {
@@ -35,7 +36,7 @@
   color: $jumbotron-color;
 }
 
-// File block
+//-- File block
 .file-element__file {
   margin-bottom: $line-height-computed * 2;
 }
