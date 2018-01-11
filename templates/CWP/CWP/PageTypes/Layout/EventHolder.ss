@@ -13,13 +13,13 @@
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
                 <article>
-                    <p><%t CWP.FilteredUpdates.NoEvents "No Events" %></p>
+                    <p><%t CWP\\CWP\\PageTypes\\EventHolder.NoEvents "No Events" %></p>
                 </article>
             <% end_if %>
         </section>
 
         <aside class="col-md-3 sidebar">
-            <h2 class="sr-only"><%t CWP_NewsEvents.FILTERS "Filters" %></h2>
+            <h2 class="sr-only"><%t CWP\\CWP\\PageTypes\\EventHolder.FILTERS "Filters" %></h2>
             <% if $UpdateTagsWithLinks %>
                 <% include UpdateTags %>
             <% end_if %>
