@@ -2,7 +2,7 @@
 
 This is the repository for the CWP "starter" theme. This theme is a highly accessible Bootstrap 3 theme which you can use as a starter for your CWP project.
 
-If you want to start with a theme that is more designed, take a look at the [Wātea theme](https://gitlab.cwp.govt.nz/cwp/watea-theme).
+If you want to start with a theme that is more designed, take a look at the [Wātea theme](https://github.com/silverstripe/cwp-watea-theme).
 
 ![Screenshot](docs/images/screenshot.jpg)
 
