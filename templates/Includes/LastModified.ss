@@ -1,3 +1,5 @@
 <% if $LastEdited %>
-    <p class="page-utilities-last-modified"><%t Cwp.LastModified "Last modified" %>: <time datetime="$LastEdited.Format(Y-m-d)">{$LastEdited.Format(jS F Y)}</time></p>
+    <p class="page-utilities-last-modified">
+        <%t CWP\\CWP\\PageTypes\\BasePage.LastModified "Last modified" %>: <time datetime="$LastEdited.Format(y-MM-dd)">{$LastEdited.Format(d MMMM y)}</time>
+    </p>
 <% end_if %>
