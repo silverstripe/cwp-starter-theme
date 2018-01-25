@@ -43,7 +43,7 @@
                 <% end_if %>
             <% end_if %>
 
-            <% if $ClassName == CWP\\CWP\\PageTypes\\NewsHolder || $ClassName == CWP\\CWP\\PageTypes\\EventsHolder || $ClassName == SilverStripe\\Blog\\Model\\Blog %>
+            <% if $ClassName == CWP\\CWP\\PageTypes\\NewsHolder || $ClassName == CWP\\CWP\\PageTypes\\EventHolder || $ClassName == SilverStripe\\Blog\\Model\\Blog %>
                 <li><a href="#subscribe"><%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %></a></li>
             <% end_if %>
         </ul>

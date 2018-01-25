@@ -81,7 +81,7 @@ export default function () {
     $screenReader.attr('data-collapse-text', screenReaderText);
   }
 
-  $('.SitemapPage').on('click', 'a.sitemap__collapse-action', function (e) {
+  $('.sitemap-page').on('click', 'a.sitemap__collapse-action', function (e) {
     e.preventDefault();
 
     // @todo: Remove passing of reference to $(this) as per AirBnB style guide

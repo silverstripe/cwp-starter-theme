@@ -17,14 +17,14 @@
 
                 <div class="content">$Content</div>
 
-                <% include EntryMeta %>
+                <% include SilverStripe\\Blog\\EntryMeta %>
 
                 $Form
                 $CommentsForm
             </article>
        </section>
 
-        <% include BlogSideBar %>
+        <% include SilverStripe\\Blog\\BlogSideBar %>
 
     </div>
 </div>

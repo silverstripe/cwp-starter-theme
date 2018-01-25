@@ -1,7 +1,7 @@
 <div class="blog-member-details row">
     <% if $CurrentProfile.BlogProfileImage %>
         <div class="profile-image col-md-3">
-            $CurrentProfile.BlogProfileImage.setWidth(180)
+            $CurrentProfile.BlogProfileImage.ScaleWidth(180)
         </div>
     <% end_if %>
 

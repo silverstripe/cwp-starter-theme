@@ -10,7 +10,7 @@
 </footer>
 <% if $FeaturedImage %>
     <figure class="right">
-        $FeaturedImage.SetWidth(300)
+        $FeaturedImage.ScaleWidth(300)
     </figure>
 <% end_if %>
 <% if $Content.RichLinks %>

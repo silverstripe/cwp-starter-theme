@@ -1,4 +1,4 @@
-<div class="container layout">
+<div class="container layout sitemap-page">
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">$Title</h1>

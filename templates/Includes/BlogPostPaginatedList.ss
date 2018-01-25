@@ -4,11 +4,11 @@
     <% end_if %>
     <% loop $PaginatedList %>
         <article class="blog-entry $EvenOdd">
-            <% include BlogSummary %>
+            <% include SilverStripe\\Blog\\PostSummary %>
         </article>
     <% end_loop %>
     <% with $PaginatedList %>
-        <% include Pagination %>
+        <% include SilverStripe\\Blog\\Pagination %>
     <% end_with %>
 <% else %>
     <p><%t BlogPostPaginatedList.NO_POSTS "There are no blog posts" %></p>

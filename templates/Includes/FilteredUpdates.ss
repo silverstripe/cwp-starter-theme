@@ -3,7 +3,7 @@
 
         <% if $FeaturedImage %>
             <figure class="pull-right news-events-item-figure">
-                $FeaturedImage.SetHeight(150)
+                $FeaturedImage.ScaleHeight(150)
             </figure>
         <% end_if %>
 
