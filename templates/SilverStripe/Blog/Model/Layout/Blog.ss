@@ -23,7 +23,7 @@
             </div>
         </section>
 
-        <% include BlogSideBar %>
+        <% include SilverStripe\\Blog\\BlogSideBar %>
 
     </div>
 </div>

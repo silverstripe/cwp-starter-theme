@@ -5,7 +5,7 @@
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
-            <% include BlogMemberDetails %>
+            <% include SilverStripe\\Blog\\MemberDetails %>
         </div>
     </div>
 
@@ -17,7 +17,7 @@
             $CommentsForm
         </section>
 
-        <% include BlogSideBar %>
+        <% include SilverStripe\\Blog\\BlogSideBar %>
     </div>
 </div>
 
