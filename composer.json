@@ -11,7 +11,10 @@
     "installer-name": "starter",
     "branch-alias": {
       "dev-master": "2.x-dev"
-    }
+    },
+    "expose": [
+      "dist"
+    ]
   },
   "suggest": {
     "cwp/cwp": "Much of the functionality in this theme is enabled by this module"
