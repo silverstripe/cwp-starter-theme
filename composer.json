@@ -13,7 +13,9 @@
       "dev-master": "2.x-dev"
     },
     "expose": [
-      "dist"
+      "dist",
+      "ico",
+      "images"
     ]
   },
   "suggest": {
