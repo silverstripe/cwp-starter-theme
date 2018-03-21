@@ -1,6 +1,6 @@
 <% if $Steps.Count > 1 %>
     <div id="userform-progress" class="userform-progress" style="display:none;">
-        <p><%t EditableFormStep.STEP_TITLE "Page {page}" page='<span class="current-step-number">1</span>' %> <%t EditableFormStep.STEP_LIMIT "of {pages}" pages='<span class="total-step-number">{count}</span>' count=$Steps.Count %></p>
+        <p><%t EditableFormStep.STEP_TITLE "Page {page}" page='<span class="current-step-number">1</span>' %> <%t EditableFormStep.STEP_LIMIT 'of <span class="total-step-number">{count}</span>' count=$Steps.Count %></p>
         <div class="progress" aria-hidden="true">
             <div class="progress-bar progress-bar-success" role="progressbar"></div>
         </div>
