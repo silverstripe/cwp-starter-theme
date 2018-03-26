@@ -8,8 +8,8 @@
                     type="checkbox"
                     value="{$Value.ATT}"
                     aria-labelledby="option-title-{$ID.ATT}"
-                    <% if $IsChecked %>checked="checked"<% end_if %>
-                    <% if $IsDisabled %>disabled="disabled"<% end_if %>
+                    <% if $isChecked %>checked="checked"<% end_if %>
+                    <% if $isDisabled %>disabled="disabled"<% end_if %>
                     />
                 {$Title}
             </label>
