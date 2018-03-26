@@ -6,8 +6,8 @@
                     <label for="{$ID}" id="option-title-{$ID}">
                         <input id="{$ID.ATT}" name="{$Name.ATT}" type="radio"
                             value="{$Value.ATT}" aria-labelledby="option-title-{$ID}"
-                            <% if $IsChecked %>checked="checked"<% end_if %>
-                            <% if $IsDisabled %>disabled="disabled"<% end_if %>
+                            <% if $isChecked %>checked="checked"<% end_if %>
+                            <% if $isDisabled %>disabled="disabled"<% end_if %>
                             <% if $Up.Required %>required="required"<% end_if %> />
                         {$Title}
                     </label>
