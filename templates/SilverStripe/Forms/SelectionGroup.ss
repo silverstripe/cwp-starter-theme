@@ -13,7 +13,7 @@
     <ul class="{$ExtraClass.ATT}">
         <% loop $FieldSet %>
             <li {$Selected}>
-                {$RadioButton} {$RadioLabel}
+                <label>{$RadioButton} {$RadioLabel}</label>
                 <% if $FieldList %>
                     {$FieldHolder}
                 <% end_if %>
