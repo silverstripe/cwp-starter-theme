@@ -1,1 +1,1 @@
-<textarea $getAttributesHTML('class') class="$ExtraClass.ATT form-control" <% include AriaAttributes %>>$Value</textarea>
+<textarea $getAttributesHTML('class') class="$ExtraClass.ATT form-control" <% include AriaAttributes %>>$ValueEntities.RAW</textarea>
