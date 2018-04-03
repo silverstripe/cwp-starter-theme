@@ -13,7 +13,7 @@
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
                 <article>
-                    <p><%t CWP.FilteredUpdates.NoNews "No news" %></p>
+                    <p><%t CWP_FilteredUpdates.NoNews "No news" %></p>
                 </article>
             <% end_if %>
         </section>

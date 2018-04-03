@@ -11,7 +11,7 @@
             <h2 class="h3"><a title="$Title" href="$Link">$Title</a></h2>
         </header>
 
-        <% if $Up.ControllerName == "EventHolder" %>
+        <% if $Up.ControllerName == 'CWP\\CWP\\PageTypes\\EventHolder' %>
 
             <% if $Date %>
                 <p class="meta-info">
@@ -19,17 +19,17 @@
                         $NiceLocation,
                     <% end_if %>
                     <% if $Date %>
-                        <time datetime="$Date">$Date.Format(Y/m/d) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
+                        <time datetime="$Date">$Date.Format(y/MM/dd) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
                     <% end_if %>
                 </p>
             <% end_if %>
 
-        <% else_if $Up.ControllerName == "NewsHolder" %>
+        <% else_if $Up.ControllerName == 'CWP\\CWP\\PageTypes\\NewsHolder' %>
 
             <% if $Date || $Author %>
                 <p class="meta-info">
                     <% if $Date %>
-                        <time datetime="$Date">$Date.nice <% if $StartTime %>$StartTime.Nice <% end_if %>
+                        <time datetime="$Date">$Date.Nice <% if $StartTime %>$StartTime.Nice <% end_if %>
                         </time>
                     <% end_if %>
                     <% if $Author %>by {$Author}<% end_if %>

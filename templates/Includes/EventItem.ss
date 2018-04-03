@@ -5,11 +5,11 @@
     <% end_if %>
     <% if $Date %>
         <time>
-            <span itemprop="startDate" datetime="{$Date.Format('Y-m-d')}<% if $StartTime %>T{$StartTime.Format('H:i:s')}<% end_if %>">
-                $Date.Format('d/m/Y') <% if $StartTime %>$StartTime.Nice<% end_if %>
+            <span itemprop="startDate" datetime="{$Date.Format('y-MM-dd')}<% if $StartTime %>T{$StartTime.Format('HH:mm:ss')}<% end_if %>">
+                $Date.Format('y/MM/dd') <% if $StartTime %>$StartTime.Nice<% end_if %>
             </span>
             <% if $EndTime %>
-                <span itemprop="endDate" datetime="{$Date.Format('Y-m-d')}T{$EndTime.Format('H:i:s')}">- $EndTime.Nice</span>
+                <span itemprop="endDate" datetime="{$Date.Format('y-MM-dd')}T{$EndTime.Format('HH:mm:ss')}">- $EndTime.Nice</span>
             <% end_if %>
         </time>
     <% end_if %>
