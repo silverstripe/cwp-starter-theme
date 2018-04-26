@@ -16,12 +16,12 @@ composer require cwp/starter-theme
 
 ## Documentation
 
-You can find documentation on how to use this theme in the CWP Developer Documentation: [Customising the starter theme](https://www.cwp.govt.nz/developer-docs/en/1.6/working_with_projects/customising_the_starter_theme/).
+You can find documentation on how to use this theme in the CWP Developer Documentation: [Customising the starter theme](https://www.cwp.govt.nz/developer-docs/en/2/working_with_projects/customising_the_starter_theme/).
 
 ## Requirements
 
 * [Composer](https://getcomposer.org)
-* `cwp/cwp`: \^1.6
+* `cwp/cwp`: \^2.0
 
 ### Development requirements
 
