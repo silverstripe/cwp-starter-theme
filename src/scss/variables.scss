@@ -497,10 +497,8 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //##
 
 $jumbotron-padding:              30px !default;
-// When applied with a 55% opacity mask, meets accessibility standards
-$jumbotron-color:                #fff !default; // default: inherit
-$jumbotron-bg:                   #001F2C !default; // default: $gray-lighter
-
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   $gray-lighter !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
