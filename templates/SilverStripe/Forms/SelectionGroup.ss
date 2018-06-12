@@ -2,7 +2,7 @@
     <ul class="{$ExtraClass.ATT}">
         <% loop $FieldSet %>
             <% if $Selected %>
-                <li {$Selected}>
+                <li class="selected">
                     {$RadioLabel}
                     {$FieldHolder}
                 </li>
@@ -12,7 +12,7 @@
 <% else %>
     <ul class="{$ExtraClass.ATT}">
         <% loop $FieldSet %>
-            <li {$Selected}>
+            <li <% if $Selected %>class="selected"<% end_if %>>
                 <label>{$RadioButton} {$RadioLabel}</label>
                 <% if $FieldList %>
                     {$FieldHolder}
