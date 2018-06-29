@@ -13,6 +13,10 @@
   margin: $line-height-computed 0;
 }
 
+.silverstripe__elementalbannerblock__block__bannerblock {
+  background-color: #001F2C;
+}
+
 .banner-element__image {
   display: flex;
   flex-grow: 1;
@@ -27,13 +31,10 @@
 
 .banner-element__content {
   // Add jumbotron padding back here
-  padding: $jumbotron-padding ($jumbotron-padding * 2);
+  left: 0;
   position: absolute;
   text-shadow: $carousel-text-shadow;
-}
-
-.banner-element__title {
-  color: $jumbotron-color;
+  color: #fff;
 }
 
 //-- File block
