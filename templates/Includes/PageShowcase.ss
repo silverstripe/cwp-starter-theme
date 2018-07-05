@@ -1,10 +1,12 @@
 <% if $ClassName == "HomePage" %>
-    <div class="page-showcase">
-        <div class="container">
-            <div class="row">
-                <% include PageShowcaseQuicklinks %>
-                <% include PageShowcaseFeatures %>
+    <% if $FeatureOneTitle || $FeatureTwoTitle || $QuickLinks %>
+        <div class="page-showcase">
+            <div class="container">
+                <div class="row">
+                    <% include PageShowcaseQuicklinks %>
+                    <% include PageShowcaseFeatures %>
+                </div>
             </div>
         </div>
-    </div>
+    <% end_if %>
 <% end_if %>
