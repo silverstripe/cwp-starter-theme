@@ -6,7 +6,7 @@
     <% if $Date %>
         <time>
             <span itemprop="startDate" datetime="{$Date.Format('y-MM-dd')}<% if $StartTime %>T{$StartTime.Format('HH:mm:ss')}<% end_if %>">
-                $Date.Format('y/MM/dd') <% if $StartTime %>$StartTime.Nice<% end_if %>
+                $Date.Format('dd/MM/y') <% if $StartTime %>$StartTime.Nice<% end_if %>
             </span>
             <% if $EndTime %>
                 <span itemprop="endDate" datetime="{$Date.Format('y-MM-dd')}T{$EndTime.Format('HH:mm:ss')}">- $EndTime.Nice</span>

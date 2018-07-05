@@ -19,7 +19,7 @@
                         $NiceLocation,
                     <% end_if %>
                     <% if $Date %>
-                        <time datetime="$Date">$Date.Format(y/MM/dd) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
+                        <time datetime="$Date">$Date.Format(dd/MM/y) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
                     <% end_if %>
                 </p>
             <% end_if %>
