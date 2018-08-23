@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - '6'
+
+before_script:
+  - npm install
+
+script:
+  # Linting
+  - npm run lint-js
+  - npm run lint-sass
+  # Check that dist files are built correctly
+  - npm run build
+  - git diff-files --quiet -w --relative=client
+  - git diff --name-status --relative=client
