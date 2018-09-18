@@ -9,7 +9,7 @@
             </li>
             <% loop $Pages %>
                 <% if $Last %>
-                    <li class="active">$Title.XML</li>
+                    <li class="active">$MenuTitle.XML</li>
                 <% else %>
                     <li><a href="$Link">$MenuTitle.XML</a></li>
                 <% end_if %>
