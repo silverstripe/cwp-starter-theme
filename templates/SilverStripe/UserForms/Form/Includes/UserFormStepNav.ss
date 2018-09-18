@@ -3,10 +3,14 @@
         <%-- If JavaScript is disabled multi-step forms are displayed as a single page
             so the 'prev' and 'next' button are not used. These buttons are made visible via JavaScript. --%>
         <li class="step-button-wrapper" aria-hidden="true" style="display:none;">
-            <button class="btn btn-default step-button-prev"><%t EditableFormStep.STEP_PREV "Prev" %></button>
+            <button class="btn btn-default step-button-prev">
+                <%t SilverStripe\\UserForms\\Model\\EditableFormField\\EditableFormStep.STEP_PREV "Prev" %>
+            </button>
         </li>
         <li class="step-button-wrapper" aria-hidden="true" style="display:none;">
-            <button class="btn btn-default step-button-next"><%t EditableFormStep.STEP_NEXT "Next" %></button>
+            <button class="btn btn-default step-button-next">
+                <%t SilverStripe\\UserForms\\Model\\EditableFormField\\EditableFormStep.STEP_NEXT "Next" %>
+            </button>
         </li>
 
         <% if $Actions %>
