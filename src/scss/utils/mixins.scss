@@ -34,3 +34,9 @@
   font-size: 75% * $popularity;
   padding: (.2em * $popularity) (.6em * $popularity);
 }
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

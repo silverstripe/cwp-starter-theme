@@ -1,14 +1,14 @@
 // Define globally exposed module objects
 /* eslint-disable */
 // Define dependency imports
-import transition from 'bootstrap-sass/assets/javascripts/bootstrap/transition';
-import collapse from 'bootstrap-sass/assets/javascripts/bootstrap/collapse';
-import dropdown from 'bootstrap-sass/assets/javascripts/bootstrap/dropdown';
-import carousel from 'bootstrap-sass/assets/javascripts/bootstrap/carousel';
-import tooltip from 'bootstrap-sass/assets/javascripts/bootstrap/tooltip';
-import popover from 'bootstrap-sass/assets/javascripts/bootstrap/popover';
-import modal from 'bootstrap-sass/assets/javascripts/bootstrap/modal';
-import tab from 'bootstrap-sass/assets/javascripts/bootstrap/tab';
+import util from 'bootstrap/js/src/util';
+// import collapse from 'bootstrap/js/src/collapse';
+// import dropdown from 'bootstrap/js/src/dropdown';
+// import carousel from 'bootstrap/js/src/carousel';
+// import tooltip from 'bootstrap/js/src/tooltip';
+// import popover from 'bootstrap/js/src/popover';
+// import modal from 'bootstrap/js/src/modal';
+import tab from 'bootstrap/js/src/tab';
 import highlight from 'jquery-highlight/jquery.highlight';
 
 // Define local components
