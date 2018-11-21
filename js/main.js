@@ -235,8 +235,8 @@ const Util = (($) => {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-__webpack_require__(12);
-module.exports = __webpack_require__(13);
+__webpack_require__(18);
+module.exports = __webpack_require__(19);
 
 
 /***/ }),
@@ -246,25 +246,37 @@ module.exports = __webpack_require__(13);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_js_src_util__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_js_src_tab__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_highlight_jquery_highlight__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_highlight_jquery_highlight___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery_highlight_jquery_highlight__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_navigation__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_content__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_sitemap__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_search__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_form__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_img__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_js_src_collapse__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap_js_src_collapse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap_js_src_collapse__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_js_src_dropdown__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_js_src_dropdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap_js_src_dropdown__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_js_src_carousel__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_js_src_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_js_src_carousel__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap_js_src_tooltip__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap_js_src_tooltip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap_js_src_tooltip__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bootstrap_js_src_popover__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bootstrap_js_src_popover___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_bootstrap_js_src_popover__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_bootstrap_js_src_modal__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_bootstrap_js_src_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_bootstrap_js_src_modal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bootstrap_js_src_tab__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_jquery_highlight_jquery_highlight__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_jquery_highlight_jquery_highlight___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_jquery_highlight_jquery_highlight__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_navigation__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_content__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_sitemap__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_search__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_form__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_img__ = __webpack_require__(17);
 // Define globally exposed module objects
 /* eslint-disable */
 // Define dependency imports
 
-// import collapse from 'bootstrap/js/src/collapse';
-// import dropdown from 'bootstrap/js/src/dropdown';
-// import carousel from 'bootstrap/js/src/carousel';
-// import tooltip from 'bootstrap/js/src/tooltip';
-// import popover from 'bootstrap/js/src/popover';
-// import modal from 'bootstrap/js/src/modal';
+
+
+
+
+
+
 
 
 
@@ -276,16 +288,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_3__components_navigation__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_4__components_content__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_5__components_sitemap__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_6__components_search__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_7__components_form__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_8__components_img__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_9__components_navigation__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_10__components_content__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_11__components_sitemap__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_12__components_search__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_13__components_form__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_14__components_img__["a" /* default */])();
 /* eslint-enable */
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (271:8)\nYou may need an appropriate loader to handle this file type.\n|     _getConfig(config) {\n|       config = {\n|         ...Default,\n|         ...config\n|       }");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (228:8)\nYou may need an appropriate loader to handle this file type.\n|     _getConfig(config) {\n|       config = {\n|         ...this.constructor.Default,\n|         ...$(this._element).data(),\n|         ...config");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (217:8)\nYou may need an appropriate loader to handle this file type.\n|     _getConfig(config) {\n|       config = {\n|         ...Default,\n|         ...config\n|       }");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (499:10)\nYou may need an appropriate loader to handle this file type.\n|       if (this.config.selector) {\n|         this.config = {\n|           ...this.config,\n|           trigger: 'manual',\n|           selector: ''");
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (27:4)\nYou may need an appropriate loader to handle this file type.\n| \n|   const Default = {\n|     ...Tooltip.Default,\n|     placement : 'right',\n|     trigger   : 'click',");
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (221:8)\nYou may need an appropriate loader to handle this file type.\n|     _getConfig(config) {\n|       config = {\n|         ...Default,\n|         ...config\n|       }");
+
+/***/ }),
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -559,7 +607,7 @@ const Tab = (($) => {
 
 
 /***/ }),
-/* 5 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -723,7 +771,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 6 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -857,7 +905,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 7 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -875,7 +923,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 8 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -992,7 +1040,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 9 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1010,7 +1058,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 10 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1065,7 +1113,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 11 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1088,13 +1136,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 12 */
+/* 18 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 13 */
+/* 19 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
