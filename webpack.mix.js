@@ -1,5 +1,4 @@
 const mix = require("laravel-mix");
-// let path = require('path');
 
 mix.webpackConfig({
   externals: {
@@ -41,16 +40,8 @@ mix.webpackConfig({
   }
 });
 
-// //this fixes an API change introduced at //https://github.com/webpack/webpack/issues/4549
-// mix.setPublicPath(
-//   path.resolve(__dirname, 'dist')
-// );
-
 mix.js('src/js/main.js', 'dist/js/main.js')
 
-// mix.js('src/js/main.js', 'dist/js/main.js');
-
-// mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
 mix
   .sass("src/scss/main.scss", "dist/css/main.css")
   .sass("src/scss/editor.scss", "dist/css/editor.css")
