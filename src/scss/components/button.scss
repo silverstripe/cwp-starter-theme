@@ -1,0 +1,6 @@
+$secondary-color: #FFFFFF;
+.btn-secondary {
+  @include button-variant($secondary-color, darken($secondary-color, 12.5%), darken($secondary-color, 10%), darken($secondary-color,12.5%), lighten($secondary-color, 10%), darken($secondary-color,30%));
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
