@@ -4,6 +4,8 @@
     min-height: 0;
     border: 0;
     border-bottom: 1px solid $navbar-default-border;
+    padding-bottom: 0;
+    margin-bottom: 20px;
 
     @media (max-width: $grid-float-breakpoint-max) {
       .dropdown:not(.active) {
@@ -17,6 +19,14 @@
   }
 
   .navbar-nav {
+    .nav-item a {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding: 10px 15px;
+      position: relative;
+      display: block;
+    }
+
     // Remove background color from open dropdown
     > .open > a {
       &,

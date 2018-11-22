@@ -1,3 +1,8 @@
+// Base font sizing
+html {
+  font-size: 62.5%; // Adjusted so that 36px is equal to 3.6rem
+}
+
 .typography {
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
@@ -135,7 +140,7 @@ table {
 
   tfoot td {
     color: $text-muted;
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 }
 
@@ -191,7 +196,7 @@ a.external {
 
   &::after {
     content: "\f08e";
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     font-family: FontAwesome;
     position: relative;
     top: -3px;
@@ -282,7 +287,7 @@ pre {
 // Meta info typically under a header to provide additional info like author or dates.
 .meta-info {
   color: $text-muted;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   header + &,
   h1 + &,

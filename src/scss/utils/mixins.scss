@@ -10,7 +10,7 @@
 // Info under headings like dates and authors
 @mixin meta-info() {
   color: $text-muted;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 
   header + &,
   h1 + &,
@@ -25,7 +25,7 @@
   }
 
   p {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 }
 

@@ -1,16 +1,16 @@
 <div class="main-nav">
-    <nav class="navbar navbar-default" aria-label="<%t CWP_Theme.MAIN_NAVIGATION 'Main navigation' %>">
+    <nav class="navbar navbar-expand-lg navbar-light " aria-label="<%t CWP_Theme.MAIN_NAVIGATION 'Main navigation' %>">
         <div class="container">
             <div class="row">
                 <div class="collapse navbar-collapse" id="navbar-collapse">
-                  <form class="navbar-form visible-xs" action="/search/SearchForm">
+                  <form class="form-inline d-block d-sm-none" action="/search/SearchForm">
                       <% include HeaderSearch %>
                   </form>
                   <ul class="nav navbar-nav" role="menubar">
                       <% loop Menu(1) %>
                           <li role="menuitem" class="nav-item $FirstLast $LinkingMode<% if $LinkingMode = current %> active<% end_if %><% if $Children %> dropdown <% end_if %>">
 
-                              <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="$LinkingMode">$MenuTitle.XML</a>
+                              <a href="$Link" <% if $LinkingMode = current %>aria-label="current page"<% end_if %> class="nav-link $LinkingMode">$MenuTitle.XML</a>
 
                               <% if $Children %>
                                   <button class="btn btn-link pull-right navbar-touch-caret" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
