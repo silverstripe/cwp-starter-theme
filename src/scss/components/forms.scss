@@ -47,12 +47,18 @@
   margin-bottom: 0;
 }
 
+// sass-lint:disable no-important
+
 // CWP 1.6.0 recipe modification for userforms display rules bug
 // NOTE: Can be removed after userforms 4.3.2 is included
 // See: https://github.com/silverstripe/silverstripe-userforms/issues/607
 .userform .userformsstep.form-step .field .hide {
   display: inherit !important;
 }
+
+// sass-lint:enable no-important;
+
+// sass-lint:disable class-name-format
 
 // Grouped buttons, convert SilverStripe convention to BS
 // Mimic BS .btn-toolbar;
@@ -73,6 +79,8 @@
     margin-left: 5px;
   }
 }
+
+// sass-lint:enable class-name-format
 
 // Add focus status removed by Bootstrap
 .dropdown-toggle:focus,
