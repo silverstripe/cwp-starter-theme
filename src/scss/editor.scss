@@ -13,23 +13,23 @@
 @import "./typography";
 @import "./utils/mixins";
 
-body.mceContentBody a.ss-broken {
-  background-color: $brand-danger;
-  border: 1px solid $brand-danger;
-  color: $label-color;
-  padding: 1px;
-  text-decoration: underline;
-}
+// body.mceContentBody a.ss-broken {
+//   background-color: $brand-danger;
+//   border: 1px solid $brand-danger;
+//   color: $label-color;
+//   padding: 1px;
+//   text-decoration: underline;
+// }
 
-/*# sourceMappingURL=editor.css.map */
+//# sourceMappingURL=editor.css.map
 
 .blockquote-footer {
   background-color: $gray-lighter;
 }
 
-.maori {
-  background-color: $alert-danger-bg !important;
-}
+// .maori {
+//   background-color: $alert-danger-bg !important;
+// }
 
 .text-hide {
   font: $font-size-base/$line-height-computed $font-family-sans-serif;
@@ -37,20 +37,18 @@ body.mceContentBody a.ss-broken {
   outline: 1px dotted $text-muted;
 }
 
-/**
- * These styles are copied through from Bootstrap to avoid using @extend
- */
+// These styles are copied through from Bootstrap to avoid using @extend
 // Refer: .center-block
 .center {
   @include center-block;
 }
 
-// Refer: .pull-left
-.left {
-  float: left !important;
-}
+// // Refer: .pull-left
+// .left {
+//   float: left !important;
+// }
 
-// Refer: .pull-right
-.right {
-  float: right !important;
-}
+// // Refer: .pull-right
+// .right {
+//   float: right !important;
+// }

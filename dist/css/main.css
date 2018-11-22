@@ -12589,37 +12589,6 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 2em;
 }
 
-@media only print {
-  .site-header-brand-link-default:after,
-  #header-language-toggle,
-  .navbar-toggle,
-  .main-nav,
-  .breadcrumb,
-  .page-utilities .list-inline,
-  .news-events-date-range,
-  .news-events-archive,
-  article h2 a:after,
-  .news-events-tags .label:after,
-  .related-pages-link:after,
-  .search-results form,
-  .search-results article h1 a:after {
-    display: none;
-  }
-  .header-search,
-  #ui-datepicker-div,
-  .treedropdownfield-panel,
-  .pagination,
-  footer {
-    display: none !important;
-  }
-  .page-utilities-last-modified {
-    float: left !important;
-  }
-  pre {
-    white-space: pre-wrap;
-  }
-}
-
 .typography {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
@@ -12652,47 +12621,10 @@ figure.left {
   margin: 0 18px 18px 0;
 }
 
-img.leftAlone,
-figure.leftAlone {
-  margin: 0 18px 18px 0;
-  display: block;
-  clear: both;
-}
-
 img.center,
 figure.center {
   margin-bottom: 18px;
   clear: both;
-}
-
-.captionImage {
-  width: 100%;
-  max-width: 100%;
-}
-
-.captionImage.pull-left {
-  margin: 0 18px 18px 0;
-}
-
-.captionImage.pull-right {
-  margin: 0 0 18px 18px;
-}
-
-.captionImage.leftAlone {
-  margin: 0 18px 18px 0;
-}
-
-.captionImage.center-block {
-  margin-bottom: 18px;
-}
-
-.captionImage p {
-  clear: both;
-  margin: 8px 0;
-}
-
-.captionImage img {
-  margin: 0 0 8px 0;
 }
 
 table {
@@ -13154,32 +13086,6 @@ h4 + .comments-holder-container .comments-holder .comments-list .comment .info,
   margin-bottom: 0;
 }
 
-.userform .userformsstep.form-step .field .hide {
-  display: inherit !important;
-}
-
-.Actions {
-  margin-left: -5px;
-}
-
-.Actions::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-.Actions .btn,
-.Actions .btn-group,
-.Actions .input-group {
-  float: left;
-}
-
-.Actions > .btn,
-.Actions > .btn-group,
-.Actions > .input-group {
-  margin-left: 5px;
-}
-
 .dropdown-toggle:focus,
 .btn:focus {
   outline: thin dotted;
@@ -13393,10 +13299,6 @@ body > header .open > a:focus {
 
 .jumbotron {
   margin-top: -1rem;
-}
-
-.Iframepage-iframe {
-  border: 0;
 }
 
 .page-showcase {

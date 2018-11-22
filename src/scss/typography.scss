@@ -27,11 +27,11 @@ figure {
     margin: 0 $image-spacing $image-spacing 0;
   }
 
-  &.leftAlone {
-    margin: 0 $image-spacing $image-spacing 0;
-    display: block;
-    clear: both;
-  }
+  // &.leftAlone {
+  //   margin: 0 $image-spacing $image-spacing 0;
+  //   display: block;
+  //   clear: both;
+  // }
 
   &.center {
     margin-bottom: $image-spacing;
@@ -39,35 +39,35 @@ figure {
   }
 }
 
-.captionImage {
-  width: 100%;
-  max-width: 100%;
+// .captionImage {
+//   width: 100%;
+//   max-width: 100%;
 
-  &.pull-left {
-    margin: 0 $image-spacing $image-spacing 0;
-  }
+//   &.pull-left {
+//     margin: 0 $image-spacing $image-spacing 0;
+//   }
 
-  &.pull-right {
-    margin: 0 0 $image-spacing $image-spacing;
-  }
+//   &.pull-right {
+//     margin: 0 0 $image-spacing $image-spacing;
+//   }
 
-  &.leftAlone {
-    margin: 0 $image-spacing $image-spacing 0;
-  }
+//   &.leftAlone {
+//     margin: 0 $image-spacing $image-spacing 0;
+//   }
 
-  &.center-block {
-    margin-bottom: $image-spacing;
-  }
+//   &.center-block {
+//     margin-bottom: $image-spacing;
+//   }
 
-  p {
-    clear: both;
-    margin: $table-cell-padding 0;
-  }
+//   p {
+//     clear: both;
+//     margin: $table-cell-padding 0;
+//   }
 
-  img {
-    margin: 0 0 $table-cell-padding 0;
-  }
-}
+//   img {
+//     margin: 0 0 $table-cell-padding 0;
+//   }
+// }
 
 // Table styles
 table {

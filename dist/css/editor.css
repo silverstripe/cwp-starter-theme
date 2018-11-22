@@ -6660,47 +6660,10 @@ figure.left {
   margin: 0 18px 18px 0;
 }
 
-img.leftAlone,
-figure.leftAlone {
-  margin: 0 18px 18px 0;
-  display: block;
-  clear: both;
-}
-
 img.center,
 figure.center {
   margin-bottom: 18px;
   clear: both;
-}
-
-.captionImage {
-  width: 100%;
-  max-width: 100%;
-}
-
-.captionImage.pull-left {
-  margin: 0 18px 18px 0;
-}
-
-.captionImage.pull-right {
-  margin: 0 0 18px 18px;
-}
-
-.captionImage.leftAlone {
-  margin: 0 18px 18px 0;
-}
-
-.captionImage.center-block {
-  margin-bottom: 18px;
-}
-
-.captionImage p {
-  clear: both;
-  margin: 8px 0;
-}
-
-.captionImage img {
-  margin: 0 0 8px 0;
 }
 
 table {
@@ -6891,19 +6854,8 @@ h4 + .meta-info,
   margin-top: -0.33333333rem;
 }
 
-body.mceContentBody a.ss-broken {
-  background-color: #d9534f;
-  border: 1px solid #d9534f;
-  color: #fff;
-  padding: 1px;
-  text-decoration: underline;
-}
 .blockquote-footer {
   background-color: #eeeeee;
-}
-
-.maori {
-  background-color: #f2dede !important;
 }
 
 .text-hide {
@@ -6912,19 +6864,8 @@ body.mceContentBody a.ss-broken {
   outline: 1px dotted #767676;
 }
 
-/**
- * These styles are copied through from Bootstrap to avoid using @extend
- */
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.left {
-  float: left !important;
-}
-
-.right {
-  float: right !important;
 }
