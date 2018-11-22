@@ -19,10 +19,12 @@
   margin-top: -$line-height-computed;
 }
 
+// sass-lint:disable class-name-format
 // IFramePage
 .Iframepage-iframe {
   border: 0;
 }
+// sass-lint:enable class-name-format
 
 // Page features & quicklinks, used on homepage
 .page-showcase {

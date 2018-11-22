@@ -6912,9 +6912,6 @@ body.mceContentBody a.ss-broken {
   outline: 1px dotted #767676;
 }
 
-/**
- * These styles are copied through from Bootstrap to avoid using @extend
- */
 .center {
   display: block;
   margin-left: auto;
