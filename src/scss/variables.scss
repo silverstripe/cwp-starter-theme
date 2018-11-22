@@ -1,3 +1,6 @@
+$bootstrap-sass-asset-helper: false !default;
+
+//
 // Variables
 //
 // ## These variables over-ride those set by bootstrap.
@@ -197,6 +200,10 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
+$colors: (
+  "gray": $gray,
+  "gray-dark": $gray-dark
+) !default;
 
 // Grid containers
 //
