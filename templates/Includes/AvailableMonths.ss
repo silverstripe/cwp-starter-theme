@@ -3,7 +3,7 @@
     <h3 class="h4 page-sidebar-header"><%t CWP.AvailableMonths.Title "Archive" %></h3>
 
     <% loop $AvailableMonths %>
-        <h4 class="h5 pull-left news-events-archive-year"> {$YearName}: </h4>
+        <h4 class="h5 float-left news-events-archive-year"> {$YearName}: </h4>
         <ul class="nav nav-pills">
             <% loop $Months %>
                 <li <% if $Active %> class="active"<% end_if %> >
