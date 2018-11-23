@@ -28,7 +28,7 @@
         <img src="$ThemeDir/images/newzealand-government-footer.png"
             width="210"
             alt="<%t CWP.Footer.GovAlt 'newzealand.govt.nz - connecting you to New Zealand central &amp; local government services' %>"
-            />
+        />
     </a>
 
     <p>

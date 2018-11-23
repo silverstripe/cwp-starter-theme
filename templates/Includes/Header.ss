@@ -8,7 +8,7 @@
             <span class="site-header-brand-tagline">$SiteConfig.Tagline</span>
         <% end_if %>
     </div>
-    <button type="button" class="navbar-toggler collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+    <button type="button" class="navbar-toggler collapsed float-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
         <span class="sr-only"><%t CWP_Header.Toggle "Toggle navigation" %></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

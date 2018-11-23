@@ -13108,7 +13108,6 @@ h4 + .comments-holder-container .comments-holder .comments-list .comment .info,
 
 @media (min-width: 992px) {
   .footer-social-links {
-    float: right;
     text-align: right;
   }
   .footer-social-links a:last-child {
