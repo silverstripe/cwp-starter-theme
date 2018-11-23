@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <section class="col-lg-10 offset-lg-1">
-                <div class="page-header">
+                <div class="pb-2 mt-4 mb-4 pb-3 border-bottom">
                     <h1>$Title.XML</h1>
                 </div>
                 $SearchForm
                 <% if $Query %>
-                    <div class="page-summary clearfix">
+                    <div class="page-summary clearfix mb-5">
                         <% if $Results %>
                             <% if $Original %>
                                 <div class="row search-results-no-result">
@@ -19,11 +19,6 @@
                                 </div>
                             <% end_if %>
                             <div class="row">
-                                <div class="col-sm-12 col-md-4 pull-right search-results-results-page">
-                                    <p class="text-muted">
-                                        <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
-                                    </p>
-                                </div>
                                 <div class="col-sm-12 col-md-8 search-results-results-message">
                                     <p class="lead">
                                         <% if $Original %>
@@ -31,6 +26,11 @@
                                         <% else %>
                                             <%t CWP_Search.ShowingResultsFor 'Showing results for "{query}"' query=$Query.XML %>
                                         <% end_if %>
+                                    </p>
+                                </div>
+                                <div class="col-sm-12 col-md-4 float-right search-results-results-page">
+                                    <p class="text-muted">
+                                        <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
                                     </p>
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
 <% if $UseButtonTag %>
-    <button $getAttributesHTML('class') class="btn btn-default {$ExtraClass.ATT}">
+    <button $getAttributesHTML('class') class="btn btn-secondary {$ExtraClass.ATT}">
         <% if $ButtonContent %>
             {$ButtonContent.RAW}
         <% else %>
@@ -7,5 +7,5 @@
         <% end_if %>
     </button>
 <% else %>
-    <input $getAttributesHTML('class') class="btn btn-default {$ExtraClass.ATT}" />
+    <input $getAttributesHTML('class') class="btn btn-secondary {$ExtraClass.ATT}" />
 <% end_if %>
