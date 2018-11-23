@@ -1,7 +1,7 @@
 <div class="content search-results">
     <div class="container">
         <div class="row">
-            <section class="col-md-10 col-md-offset-1">
+            <section class="col-lg-10 offset-lg-1">
                 <div class="page-header">
                     <h1>$Title.XML</h1>
                 </div>
@@ -11,7 +11,7 @@
                         <% if $Results %>
                             <% if $Original %>
                                 <div class="row search-results-no-result">
-                                    <div class="col-sm-12">
+                                    <div class="col-md-12">
                                         <div class="alert alert-warning" role="alert"><p>
                                             <%t CWP_Search.Original "No search results were found matching <strong>{original}</strong>." original=$Original %>
                                         </p></div>
@@ -19,12 +19,12 @@
                                 </div>
                             <% end_if %>
                             <div class="row">
-                                <div class="col-xs-12 col-sm-4 pull-right search-results-results-page">
+                                <div class="col-sm-12 col-md-4 pull-right search-results-results-page">
                                     <p class="text-muted">
                                         <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
                                     </p>
                                 </div>
-                                <div class="col-xs-12 col-sm-8 search-results-results-message">
+                                <div class="col-sm-12 col-md-8 search-results-results-message">
                                     <p class="lead">
                                         <% if $Original %>
                                             <%t CWP_Search.ShowingResultsInsteadFor 'Showing results for "{query}" instead' query=$Query.XML %>
@@ -37,7 +37,7 @@
 
                         <% else %>
                             <div class="row search-results-no-result">
-                                <div class="col-sm-12">
+                                <div class="col-md-12">
                                     <div class="alert alert-warning" role="alert">
                                         $NoSearchResults.XML
                                     </div>
@@ -65,7 +65,7 @@
                     <% end_if %>
                 <% else %>
                     <div class="row search-results__empty-search">
-                        <div class="col-sm-12">
+                        <div class="col-md-12">
                             <div class="alert alert-warning" role="alert">
                                 $EmptySearch
                             </div>
