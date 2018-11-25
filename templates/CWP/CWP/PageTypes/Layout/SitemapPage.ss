@@ -1,7 +1,7 @@
 <div class="container layout sitemap-page">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="page-header">$Title</h1>
+            <h1 class="page-header border-bottom pb-3 mt-5 mb-4">$Title</h1>
         </div>
         <div class="col-md-9">
             <div class="clearfix">

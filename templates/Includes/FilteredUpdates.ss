@@ -1,5 +1,5 @@
 <% loop $FilteredUpdates(10) %>
-    <article class="news-events-article clearfix">
+    <article class="news-events-article clearfix mb-5">
 
         <% if $FeaturedImage %>
             <figure class="float-right news-events-item-figure">

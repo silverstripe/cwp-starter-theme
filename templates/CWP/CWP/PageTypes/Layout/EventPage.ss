@@ -1,7 +1,7 @@
 <article class="container">
     <div class="row">
         <section class="col-md-10 col-md-offset-1">
-            <header class="page-header">
+            <header class="page-header border-bottom pb-3 mt-5 mb-4">
                 $Breadcrumbs
                 <h1>$Title</h1>
             </header>
