@@ -6,8 +6,8 @@
         <h4 class="h5 float-left news-events-archive-year"> {$YearName}: </h4>
         <ul class="nav nav-pills">
             <% loop $Months %>
-                <li <% if $Active %> class="active"<% end_if %> >
-                    <a title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
+                <li>
+                    <a  class="badge rounded<% if $Active %> badge-primary<% else %> btn-secondary<% end_if %>" title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
                 </li>
             <% end_loop %>
         </ul>

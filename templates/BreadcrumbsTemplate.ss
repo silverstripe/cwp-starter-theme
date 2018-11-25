@@ -1,5 +1,5 @@
 <% if $Pages %>
-    <nav role="navigation">
+    <nav role="navigation" class="mb-4">
         <p class="sr-only" id="breadcrumbs-label"><%t SiteTree.BREADCRUMBSLABEL "You are here" %></p>
         <ol class="breadcrumb" aria-labelledby="breadcrumbs-label">
             <li class="breadcrumb-item">
