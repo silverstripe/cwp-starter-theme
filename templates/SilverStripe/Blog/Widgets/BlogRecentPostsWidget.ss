@@ -1,5 +1,5 @@
 <% if $Posts %>
-    <ul class="blogposts list-unstyled">
+    <ul class="blogposts list-unstyled mb-4">
         <% loop $Posts %>
             <li class="blogposts-{$Class}">
                 <a href="$Link">
