@@ -1,1 +1,1 @@
-<input $getAttributesHTML('class') class="$ExtraClass.ATT form-control" <% include AriaAttributes %> />
+<input $getAttributesHTML('class') class="$ExtraClass.ATT form-control row" <% include AriaAttributes %> />

@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="row">
-        <section class="col-md-10 col-md-offset-1">
+        <section class="col-lg-10 offset-lg-1">
             <header class="page-header border-bottom pb-3 mt-5 mb-4">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-7 col-md-offset-1">
+        <div class="col-lg-7 offset-lg-1">
 
             $Content
 
@@ -73,7 +73,7 @@
         </div>
 
         <% if $RegistryFilterForm %>
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <h3 class="h4"><%t CWP.Registry.FilterTitle "Filters" %></h3>
                 <div id="{$DataClass}_searchform" class="searchForm">
                     $RegistryFilterForm
