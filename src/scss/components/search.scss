@@ -1,4 +1,4 @@
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(md) {
   .search-results-results-page {
     text-align: right;
   }
