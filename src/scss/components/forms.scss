@@ -83,7 +83,7 @@
 // sass-lint:enable class-name-format
 
 // Add focus status removed by Bootstrap
-.dropdown-toggle:focus,
+.dropdown-toggler:focus,
 .btn:focus {
   @include outline-focus();
 }
