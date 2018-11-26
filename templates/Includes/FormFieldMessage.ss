@@ -1,5 +1,5 @@
 <% if $Message %>
-    <span id="message-$ID" class="help-block">
+    <span id="message-$ID" class="form-text">
         {$Message}
     </span>
 <% end_if %>

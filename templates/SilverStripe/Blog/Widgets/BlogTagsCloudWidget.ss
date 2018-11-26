@@ -1,5 +1,5 @@
 <% if $Tags %>
-    <div class="blog-tags-widget blog-tag-cloud mb-4" role="tablist">
+    <div class="blog-tags-widget blog-tag-cloud" role="tablist">
         <% loop $Tags %>
             <a role="presentation" href="$Link" class="badge badge-primary rounded blog-tag-count blog-tag-count-{$NormalizedTag}">
                 $TagName.XML

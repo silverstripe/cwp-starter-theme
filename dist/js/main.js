@@ -6672,15 +6672,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       var validatorSettings = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).validate().settings;
 
       validatorSettings.highlight = function (element) {
-        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').addClass('has-error');
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').addClass('has-error text-danger');
       };
 
       validatorSettings.unhighlight = function (element) {
-        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').removeClass('has-error');
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default()(element).closest('.form-group').removeClass('has-error text-danger');
       };
 
       validatorSettings.errorElement = 'span';
-      validatorSettings.errorClass = 'help-block';
+      validatorSettings.errorClass = 'form-text text-danger';
 
       validatorSettings.errorPlacement = function (error, element) {
         if (element.parent('.input-group').length || element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
