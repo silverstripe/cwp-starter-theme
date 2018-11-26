@@ -1,9 +1,9 @@
 <% if $Tags %>
-<div class="blog-tags-widget">
+<div class="blog-tags-widget mb-4">
     <% loop $Tags %>
         <a href="$Link"
             title="<%t BlogTagsWidget.LINK_TEXT 'View {count} blog posts tagged {tag}' count=$BlogPosts.Count tag=$Title.ATT %>"
-            class="label label-primary">
+            class="badge badge-primary rounded">
             $Title.XML
         </a>
     <% end_loop %>
