@@ -16,15 +16,15 @@ export default function () {
       const validatorSettings = $(this).validate().settings;
 
       validatorSettings.highlight = function (element) {
-        $(element).closest('.form-group').addClass('has-error');
+        $(element).closest('.form-group').addClass('has-error text-danger');
       };
 
       validatorSettings.unhighlight = function (element) {
-        $(element).closest('.form-group').removeClass('has-error');
+        $(element).closest('.form-group').removeClass('has-error text-danger');
       };
 
       validatorSettings.errorElement = 'span';
-      validatorSettings.errorClass = 'help-block';
+      validatorSettings.errorClass = 'form-text text-danger';
 
       validatorSettings.errorPlacement = function (error, element) {
         if (element.parent('.input-group').length

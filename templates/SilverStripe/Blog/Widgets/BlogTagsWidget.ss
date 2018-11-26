@@ -1,5 +1,5 @@
 <% if $Tags %>
-<div class="blog-tags-widget mb-4">
+<div class="blog-tags-widget">
     <% loop $Tags %>
         <a href="$Link"
             title="<%t BlogTagsWidget.LINK_TEXT 'View {count} blog posts tagged {tag}' count=$BlogPosts.Count tag=$Title.ATT %>"

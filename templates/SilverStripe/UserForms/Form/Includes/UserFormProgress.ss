@@ -5,11 +5,11 @@
             <div class="progress-bar progress-bar-success" role="progressbar"></div>
         </div>
         <nav aria-hidden="true">
-            <ul class="step-buttons">
+            <ul class="step-buttons mt-4">
                 <% loop $Steps %>
                 <li class="step-button-wrapper<% if $First %> current<% end_if %>" data-for="$Name">
                     <%-- Remove js-align class to remove javascript positioning --%>
-                    <button class="btn btn-secondary btn-sm step-button-jump js-align" disabled="disabled" data-step="$Pos"><% if $Top.ButtonText %>$Top.ButtonText <% end_if %>$Pos</button>
+                    <button class="btn btn-secondary rounded btn-md step-button-jump js-align" disabled="disabled" data-step="$Pos"><% if $Top.ButtonText %>$Top.ButtonText <% end_if %>$Pos</button>
                 </li>
                 <% end_loop %>
             </ul>

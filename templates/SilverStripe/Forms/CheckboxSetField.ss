@@ -16,5 +16,5 @@
         </div>
     <% end_loop %>
 <% else %>
-    <p class="help-block"><%t CWP_Form.NoOptions "No options available" %></p>
+    <p class="form-text"><%t CWP_Form.NoOptions "No options available" %></p>
 <% end_if %>
