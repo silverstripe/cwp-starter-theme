@@ -13,6 +13,7 @@
 @import "./typography";
 @import "./utils/mixins";
 
+// sass-lint:disable class-name-format
 body.mceContentBody a.ss-broken {
   background-color: $brand-danger;
   border: 1px solid $brand-danger;
@@ -20,16 +21,21 @@ body.mceContentBody a.ss-broken {
   padding: 1px;
   text-decoration: underline;
 }
+// sass-lint:enable class-name-format
 
+// sass-lint:disable no-css-comments
 /*# sourceMappingURL=editor.css.map */
+// sass-lint:enable no-css-comments
 
 .blockquote-footer {
   background-color: $gray-lighter;
 }
 
+// sass-lint:disable no-important
 .maori {
   background-color: $alert-danger-bg !important;
 }
+// sass-lint:enable no-important
 
 .text-hide {
   font: $font-size-base/$line-height-computed $font-family-sans-serif;
@@ -37,14 +43,13 @@ body.mceContentBody a.ss-broken {
   outline: 1px dotted $text-muted;
 }
 
-/**
- * These styles are copied through from Bootstrap to avoid using @extend
- */
+// These styles are copied through from Bootstrap to avoid using @extend
 // Refer: .center-block
 .center {
   @include center-block;
 }
 
+// sass-lint:disable no-important
 // Refer: .pull-left
 .left {
   float: left !important;
@@ -54,3 +59,4 @@ body.mceContentBody a.ss-broken {
 .right {
   float: right !important;
 }
+// sass-lint:enable no-important

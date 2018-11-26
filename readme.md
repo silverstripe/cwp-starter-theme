@@ -4,7 +4,7 @@
 [![Packagist](https://img.shields.io/packagist/v/cwp/starter-theme.svg)](https://packagist.org/packages/cwp/starter-theme)
 [![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
-This is the repository for the CWP "starter" theme. This theme is a highly accessible Bootstrap 3 theme which you can use as a starter for your CWP project.
+This is the repository for the CWP "starter" theme. This theme is a highly accessible Bootstrap 4 theme which you can use as a starter for your CWP project.
 
 The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see [cascading themes](https://docs.silverstripe.org/en/4/developer_guides/templates/themes)) to provide a more visually appealing start to a CWP website.
 
