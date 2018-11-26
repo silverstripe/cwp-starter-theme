@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-10 offset-lg-1">
+        <div class="col-lg-10 offset-lg-1 mb-5">
             <div class="page-header border-bottom pb-3 mt-5 mb-4">
                 $Breadcrumbs
                 <h1>$Title</h1>
