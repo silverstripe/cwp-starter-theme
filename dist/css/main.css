@@ -13234,11 +13234,6 @@ body > header .open > a:focus {
   margin-right: 0.8rem;
 }
 
-/*.site-header-search {
-  button[type='submit'] {
-    background-color: #FFFFFF;
-  }
-}*/
 .site-header-brand {
   overflow: visible;
   float: left;
