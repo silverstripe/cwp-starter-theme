@@ -18,6 +18,6 @@ $Content.RichLinks
 <% else %>
 $Content
 <% end_if %>
-<p><a href="$Parent.Link" title="$Parent.Title" class="hidden-print"><i class="fa fa-angle-left m-r-025" aria-hidden="true"></i><%t CWP.News.BACK "Back to the news" %></a></p>
+<p><a href="$Parent.Link" title="$Parent.Title" class="hidden-print"><i class="fa fa-angle-left mr-1" aria-hidden="true"></i><%t CWP.News.BACK "Back to the news" %></a></p>
 
 $Form

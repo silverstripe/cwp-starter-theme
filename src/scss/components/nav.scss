@@ -7,21 +7,41 @@
     padding-bottom: 0;
     margin-bottom: 20px;
 
-    /*@media (max-width: $grid-float-breakpoint-max) {
-      .dropdown:not(.active) {
-        background: $navbar-default-link-hover-bg;
+    @include media-breakpoint-down(sm) {
+      .container {
+        max-width: none;
       }
+    }
+
+    .dropdown-menu {
+      margin-top: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    @include media-breakpoint-down(md)  {
+
+      padding-left: 0;
+      padding-right: 0;
 
       .dropdown {
         padding-right: 0;
       }
-    }*/
+
+      .dropdown-menu {
+        border: 0;
+      }
+
+    }
   }
 
   .navbar-nav {
+
+    @include media-breakpoint-down(sm) {
+      margin: 7.5px -15px;
+    }
+
     .nav-link {
-      padding-top: 15px;
-      padding-bottom: 15px;
       padding: 10px 15px;
       position: relative;
       display: block;
@@ -40,13 +60,17 @@
       &,
       &:hover,
       &:focus {
-        background-color: $gray-200;
+        background-color: $gray-300;
       }
     }
   }
 
   .dropdown {
     padding-right: 18px;
+
+    a {
+      text-decoration: none;
+    }
 
     &:hover .navbar-touch-caret,
     &:focus .navbar-touch-caret {
@@ -58,12 +82,30 @@
       .navbar-touch-caret,
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
-        background: $gray-300;
+        background: $gray-200;
 
         &:hover,
         &:focus {
           background-color: $gray-300;
         }
+      }
+    }
+
+    .dropdown-item.active a {
+      color: $dropdown-link-active-color;
+    }
+
+    &.open {
+      >.dropdown-menu {
+        display: block;
+      }
+    }
+
+    .dropdown-item a {
+      color: $navbar-light-color;
+
+      @include media-breakpoint-down(md) {
+        padding: $navbar-padding-y $navbar-padding-x;
       }
     }
   }
@@ -79,7 +121,8 @@
   top: 0;
   right: 0;
   border: 0;
-  padding: $navbar-padding-y $navbar-padding-x $navbar-padding-y 8px;
+  padding: 1rem 1.6rem 1rem 8px;
+  border-radius: 0;
   background: $dropdown-caret-bg;
 }
 
@@ -88,7 +131,7 @@
 }
 
 // Btn mobile toggle
-.navbar-toggle {
+.navbar-toggler {
   margin-top: 0;
 
   &:focus {
@@ -96,7 +139,7 @@
   }
 
   .icon-bar {
-    background-color: $navbar-light-toggler-icon-bg;
+    background: #888;
   }
 }
 
@@ -104,9 +147,10 @@
   border-top: 0;
 }
 
-/*@media (max-width: $grid-float-breakpoint-max) {
-  .navbar-touch-caret {
-    // Uses BS default mobile nav values which are not variables
-    padding: 10px $navbar-padding-x 10px 8px;
+
+.navbar {
+  .container {
+    padding-right: 0;
+    padding-left: 0;
   }
-}*/
+}

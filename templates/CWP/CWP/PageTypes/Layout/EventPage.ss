@@ -1,17 +1,17 @@
 <article class="container">
     <div class="row">
-        <section class="col-md-10 col-md-offset-1">
-            <header class="page-header">
+        <section class="col-lg-10 offset-lg-1">
+            <header class="page-header border-bottom pb-3 mt-5 mb-4">
                 $Breadcrumbs
                 <h1>$Title</h1>
             </header>
         </section>
     </div>
     <div class="row">
-        <section class="col-md-7 col-md-offset-1">
+        <section class="col-lg-7 offset-lg-1">
             <% include EventItem %>
         </section>
-        <aside class="col-md-3 sidebar">
+        <aside class="col-lg-3 sidebar">
             <% include EventDetail %>
         </aside>
     </div>

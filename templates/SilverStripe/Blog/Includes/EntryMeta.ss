@@ -13,7 +13,7 @@
         <% end_loop %>
     <% end_if %>
 </p>
-<p class="meta-info m-b-2">
+<p class="meta-info mb-2">
     <%t Blog.Posted "Posted" %> $PublishDate.ago
 
     <% if $Credits %>

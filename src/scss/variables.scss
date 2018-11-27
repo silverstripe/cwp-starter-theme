@@ -197,6 +197,10 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
+$colors: (
+  "gray": $gray,
+  "gray-dark": $gray-dark
+) !default;
 
 // Grid containers
 //
@@ -246,6 +250,7 @@ $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 
+$caret-width:                 .3em !default;
 
 // Fonts
 //
@@ -317,7 +322,6 @@ $list-inline-padding:         .5rem !default;
 $mark-bg:                     #fcf8e3 !default;
 
 $hr-margin-y:                 $spacer !default;
-
 
 // Tables
 //
@@ -677,12 +681,12 @@ $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 // Pagination
 
-$pagination-padding-y:              .5rem !default;
-$pagination-padding-x:              .75rem !default;
-$pagination-padding-y-sm:           .25rem !default;
-$pagination-padding-x-sm:           .5rem !default;
-$pagination-padding-y-lg:           .75rem !default;
-$pagination-padding-x-lg:           1.5rem !default;
+$pagination-padding-y:              .8rem !default;
+$pagination-padding-x:              1.2rem !default;
+$pagination-padding-y-sm:           .4rem !default;
+$pagination-padding-x-sm:           .8rem !default;
+$pagination-padding-y-lg:           1.2rem !default;
+$pagination-padding-x-lg:           2.4rem !default;
 $pagination-line-height:            1.25 !default;
 
 $pagination-color:                  $link-color !default;
@@ -714,8 +718,8 @@ $jumbotron-bg:                      $gray-200 !default;
 
 // Cards
 
-$card-spacer-y:                     .75rem !default;
-$card-spacer-x:                     1.25rem !default;
+$card-spacer-y:                     1.2rem !default;
+$card-spacer-x:                     2rem !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 rgba($black, .125) !default;
@@ -723,13 +727,13 @@ $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border
 $card-cap-bg:                       rgba($black, .03) !default;
 $card-bg:                           $white !default;
 
-$card-img-overlay-padding:          1.25rem !default;
+$card-img-overlay-padding:          2rem !default;
 
 $card-group-margin:                 ($grid-gutter-width / 2) !default;
 $card-deck-margin:                  $card-group-margin !default;
 
 $card-columns-count:                3 !default;
-$card-columns-gap:                  1.25rem !default;
+$card-columns-gap:                  2rem !default;
 $card-columns-margin:               $card-spacer-y !default;
 
 
@@ -741,12 +745,12 @@ $tooltip-color:                     $white !default;
 $tooltip-bg:                        $black !default;
 $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   .9 !default;
-$tooltip-padding-y:                 .25rem !default;
-$tooltip-padding-x:                 .5rem !default;
+$tooltip-padding-y:                 .4rem !default;
+$tooltip-padding-x:                 1.3rem !default;
 $tooltip-margin:                    0 !default;
 
-$tooltip-arrow-width:               .8rem !default;
-$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-width:               1.3rem !default;
+$tooltip-arrow-height:              .64rem !default;
 $tooltip-arrow-color:               $tooltip-bg !default;
 
 
@@ -758,19 +762,19 @@ $popover-max-width:                 276px !default;
 $popover-border-width:              $border-width !default;
 $popover-border-color:              rgba($black, .2) !default;
 $popover-border-radius:             $border-radius-lg !default;
-$popover-box-shadow:                0 .25rem .5rem rgba($black, .2) !default;
+$popover-box-shadow:                0 .4rem .8rem rgba($black, .2) !default;
 
 $popover-header-bg:                 darken($popover-bg, 3%) !default;
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          .5rem !default;
-$popover-header-padding-x:          .75rem !default;
+$popover-header-padding-y:          .8rem !default;
+$popover-header-padding-x:          1.2rem !default;
 
 $popover-body-color:                $body-color !default;
 $popover-body-padding-y:            $popover-header-padding-y !default;
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
-$popover-arrow-width:               1rem !default;
-$popover-arrow-height:              .5rem !default;
+$popover-arrow-width:               1.6rem !default;
+$popover-arrow-height:              .8rem !default;
 $popover-arrow-color:               $popover-bg !default;
 
 $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
@@ -780,23 +784,23 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 
 $badge-font-size:                   75% !default;
 $badge-font-weight:                 $font-weight-bold !default;
-$badge-padding-y:                   .25em !default;
-$badge-padding-x:                   .4em !default;
+$badge-padding-y:                   .4em !default;
+$badge-padding-x:                   .64em !default;
 $badge-border-radius:               $border-radius !default;
 
-$badge-pill-padding-x:              .6em !default;
+$badge-pill-padding-x:              .96em !default;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
-$badge-pill-border-radius:          10rem !default;
+$badge-pill-border-radius:          16rem !default;
 
 
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:               1rem !default;
+$modal-inner-padding:               1.6rem !default;
 
-$modal-dialog-margin:               .5rem !default;
-$modal-dialog-margin-y-sm-up:       1.75rem !default;
+$modal-dialog-margin:               .8rem !default;
+$modal-dialog-margin-y-sm-up:       2.8rem !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
@@ -804,8 +808,8 @@ $modal-content-bg:                  $white !default;
 $modal-content-border-color:        rgba($black, .2) !default;
 $modal-content-border-width:        $border-width !default;
 $modal-content-border-radius:       $border-radius-lg !default;
-$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5) !default;
-$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5) !default;
+$modal-content-box-shadow-xs:       0 .4rem .8rem rgba($black, .5) !default;
+$modal-content-box-shadow-sm-up:    0 .8rem 1.6rem rgba($black, .5) !default;
 
 $modal-backdrop-bg:                 $black !default;
 $modal-backdrop-opacity:            .5 !default;
@@ -813,7 +817,7 @@ $modal-header-border-color:         $gray-200 !default;
 $modal-footer-border-color:         $modal-header-border-color !default;
 $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
-$modal-header-padding:              1rem !default;
+$modal-header-padding:              1.6rem !default;
 
 $modal-lg:                          800px !default;
 $modal-md:                          500px !default;
@@ -826,9 +830,9 @@ $modal-transition:                  transform .3s ease-out !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   .75rem !default;
-$alert-padding-x:                   1.25rem !default;
-$alert-margin-bottom:               1rem !default;
+$alert-padding-y:                   1.2rem !default;
+$alert-padding-x:                   2rem !default;
+$alert-margin-bottom:               1.6rem !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
@@ -840,11 +844,11 @@ $alert-color-level:                 6 !default;
 
 // Progress bars
 
-$progress-height:                   1rem !default;
+$progress-height:                   1.6rem !default;
 $progress-font-size:                ($font-size-base * .75) !default;
 $progress-bg:                       $gray-200 !default;
 $progress-border-radius:            $border-radius !default;
-$progress-box-shadow:               inset 0 .1rem .1rem rgba($black, .1) !default;
+$progress-box-shadow:               inset 0 .16rem .16rem rgba($black, .1) !default;
 $progress-bar-color:                $white !default;
 $progress-bar-bg:                   theme-color("primary") !default;
 $progress-bar-animation-timing:     1s linear infinite !default;
@@ -857,8 +861,8 @@ $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         .75rem !default;
-$list-group-item-padding-x:         1.25rem !default;
+$list-group-item-padding-y:         1.2rem !default;
+$list-group-item-padding-x:         2rem !default;
 
 $list-group-hover-bg:               $gray-100 !default;
 $list-group-active-color:           $component-active-color !default;
@@ -877,7 +881,7 @@ $list-group-action-active-bg:       $gray-200 !default;
 
 // Image thumbnails
 
-$thumbnail-padding:                 .25rem !default;
+$thumbnail-padding:                 .4rem !default;
 $thumbnail-bg:                      $body-bg !default;
 $thumbnail-border-width:            $border-width !default;
 $thumbnail-border-color:            $gray-300 !default;
@@ -893,11 +897,11 @@ $figure-caption-color:              $gray-600 !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              .75rem !default;
-$breadcrumb-padding-x:              1rem !default;
-$breadcrumb-item-padding:           .5rem !default;
+$breadcrumb-padding-y:              1.2rem !default;
+$breadcrumb-padding-x:              1.6rem !default;
+$breadcrumb-item-padding:           .8rem !default;
 
-$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-margin-bottom:          1.2rem !default;
 
 $breadcrumb-bg:                     $gray-200 !default;
 $breadcrumb-divider-color:          $gray-600 !default;

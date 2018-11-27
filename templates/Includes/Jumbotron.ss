@@ -1,7 +1,7 @@
 <div class="jumbotron">
     <div class="container text-center">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-lg-8 offset-lg-2">
                 <h1>$Title</h1>
                 $Content
                 <p>
