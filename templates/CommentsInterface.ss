@@ -2,7 +2,7 @@
 
 <% if $CommentsEnabled %>
     <div id="$CommentHolderID" class="comments-holder-container">
-        <h2 class="h3 comments-heading m-t-2"><%t CommentsInterface_ss.POSTCOM 'Post your comment' %></h2>
+        <h2 class="h3 comments-heading mt-2"><%t CommentsInterface_ss.POSTCOM 'Post your comment' %></h2>
 
         <% if $AddCommentForm %>
             <% if $canPostComment %>
@@ -19,7 +19,7 @@
             <p><%t CommentsInterface_ss.COMMENTSDISABLED 'Posting comments has been disabled' %>.</p>
         <% end_if %>
         <hr />
-        <h2 class="h3 m-t-2"><%t CommentsInterface_ss.COMMENTS 'Comments' %></h2>
+        <h2 class="h3 mt-2"><%t CommentsInterface_ss.COMMENTS 'Comments' %></h2>
 
         <div class="comments-holder">
             <% if $PagedComments %>
