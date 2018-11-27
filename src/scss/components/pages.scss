@@ -37,3 +37,9 @@
 .page-sidebar-widget {
   margin-bottom: $line-height-computed * 1.5;
 }
+
+@include media-breakpoint-down(sm) {
+  .container {
+    max-width: none;
+  }
+}
