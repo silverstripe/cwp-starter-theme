@@ -8,7 +8,7 @@ This is the repository for the CWP "starter" theme. This theme is a highly acces
 
 The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see [cascading themes](https://docs.silverstripe.org/en/4/developer_guides/templates/themes)) to provide a more visually appealing start to a CWP website.
 
-![Screenshot](docs/images/screenshot.jpg)
+![Screenshot](docs/images/screenshot.png)
 
 ## Installation
 
