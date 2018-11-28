@@ -60,7 +60,7 @@
       &,
       &:hover,
       &:focus {
-        background-color: $gray-300;
+        background-color: lighten($gray-200, .9);
       }
     }
   }
