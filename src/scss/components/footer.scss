@@ -1,18 +1,17 @@
 .footer-site {
-  border-top: 1px solid $gray-lighter;
+  border-top: 1px solid $gray-300;
   margin-top: 10px;
   padding: 30px 0;
 }
 
 .footer-nav-links a {
-  margin-right: 30px;
   display: inline-block;
   margin-bottom: 10px;
+  margin-right: 30px;
 }
 
-@media (min-width: $screen-md-min) {
+@include media-breakpoint-up(lg) {
   .footer-social-links {
-    float: right;
     text-align: right;
 
     a:last-child {

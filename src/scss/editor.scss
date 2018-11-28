@@ -1,6 +1,8 @@
+// Bootstrap functions
+@import "~bootstrap/scss/functions";
+
 @import "./variables";
 // sass-lint:disable clean-import-paths
-@import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/alert";
@@ -15,8 +17,8 @@
 
 // sass-lint:disable class-name-format
 body.mceContentBody a.ss-broken {
-  background-color: $brand-danger;
-  border: 1px solid $brand-danger;
+  background-color: $danger;
+  border: 1px solid $danger;
   color: $label-color;
   padding: 1px;
   text-decoration: underline;
@@ -28,18 +30,18 @@ body.mceContentBody a.ss-broken {
 // sass-lint:enable no-css-comments
 
 .blockquote-footer {
-  background-color: $gray-lighter;
+  background-color: $gray-300;
 }
 
 // sass-lint:disable no-important
 .maori {
-  background-color: $alert-danger-bg !important;
+  background-color: $danger !important;
 }
 // sass-lint:enable no-important
 
 .text-hide {
   font: $font-size-base/$line-height-computed $font-family-sans-serif;
-  color: $text-color;
+  color: $gray-800;
   outline: 1px dotted $text-muted;
 }
 

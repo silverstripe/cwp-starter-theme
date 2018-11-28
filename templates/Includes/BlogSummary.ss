@@ -1,7 +1,7 @@
 <%-- clearfix needed for floating image --%>
 <div class="clearfix">
     <% if $FeaturedImage %>
-        <figure class="pull-right blog-item-figure">
+        <figure class="float-right blog-item-figure">
             $FeaturedImage.SetHeight(150)
         </figure>
     <% end_if %>

@@ -3,8 +3,8 @@
     <span class="banner-element__image">
         $File
     </span>
-<% end_if %>
 
+<% end_if %>
 <div class="banner-element__content">
     <% if $Title && $ShowTitle %>
         <h2 class="banner-element__title">$Title</h2>
@@ -14,14 +14,14 @@
 
     <%-- Add a CallToActionLink if available --%>
     <% if $CallToActionLink.Page.Link %>
-        <p class="banner-element__call-to-action-container">
+        <div class="banner-element__call-to-action-container">
         <% with $CallToActionLink %>
-            <a href="{$Page.Link}" class="banner-element__call-to-action btn btn-primary btn-lg" role="button"
+            <a href="{$Page.Link}" class="banner-element__call-to-action"
                 <% if $TargetBlank %>target="_blank"<% end_if %>
                 <% if $Description %>title="{$Description.ATT}"<% end_if %>>
                 {$Text.XML}
             </a>
         <% end_with %>
-        </p>
+        </div>
     <% end_if %>
 </div>

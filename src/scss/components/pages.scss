@@ -5,10 +5,10 @@
 }
 
 .page-utilities-last-modified {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   color: $text-muted;
 
-  @media (min-width: $screen-sm) {
+  @include media-breakpoint-up(md) {
     float: right;
     text-align: right;
   }
@@ -17,6 +17,7 @@
 // Compensate for the nav margin on bottom
 .jumbotron {
   margin-top: -$line-height-computed;
+  border-radius: 0;
 }
 
 // sass-lint:disable class-name-format
@@ -35,4 +36,10 @@
 // Used for side menus, News and Events widgets and Blog widgets
 .page-sidebar-widget {
   margin-bottom: $line-height-computed * 1.5;
+}
+
+@include media-breakpoint-down(sm) {
+  .container {
+    max-width: none;
+  }
 }

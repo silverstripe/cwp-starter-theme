@@ -3,20 +3,50 @@
   .navbar {
     min-height: 0;
     border: 0;
-    border-bottom: 1px solid $navbar-default-border;
+    border-bottom: 1px solid $navbar-light-toggler-border-color;
+    padding-bottom: 0;
+    margin-bottom: 20px;
 
-    @media (max-width: $grid-float-breakpoint-max) {
-      .dropdown:not(.active) {
-        background: $navbar-default-link-hover-bg;
+    @include media-breakpoint-down(sm) {
+      .container {
+        max-width: none;
       }
+    }
+
+    .dropdown-menu {
+      margin-top: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    @include media-breakpoint-down(md)  {
+
+      padding-left: 0;
+      padding-right: 0;
 
       .dropdown {
         padding-right: 0;
       }
+
+      .dropdown-menu {
+        border: 0;
+      }
+
     }
   }
 
   .navbar-nav {
+
+    @include media-breakpoint-down(sm) {
+      margin: 7.5px -15px;
+    }
+
+    .nav-link {
+      padding: 10px 15px;
+      position: relative;
+      display: block;
+    }
+
     // Remove background color from open dropdown
     > .open > a {
       &,
@@ -30,13 +60,17 @@
       &,
       &:hover,
       &:focus {
-        background-color: $navbar-default-link-active-bg;
+        background-color: $gray-300;
       }
     }
   }
 
   .dropdown {
     padding-right: 18px;
+
+    a {
+      text-decoration: none;
+    }
 
     &:hover .navbar-touch-caret,
     &:focus .navbar-touch-caret {
@@ -48,14 +82,36 @@
       .navbar-touch-caret,
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
-        background: $gray-lighter;
+        background: $gray-200;
 
         &:hover,
         &:focus {
-          background-color: $gray-lighter;
+          background-color: $gray-300;
         }
       }
     }
+
+    .dropdown-item.active a {
+      color: $dropdown-link-active-color;
+    }
+
+    &.open {
+      >.dropdown-menu {
+        display: block;
+      }
+    }
+
+    .dropdown-item a {
+      color: $navbar-light-color;
+
+      @include media-breakpoint-down(md) {
+        padding: $navbar-padding-y $navbar-padding-x;
+      }
+    }
+  }
+
+  .btn-link {
+    color: $navbar-light-color;
   }
 }
 
@@ -65,8 +121,9 @@
   top: 0;
   right: 0;
   border: 0;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal $navbar-padding-vertical 8px;
-  background: $navbar-default-link-hover-bg;
+  padding: 1rem 1.6rem 1rem 8px;
+  border-radius: 0;
+  background: $dropdown-caret-bg;
 }
 
 .navbar-form {
@@ -74,7 +131,7 @@
 }
 
 // Btn mobile toggle
-.navbar-toggle {
+.navbar-toggler {
   margin-top: 0;
 
   &:focus {
@@ -82,7 +139,7 @@
   }
 
   .icon-bar {
-    background-color: $navbar-default-toggle-icon-bar-bg;
+    background: #888;
   }
 }
 
@@ -90,9 +147,10 @@
   border-top: 0;
 }
 
-@media (max-width: $grid-float-breakpoint-max) {
-  .navbar-touch-caret {
-    // Uses BS default mobile nav values which are not variables
-    padding: 10px $navbar-padding-horizontal 10px 8px;
+
+.navbar {
+  .container {
+    padding-right: 0;
+    padding-left: 0;
   }
 }

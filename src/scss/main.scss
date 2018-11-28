@@ -1,3 +1,6 @@
+// Bootstrap functions
+@import "~bootstrap/scss/functions";
+
 // Theme specific variables and overrides
 @import "./variables";
 
@@ -27,3 +30,4 @@
 @import "./components/pages";
 @import "./components/search";
 @import "./components/sitemap";
+@import "./components/button";
