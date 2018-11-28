@@ -13442,6 +13442,10 @@ body > header .open > a:focus {
   margin-bottom: 18px;
 }
 
+.news-events-date-range label {
+  font-size: 1.4rem;
+}
+
 .page-utilities {
   margin-top: 3rem;
 }
