@@ -3411,7 +3411,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.8rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   color: inherit;
 }
@@ -12589,6 +12589,13 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 2em;
 }
 
+.no-margin-collapse {
+  /*  &:before {
+    content: " "; // 1
+    display: table; // 2
+  }*/
+}
+
 @media only print {
   .site-header-brand-link-default:after,
   #header-language-toggle,
@@ -12745,7 +12752,7 @@ table caption {
 }
 
 table thead td {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 table tfoot td {
@@ -12875,18 +12882,6 @@ pre {
   font-size: 1.2rem;
 }
 
-header + .meta-info,
-h1 + .meta-info,
-.h1 + .meta-info,
-h2 + .meta-info,
-.h2 + .meta-info,
-h3 + .meta-info,
-.h3 + .meta-info,
-h4 + .meta-info,
-.h4 + .meta-info {
-  margin-top: -0.66666667rem;
-}
-
 .banner-element {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -13011,6 +13006,10 @@ h4 + .meta-info,
 .blog-tag-count.blog-tag-count-10 {
   font-size: 93%;
   padding: 0.248em 0.744em;
+}
+
+.test123 {
+  color: #ffffff;
 }
 
 .comments-holder-container .comments-heading {
@@ -13202,7 +13201,7 @@ h4 + .comments-holder-container .comments-holder .comments-list .comment .info,
   display: inline-block;
   max-width: 100%;
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 600;
   border-bottom: 0;
   font-size: 1.6rem;
 }
@@ -13222,6 +13221,10 @@ body > header .open > a:focus {
 }
 
 .site-header {
+  /*  &:before {
+    content: " "; // 1
+    display: table; // 2
+  }*/
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -13242,7 +13245,7 @@ body > header .open > a:focus {
 
 .site-header-brand a {
   font-size: 2.4rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1em;
 }
 
@@ -13324,7 +13327,7 @@ body > header .open > a:focus {
 }
 
 .main-nav .navbar-nav .nav-link {
-  padding: 10px 15px;
+  padding: 13px;
   position: relative;
   display: block;
 }
@@ -13383,7 +13386,7 @@ body > header .open > a:focus {
 }
 
 .main-nav .btn-link {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-touch-caret {
@@ -13392,7 +13395,7 @@ body > header .open > a:focus {
   top: 0;
   right: 0;
   border: 0;
-  padding: 1rem 1.6rem 1rem 8px;
+  padding: 1.3rem 1rem 1.3rem .8rem;
   border-radius: 0;
   background: transparent;
 }
@@ -13446,6 +13449,10 @@ body > header .open > a:focus {
   font-size: 1.4rem;
 }
 
+.news-events-article {
+  margin-bottom: 2.4rem;
+}
+
 .page-utilities {
   margin-top: 3rem;
 }
@@ -13483,6 +13490,13 @@ body > header .open > a:focus {
   .container {
     max-width: none;
   }
+}
+
+.page-summary {
+  /*  &:before {
+    content: " "; // 1
+    display: table; // 2
+  }*/
 }
 
 @media (min-width: 768px) {
@@ -13538,4 +13552,21 @@ body > header .open > a:focus {
   border-color: #dee2e6;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.btn-secondary.btn-primary {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.btn-toolbar .btn {
+  margin-left: 5px;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

@@ -452,7 +452,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.8rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   color: inherit;
 }
@@ -6753,7 +6753,7 @@ table caption {
 }
 
 table thead td {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 table tfoot td {
@@ -6881,18 +6881,6 @@ pre {
 .meta-info {
   color: #6c757d;
   font-size: 1.2rem;
-}
-
-header + .meta-info,
-h1 + .meta-info,
-.h1 + .meta-info,
-h2 + .meta-info,
-.h2 + .meta-info,
-h3 + .meta-info,
-.h3 + .meta-info,
-h4 + .meta-info,
-.h4 + .meta-info {
-  margin-top: -0.66666667rem;
 }
 
 body.mceContentBody a.ss-broken {

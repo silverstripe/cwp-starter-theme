@@ -3,3 +3,15 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+// Work around to force primary colour if both classes are added to a button (FormActions)
+.btn-secondary.btn-primary {
+  background-color: $primary;
+  color: $white;
+}
+
+.btn-toolbar {
+  .btn {
+    margin-left: 5px;
+  }
+}

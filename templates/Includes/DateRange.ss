@@ -15,7 +15,7 @@
                 $Fields.dataFieldByName('SecurityID').FieldHolder
             </fieldset>
 
-            <div class="btn-toolbar">
+            <div class="Actions">
                 <% if $Actions %>
                     <% loop $Actions %>$Field<% end_loop %>
                 <% end_if %>

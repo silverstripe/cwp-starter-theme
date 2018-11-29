@@ -3,6 +3,8 @@ body > header .open > a:focus {
 }
 
 .site-header {
+  @include no-margin-collapse;
+
   padding-top: 30px;
   padding-bottom: 30px;
 
