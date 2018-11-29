@@ -7619,7 +7619,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
@@ -7638,16 +7638,16 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
   border-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.6)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-light .navbar-text a {
@@ -7996,7 +7996,7 @@ input[type="button"].btn-block {
   padding: 1.2rem 1.6rem;
   margin-bottom: 1.2rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #eceef1;
   border-radius: 0.4rem;
 }
 
@@ -8007,7 +8007,7 @@ input[type="button"].btn-block {
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 0.8rem;
-  color: #6c757d;
+  color: #adb5bd;
   content: "/";
 }
 
@@ -8020,7 +8020,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item.active {
-  color: #6c757d;
+  color: #4b5259;
 }
 
 .pagination {
@@ -8238,7 +8238,7 @@ input[type="button"].btn-block {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #e9ecef;
+  background-color: #eceef1;
   border-radius: 0.48rem;
 }
 
@@ -13334,7 +13334,7 @@ body > header .open > a:focus {
 }
 
 .main-nav .navbar-nav > .current > a, .main-nav .navbar-nav > .current > a:hover, .main-nav .navbar-nav > .current > a:focus {
-  background-color: #dee2e6;
+  background-color: #eceef1;
 }
 
 .main-nav .dropdown {
@@ -13373,7 +13373,7 @@ body > header .open > a:focus {
 }
 
 .main-nav .dropdown .dropdown-item a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 991.98px) {
@@ -13383,7 +13383,7 @@ body > header .open > a:focus {
 }
 
 .main-nav .btn-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-touch-caret {
