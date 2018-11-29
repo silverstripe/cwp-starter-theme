@@ -13453,6 +13453,12 @@ body > header .open > a:focus {
   margin-bottom: 2.4rem;
 }
 
+.page-header {
+  border-bottom: 1px solid #dee2e6;
+  margin: 4rem 0 2rem;
+  padding-bottom: 0rem;
+}
+
 .page-utilities {
   margin-top: 3rem;
 }
