@@ -7,7 +7,7 @@
                 </div>
                 $SearchForm
                 <% if $Query %>
-                    <div class="page-summary clearfix mb-5">
+                    <div class="page-summary clearfix">
                         <% if $Results %>
                             <% if $Original %>
                                 <div class="row search-results-no-result">
