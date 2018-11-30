@@ -5,7 +5,6 @@
 @import "./variables";
 
 // Third-party libraries
-// sass-lint:disable clean-import-paths
 @import "~font-awesome/scss/font-awesome";
 @import "~bootstrap/scss/bootstrap";
 // sass-lint:enable clean-import-paths
@@ -31,3 +30,4 @@
 @import "./components/search";
 @import "./components/sitemap";
 @import "./components/button";
+

@@ -42,7 +42,7 @@
     }
 
     .nav-link {
-      padding: 10px 15px;
+      padding: 13px;
       position: relative;
       display: block;
     }
@@ -111,7 +111,7 @@
   }
 
   .btn-link {
-    color: $navbar-light-color;
+    color: $navbar-dark-color;
   }
 }
 
@@ -121,7 +121,7 @@
   top: 0;
   right: 0;
   border: 0;
-  padding: 1rem 1.6rem 1rem 8px;
+  padding: 1.3rem 1rem 1.3rem .8rem;
   border-radius: 0;
   background: $dropdown-caret-bg;
 }

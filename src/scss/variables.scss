@@ -282,7 +282,7 @@ $h6-font-size:                ($font-size-base * 0.75) !default; // ~12px
 
 $headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family:        inherit !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        600 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 
@@ -967,3 +967,8 @@ $label-color:                       #fff !default;
 $carousel-text-shadow:              0 1px 2px rgba(0, 0, 0, .6) !default;
 $progress-bar-success-bg:           $success !default;
 $dropdown-caret-bg:                 transparent !default;
+
+$page-header-border-color:          $gray-300 !default;
+
+$fa-font-path: '../fonts' !default;
+
