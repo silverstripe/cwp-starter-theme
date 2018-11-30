@@ -1,7 +1,3 @@
-.page-summary {
-  @include no-margin-collapse;
-}
-
 @include media-breakpoint-up(md) {
   .search-results-results-page {
     text-align: right;
