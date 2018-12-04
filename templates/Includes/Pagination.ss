@@ -3,8 +3,8 @@
         <nav aria-label="Page navigation">
             <ul class="pagination">
                 <% if $NotFirstPage %>
-                <li>
-                    <a class="prev" aria-label="Previous" href="$PrevLink" title='<%t CWP_Pagination.PrevPage "View previous page of results" %>'>
+                <li class="page-item">
+                    <a class="prev page-link" aria-label="Previous" href="$PrevLink" title='<%t CWP_Pagination.PrevPage "View previous page of results" %>'>
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
@@ -12,7 +12,7 @@
                 <% loop $PaginationSummary(4) %>
                     <% if $CurrentBool %>
                         <li class="active page-item">
-                            <a>
+                            <a class="page-link">
                                 <span>$PageNum <span class="sr-only"><%t CWP_Pagination.CURRENT_LABEL "(current)" %></span></span>
                             </a>
                         </li>
@@ -21,7 +21,7 @@
                             <li class="page-item">
                                 <a href="$Link"
                                     title='<%t CWP_Pagination.PageNum "View page {PageNum} of results" PageNum=$PageNum %>'
-                                    class="go-to-page">
+                                    class="go-to-page page-link">
                                     $PageNum
                                 </a>
                             </li>
@@ -36,7 +36,7 @@
                 <% end_loop %>
                 <% if $NotLastPage %>
                 <li class="page-item">
-                    <a class="next" aria-label="Next" href="$NextLink" title='<%t CWP_Pagination.NextPage "View next page of results" %>'>
+                    <a class="next page-link" aria-label="Next" href="$NextLink" title='<%t CWP_Pagination.NextPage "View next page of results" %>'>
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
