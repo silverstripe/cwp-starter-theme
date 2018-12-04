@@ -10,7 +10,7 @@
     </div>
 
     <div class="row">
-        <section class="<% if $SideBarView %>col-lg-7<% else %>col-lg-10<% end_if %> offset-lg-1 resultsList">
+        <section class="<% if $SideBarView %>col-lg-8<% else %>col-lg-12<% end_if %>resultsList">
             <% include BlogPostPaginatedList %>
             $Form
             <% include RelatedPages %>

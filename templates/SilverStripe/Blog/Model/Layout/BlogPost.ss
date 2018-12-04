@@ -7,7 +7,7 @@
             </div>
         </div>
 
-         <section class="<% if $SideBarView %>col-lg-7 offset-lg-1<% else %>col-lg-10 offset-lg-1<% end_if %>">
+         <section class="<% if $SideBarView %>col-lg-8 offset-lg-1<% else %>col-lg-10 offset-lg-1<% end_if %>">
             <article class="blog-post-article">
                 <% if $FeaturedImage %>
                     <p class="post-image">$FeaturedImage.ScaleWidth(795)</p>
