@@ -1,7 +1,7 @@
 <div class="content search-results">
     <div class="container">
         <div class="row">
-            <section class="col-lg-12">
+            <section class="col-lg-8">
                 <div class="pb-2 mt-4 mb-4 pb-3 border-bottom">
                     <h1>$Title.XML</h1>
                 </div>
@@ -49,14 +49,7 @@
                     <% if $Results %>
                         <div class="listing">
                             <% loop $Results %>
-                                <article class="listing__item" data-highlight="$Up.Query.ATT">
-                                    <header>
-                                        <h1 class="h3">
-                                            <a href="$Link" title="$Title">$Title</a>
-                                        </h1>
-                                    </header>
-                                    $Content.Summary
-                                </article>
+                                <% include SearchResult %>
                             <% end_loop %>
                         </div>
                         <% with $Results %>
