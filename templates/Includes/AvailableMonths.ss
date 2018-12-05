@@ -6,7 +6,7 @@
         <ul class="nav nav-pills">
             <% loop $Months %>
                 <li class="nav-item">
-                    <a class="nav-link badge rounded<% if $Active %> badge-primary<% else %> btn-secondary<% end_if %>" title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
+                    <a class="nav-link badge rounded<% if $Active %> badge-primary<% end_if %>" title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
                 </li>
             <% end_loop %>
         </ul>

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 mb-5">
+        <div class="col-lg-12 mb-4">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 mb-5">
+        <div class="col-lg-12 mb-4">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -13,7 +13,7 @@
             <% include NewsFilterContext %>
         </div>
 
-        <section class="<% if $AvailableMonths || not $FilteredUpdates %>col-lg-8<% else %>col-lg-12<% end_if %>">
+        <section class="listing <% if $AvailableMonths || not $FilteredUpdates %>col-lg-8<% else %>col-lg-12<% end_if %>">
             <% if $FilteredUpdates %>
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
