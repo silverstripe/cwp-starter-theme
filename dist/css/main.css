@@ -13426,7 +13426,7 @@ body > header .open > a:focus {
 
 .news-events-item-figure {
   margin-left: 18px;
-  margin-top: 24px;
+  margin-top: 0;
   margin-bottom: 18px;
 }
 
@@ -13436,6 +13436,10 @@ body > header .open > a:focus {
 
 .news-events-article {
   margin-bottom: 4.2rem;
+}
+
+.news-events-tags a.badge {
+  text-decoration: none;
 }
 
 .page-header {
