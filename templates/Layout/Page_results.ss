@@ -47,9 +47,9 @@
                     </div>
 
                     <% if $Results %>
-                        <div class="results">
+                        <div class="listing">
                             <% loop $Results %>
-                                <article class="result" data-highlight="$Up.Query.ATT">
+                                <article class="listing__item" data-highlight="$Up.Query.ATT">
                                     <header>
                                         <h1 class="h3">
                                             <a href="$Link" title="$Title">$Title</a>
