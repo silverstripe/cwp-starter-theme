@@ -2,12 +2,13 @@
     <div class="container">
         <div class="row">
             <section class="col-lg-8">
-                <div class="pb-2 mt-4 mb-4 pb-3 border-bottom">
+                <%-- <div class="pb-2 mt-4 mb-4 pb-3 border-bottom"> --%>
+                <div class="search-results__heading">
                     <h1>$Title.XML</h1>
                 </div>
                 $SearchForm
                 <% if $Query %>
-                    <div class="page-summary clearfix">
+                    <div class="search-results__summary clearfix">
                         <% if $Results %>
                             <% if $Original %>
                                 <div class="row search-results-no-result">
@@ -30,7 +31,7 @@
                                 </div>
                                 <div class="col-sm-12 col-md-4 float-right search-results-results-page">
                                     <p class="text-muted">
-                                        <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
+                                        <%t CWP_Search.Pages "Displaying {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
                                     </p>
                                 </div>
                             </div>
