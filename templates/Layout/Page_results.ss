@@ -47,9 +47,16 @@
                     </div>
 
                     <% if $Results %>
-                        <div class="results">
+                        <div class="listing">
                             <% loop $Results %>
-                                <% include SearchResult %>
+                                <article class="listing__item" data-highlight="$Up.Query.ATT">
+                                    <header>
+                                        <h1 class="h3">
+                                            <a href="$Link" title="$Title">$Title</a>
+                                        </h1>
+                                    </header>
+                                    $Content.Summary
+                                </article>
                             <% end_loop %>
                         </div>
                         <% with $Results %>
