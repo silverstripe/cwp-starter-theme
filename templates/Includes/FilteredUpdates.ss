@@ -1,5 +1,5 @@
 <% loop $FilteredUpdates(10) %>
-    <article class="news-events-article clearfix">
+    <article class="news-events-article listing__item<% if $ClassName == 'CWP\CWP\PageTypes\NewsPage' || $ClassName == 'CWP\CWP\PageTypes\NewsHolder' %>--news-events<% end_if %> clearfix">
 
         <% if $FeaturedImage %>
             <figure class="float-right news-events-item-figure">

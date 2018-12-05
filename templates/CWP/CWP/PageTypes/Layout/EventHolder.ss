@@ -13,7 +13,7 @@
             <% include NewsFilterContext %>
         </div>
 
-        <section class="<% if $AvailableMonths || not $FilteredUpdates %>col-lg-7 offset-lg-1<% else %>col-lg-10 offset-lg-1<% end_if %>">
+        <section class="listing <% if $AvailableMonths || not $FilteredUpdates %>col-lg-7 offset-lg-1<% else %>col-lg-10 offset-lg-1<% end_if %>">
             <% if $FilteredUpdates %>
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
