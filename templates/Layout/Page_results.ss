@@ -11,7 +11,7 @@
                     <div class="search-results__summary clearfix">
                         <% if $Results %>
                             <% if $Original %>
-                                <div class="row search-results-no-result">
+                                <div class="row search-results__no-result">
                                     <div class="col-md-12">
                                         <div class="alert alert-warning" role="alert"><p>
                                             <%t CWP_Search.Original "No search results were found matching <strong>{original}</strong>." original=$Original %>
@@ -20,8 +20,8 @@
                                 </div>
                             <% end_if %>
                             <div class="row">
-                                <div class="col-sm-12 col-md-8 search-results-results-message">
-                                    <p class="lead">
+                                <div class="col-sm-12 col-md-8">
+                                    <p class="lead search-results__message">
                                         <% if $Original %>
                                             <%t CWP_Search.ShowingResultsInsteadFor 'Showing results for "{query}" instead' query=$Query.XML %>
                                         <% else %>
