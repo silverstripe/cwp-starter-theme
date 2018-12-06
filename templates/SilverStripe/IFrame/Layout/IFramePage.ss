@@ -1,6 +1,6 @@
 <article class="container">
     <div class="row">
-        <section class="col-lg-10 offset-lg-1">
+        <section class="col-lg-12">
             <header class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -8,7 +8,7 @@
         </section>
     </div>
     <div class="row">
-        <section class="col-lg-10 offset-lg-1">
+        <section class="col-lg-12">
             $Content
             <% if $IFrameURL %>
                 <span id="Iframepage-loading" style="display: none;">
