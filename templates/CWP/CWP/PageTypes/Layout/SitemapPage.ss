@@ -41,5 +41,6 @@
                 <% include SidebarNav %>
             </aside>
         <% end_if %>
+        <% include PageUtilities %>
     </div>
 </div>
