@@ -5,11 +5,16 @@
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
-            <% if $Content.RichLinks %>
-                $Content.RichLinks
-            <% else %>
-                $Content
-            <% end_if %>
+            <div class="row">
+                <div class="col-lg-8">
+                    <% if $Content.RichLinks %>
+                        $Content.RichLinks
+                    <% else %>
+                        $Content
+                    <% end_if %>
+                    <% include NewsFilterContext %>
+                </div>
+            </div>
             <% include NewsFilterContext %>
         </div>
 
