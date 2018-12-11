@@ -19,7 +19,7 @@
                         $NiceLocation,
                     <% end_if %>
                     <% if $Date %>
-                        <time datetime="$Date">$Date.Format(dd/MM/y) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
+                        <time datetime="$Date">$Date.Format('dd MMM y') <% if $StartTime %>$StartTime.Format(h:mma) <% if $EndTime %>- $EndTime.Format(h:mma) <% end_if %><% end_if %></time>
                     <% end_if %>
                 </p>
             <% end_if %>
@@ -29,7 +29,7 @@
             <% if $Date || $Author %>
                 <p class="meta-info">
                     <% if $Date %>
-                        <time datetime="$Date">$Date.Nice <% if $StartTime %>$StartTime.Nice <% end_if %>
+                        <time datetime="$Date">$Date.Format('dd MMM y')<% if $StartTime %>$StartTime.Nice <% end_if %>
                         </time>
                     <% end_if %>
                     <% if $Author %>by {$Author}<% end_if %>
