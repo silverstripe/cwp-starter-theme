@@ -8,7 +8,7 @@
         </div>
 
         <div class="col-8">
-            <div class="mb-3">
+            <div class="mb-4">
                 <% if $Content.RichLinks %>
                     $Content.RichLinks
                 <% else %>
