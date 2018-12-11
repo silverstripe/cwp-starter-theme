@@ -8,26 +8,24 @@
         </div>
 
         <div class="col-8">
-            <div class="row">
-                <div class="col-lg-12 mb-3">
-                    <% if $Content.RichLinks %>
-                        $Content.RichLinks
-                    <% else %>
-                        $Content
-                    <% end_if %>
-                    <% include NewsFilterContext %>
-                </div>
-
-                <section class="listing col-lg-12">
-                    <% if $FilteredUpdates %>
-                        <% include FilteredUpdates ControllerName=$ClassName %>
-                    <% else %>
-                        <article>
-                            <p><%t CWP_FilteredUpdates.NoNews "No news" %></p>
-                        </article>
-                    <% end_if %>
-                </section>
+            <div class="mb-3">
+                <% if $Content.RichLinks %>
+                    $Content.RichLinks
+                <% else %>
+                    $Content
+                <% end_if %>
+                <% include NewsFilterContext %>
             </div>
+
+            <section class="listing">
+                <% if $FilteredUpdates %>
+                    <% include FilteredUpdates ControllerName=$ClassName %>
+                <% else %>
+                    <article>
+                        <p><%t CWP_FilteredUpdates.NoNews "No news" %></p>
+                    </article>
+                <% end_if %>
+            </section>
         </div>
 
         <aside class="col-lg-3 offset-lg-1 sidebar">
