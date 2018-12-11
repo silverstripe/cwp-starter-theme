@@ -9,7 +9,7 @@
             placeholder="<%t CWP_Search.Placeholder "Search..." %>"/>
         <label class="sr-only" for="SearchForm_SearchForm_Search"><%t CWP_Search.Button "Search" %></label>
         <div class="input-group-append">
-            <button type="submit" class="btn btn-secondary btn-lg search__btn"><%t CWP_Search.Button "Search" %></button>
+            <button type="submit" class="btn btn-primary btn-lg"><%t CWP_Search.Button "Search" %></button>
         </div>
     </div>
 </form>
