@@ -1,27 +1,32 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 mb-4">
+        <div class="col-lg-12">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
-            <% if $Content.RichLinks %>
-                $Content.RichLinks
-            <% else %>
-                $Content
-            <% end_if %>
-            <% include NewsFilterContext %>
         </div>
 
-        <section class="listing <% if $AvailableMonths || not $FilteredUpdates %>col-lg-8<% else %>col-lg-12<% end_if %>">
-            <% if $FilteredUpdates %>
-                <% include FilteredUpdates ControllerName=$ClassName %>
-            <% else %>
-                <article>
-                    <p><%t CWP_FilteredUpdates.NoNews "No news" %></p>
-                </article>
-            <% end_if %>
-        </section>
+        <div class="col-8">
+            <div class="mb-4">
+                <% if $Content.RichLinks %>
+                    $Content.RichLinks
+                <% else %>
+                    $Content
+                <% end_if %>
+                <% include NewsFilterContext %>
+            </div>
+
+            <section class="listing">
+                <% if $FilteredUpdates %>
+                    <% include FilteredUpdates ControllerName=$ClassName %>
+                <% else %>
+                    <article>
+                        <p><%t CWP_FilteredUpdates.NoNews "No news" %></p>
+                    </article>
+                <% end_if %>
+            </section>
+        </div>
 
         <aside class="col-lg-3 offset-lg-1 sidebar">
             <h2 class="sr-only"><%t CWP_NewsEvents.FILTERS "Filters" %></h2>
