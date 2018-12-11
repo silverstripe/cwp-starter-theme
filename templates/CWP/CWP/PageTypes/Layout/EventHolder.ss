@@ -5,12 +5,16 @@
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
-            <% if $Content.RichLinks %>
-                $Content.RichLinks
-            <% else %>
-                $Content
-            <% end_if %>
-            <% include NewsFilterContext %>
+            <div class="row">
+                <div class="col-lg-8">
+                    <% if $Content.RichLinks %>
+                        $Content.RichLinks
+                    <% else %>
+                        $Content
+                    <% end_if %>
+                    <% include NewsFilterContext %>
+                </div>
+            </div>
         </div>
 
         <section class="listing <% if $AvailableMonths || not $FilteredUpdates %>col-lg-8<% else %>col-lg-12<% end_if %>">
