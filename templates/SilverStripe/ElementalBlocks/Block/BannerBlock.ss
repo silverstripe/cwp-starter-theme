@@ -1,3 +1,10 @@
+<%--
+    PLEASE NOTE: This template is no longer in use. It will be used if you have silverstripe/elemental-blocks
+    installed (deprecated). If you are using silverstripe/elemental-bannerblock, please use the template
+    at templates/SilverStripe/ElementalBannerBlock/Block/BannerBlock.ss instead.
+
+    This template will be removed in the next major version.
+--%>
 <%-- Display the image (File) --%>
 <% if $File %>
     <span class="banner-element__image">
