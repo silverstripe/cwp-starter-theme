@@ -38,7 +38,7 @@ $grays: map-merge(
     "800": $gray-800,
     "900": $gray-900
   ),
-  $grays
+  $grays // sass-lint:disable-line indentation
 );
 
 
@@ -71,7 +71,7 @@ $colors: map-merge(
     "gray":       $gray-600,
     "gray-dark":  $gray-800
   ),
-  $colors
+  $colors // sass-lint:disable-line indentation
 );
 
 $primary:       darken(#428bca, 6.5%) !default; // #337ab7
@@ -96,7 +96,7 @@ $theme-colors: map-merge(
     "light":      $light,
     "dark":       $dark
   ),
-  $theme-colors
+  $theme-colors // sass-lint:disable-line indentation
 );
 
 // Set a specific jump point for requesting color jumps
@@ -141,7 +141,7 @@ $spacers: map-merge(
     4: ($spacer * 1.5),
     5: ($spacer * 3)
   ),
-  $spacers
+  $spacers // sass-lint:disable-line indentation
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -155,7 +155,7 @@ $sizes: map-merge(
     100: 100%,
     auto: auto
   ),
-  $sizes
+  $sizes // sass-lint:disable-line indentation
 );
 
 // Body
@@ -970,5 +970,5 @@ $dropdown-caret-bg:                 transparent !default;
 
 $page-header-border-color:          $gray-300 !default;
 
-$fa-font-path: '../fonts' !default;
+$fa-font-path: "../fonts" !default;
 

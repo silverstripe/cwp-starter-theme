@@ -52,7 +52,7 @@
 }
 
 .comments-holder-container .comments-holder .comments-list .comment.spam .comment-text {
-  @include alert-variant(theme-color-level('warning', $alert-bg-level), theme-color-level('warning', $alert-border-level), theme-color-level('warning', $alert-color-level));
+  @include alert-variant(theme-color-level("warning", $alert-bg-level), theme-color-level("warning", $alert-border-level), theme-color-level("warning", $alert-color-level));
 }
 
 .comments-holder-container .comments-holder .comments-list .comment .info {
