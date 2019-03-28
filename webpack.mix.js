@@ -14,33 +14,23 @@ mix.webpackConfig({
           cacheDirectory: true,
           presets: [
             [
-              'env',
+              '@babel/preset-env',
               {
                 modules: false,
+                forceAllTransforms: true,
                 targets: {
                   browsers: ['> 2%'],
-                  uglify: true
-                }
-              }
-            ]
+                },
+              },
+            ],
           ],
-          plugins: [
-            'transform-object-rest-spread',
-            [
-              'transform-runtime',
-              {
-                polyfill: false,
-                helpers: false
-              }
-            ]
-          ]
-        }
-      }
-    }]
-  }
+        },
+      },
+    }],
+  },
 });
 
-mix.js('src/js/main.js', 'dist/js/main.js')
+mix.js('src/js/main.js', 'dist/js/main.js');
 
 mix
   .sass("src/scss/main.scss", "dist/css/main.css")
