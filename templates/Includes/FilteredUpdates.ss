@@ -1,14 +1,14 @@
 <% loop $FilteredUpdates(10) %>
-    <article class="news-events-article clearfix">
+    <article class="news-events-article listing__item<% if $ClassName == 'CWP\CWP\PageTypes\NewsPage' || $ClassName == 'CWP\CWP\PageTypes\NewsHolder' %>--news-events<% end_if %> clearfix">
 
         <% if $FeaturedImage %>
-            <figure class="pull-right news-events-item-figure">
-                $FeaturedImage.ScaleHeight(150)
+            <figure class="float-right news-events-item-figure">
+                $FeaturedImage.Fill(150, 150)
             </figure>
         <% end_if %>
 
         <header>
-            <h2 class="h3"><a title="$Title" href="$Link">$Title</a></h2>
+            <h1 class="h4 listing__title"><a title="$Title" href="$Link">$Title</a></h1>
         </header>
 
         <% if $Up.ControllerName == 'CWP\\CWP\\PageTypes\\EventHolder' %>
@@ -19,7 +19,7 @@
                         $NiceLocation,
                     <% end_if %>
                     <% if $Date %>
-                        <time datetime="$Date">$Date.Format(dd/MM/y) <% if $StartTime %>$StartTime.Nice <% if $EndTime %>- $EndTime.Nice <% end_if %><% end_if %></time>
+                        <time datetime="$Date">$Date.Format('dd MMM y') <% if $StartTime %>$StartTime.Format(h:mma) <% if $EndTime %>- $EndTime.Format(h:mma) <% end_if %><% end_if %></time>
                     <% end_if %>
                 </p>
             <% end_if %>
@@ -29,7 +29,7 @@
             <% if $Date || $Author %>
                 <p class="meta-info">
                     <% if $Date %>
-                        <time datetime="$Date">$Date.Nice <% if $StartTime %>$StartTime.Nice <% end_if %>
+                        <time datetime="$Date">$Date.Format('dd MMM y')<% if $StartTime %>$StartTime.Nice <% end_if %>
                         </time>
                     <% end_if %>
                     <% if $Author %>by {$Author}<% end_if %>

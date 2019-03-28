@@ -1,48 +1,57 @@
+// Bootstrap functions
+@import "~bootstrap/scss/functions";
+
 @import "./variables";
 // sass-lint:disable clean-import-paths
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_alerts";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_tables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_media";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_type";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/_utilities";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/utilities";
 @import "~font-awesome/scss/font-awesome";
 // sass-lint:enable clean-import-paths
 @import "./typography";
+@import "./utils/mixins";
 
+// sass-lint:disable class-name-format
 body.mceContentBody a.ss-broken {
-  background-color: $brand-danger;
-  border: 1px solid $brand-danger;
+  background-color: $danger;
+  border: 1px solid $danger;
   color: $label-color;
   padding: 1px;
   text-decoration: underline;
 }
+// sass-lint:enable class-name-format
 
+// sass-lint:disable no-css-comments
 /*# sourceMappingURL=editor.css.map */
+// sass-lint:enable no-css-comments
 
 .blockquote-footer {
-  background-color: $gray-lighter;
+  background-color: $gray-300;
 }
 
+// sass-lint:disable no-important
 .maori {
-  background-color: $alert-danger-bg !important;
+  background-color: $danger !important;
 }
+// sass-lint:enable no-important
 
 .text-hide {
   font: $font-size-base/$line-height-computed $font-family-sans-serif;
-  color: $text-color;
+  color: $gray-800;
   outline: 1px dotted $text-muted;
 }
 
-/**
- * These styles are copied through from Bootstrap to avoid using @extend
- */
+// These styles are copied through from Bootstrap to avoid using @extend
 // Refer: .center-block
 .center {
   @include center-block;
 }
 
+// sass-lint:disable no-important
 // Refer: .pull-left
 .left {
   float: left !important;
@@ -52,3 +61,4 @@ body.mceContentBody a.ss-broken {
 .right {
   float: right !important;
 }
+// sass-lint:enable no-important

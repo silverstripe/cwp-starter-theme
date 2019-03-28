@@ -1,3 +1,8 @@
+// Base font sizing
+html {
+  font-size: 62.5%; // Adjusted so that 36px is equal to 3.6rem
+}
+
 .typography {
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
@@ -27,11 +32,13 @@ figure {
     margin: 0 $image-spacing $image-spacing 0;
   }
 
+  // sass-lint:disable class-name-format
   &.leftAlone {
     margin: 0 $image-spacing $image-spacing 0;
     display: block;
     clear: both;
   }
+  // sass-lint:enable class-name-format
 
   &.center {
     margin-bottom: $image-spacing;
@@ -39,6 +46,7 @@ figure {
   }
 }
 
+// sass-lint:disable class-name-format
 .captionImage {
   width: 100%;
   max-width: 100%;
@@ -68,6 +76,7 @@ figure {
     margin: 0 0 $table-cell-padding 0;
   }
 }
+// sass-lint:enable class-name-format
 
 // Table styles
 table {
@@ -131,7 +140,7 @@ table {
 
   tfoot td {
     color: $text-muted;
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 }
 
@@ -167,7 +176,7 @@ table {
 
   // BS Table striped styles
   > tbody > tr:nth-of-type(odd) {
-    background-color: $table-bg-accent;
+    background-color: $table-accent-bg;
   }
 }
 
@@ -187,7 +196,7 @@ a.external {
 
   &::after {
     content: "\f08e";
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     font-family: FontAwesome;
     position: relative;
     top: -3px;
@@ -270,25 +279,13 @@ pre {
   margin: 0 0 ($line-height-computed / 2);
   word-break: break-all;
   word-wrap: break-word;
-  background-color: $pre-bg;
-  border: 1px solid $pre-border-color;
+  background-color: $gray-100;
+  border: 1px solid $pre-color;
   white-space: pre-wrap;
 }
 
 // Meta info typically under a header to provide additional info like author or dates.
 .meta-info {
   color: $text-muted;
-  font-size: $font-size-small;
-
-  header + &,
-  h1 + &,
-  .h1 + &,
-  h2 + &,
-  .h2 + &,
-  h3 + &,
-  .h3 + &,
-  h4 + &,
-  .h4 + & {
-    margin-top: -$line-height-computed / 3;
-  }
+  font-size: $font-size-sm;
 }

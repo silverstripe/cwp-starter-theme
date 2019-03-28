@@ -1,0 +1,16 @@
+.btn-secondary {
+  border-color: $gray-300;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:hover {
+    background: inherit;
+    border-color: $gray-500;
+  }
+}
+
+// Work around to force primary colour if both classes are added to a button (FormActions)
+.btn-secondary.btn-primary {
+  background-color: $primary;
+  color: $white;
+}

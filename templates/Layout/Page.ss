@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <section class="col-md-10 col-md-offset-1">
+        <section class="col-lg-12">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -8,7 +8,7 @@
         </section>
     </div>
     <div class="row">
-        <section class="col-md-7 col-md-offset-1">
+        <section class="col-lg-8">
             <% if $ElementalArea %>
                 <%-- Support for content blocks, if enabled --%>
                 <% if $ElementalArea.RichLinks %>
@@ -29,7 +29,7 @@
             $CommentsForm
         </section>
 
-        <aside class="col-md-3">
+        <aside class="col-lg-3 offset-lg-1">
             <% include SidebarNav %>
         </aside>
     </div>

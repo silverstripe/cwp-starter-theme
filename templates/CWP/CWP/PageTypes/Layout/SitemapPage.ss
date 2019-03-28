@@ -1,14 +1,19 @@
 <div class="container layout sitemap-page">
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-header">$Title</h1>
-        </div>
-        <div class="col-md-9">
+        <section class="col-lg-12">
+            <div class="page-header">
+                $Breadcrumbs
+                <h1>$Title</h1>
+            </div>
+        </section>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
             <div class="clearfix">
                 <% if $Content.RichLinks %>
-                $Content.RichLinks
+                    $Content.RichLinks
                 <% else %>
-                $Content
+                    $Content
                 <% end_if %>
             </div>
 
@@ -32,9 +37,10 @@
             $CommentsForm
         </div>
         <% if Menu(2) %>
-            <aside class="col-md-3">
+            <aside class="col-lg-3 offset-lg-1">
                 <% include SidebarNav %>
             </aside>
         <% end_if %>
+        <% include PageUtilities %>
     </div>
 </div>

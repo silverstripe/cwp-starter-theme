@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-lg-12">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="row">
-        <section class="<% if $SideBarView %>col-md-7<% else %>col-md-10<% end_if %> col-md-offset-1 resultsList">
+        <section class="<% if $SideBarView %>col-lg-8<% else %>col-lg-12<% end_if %> resultsList">
             <% include BlogPostPaginatedList %>
             $Form
             <% include RelatedPages %>

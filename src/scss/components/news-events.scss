@@ -1,6 +1,6 @@
 .news-events-archive .nav a {
   padding: 3px 7px;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
 .news-events-archive-year {
@@ -12,6 +12,21 @@
 
 .news-events-item-figure {
   margin-left: 18px;
-  margin-top: 24px;
+  margin-top: 0;
   margin-bottom: 18px;
 }
+
+.news-events-date-range {
+  label {
+    font-size: $font-size-base * 0.875;
+  }
+}
+
+.news-events-article {
+  margin-bottom: 4.2rem;
+}
+
+.news-events-tags a.badge {
+  text-decoration: none;
+}
+

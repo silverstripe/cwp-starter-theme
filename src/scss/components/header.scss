@@ -22,7 +22,7 @@ body > header .open > a:focus {
 }
 
 .site-header-brand a {
-  font-size: $font-size-h3;
+  font-size: $h3-font-size;
   font-weight: $headings-font-weight;
   line-height: 1em;
 }
@@ -46,7 +46,7 @@ body > header .open > a:focus {
 //Accessibilty links to navigation
 .skip-links a {
   height: 1px;
-  padding: $padding-small-vertical $padding-small-horizontal;
+  padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
   position: absolute;
   left: -100%;
   overflow: hidden;
