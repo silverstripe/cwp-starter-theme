@@ -1,12 +1,11 @@
 <% if $UseButtonTag %>
-    <button $getAttributesHTML('class') class="btn btn-secondary rounded {$ExtraClass.ATT}" />
-        <% if $ButtonContent %>
-            {$ButtonContent.RAW}
-        <% else %>
-            {$Title.XML}
-        <% end_if %>
+    <button $getAttributesHTML('class') class="{$ExtraClass.ATT} btn btn-secondary rounded" />
+    <% if $ButtonContent %>
+        {$ButtonContent.RAW}
+    <% else %>
+        {$Title.XML}
+    <% end_if %>
     </button>
 <% else %>
-    <input $getAttributesHTML('class') class="btn btn-secondary rounded {$ExtraClass.ATT}"
-    />
+    <input $getAttributesHTML('class') class="{$ExtraClass.ATT} btn btn-secondary rounded" />
 <% end_if %>
