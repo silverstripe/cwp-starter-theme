@@ -67,7 +67,7 @@ $colors: map-merge(
 );
 
 $primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$secondary:     $gray-600 !default; // @todo check with Paul in case this should be white still
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -169,9 +169,9 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                              theme-color("primary") !default;
+$link-color:                              #0070b7 !default; // Original: theme-color("primary") !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        darken($link-color, 5%) !default; // Original: darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -317,7 +317,7 @@ $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600 !default;
+$text-muted:                  #767676 !default; // Original: $gray-600 !default;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
@@ -692,6 +692,7 @@ $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
+// @todo should this be zero? $navbar-border-radius was 0 in starter v2
 $nav-tabs-border-radius:            $border-radius !default;
 $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
 $nav-tabs-link-active-color:        $gray-700 !default;
@@ -1042,7 +1043,7 @@ $breadcrumb-item-padding:           .5rem !default;
 $breadcrumb-margin-bottom:          1rem !default;
 
 $breadcrumb-bg:                     $gray-200 !default;
-$breadcrumb-divider-color:          $gray-600 !default;
+$breadcrumb-divider-color:          #707070 !default; // Original: $gray-600 !default;
 $breadcrumb-active-color:           $gray-600 !default;
 $breadcrumb-divider:                quote("/") !default;
 
@@ -1121,3 +1122,30 @@ $positions: static, relative, absolute, fixed, sticky !default;
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+//
+// --- SilverStripe custom variables (@todo evaluate if we actually need any of these)
+//
+
+// We use this Bootstrap 3 variable for a lot of margin and padding calculations in our components
+// @todo remove this
+$line-height-computed:              floor(($font-size-base * $line-height-base)) !default; // ~20px BS3 -> 16px in BS4
+
+//** Custom spacing for images within typography
+$image-spacing: 18px !default;
+
+// ## These variables are custom ones used within the starter scss files
+$line-height-computed:              floor(($font-size-base * $line-height-base)) !default; // ~20px
+$image-spacing:                     18px !default;
+$carousel-text-shadow:              0 1px 2px rgba(0, 0, 0, .6) !default;
+$progress-bar-success-bg:           $success !default;
+$dropdown-caret-bg:                 transparent !default;
+
+$page-header-border-color:          $gray-300 !default;
+
+// @todo do we still need these?
+// Starter theme: Note that this may need to be adjusted if you are installing into a sub-folder rather than the
+// root of a domain
+$icon-font-path: "/themes/starter/dist/fonts/" !default;
+// Font-awesome path (using CDN to avoid subfolder installation problems)
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default;
