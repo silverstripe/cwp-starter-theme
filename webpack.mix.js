@@ -22,7 +22,7 @@ mix.webpackConfig({
                   browsers: ['> 2%'],
                 },
               },
-            ],
+            ]
           ],
         },
       },
@@ -30,12 +30,14 @@ mix.webpackConfig({
   },
 });
 
-mix.js('src/js/main.js', 'dist/js/main.js');
+mix.js('src/js/main.js', 'dist/js');
 
 mix
-  .sass("src/scss/main.scss", "dist/css/main.css")
-  .sass("src/scss/editor.scss", "dist/css/editor.css")
+  .sass("src/scss/main.scss", "dist/css")
+  .sass("src/scss/editor.scss", "dist/css")
   .options({ processCssUrls: false });
 
 mix.copy("src/images", "images");
 
+mix.minify('dist/css/main.css');
+mix.minify('dist/css/editor.css');
