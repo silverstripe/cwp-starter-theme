@@ -1,6 +1,6 @@
 {
   "name": "cwp-starter-theme",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
@@ -21,22 +21,24 @@
     "font-awesome": "^4.7.0",
     "imagemin": "^6.0.0",
     "jquery-highlight": "^3.3.0",
-    "laravel-mix": "^2.1.14",
+    "laravel-mix": "^4.0.0",
     "path": "^0.12.7",
     "popper.js": "^1.14.5"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^8.0.5",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "eslint": "^3.13.1",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
-    "sass-lint": "^1.10.2"
+    "sass": "^1.17.3",
+    "sass-lint": "^1.10.2",
+    "sass-loader": "7.*",
+    "vue-template-compiler": "^2.6.10"
   }
 }
