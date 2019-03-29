@@ -27,8 +27,10 @@
                             </li>
                         <% else %>
                             <li class="disabled page-item">
-                                <span>
-                                    <span aria-hidden="true">&hellip;</span>
+                                <span
+                                   class="page-link disabled"
+                                   aria-hidden="true">
+                                    &hellip;
                                 </span>
                             </li>
                         <% end_if %>
