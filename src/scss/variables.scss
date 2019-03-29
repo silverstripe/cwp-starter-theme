@@ -31,7 +31,7 @@ $grays: map-merge(
     "800": $gray-800,
     "900": $gray-900
   ),
-  $grays
+    $grays
 );
 
 $blue:    #007bff !default;
@@ -63,7 +63,7 @@ $colors: map-merge(
     "gray":       $gray-600,
     "gray-dark":  $gray-800
   ),
-  $colors
+    $colors
 );
 
 $primary:       $blue !default;
@@ -88,7 +88,7 @@ $theme-colors: map-merge(
     "light":      $light,
     "dark":       $dark
   ),
-  $theme-colors
+    $theme-colors
 );
 
 // Set a specific jump point for requesting color jumps
@@ -139,7 +139,7 @@ $spacers: map-merge(
     4: ($spacer * 1.5),
     5: ($spacer * 3)
   ),
-  $spacers
+    $spacers
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -153,7 +153,7 @@ $sizes: map-merge(
     100: 100%,
     auto: auto
   ),
-  $sizes
+    $sizes
 );
 
 
@@ -262,7 +262,7 @@ $embed-responsive-aspect-ratios: join(
     (4 3),
     (1 1),
   ),
-  $embed-responsive-aspect-ratios
+    $embed-responsive-aspect-ratios
 );
 
 // Typography
@@ -667,7 +667,7 @@ $form-validation-states: map-merge(
       "icon": $form-feedback-icon-invalid
     ),
   ),
-  $form-validation-states
+    $form-validation-states
 );
 
 // Z-index master list
