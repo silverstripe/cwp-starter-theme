@@ -1,7 +1,7 @@
 <div class="content search-results">
      <div class="container">
          <div class="row">
-             <section class="col-lg-12">
+             <section class="col-lg-10 offset-lg-1">
                  <div class="pb-2 mt-4 mb-4 pb-3 border-bottom">
                      <h1>$Title.XML</h1>
                  </div>
@@ -12,9 +12,9 @@
                              <% if $Original %>
                                  <div class="row search-results-no-result">
                                      <div class="col-md-12">
-                                         <div class="alert alert-warning" role="alert"><p>
+                                         <div class="alert alert-warning" role="alert">
                                              <%t CWP_Search.Original "No search results were found matching <strong>{original}</strong>." original=$Original %>
-                                         </p></div>
+                                         </div>
                                      </div>
                                  </div>
                              <% end_if %>
