@@ -1,4 +1,6 @@
 // Main navigation
+$navitem-padding: 13px;
+
 .main-nav {
   .navbar {
     min-height: 0;
@@ -42,7 +44,7 @@
     }
 
     .nav-link {
-      padding: 13px;
+      padding: $navitem-padding;
       position: relative;
       display: block;
     }
@@ -66,7 +68,7 @@
   }
 
   .dropdown {
-    padding-right: 18px;
+    display: flex;
 
     a {
       text-decoration: none;
@@ -111,19 +113,14 @@
   }
 
   .btn-link {
-    color: $navbar-dark-color;
+    color: $navbar-light-color;
   }
 }
 
 .navbar-touch-caret {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
-  padding: 1.3rem 1rem 1.3rem .8rem;
+  z-index: 1;
+  margin-left: -$navitem-padding;
   border-radius: 0;
-  background: $dropdown-caret-bg;
 }
 
 .navbar-form {
