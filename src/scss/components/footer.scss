@@ -5,22 +5,9 @@
 }
 
 .footer-nav-links a {
-  display: inline-block;
-  margin-bottom: 10px;
   margin-right: 30px;
-}
 
-@include media-breakpoint-up(lg) {
-  .footer-social-links {
-    text-align: right;
-
-    a:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .footer-govt-logo {
-    float: right;
-    margin-top: -3px;
+  &:last-child {
+    margin-right: 0;
   }
 }
