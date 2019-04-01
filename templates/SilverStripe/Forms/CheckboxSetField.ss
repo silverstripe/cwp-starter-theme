@@ -1,16 +1,17 @@
 <% if $Options %>
     <% loop $Options %>
-        <div class="{$Class.ATT} checkbox">
-            <label id="option-title-{$ID.ATT}" for="$ID.ATT">
-                <input
-                    id="{$ID.ATT}"
-                    name="{$Name.ATT}"
-                    type="checkbox"
-                    value="{$Value.ATT}"
-                    aria-labelledby="option-title-{$ID.ATT}"
-                    <% if $isChecked %>checked="checked"<% end_if %>
-                    <% if $isDisabled %>disabled="disabled"<% end_if %>
-                    />
+        <div class="{$Class.ATT} form-check form-check-inline">
+            <input
+                id="{$ID.ATT}"
+                class="form-check-input"
+                name="{$Name.ATT}"
+                type="checkbox"
+                value="{$Value.ATT}"
+                aria-labelledby="option-title-{$ID.ATT}"
+                <% if $isChecked %>checked="checked"<% end_if %>
+                <% if $isDisabled %>disabled="disabled"<% end_if %>
+            />
+            <label id="option-title-{$ID.ATT}" for="$ID.ATT" class="form-check-label">
                 {$Title}
             </label>
         </div>

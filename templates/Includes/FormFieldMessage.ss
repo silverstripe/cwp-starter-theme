@@ -1,5 +1,5 @@
 <% if $Message %>
-    <span id="message-$ID" class="form-text">
-        {$Message}
-    </span>
+<div id="message-$ID" class="invalid-feedback">
+    {$Message}
+</div>
 <% end_if %>

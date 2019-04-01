@@ -1,8 +1,10 @@
-<div id="$Name" class="field form-group checkbox {$ExtraClass.ATT} <% if $Message %>has-error<% end_if %>">
-    <label for="{$ID}">
+<div id="$Name" class="field form-group {$ExtraClass.ATT}">
+    <div class="form-check">
         {$Field}
-        {$Title}
-    </label>
-    <% include FormFieldMessage %>
-    <% include FormFieldDescription %>
+        <label class="form-check-label" for="{$ID}">
+            {$Title}
+        </label>
+        <% include FormFieldMessage %>
+        <% include FormFieldDescription %>
+    </div>
 </div>

@@ -16,22 +16,34 @@ export default function () {
       const validatorSettings = $(this).validate().settings;
 
       validatorSettings.highlight = function (element) {
-        $(element).closest('.form-group').addClass('has-error text-danger');
+        if ($(element).prop('type') === 'checkbox' || $(element).prop('type') === 'radio') {
+          $(element).parents('.form-group').find('.form-check input').addClass('is-invalid');
+        } else {
+          $(element).addClass('is-invalid');
+        }
+        $(element).closest('.form-group').addClass('has-error');
       };
 
       validatorSettings.unhighlight = function (element) {
-        $(element).closest('.form-group').removeClass('has-error text-danger');
+        if ($(element).prop('type') === 'checkbox' || $(element).prop('type') === 'radio') {
+          $(element).parents('.form-group').find('.form-check input').removeClass('is-invalid');
+        } else {
+          $(element).removeClass('is-invalid');
+        }
+
+        $(element).closest('.form-group').removeClass('has-error');
       };
 
       validatorSettings.errorElement = 'span';
-      validatorSettings.errorClass = 'form-text text-danger';
+      validatorSettings.errorClass = 'invalid-feedback';
 
       validatorSettings.errorPlacement = function (error, element) {
         if (element.parent('.input-group').length
           || element.prop('type') === 'checkbox'
           || element.prop('type') === 'radio'
         ) {
-          error.insertAfter(element.parent());
+          // Handle lists of checkboxes/radios by looking for all children
+          error.insertAfter(element.parents('.form-group:first').children().last());
         } else {
           error.insertAfter(element);
         }
