@@ -62,7 +62,7 @@ $navitem-padding: 13px;
       &,
       &:hover,
       &:focus {
-        background-color: lighten($gray-200, .9);
+        background-color: lighten($gray-200, 3%);
       }
     }
   }

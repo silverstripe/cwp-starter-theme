@@ -692,8 +692,7 @@ $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
-// @todo should this be zero? $navbar-border-radius was 0 in starter v2
-$nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-border-radius:            0 !default; // Original: $border-radius !default;
 $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
 $nav-tabs-link-active-color:        $gray-700 !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
@@ -813,7 +812,7 @@ $pagination-disabled-border-color:  $gray-300 !default;
 
 $jumbotron-padding:                 2rem !default;
 $jumbotron-color:                   null !default;
-$jumbotron-bg:                      $gray-200 !default;
+$jumbotron-bg:                      lighten($gray-200, 3%) !default; // Original: $gray-200 !default;
 
 
 // Cards
