@@ -1,8 +1,8 @@
 <fieldset role="radiogroup" <% if $Required %>aria-required="true"<% end_if %> >
-    <ul $getAttributesHTML('class', 'aria-required', 'required') class="$ExtraClass list-unstyled">
+    <div $getAttributesHTML('class', 'aria-required', 'required') class="$ExtraClass">
         <% if $Options %>
             <% loop $Options %>
-                <li class="{$Class.ATT} radio">
+                <div class="{$Class.ATT} form-check">
                     <input id="{$ID.ATT}" name="{$Name.ATT}" type="radio"
                         value="{$Value.ATT}" aria-labelledby="option-title-{$ID}"
                         class="form-check-input"
@@ -12,10 +12,10 @@
                     <label for="{$ID}" class="form-check-label" id="option-title-{$ID}">
                         {$Title}
                     </label>
-                </li>
+                </div>
             <% end_loop %>
         <% else %>
             <li><%t CWP_Form.NoOptions "No options available" %></li>
         <% end_if %>
-    </ul>
+    </div>
 </fieldset>

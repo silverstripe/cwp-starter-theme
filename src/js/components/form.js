@@ -30,7 +30,7 @@ export default function () {
         } else {
           $(element).removeClass('is-invalid');
         }
-        
+
         $(element).closest('.form-group').removeClass('has-error');
       };
 
