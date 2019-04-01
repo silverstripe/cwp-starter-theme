@@ -5,7 +5,7 @@ $navitem-padding: 13px;
   .navbar {
     min-height: 0;
     border: 0;
-    border-bottom: 1px solid $navbar-light-toggler-border-color;
+    border-bottom: 1px solid $gray-100;
     padding-bottom: 0;
     margin-bottom: 20px;
 
@@ -62,7 +62,7 @@ $navitem-padding: 13px;
       &,
       &:hover,
       &:focus {
-        background-color: lighten($gray-200, 3%);
+        background-color: $gray-100;
       }
     }
   }
@@ -84,11 +84,11 @@ $navitem-padding: 13px;
       .navbar-touch-caret,
       &:hover .navbar-touch-caret,
       &:focus .navbar-touch-caret {
-        background: $gray-200;
+        background: $gray-100;
 
         &:hover,
         &:focus {
-          background-color: $gray-300;
+          background-color: $gray-200;
         }
       }
     }
