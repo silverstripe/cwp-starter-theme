@@ -22,16 +22,16 @@
         <div class="comment-action-links">
             <div class="comment-moderation-options">
                 <% if $ApproveLink %>
-                    <a href="$ApproveLink.ATT" class="approve"><%t CommentsInterface_singlecomment_ss.APPROVE 'approve it' %></a>
+                    <a href="$ApproveLink.ATT" class="comment-action-link btn btn-success approve"><%t CommentsInterface_singlecomment_ss.APPROVE 'approve it' %></a>
                 <% end_if %>
                 <% if $SpamLink %>
-                    <a href="$SpamLink.ATT" class="spam"><%t CommentsInterface_singlecomment_ss.ISSPAM 'spam it' %></a>
+                    <a href="$SpamLink.ATT" class="comment-action-link btn btn-warning spam"><%t CommentsInterface_singlecomment_ss.ISSPAM 'spam it' %></a>
                 <% end_if %>
                 <% if $HamLink %>
-                    <a href="$HamLink.ATT" class="ham"><%t CommentsInterface_singlecomment_ss.ISNTSPAM 'not spam' %></a>
+                    <a href="$HamLink.ATT" class="comment-action-link btn btn-primary ham"><%t CommentsInterface_singlecomment_ss.ISNTSPAM 'not spam' %></a>
                 <% end_if %>
                 <% if $DeleteLink %>
-                    <a href="$DeleteLink.ATT" class="delete"><%t CommentsInterface_singlecomment_ss.REMCOM 'reject it' %></a>
+                    <a href="$DeleteLink.ATT" class="comment-action-link btn btn-danger delete"><%t CommentsInterface_singlecomment_ss.REMCOM 'reject it' %></a>
                 <% end_if %>
             </div>
             <% if $RepliesEnabled %>

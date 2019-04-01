@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "watch": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
-    "build": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "package": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build": "yarn lint && webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "package": "yarn lint && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "yarn lint-js; yarn lint-sass",
     "lint-js": "node_modules/.bin/eslint src/js",
     "lint-sass": "node_modules/.bin/sass-lint -v"
   },

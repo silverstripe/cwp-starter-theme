@@ -1,5 +1,8 @@
 // Comments styles
 // Note: These styles don't follow the CSS theme conventions as they need to override the Comment Module styles
+$comment-text-padding: .5rem;
+$moderation-action-padding-x: 4px;
+$moderation-action-padding-y: 0;
 
 .comments-holder-container {
   .comments-heading {
@@ -22,8 +25,13 @@
         padding: 0 0 $line-height-computed 0;
 
         .comment-text {
-          background-color: $gray-200;
+          padding: $comment-text-padding;
+          background-color: $gray-100;
           min-height: auto;
+
+          p:last-child {
+            margin-bottom: 0;
+          }
         }
 
         .date::before {
@@ -31,12 +39,16 @@
         }
       }
 
+      .comment-action-link {
+        @include button-size($moderation-action-padding-y, $moderation-action-padding-x, $font-size-sm, $line-height-base, $border-radius);
+      }
+
       .comment-action-links {
         margin: $line-height-computed * 0.5 0 $line-height-computed * 0.5;
       }
 
       .comment-replies-container {
-        margin: $line-height-computed * 2 0 0 0;
+        margin: $line-height-computed * 2 0 0 $line-height-computed;
       }
     }
   }
@@ -52,7 +64,11 @@
 }
 
 .comments-holder-container .comments-holder .comments-list .comment.spam .comment-text {
-  @include alert-variant(theme-color-level("warning", $alert-bg-level), theme-color-level("warning", $alert-border-level), theme-color-level("warning", $alert-color-level));
+  @include alert-variant(
+    theme-color-level("warning", $alert-bg-level),
+    theme-color-level("warning", $alert-border-level),
+    theme-color-level("warning", $alert-color-level)
+  );
 }
 
 .comments-holder-container .comments-holder .comments-list .comment .info {
