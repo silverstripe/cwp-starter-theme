@@ -11,6 +11,6 @@ script:
   - npm run lint-js
   - npm run lint-sass
   # Check that dist files are built correctly
-  - npm run build
+  - npm run package
   - git diff-files --quiet -w --relative=client
   - git diff --name-status --relative=client
