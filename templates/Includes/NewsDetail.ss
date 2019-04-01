@@ -5,7 +5,7 @@
             <dt class="h4 page-sidebar-header"><%t CWP.NewsDetail.TAGS "Tags" %></dt>
             <dd>
                 <% loop $Terms %>
-                    <span class="badge badge-primary rounded $FirstLast">$Name</span>
+                    <span class="badge badge-primary $FirstLast">$Name</span>
                 <% end_loop %>
             </dd>
         <% end_if %>
