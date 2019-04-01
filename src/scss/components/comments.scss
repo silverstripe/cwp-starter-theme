@@ -2,7 +2,7 @@
 // Note: These styles don't follow the CSS theme conventions as they need to override the Comment Module styles
 $comment-text-padding: .5rem;
 $moderation-action-padding-x: 4px;
-$moderation-action-padding-y: 0px;
+$moderation-action-padding-y: 0;
 
 .comments-holder-container {
   .comments-heading {
@@ -65,9 +65,9 @@ $moderation-action-padding-y: 0px;
 
 .comments-holder-container .comments-holder .comments-list .comment.spam .comment-text {
   @include alert-variant(
-      theme-color-level("warning", $alert-bg-level),
-      theme-color-level("warning", $alert-border-level),
-      theme-color-level("warning", $alert-color-level)
+    theme-color-level("warning", $alert-bg-level),
+    theme-color-level("warning", $alert-border-level),
+    theme-color-level("warning", $alert-color-level)
   );
 }
 
