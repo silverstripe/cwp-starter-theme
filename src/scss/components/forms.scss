@@ -106,3 +106,16 @@
   color: $text-muted;
   font-size: $font-size-sm;
 }
+
+// Work around a CSSClean bug that mangles the background-position property
+@each $state, $data in $form-validation-states {
+  .form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+
+      @if $enable-validation-icons {
+        background-position: calc(100% - #{$input-height-inner-quarter});
+      }
+    }
+  }
+}
