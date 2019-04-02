@@ -42,14 +42,14 @@ export default function () {
   };
 
   /**
-   * If screen width is Desktop return true. 752px according to Bootstrap @media queries,
+   * If screen width is Desktop return true. 768px according to Bootstrap @media queries,
    * but can be overridden by adding data-grid-float-breakpoint-width="1234" to your <body>
    * tag to override this.
    *
    * @returns {Boolean}
    */
   const isDesktop = function () {
-    const maxWidth = $('body').data('grid-float-breakpoint-width') || 752;
+    const maxWidth = $('body').data('grid-float-breakpoint-width') || 768;
     return $(document).width() > maxWidth || false;
   };
 
@@ -123,22 +123,6 @@ export default function () {
         break;
       default:
         break;
-    }
-  });
-
-  /**
-   * Handler for opening and closing the dropdown menus when you click on the caret toggle
-   */
-  $('.main-nav .navbar-nav').on('click', '.navbar-touch-caret', function (event) {
-    event.stopPropagation();
-    event.preventDefault();
-
-    const $parent = $(this).parent('.dropdown');
-
-    if ($parent.hasClass('open')) {
-      closeMenu();
-    } else {
-      openMenu($parent);
     }
   });
 }
