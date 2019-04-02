@@ -38,6 +38,3 @@ mix
   .options({ processCssUrls: false });
 
 mix.copy("src/images", "images");
-
-mix.minify('dist/css/main.css');
-mix.minify('dist/css/editor.css');
