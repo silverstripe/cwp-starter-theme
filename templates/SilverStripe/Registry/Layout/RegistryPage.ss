@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="row">
-        <section class="col-lg-12">
+        <section class="col-lg-8<% if not $RegistryFilterForm %> offset-lg-2<% end_if %>">
             <header class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8<% if not $RegistryFilterForm %> offset-lg-2<% end_if %>">
 
             $Content
 
