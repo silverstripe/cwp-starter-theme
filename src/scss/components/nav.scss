@@ -72,6 +72,10 @@
       color: $navbar-light-hover-color;
       text-decoration: none;
     }
+
+    &:active {
+      background-color: $gray-100;
+    }
   }
 
   .active {
@@ -123,12 +127,6 @@
         &:focus {
           text-decoration: none;
         }
-      }
-
-      // Active (currently selected) and active (clicking on) sub-navigation menu items
-      &.active a,
-      a:active {
-        color: $white;
       }
     }
 
