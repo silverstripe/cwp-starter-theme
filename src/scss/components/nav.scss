@@ -1,54 +1,17 @@
-// Main navigation
-$navitem-padding: 13px;
-
+// Main navigation (note: mobile first, responsive breakpoints for medium viewports and above are lower down)
 .main-nav {
   .navbar {
     min-height: 0;
     border: 0;
-    border-bottom: 1px solid $gray-100;
-    padding-bottom: 0;
-    margin-bottom: 20px;
+    display: block;
+    padding: 0;
+  }
 
-    @include media-breakpoint-down(sm) {
-      .container {
-        max-width: none;
-      }
-    }
-
-    .dropdown-menu {
-      margin-top: 0;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-    }
-
-    @include media-breakpoint-down(md)  {
-
-      padding-left: 0;
-      padding-right: 0;
-
-      .dropdown {
-        padding-right: 0;
-      }
-
-      .dropdown-menu {
-        border: 0;
-      }
-
-    }
+  .nav-link {
+    padding: $navbar-padding-y $navbar-padding-x;
   }
 
   .navbar-nav {
-
-    @include media-breakpoint-down(sm) {
-      margin: 7.5px -15px;
-    }
-
-    .nav-link {
-      padding: $navitem-padding;
-      position: relative;
-      display: block;
-    }
-
     // Remove background color from open dropdown
     > .open > a {
       &,
@@ -68,12 +31,6 @@ $navitem-padding: 13px;
   }
 
   .dropdown {
-    display: flex;
-
-    a {
-      text-decoration: none;
-    }
-
     &:hover .navbar-touch-caret,
     &:focus .navbar-touch-caret {
       background-color: transparent;
@@ -88,66 +45,103 @@ $navitem-padding: 13px;
 
         &:hover,
         &:focus {
-          background-color: $gray-200;
+          background-color: $gray-100;
         }
       }
     }
 
-    .dropdown-item.active a {
-      color: $dropdown-link-active-color;
-    }
-
     &.open {
-      >.dropdown-menu {
+      .dropdown-menu {
         display: block;
-      }
-    }
-
-    .dropdown-item a {
-      color: $navbar-light-color;
-
-      @include media-breakpoint-down(md) {
-        padding: $navbar-padding-y $navbar-padding-x;
       }
     }
   }
 
-  .btn-link {
+  // All sub-navigation menus
+  .dropdown-menu {
+    border-width: 0;
+    margin-top: 0;
+  }
+
+  .dropdown-item {
+    // All sub-navigation menu items
     color: $navbar-light-color;
+
+    &:hover,
+    &:focus {
+      color: $navbar-light-hover-color;
+      text-decoration: none;
+    }
+  }
+
+  .active {
+    // Active (currently selected) sub-navigation menu items
+    .dropdown-item {
+      background-color: $gray-100;
+      color: $navbar-light-hover-color;
+    }
   }
 }
 
 .navbar-touch-caret {
-  z-index: 1;
-  margin-left: -$navitem-padding;
-  border-radius: 0;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  color: $navbar-light-color;
+  padding: $navbar-padding-y $navbar-padding-x $navbar-padding-y 8px;
 }
 
 .navbar-form {
   margin-bottom: 0;
 }
 
-// Btn mobile toggle
-.navbar-toggler {
-  margin-top: 0;
-
-  &:focus {
-    @include outline-focus;
-  }
-
-  .icon-bar {
-    background-color: #888;
-  }
-}
-
 .navbar-collapse {
   border-top: 0;
 }
 
+// Medium and up viewports
+@include media-breakpoint-up(md) {
+  .main-nav {
+    .dropdown {
+      // Make room for the caret to be displayed
+      padding-right: $navbar-padding-x * 1.75;
+    }
 
-.navbar {
-  .container {
-    padding-right: 0;
-    padding-left: 0;
+    .dropdown-menu {
+      border-width: 1px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .dropdown-item {
+      a {
+        color: $navbar-light-color;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      // Active (currently selected) and active (clicking on) sub-navigation menu items
+      &.active a,
+      a:active {
+        color: $white;
+      }
+    }
+
+    .nav-link {
+      padding: $navbar-padding-x;
+    }
+
+    .navbar {
+      border-bottom: 1px solid $navbar-light-toggler-border-color;
+    }
+  }
+
+  .navbar-touch-caret {
+    padding: $navbar-padding-x;
   }
 }
