@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <section class="col-md-10 offset-md-1">
+        <section class="col-lg-8<% if not $Children %> offset-lg-2<% end_if %>">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -8,7 +8,7 @@
         </section>
     </div>
     <div class="row">
-        <section class="col-md-8 offset-md-1">
+        <section class="col-lg-8<% if not $Children %> offset-lg-2<% end_if %>">
             <% if $ElementalArea %>
                 <%-- Support for content blocks, if enabled --%>
                 <% if $ElementalArea.RichLinks %>
@@ -28,10 +28,11 @@
             <% include RelatedPages %>
             $CommentsForm
         </section>
-
-        <aside class="col-md-3">
+        <% if $Children %>
+        <aside class="col-lg-3 offset-lg-1">
             <% include SidebarNav %>
         </aside>
+        <% end_if %>
     </div>
 </div>
 <% include PageUtilities %>

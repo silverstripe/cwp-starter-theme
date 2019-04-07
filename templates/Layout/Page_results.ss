@@ -1,7 +1,7 @@
 <div class="content search-results">
      <div class="container">
          <div class="row">
-             <section class="col-lg-10 offset-lg-1">
+             <section class="col-lg-8 offset-lg-2">
                  <div class="pb-2 mt-4 mb-4 pb-3 border-bottom">
                      <h1>$Title.XML</h1>
                  </div>

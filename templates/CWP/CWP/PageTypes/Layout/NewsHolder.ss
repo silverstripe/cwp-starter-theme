@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-10 offset-lg-1">
+        <div class="col-lg-8">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
@@ -13,7 +13,7 @@
             <% include NewsFilterContext %>
         </div>
 
-        <section class="listing <% if $AvailableMonths || not $FilteredUpdates %>col-lg-7 offset-lg-1<% else %>col-lg-10 offset-lg-1<% end_if %>">
+        <section class="listing col-lg-8">
             <% if $FilteredUpdates %>
                 <% include FilteredUpdates ControllerName=$ClassName %>
             <% else %>
@@ -23,7 +23,7 @@
             <% end_if %>
         </section>
 
-        <aside class="col-lg-3 sidebar">
+        <aside class="col-lg-3 offset-lg-1 sidebar">
             <h2 class="sr-only"><%t CWP_NewsEvents.FILTERS "Filters" %></h2>
             <% if $UpdateTagsWithLinks %>
                 <% include UpdateTags %>
