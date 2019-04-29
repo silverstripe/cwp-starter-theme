@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 offset-lg-2">
+        <div class="col-lg-8<% if not $SideBarView %> offset-lg-2<% end_if %>">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
