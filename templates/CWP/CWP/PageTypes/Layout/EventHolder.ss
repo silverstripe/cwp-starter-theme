@@ -1,27 +1,33 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
             <% if $Content.RichLinks %>
                 $Content.RichLinks
             <% else %>
                 $Content
             <% end_if %>
-            <% include NewsFilterContext %>
-        </div>
 
-        <section class="listing col-lg-8">
-            <% if $FilteredUpdates %>
-                <% include FilteredUpdates ControllerName=$ClassName %>
-            <% else %>
-                <article>
-                    <p><%t CWP\\CWP\\PageTypes\\EventHolder.NoEvents "No Events" %></p>
-                </article>
-            <% end_if %>
-        </section>
+            <% include NewsFilterContext %>
+
+            <section class="listing">
+                <% if $FilteredUpdates %>
+                    <% include FilteredUpdates ControllerName=$ClassName %>
+                <% else %>
+                    <article>
+                        <p><%t CWP\\CWP\\PageTypes\\EventHolder.NoEvents "No Events" %></p>
+                    </article>
+                <% end_if %>
+            </section>
+        </div>
 
         <aside class="col-lg-3 offset-lg-1 sidebar">
             <h2 class="sr-only"><%t CWP\\CWP\\PageTypes\\EventHolder.FILTERS "Filters" %></h2>
@@ -35,7 +41,6 @@
                 <% include AvailableMonths ControllerName=$ClassName %>
             <% end_if %>
         </aside>
-
     </div>
 </div>
 
