@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-8<% if not $SideBarView %> offset-lg-2<% end_if %>">
+        <div class="col-lg-8<% if not $SideBarView || not $SideBarView.Widgets %> offset-lg-2<% end_if %>">
             <div class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
             </div>
         </div>
 
-        <section class="col-lg-8<% if not $SideBarView %> offset-lg-2<% end_if %>">
+        <section class="col-lg-8<% if not $SideBarView || not $SideBarView.Widgets %> offset-lg-2<% end_if %>">
             <div class="blog-main" role="main">
                 <div class="clearfix blog-holder__content">
                     <% if $Content.RichLinks %>
