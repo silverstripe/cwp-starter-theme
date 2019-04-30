@@ -6,7 +6,7 @@
     <% end_if %>
 
     <div class="profile-summary col-lg-9">
-        <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
+        <h2>$CurrentProfile.FirstName $CurrentProfile.Surname</h2>
         <p>$CurrentProfile.BlogProfileSummary</p>
     </div>
 </div>

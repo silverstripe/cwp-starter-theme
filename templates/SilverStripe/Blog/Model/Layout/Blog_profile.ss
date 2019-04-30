@@ -3,7 +3,7 @@
         <div class="col-lg-8<% if not $SideBarView || not $SideBarView.Widgets %> offset-lg-2<% end_if %>">
             <div class="page-header">
                 $Breadcrumbs
-                <h1 class="h2">$Title</h1>
+                <h1>$Title</h1>
             </div>
             <% include SilverStripe\\Blog\\MemberDetails %>
         </div>
