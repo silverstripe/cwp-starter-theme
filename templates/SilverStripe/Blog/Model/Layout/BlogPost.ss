@@ -1,12 +1,14 @@
 <div class="blog-entry container">
     <div class="row">
-        <div class="col-lg-8<% if not $SideBarView || not $SideBarView.Widgets %> offset-lg-2<% end_if %>">
-            <div class="page-header">
+        <div class="<% if not $SideBarView || not $SideBarView.Widgets %>col-lg-8 offset-lg-2<% else %>col-lg-12<% end_if %>">
+            <header class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
-            </div>
+            </header>
         </div>
+    </div>
 
+    <div class="row">
         <section class="col-lg-8<% if not $SideBarView || not $SideBarView.Widgets %> offset-lg-2<% end_if %>">
             <article class="blog-post-article">
                 <% if $FeaturedImage %>
@@ -39,7 +41,6 @@
         </section>
 
         <% include SilverStripe\\Blog\\BlogSideBar %>
-
     </div>
 </div>
 <% include PageUtilities %>
