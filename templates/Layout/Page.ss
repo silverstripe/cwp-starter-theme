@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
-        <section class="col-lg-8<% if not $Children %> offset-lg-2<% end_if %>">
-            <div class="page-header">
+        <section class="<% if $Children %>col-lg-12<% else %>col-lg-8 offset-lg-2<% end_if %>">
+            <header class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
-            </div>
+            </header>
         </section>
     </div>
     <div class="row">
