@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <div class="page-header">
+        <div class="<% if not $SideBarView || not $SideBarView.Widgets %>col-lg-8 offset-lg-2<% else %>col-lg-12<% end_if %>">
+            <header class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
-            </div>
+            </header>
             <% include SilverStripe\\Blog\\MemberDetails %>
         </div>
     </div>

@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <div class="page-header">
+            <header class="page-header">
                 $Breadcrumbs
                 <h1>$Title</h1>
-            </div>
+            </header>
         </div>
     </div>
 
