@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="col-sm-12 col-md-4 float-right search-results-results-page">
                                     <p class="text-muted">
-                                        <%t CWP_Search.Pages "Displaying Page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
+                                        <%t CWP_Search.Pages "Displaying page {current} of {total}" current=$Results.CurrentPage total=$Results.TotalPages %>
                                     </p>
                                 </div>
                             </div>
