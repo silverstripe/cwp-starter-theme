@@ -1,7 +1,6 @@
 <% if $Pages %>
-    <nav role="navigation">
-        <p class="sr-only" id="breadcrumbs-label"><%t SiteTree.BREADCRUMBSLABEL "You are here" %></p>
-        <ol class="breadcrumb" aria-labelledby="breadcrumbs-label">
+    <nav role="navigation" aria-label="<%t CWP_Search.BREADCRUMBS "Breadcrumbs" %>">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="$BaseHref">
                     <%t SiteTree.DEFAULTHOMETITLE "Home" %>
