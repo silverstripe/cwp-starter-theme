@@ -1,5 +1,5 @@
 <% if $Pages %>
-    <nav role="navigation" aria-label="<%t CWP_Search.BREADCRUMB "Breadcrumb" %>">
+    <nav role="navigation" aria-label="<%t CWP_Search.BREADCRUMBS "Breadcrumbs" %>">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="$BaseHref">
