@@ -15,27 +15,28 @@
 
 .silverstripe__elementalbannerblock__block__bannerblock {
   background-color: #001F2C;
-  overflow: hidden;
-}
 
-.banner-element__image {
-  display: flex;
-  flex-grow: 1;
-  max-height: 450px;
-  opacity: .55;
+  .banner-element__image {
+    display: flex;
+    flex-grow: 1;
+    max-height: 450px;
+    opacity: .55;
 
-  img {
-    object-fit: cover;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .banner-element__content {
+    color: #fff;
+    left: 0;
+    padding: 2rem;
+    position: absolute;
+    text-shadow: $carousel-text-shadow;
+    top: 0;
     width: 100%;
   }
-}
-
-.banner-element__content {
-  // Add jumbotron padding back here
-  left: 0;
-  position: absolute;
-  text-shadow: $carousel-text-shadow;
-  color: #fff;
 }
 
 //-- File block
