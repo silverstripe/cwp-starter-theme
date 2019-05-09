@@ -50,7 +50,7 @@
                         </tbody>
                     </table>
 
-                    <a class="historyFeedLink" href="registry-feed/latest/{$DataClass}">
+                    <a class="historyFeedLink" href="registry-feed/latest/{$getClassNameForUrl($DataClass)}">
                         <%t RegistryPage.ViewHistory "View imported data history" %>
                     </a>
                     <div class="resultActions">
