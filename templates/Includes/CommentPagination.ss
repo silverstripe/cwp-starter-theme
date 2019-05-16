@@ -12,7 +12,7 @@
                     <% loop $Pages %>
                         <% if $CurrentBool %>
                             <li class="page-item active">
-                                <a class="page-link"><strong>$PageNum</strong></a>
+                                <a class="page-link" href="#"><strong>$PageNum</strong></a>
                             </li>
                         <% else %>
                             <li>
