@@ -11,10 +11,10 @@
                 <% end_if %>
                 <% loop $PaginationSummary(4) %>
                     <% if $CurrentBool %>
-                        <li class="active page-item">
-                            <a class="page-link">
-                                <span>$PageNum <span class="sr-only"><%t CWP_Pagination.CURRENT_LABEL "(current)" %></span></span>
-                            </a>
+                        <li class="page-item active">
+                            <span class="page-link">
+                                $PageNum <span class="sr-only"><%t CWP_Pagination.CURRENT_LABEL "(current)" %></span>
+                            </span>
                         </li>
                     <% else %>
                         <% if $PageNum %>
