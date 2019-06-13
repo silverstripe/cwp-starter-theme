@@ -1,6 +1,6 @@
 ## CSS Conventions
 
-## This theme uses Bootstrap v4.1.3 (http://getbootstrap.com/)
+## This theme uses Bootstrap 4.3.1 (http://getbootstrap.com/)
 ## The principles below are inspired by Bootstrap and Airbnb standards.
 ## As per Bootstrap (unlike Airbnb) this theme does not use strict BEM with its use of double dashes or underscores but uses single dashes.
 
