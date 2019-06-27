@@ -21,26 +21,26 @@
                     <% if $ClassName == HomePage %>
                         <% if $AtomLink %>
                             <li class="list-inline-item">
-                                <a href="$AtomLink" class="fa fa-rss">
-                                    <span class="sr-only"><%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %></span>
+                                <a href="$AtomLink" aria-label="<%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %>">
+                                    <i class="fa fa-rss" aria-hidden="true"></i>
                                 </a>
                             </li>
                         <% else_if $RSSLink %>
                             <li class="list-inline-item">
-                                <a href="$RSSLink" class="fa fa-rss">
-                                    <span class="sr-only"><%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %></span>
+                                <a href="$RSSLink" aria-label="<%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %>">
+                                    <i class="fa fa-rss" aria-hidden="true"></i>
                                 </a>
                             </li>
                         <% else_if $DefaultAtomLink %>
                             <li class="list-inline-item">
-                                <a href="$DefaultAtomLink" class="fa fa-rss">
-                                    <span class="sr-only"><%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %></span>
+                                <a href="$DefaultAtomLink" aria-label="<%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %>">
+                                    <i class="fa fa-rss" aria-hidden="true"></i>
                                 </a>
                             </li>
                         <% else_if $DefaultRSSLink %>
                             <li class="list-inline-item">
-                                <a href="$DefaultRSSLink" class="fa fa-rss">
-                                    <span class="sr-only"><%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %></span>
+                                <a href="$DefaultRSSLink" aria-label="<%t CWP\\CWP\\PageTypes\\BaseHomePage.Subscribe "Subscribe" %>">
+                                    <i class="fa fa-rss" aria-hidden="true"></i>
                                 </a>
                             </li>
                         <% end_if %>
