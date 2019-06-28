@@ -10,7 +10,7 @@
 
     <div class="row">
         <section class="col-lg-8<% if not $SideBarView || not $SideBarView.Widgets %> offset-lg-2<% end_if %>">
-            <div class="blog-main" role="main">
+            <div class="blog-main">
                 <div class="clearfix blog-holder__content">
                     <% if $ElementalArea %>
                         <%-- Support for content blocks, if enabled --%>
