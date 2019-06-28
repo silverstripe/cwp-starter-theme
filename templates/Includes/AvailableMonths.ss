@@ -6,7 +6,7 @@
         <ul class="nav nav-pills">
             <% loop $Months %>
                 <li class="nav-item">
-                    <a class="nav-link badge <% if $Active %> badge-primary<% end_if %>" title="$MonthName" aria-label="Archive $Up.YearName $MonthName" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
+                    <a class="nav-link badge <% if $Active %> badge-primary<% end_if %>" aria-label="$MonthName $Up.YearName Archive" href="$MonthLink.XML" <% if $Active %> aria-selected="true"<% end_if %>>$MonthName</a>
                 </li>
             <% end_loop %>
         </ul>
@@ -15,9 +15,9 @@
     <% if $FilteredUpdates %>
         <% if $FilterDescription %>
             <% if $ControllerName == "EventHolder" %>
-                 <p><a class="small" title="<%t CWP.EventHolder.ShowAllEvents "Show all events" %>" href="$Link"><%t CWP.EventHolder.ShowAllEvents "Show all upcoming events" %></a></p>
+                 <p><a class="small" href="$Link"><%t CWP.EventHolder.ShowAllEvents "Show all upcoming events" %></a></p>
             <% else_if $ControllerName == "NewsHolder" %>
-                 <p><a class="small" title="<%t CWP.NewsHolder.ShowAllNews "Show all news" %>" href="$Link"><%t CWP.NewsHolder.ShowAllNews "Show all news" %></a></p>
+                 <p><a class="small" href="$Link"><%t CWP.NewsHolder.ShowAllNews "Show all news" %></a></p>
             <% end_if %>
         <% end_if %>
     <% end_if %>
