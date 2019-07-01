@@ -284,3 +284,8 @@ pre {
   color: $text-muted;
   font-size: $font-size-sm;
 }
+
+legend {
+  // Overrides Bootstrap default of 1.5rem
+  font-size: 1rem;
+}
