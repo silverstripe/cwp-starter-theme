@@ -5,8 +5,7 @@
             <% loop $UpdateTagsWithLinks %>
                 <a href="$Link"
                     <% if $Top.CurrentTag.ID == $ID %> aria-selected="true"<% end_if %>
-                    class="badge <% if $Top.CurrentTag.ID == $ID %> badge-success<% else %> badge-primary<% end_if %>"
-                    title='<%t CWP.Events_News.ViewItemsTagged "View items tagged {Name}" Name=$Name %>'>$Name</a>
+                    class="badge <% if $Top.CurrentTag.ID == $ID %> badge-success<% else %> badge-primary<% end_if %>" Name=$Name %>'>$Name</a>
             <% end_loop %>
         </p>
         <% if $CurrentTag %>
