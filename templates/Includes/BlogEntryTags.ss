@@ -4,7 +4,7 @@
             <p class="blog-tags">
                 <%-- If you are using the category list below, uncomment the "Tags:" label here --%>
                 <%--<%t BlogEntry.Tags "Tags:" %>--%>
-                <% loop $Tags %><a href="$Link" title="$Title.ATT" class="badge badge-primary mr-2">$Title</a><% end_loop %>
+                <% loop $Tags %><a href="$Link" class="badge badge-primary mr-2">$Title</a><% end_loop %>
             </p>
         <% end_if %>
 
@@ -12,7 +12,7 @@
         <%--
         <% if $Categories %>
             <p class="entry-categories">
-                <%t BlogEntry.Categories "Categories:" %> <% loop $Categories %><a href="$Link" title="$Title.ATT" class="label label-primary">$Title</a><% end_loop %>
+                <%t BlogEntry.Categories "Categories:" %> <% loop $Categories %><a href="$Link" class="label label-primary">$Title</a><% end_loop %>
             </p>
         <% end_if %>
          --%>
