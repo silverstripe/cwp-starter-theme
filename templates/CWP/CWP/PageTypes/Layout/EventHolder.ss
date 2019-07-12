@@ -30,7 +30,7 @@
         </div>
 
         <aside class="col-lg-3 offset-lg-1 sidebar">
-            <h2 class="sr-only"><%t CWP\\CWP\\PageTypes\\EventHolder.FILTERS "Filters" %></h2>
+            <h2 class="h3"><%t CWP\\CWP\\PageTypes\\EventHolder.FILTERS "Filters" %></h2>
             <% if $UpdateTagsWithLinks %>
                 <% include UpdateTags %>
             <% end_if %>
