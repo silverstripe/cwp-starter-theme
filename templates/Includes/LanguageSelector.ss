@@ -2,7 +2,7 @@
     <div class="btn-group float-right language-selector" id="header-language-toggle">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="<%t CWPLanguageSelector.LANGUAGE_SELECTOR "Language selector" %>">
             <i class="fa fa-language" aria-hidden="true"></i>
-            <span class="d-none d-sm-inline">Language</span>
+            <span class="d-none d-sm-inline"><%t CWP_LanguageSelector "Language" %></span>
         </button>
         <div class="dropdown-menu dropdown-menu-right">
             <% loop $Locales %>
