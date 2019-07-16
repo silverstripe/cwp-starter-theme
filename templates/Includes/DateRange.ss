@@ -1,6 +1,6 @@
 <div class="page-sidebar-widget news-events-date-range">
     <% with $DateRangeForm %>
-        <h3 class="h4 page-sidebar-header"><%t CWP\\CWP\\PageTypes\\EventHolder.FilterDate "Date" %></h3>
+        <h3 class="h4 page-sidebar-header"><%t CWP\\CWP\\PageTypes\\EventHolder.Date "Date" %></h3>
         <form $FormAttributes>
             <% if $Message %>
                 <div id="{$FormName}_error" class="message $MessageType">$Message</div>
