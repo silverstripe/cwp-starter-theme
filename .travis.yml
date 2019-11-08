@@ -1,16 +1,15 @@
 language: node_js
-
 node_js:
-  - '6'
+  - '10'
 
 before_script:
-  - npm install
+  - yarn install
 
 script:
   # Linting
-  - npm run lint-js
-  - npm run lint-sass
+  - yarn lint-js
+  - yarn lint-sass
   # Check that dist files are built correctly
-  - npm run package
+  - yarn build
   - git diff-files --quiet -w --relative=dist
   - git diff --name-status --relative=dist
