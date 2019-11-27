@@ -16,11 +16,8 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "expose-loader": "^0.7",
     "font-awesome": "^4.7.0",
-    "jquery-highlight": "^3.3.0",
-    "laravel-mix": "^0.5",
-    "path": "^0.12.7"
+    "jquery-highlight": "^3.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -29,7 +26,12 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "laravel-mix": "^4",
+    "path": "^0.12.7",
+    "sass": "^1.23.3",
     "sass-lint": "^1.10.2",
-    "webpack": "^2"
+    "sass-loader": "^7.3.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4"
   }
 }
