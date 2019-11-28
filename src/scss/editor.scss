@@ -42,10 +42,12 @@ body.mceContentBody a.ss-broken {
 .center {
   @include center-block;
 }
+
 // Refer: .pull-left
 .left {
   float: left !important;
 }
+
 // Refer: .pull-right
 .right {
   float: right !important;
