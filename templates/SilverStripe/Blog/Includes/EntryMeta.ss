@@ -1,18 +1,20 @@
+<% if $Categories || $Tags %>
 <p class="meta-info">
     <% if $Categories.exists %>
         <%t Blog.PostedIn "Posted in" %>
         <% loop $Categories %>
-            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %>;<% end_if %>
+            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% end_if %>
         <% end_loop %>
     <% end_if %>
-    <br />
+    <% if $Categories && $Tags %><br /><% end_if %>
     <% if $Tags.exists %>
         <%t Blog.Tagged "Tagged" %>
         <% loop $Tags %>
-            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %>;<% end_if %>
+            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% end_if %>
         <% end_loop %>
     <% end_if %>
 </p>
+<% end_if %>
 <p class="meta-info">
     <%t Blog.Posted "Posted" %> $PublishDate.ago
 

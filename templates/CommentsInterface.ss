@@ -7,7 +7,7 @@
         <% if $AddCommentForm %>
             <% if $canPostComment %>
                 <% if $ModeratedSubmitted %>
-                    <p id="moderated" class="message good"><%t CommentsInterface_ss.AWAITINGMODERATION 'Your comment has been submitted and is now awaiting moderation.' %></p>
+                    <p id="moderated" class="message good" tabindex="-1"><%t CommentsInterface_ss.AWAITINGMODERATION 'Your comment has been submitted and is now awaiting moderation.' %></p>
                 <% end_if %>
                 $AddCommentForm
             <% else %>

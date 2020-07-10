@@ -15,10 +15,10 @@
 <% end_if %>
 
 <div class="page-toggle__children">
-    <a href="{$Link}" class="sitemap-link" title="<%t SitemapNode_ss.GO_TO_LABEL "Go to {page} page" page=$MenuTitle %>">
+    <a href="{$Link}" class="sitemap-link">
         {$MenuTitle}
     </a>
 
     <%-- Children are populated via AJAX --%>
-    <ul id="children-{$ID}" class="collapse" role="tablist"></ul>
+    <ul id="children-{$ID}" class="collapse"></ul>
 </div>

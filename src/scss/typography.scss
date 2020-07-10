@@ -33,11 +33,23 @@ figure {
     display: block;
     clear: both;
   }
-  // sass-lint:enable class-name-format
 
+  // sass-lint:disable class-name-format
+  &.rightAlone {
+    margin-left: auto;
+    display: flex;
+  }
+
+  // sass-lint:enable class-name-format
   &.center {
     margin-bottom: $image-spacing;
-    clear: both;
+    display: flex;
+    margin: auto;
+  }
+
+  &.center-block {
+    display: flex;
+    margin: auto;
   }
 }
 
@@ -46,20 +58,36 @@ figure {
   width: 100%;
   max-width: 100%;
 
-  &.pull-left {
+  &.pull-left,
+  &.left {
     margin: 0 $image-spacing $image-spacing 0;
+    float: left;
   }
 
-  &.pull-right {
+  &.pull-right,
+  &.right {
     margin: 0 0 $image-spacing $image-spacing;
+    float: right;
   }
 
   &.leftAlone {
     margin: 0 $image-spacing $image-spacing 0;
   }
 
+  &.rightAlone {
+    margin-left: auto;
+  }
+
+  &.center {
+    margin-bottom: $image-spacing;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &.center-block {
     margin-bottom: $image-spacing;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   p {

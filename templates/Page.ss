@@ -12,18 +12,18 @@
         <% include Favicon %>
     </head>
     <body class="$ClassName">
-        <header>
+        <header role="banner">
             <% include Header %>
             <% include MainNav %>
         </header>
-        <main id="main" class="main">
+        <main id="main" class="main" role="main">
             $Layout
         </main>
         <% include PageShowcase %>
-        <footer class="footer-site">
+        <footer class="footer-site" role="contentinfo">
             <% include Footer %>
         </footer>
-        <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
+        <% require javascript('https://code.jquery.com/jquery-3.4.1.min.js') %>
         <% require themedJavascript('dist/js/main.js') %>
         <% include GoogleAnalytics %>
     </body>
