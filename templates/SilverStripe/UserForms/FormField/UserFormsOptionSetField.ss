@@ -9,6 +9,7 @@
         <% if $isChecked %>checked<% end_if %>
         <% if $isDisabled %>disabled<% end_if %>
         <% if $Up.Required %>required<% end_if %>
+        $Top.getValidationAttributesHTML().RAW
     />
     <label for="$ID" class="form-check-label">
         $Title
