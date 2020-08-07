@@ -9,6 +9,7 @@
                 value="$Value.ATT"
                 <% if $isChecked %>checked="checked"<% end_if %>
                 <% if $isDisabled %> disabled="disabled"<% end_if %>
+                $Top.getValidationAttributesHTML().RAW
             />
             <label for="$ID" class="form-check-label">
                 $Title
