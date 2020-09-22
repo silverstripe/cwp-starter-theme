@@ -3,7 +3,9 @@
     <% if $Title %>
         <legend class="left">
             $Title
-            <span class="required help-text" aria-required="true">(required)</span>
+            <% if $Required %>
+                <span class="help-text" aria-required="true">(required)</span>
+            <% end_if %>
         </legend>
     <% end_if %>
     {$Field}
