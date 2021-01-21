@@ -1,6 +1,6 @@
 # CWP Starter Theme
 
-[![Build Status](https://travis-ci.org/silverstripe/cwp-starter-theme.svg?branch=master)](https://travis-ci.org/silverstripe/cwp-starter-theme)
+[![Build Status](https://api.travis-ci.com/silverstripe/cwp-starter-theme.svg?branch=3)](https://travis-ci.com/silverstripe/cwp-starter-theme)
 [![Packagist](https://img.shields.io/packagist/v/cwp/starter-theme.svg)](https://packagist.org/packages/cwp/starter-theme)
 [![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
