@@ -1,9 +1,9 @@
-const mix = require("laravel-mix");
+const mix = require('laravel-mix');
 
 mix.webpackConfig({
   externals: {
-    '$': 'jQuery',
-    'jquery': 'jQuery'
+    $: 'jQuery',
+    jquery: 'jQuery',
   },
   module: {
     rules: [{
@@ -22,7 +22,7 @@ mix.webpackConfig({
                   browsers: ['> 2%'],
                 },
               },
-            ]
+            ],
           ],
         },
       },
@@ -33,8 +33,10 @@ mix.webpackConfig({
 mix.js('src/js/main.js', 'dist/js');
 
 mix
-  .sass("src/scss/main.scss", "dist/css")
-  .sass("src/scss/editor.scss", "dist/css")
+  .sass('src/scss/main.scss', 'dist/css')
+  .sass('src/scss/editor.scss', 'dist/css')
   .options({ processCssUrls: false });
 
-mix.copy("src/images", "images");
+mix
+  .copy('src/images', 'images')
+  .copy('node_modules/jquery/dist/jquery.min.js', 'dist/js');
