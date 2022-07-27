@@ -38,5 +38,6 @@ mix
   .options({ processCssUrls: false });
 
 mix
-  .copy('src/images', 'images')
+  .copy('src/images', 'dist/images')
+  .copy('src/fonts', 'dist/fonts')
   .copy('node_modules/jquery/dist/jquery.min.js', 'dist/js');
