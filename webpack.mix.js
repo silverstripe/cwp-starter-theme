@@ -37,4 +37,7 @@ mix
   .sass("src/scss/editor.scss", "dist/css")
   .options({ processCssUrls: false });
 
-mix.copy("src/images", "images");
+mix
+  .copy('src/images', 'dist/images')
+  .copy('src/fonts', 'dist/fonts')
+  .copy('node_modules/jquery/dist/jquery.min.js', 'dist/js');
