@@ -4,7 +4,7 @@
         <legend class="left">
             $Title
             <% if $Required %>
-                <span class="help-text" aria-required="true">(required)</span>
+                <span class="required help-text" aria-required="true">(required)</span>
             <% end_if %>
         </legend>
     <% end_if %>
