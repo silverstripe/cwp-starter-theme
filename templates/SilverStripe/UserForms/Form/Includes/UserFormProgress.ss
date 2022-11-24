@@ -7,7 +7,7 @@
         <nav aria-hidden="true">
             <ul class="step-buttons mt-4">
                 <% loop $Steps %>
-                <li class="step-button-wrapper<% if $First %> current<% end_if %>" data-for="$Name">
+                <li class="step-button-wrapper<% if $IsFirst %> current<% end_if %>" data-for="$Name">
                     <%-- Remove js-align class to remove javascript positioning --%>
                     <button class="btn btn-secondary rounded btn-md step-button-jump js-align" disabled="disabled" data-step="$Pos"><% if $Top.ButtonText %>$Top.ButtonText <% end_if %>$Pos</button>
                 </li>

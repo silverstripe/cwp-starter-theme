@@ -7,7 +7,7 @@
                 </a>
             </li>
             <% loop $Pages %>
-                <% if $Last %>
+                <% if $IsLast %>
                     <li class="breadcrumb-item active">$MenuTitle.XML</li>
                 <% else %>
                     <li class="breadcrumb-item"><a href="$Link">$MenuTitle.XML</a></li>

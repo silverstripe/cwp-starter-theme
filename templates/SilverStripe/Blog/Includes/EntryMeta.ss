@@ -3,14 +3,14 @@
     <% if $Categories.exists %>
         <%t Blog.PostedIn "Posted in" %>
         <% loop $Categories %>
-            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% end_if %>
+            <a href="$Link" title="$Title">$Title</a><% if not $IsLast %>, <% end_if %>
         <% end_loop %>
     <% end_if %>
     <% if $Categories && $Tags %><br /><% end_if %>
     <% if $Tags.exists %>
         <%t Blog.Tagged "Tagged" %>
         <% loop $Tags %>
-            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% end_if %>
+            <a href="$Link" title="$Title">$Title</a><% if not $IsLast %>, <% end_if %>
         <% end_loop %>
     <% end_if %>
 </p>
@@ -20,7 +20,7 @@
 
     <% if $Credits %>
         <%t Blog.By "by" %>
-        <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %><% if $URLSegment %><a href="$URL">$Name.XML</a><% else %>$Name.XML<% end_if %><% end_loop %>
+        <% loop $Credits %><% if not $IsFirst && not $IsLast %>, <% end_if %><% if not $IsFirst && $IsLast %> <%t Blog.AND "and" %> <% end_if %><% if $URLSegment %><a href="$URL">$Name.XML</a><% else %>$Name.XML<% end_if %><% end_loop %>
     <% end_if %>
 
     <% if $Comments.exists %>
