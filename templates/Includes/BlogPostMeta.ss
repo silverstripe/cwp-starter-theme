@@ -1,6 +1,6 @@
 <p class="meta-info" itemscope itemtype="http://schema.org/BlogPosting">
     <% if $Credits %>
-        <% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %><% if $TotalItems > '2' %>,<% end_if %> <%t BlogPostMeta_ss.AND "and" %> <% end_if %><% if $URLSegment %><a href="$URL">$Name.XML</a><% else %>$Name.XML<% end_if %><% end_loop %>
+        <% loop $Credits %><% if not $IsFirst && not $IsLast %>, <% end_if %><% if not $IsFirst && $IsLast %><% if $TotalItems > '2' %>,<% end_if %> <%t BlogPostMeta_ss.AND "and" %> <% end_if %><% if $URLSegment %><a href="$URL">$Name.XML</a><% else %>$Name.XML<% end_if %><% end_loop %>
     <% end_if %>
 
     <% if $PublishDate %>
