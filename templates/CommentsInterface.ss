@@ -1,5 +1,3 @@
-<% require themedCSS('comments', 'comments') %>
-
 <% if $CommentsEnabled %>
     <div id="$CommentHolderID" class="comments-holder-container">
         <h2 class="h3 comments-heading"><%t CommentsInterface_ss.POSTCOM 'Post your comment' %></h2>
