@@ -10,6 +10,7 @@ import popover from 'bootstrap/js/src/popover';
 import modal from 'bootstrap/js/src/modal';
 import tab from 'bootstrap/js/src/tab';
 import highlight from 'jquery-highlight/jquery.highlight';
+import "core-js/stable";
 
 // Define local components
 import navigation from './components/navigation';
